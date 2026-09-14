@@ -1,0 +1,3 @@
+// 把下面这一行追加到 config/ftbquests/quests/chapter_groups.snbt
+// 的 chapter_groups: [ ... ] 数组里（注意与前后行之间不要多余逗号）：
+{ id: "00C72C1FB6193A42", title: "&d科技入门教程&f" }

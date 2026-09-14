@@ -1,0 +1,1330 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "t02_mekanism"
+	group: "00C72C1FB6193A42"
+	icon: "mekanism:enrichment_chamber"
+	id: "71EB2E1753A363A4"
+	order_index: 2
+	progression_mode: "flexible"
+	quest_links: [ ]
+	quests: [
+		{
+			description: [
+				"通用机械（Mekanism）是本包&a矿物处理&f核心：同样的矿石榨出 2~5 倍产出，自带能量/流体/气体物流与发电体系。"
+				""
+				"它引入「&a气体&f」维度：氢、氧、氯、硫酸……用压力管道传输、化学罐存储，是高阶产线的命脉。"
+				""
+				"本章树状路线："
+				""
+				"· 主干(任务1-4)：外壳/电路→冶金灌注机→钢与合金；"
+				""
+				"· 矿物处理(任务5-9, 15-22)：2x→3x→4x→5x 完整产线；"
+				""
+				"· 工厂与物流(任务23-31)：并行工厂、四类管道、分类、自动合成；"
+				""
+				"· 采矿/QIO/多方块(任务32-42)：数字矿机、QIO、感应矩阵、锅炉汽轮机、蒸发器、裂变/聚变/SPS；"
+				""
+				"· 装备工具(任务43-50)：原子分解器、自由跑者、喷气背包、传送、Meka 套装与模块、辐射防护；"
+				""
+				"结尾(任务51)：把 5 倍矿物处理基地搭起来。"
+			]
+			icon: "mekanism:atomic_disassembler"
+			id: "4E8D0115536BAF2B"
+			shape: "hexagon"
+			size: 1.5d
+			subtitle: "矿物处理之王，气体工业鼻祖"
+			tasks: [{
+				id: "33CDAC3F4AD56157"
+				title: "认识通用机械"
+				type: "checkmark"
+			}]
+			title: "认识通用机械"
+			x: 0.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["4E8D0115536BAF2B"]
+			description: [
+				"&a钢制外壳(Steel Casing)&f是通用机械所有机器的底座；&a基础控制电路(basic_control_circuit)&f是大部分机器的电路部件。"
+				""
+				"电路升级线：&abasic→advanced→elite→ultimate&a_control_circuit，低级电路是高级电路的材料，别卖。"
+				""
+				"所有机器的通用升级槽：&aupgrade_speed(速度)&f、&aupgrade_energy(能量)&f、&aupgrade_gas(气体)&f、&aupgrade_filter(过滤)&f、&aupgrade_muffling(消音)&f、&aupgrade_anchor(锚定)&f、&aupgrade_stone_generator(石头发电机升级)&f。"
+			]
+			id: "7C9901B56D5867D6"
+			rewards: [{
+				id: "1DA3F226E0D24588"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "一切机器的底座"
+			tasks: [{
+				id: "373AEA6E78CDF5B7"
+				item: "mekanism:steel_casing"
+				type: "item"
+			}]
+			title: "钢制外壳与控制电路"
+			x: 1.5d
+			y: 6.0d
+		}
+		{
+			dependencies: ["7C9901B56D5867D6"]
+			description: [
+				"&a冶金灌注机(Metallurgic Infuser)&f把「金属+灌注材料」合成新材料：铁锭+煤→钢锭，铁+红石→灌注合金等。"
+				""
+				"它是通用机械最早的自动化机器，也是你第一台需要接电的机器。"
+				""
+				"用法：一个槽放金属、一个槽放灌注材料（煤/红石等），接电后自动合成；配合漏斗/物流传输器可全自动。"
+			]
+			id: "5074F3EE33743230"
+			rewards: [{
+				id: "558BAF2C70D00C63"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "第一台吃电的机器"
+			tasks: [{
+				id: "017DC1914A8A33CD"
+				item: "mekanism:metallurgic_infuser"
+				type: "item"
+			}]
+			title: "冶金灌注机"
+			x: 3.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["5074F3EE33743230"]
+			description: [
+				"&a钢锭(ingot_steel)&f=铁锭+煤在冶金灌注机里合成，做钢制外壳、高级工具的基础。"
+				""
+				"三大合金：&a灌注合金(alloy_infused，铁+红石)&f、&a强化合金(alloy_reinforced)&f、&a原子合金(alloy_atomic)&f——分别对应 basic→advanced/elite→ultimate 的机器/线缆升级。"
+				""
+				"其它锭：&a青铜(ingot_bronze)、&a锡(ingot_tin)、&a铅(ingot_lead)、&a锇(ingot_osmium)、&a铀(ingot_uranium)、&a强化荧石(glowstone)、&a强化黑曜(refined_obsidian)&f。"
+			]
+			id: "1CA310DE3EB0B09C"
+			rewards: [{
+				id: "470169603F663AB8"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "灌注出来的关键材料"
+			tasks: [{
+				id: "39EDC6980099394E"
+				item: "mekanism:ingot_steel"
+				type: "item"
+			}]
+			title: "钢锭与合金"
+			x: 4.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["7C9901B56D5867D6"]
+			description: [
+				"&a锇(Osminum)&f矿(osmium_ore/deepslate_osmium_ore)下矿顺路挖，&a原锇(raw_osmium)&f熔炼得&a锇锭(ingot_osmium)&f。"
+				""
+				"锇锭是&a锇压缩机(osmium_compressor)&f、大量机器和线缆的材料；&a锇块(block_osmium)&f用于堆放。"
+				""
+				"粉系：&adust_osmium/copper/tin/lead/uranium/iron/gold/lithium/sulfur&f 等都是各处理阶段的中间产物，JEI 查即可。"
+			]
+			id: "13710DD070FF3A99"
+			rewards: [{
+				id: "09A3D9EE62095798"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "Mek 的招牌金属"
+			tasks: [{
+				id: "19F9980BC8A93F14"
+				item: "mekanism:ingot_osmium"
+				type: "item"
+			}]
+			title: "锇矿与锇材料"
+			x: 3.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["13710DD070FF3A99"]
+			description: [
+				"&a富集仓(Enrichment Chamber)&f是矿物处理第一站：把原矿磨成&a2 份矿粉&f，比直接熔炼多一倍。"
+				""
+				"矿粉再进充能冶炼炉熔炼成锭，就是最简单的 2 倍增产线。"
+				""
+				"它还能富集副产物：&aenriched_iron/gold/diamond/redstone/coal/tin/refined_obsidian/carbon&f 等，是合成高级材料的关键。"
+				""
+				"给它塞 4 个&aupgrade_speed&f，产能立刻翻倍。"
+			]
+			id: "6CE3AF4186481916"
+			rewards: [{
+				id: "214BE0C49128D3AF"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "1 原矿 → 2 矿粉"
+			tasks: [{
+				id: "07692C8C011FE6EE"
+				item: "mekanism:enrichment_chamber"
+				type: "item"
+			}]
+			title: "富集仓：第一次矿物翻倍"
+			x: 4.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["6CE3AF4186481916"]
+			description: [
+				"&a充能冶炼炉(Energized Smelter)&f用电熔炼，速度远超原版熔炉，是矿粉→锭的关键一环。"
+				""
+				"它直接熔炼原矿只有 1 倍产出——正确流程永远是「先富集/净化，再冶炼」。"
+				""
+				"进阶：也能熔沙子→玻璃、熔特殊材料；接漏斗可全自动。"
+			]
+			id: "019EEB620092E46B"
+			rewards: [{
+				id: "0C1D161D908B8484"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "电动熔炉"
+			tasks: [{
+				id: "1CC179423D87A5C3"
+				item: "mekanism:energized_smelter"
+				type: "item"
+			}]
+			title: "充能冶炼炉"
+			x: 6.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["019EEB620092E46B"]
+			description: [
+				"最小 2 倍产线：&a富集仓&f（入原矿→出 2 粉）→ &a充能冶炼炉&f（粉→锭）。"
+				""
+				"布局：机器并排摆好，富集仓出料口用&a物流传输器&f接冶炼炉进料口；冶炼炉出料接箱子。"
+				""
+				"供电：发电机→能量线缆→机器；建议中间挂一个能量电池缓冲。"
+				""
+				"产量预期：一台富集仓+4 速度升级，约每秒处理数个原矿；先跑铜线/铁线，再扩到金银。"
+			]
+			icon: "mekanism:basic_enriching_factory"
+			id: "3381752D20D3AC53"
+			rewards: [{
+				id: "6AF1C1014E6FFC61"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "原矿→粉→锭 全自动"
+			tasks: [{
+				id: "13D3375A549F8464"
+				title: "跑通你的第一条 2 倍产线"
+				type: "checkmark"
+			}]
+			title: "跑通你的第一条 2 倍产线"
+			x: 7.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["6CE3AF4186481916"]
+			description: [
+				"&a粉碎机(Crusher)&f把方块/物品打成粉：圆石→沙砾→沙，骨头→骨粉，也把矿二次加工。"
+				""
+				"它是「石头→沙子」自动产线核心，配合刷石机源源不断产沙（建筑、工业先锋塑料都缺沙）。"
+				""
+				"与富集仓互补：煤、青金石这类不能直接熔的原料，先粉碎再用更划算。"
+			]
+			id: "350B6A250E975960"
+			rewards: [{
+				id: "61644D6D1EE2FE63"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "石头→沙，副产物处理"
+			tasks: [{
+				id: "1BA33CE696960147"
+				item: "mekanism:crusher"
+				type: "item"
+			}]
+			title: "粉碎机"
+			x: 6.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["6CE3AF4186481916"]
+			description: [
+				"&a锇压缩机(Osminum Compressor)&f把物品压在锇锭上合成：如圆石→燧石、各种粉→富集材料、合金成型。"
+				""
+				"它是「把 X 压一压」类配方的专用机器，很多高级零件要靠它做。"
+				""
+				"工厂版：basic/advanced/elite/ultimate_compressing_factory 并行处理。"
+			]
+			id: "502F3CD80D01E435"
+			rewards: [{
+				id: "21303BC981BE8DFE"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "固+固 压缩合成"
+			tasks: [{
+				id: "6EF72A10E6F6A356"
+				item: "mekanism:osmium_compressor"
+				type: "item"
+			}]
+			title: "锇压缩机"
+			x: 6.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["019EEB620092E46B"]
+			description: [
+				"&a电解分离机(Electrolytic Separator)&f用电把水分解成&a氢气&f和&a氧气&f，是气体工业起点。"
+				""
+				"气体用&a压力管道(pressurized_tube)&f传输、&a化学罐(chemical_tank)&f存储（均四级）。"
+				""
+				"用途：氧气→净化仓(3x)；氢气→化学注入仓(4x)+燃气发电机。水从机械管道接水池自动抽。"
+			]
+			id: "1CC05A5CBDE08549"
+			rewards: [{
+				id: "6B6FD191B54554F8"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "氢气与氧气的起点"
+			tasks: [{
+				id: "69EC2D095D443287"
+				item: "mekanism:electrolytic_separator"
+				type: "item"
+			}]
+			title: "电解分离机：水变气"
+			x: 7.5d
+			y: 6.0d
+		}
+		{
+			dependencies: ["1CC05A5CBDE08549"]
+			description: [
+				"&a压力管道(Pressurized Tube)&f传输气体，basic→advanced→elite→ultimate 四级，可缓存少量气体、缓冲波动。"
+				""
+				"&a化学罐(Chemical Tank)&f存气体，同分级（另有 creative）。"
+				""
+				"配套：&a机械管道(mechanical_pipe)&f传流体、&a热力学导管(thermodynamic_conductor)&f传热、&a流体罐(fluid_tank)&f存流体。"
+			]
+			id: "6E0C7844305E2000"
+			rewards: [{
+				id: "13BA1BAD120E43E8"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "气体的血管与仓库"
+			tasks: [{
+				id: "290ECE0CF335C017"
+				item: "mekanism:basic_pressurized_tube"
+				type: "item"
+			}]
+			title: "压力管道与化学罐"
+			x: 9.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["6E0C7844305E2000"]
+			description: [
+				"&a净化仓(Purification Chamber)&f处理原矿时注入氧气，产出&a碎块(clump_*)&f，熔炼后得&a3 锭&f。"
+				""
+				"它同时耗电和氧气：把电解分离机的氧气用压力管道接进来。"
+				""
+				"中间产物 clump_copper/gold/iron/lead/osmium/tin/uranium，直接进充能冶炼炉。"
+			]
+			id: "6A7BC5AA3922A4B5"
+			rewards: [{
+				id: "4327C544E69ECB78"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "原矿+氧气→碎块"
+			tasks: [{
+				id: "25FB787A7228FB1C"
+				item: "mekanism:purification_chamber"
+				type: "item"
+			}]
+			title: "净化仓：3 倍产出"
+			x: 10.5d
+			y: 6.0d
+		}
+		{
+			dependencies: ["6A7BC5AA3922A4B5"]
+			description: [
+				"&a化学注入仓(Chemical Injection Chamber)&f给碎块注入氢气，产出&a碎片(shard_*)&f，熔炼后得&a4 锭&f。"
+				""
+				"需要氢气供应，同样用压力管道接入；电解水→氧/氢→净化/注入可串成一条线。"
+			]
+			id: "31BD93CD26F1964E"
+			rewards: [{
+				id: "167EA72A7E5C9480"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "碎块+氢气→碎片"
+			tasks: [{
+				id: "2AF3093CE5200353"
+				item: "mekanism:chemical_injection_chamber"
+				type: "item"
+			}]
+			title: "化学注入仓：4 倍产出"
+			x: 12.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["31BD93CD26F1964E"]
+			description: [
+				"4 倍产线：&a电解分离机(水→H₂/O₂)&f → &a净化仓(原矿+O₂→clump)&f → &a化学注入仓(clump+H₂→shard)&f → &a充能冶炼炉(shard→锭)&f。"
+				""
+				"布局：电解分离机放中间，压力管道分两路——氧气去净化仓、氢气去注入仓；矿用物流传输器串三级。"
+				""
+				"产能建议：一台电解机可同时供多台净化/注入仓，别 1:1 死板配对。"
+			]
+			icon: "mekanism:chemical_injection_chamber"
+			id: "5A491FBB45FB5C57"
+			rewards: [{
+				id: "3917B0D3B90D9A59"
+				type: "xp"
+				xp: 20
+			}]
+			subtitle: "电解水闭环"
+			tasks: [{
+				id: "3DF3A412B1A30B15"
+				title: "跑通 4 倍产线"
+				type: "checkmark"
+			}]
+			title: "跑通 4 倍产线"
+			x: 13.5d
+			y: 6.0d
+		}
+		{
+			dependencies: ["5A491FBB45FB5C57"]
+			description: [
+				"&a化学溶解仓(Chemical Dissolution Chamber)&f把原矿+硫酸溶成&a泥浆(slurry)&f，是 5 倍产线起点。"
+				""
+				"输入：原矿 + 硫酸(从机械管道进)；输出：泥浆(从压力管道出)。"
+				""
+				"5 倍线三段：溶解仓→清洗机→结晶器，见任务18-19。"
+			]
+			id: "18E6D1CD2A3B2A77"
+			rewards: [{
+				id: "7B3D992F0AF61DC6"
+				type: "xp"
+				xp: 20
+			}]
+			subtitle: "原矿+硫酸→泥浆"
+			tasks: [{
+				id: "4B3142FA6AD26A0B"
+				item: "mekanism:chemical_dissolution_chamber"
+				type: "item"
+			}]
+			title: "化学溶解仓：5 倍第一步"
+			x: 15.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["18E6D1CD2A3B2A77"]
+			description: [
+				"&a化学氧化机(Chemical Oxidizer)&f把固体转成气体：硫粉(dust_sulfur)→二氧化硫(sulfur_dioxide)，红石→红石气等。"
+				""
+				"硫酸链：硫粉→SO₂→SO₃→硫酸(sulfuric_acid)，是 5 倍产线和裂变的关键原料。"
+			]
+			id: "0BD7597718279961"
+			rewards: [{
+				id: "12EFEB5FD0701F4D"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "硫→二氧化硫"
+			tasks: [{
+				id: "4DF099D648847F3D"
+				item: "mekanism:chemical_oxidizer"
+				type: "item"
+			}]
+			title: "化学氧化机：把固体变成气体"
+			x: 16.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["0BD7597718279961"]
+			description: [
+				"&a化学灌注机(Chemical Infuser)&f把两种气体合成新气体：SO₂+O₂→SO₃，再吸收成硫酸；也做氯化氢、氢气等。"
+				""
+				"它和氧化机、溶解仓一起构成「硫酸自产线」。"
+			]
+			id: "001E5F52495E101A"
+			rewards: [{
+				id: "29A69062CD31E393"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "气体×气体=新气体"
+			tasks: [{
+				id: "453BFC34622714C6"
+				item: "mekanism:chemical_infuser"
+				type: "item"
+			}]
+			title: "化学灌注机：两种气体合成"
+			x: 18.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["18E6D1CD2A3B2A77"]
+			description: [
+				"&a化学清洗机(Chemical Washer)&f把溶解仓的泥浆加水洗成&a洁净泥浆(clean slurry)&f，去掉杂质。"
+				""
+				"输入：泥浆(压力管道) + 水(机械管道)；输出：洁净泥浆。"
+			]
+			id: "124F57059F9A3FA5"
+			rewards: [{
+				id: "5BC40678172A22C4"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "泥浆+水→洁净泥浆"
+			tasks: [{
+				id: "2A6A253DF53E539C"
+				item: "mekanism:chemical_washer"
+				type: "item"
+			}]
+			title: "化学清洗机"
+			x: 16.5d
+			y: 6.0d
+		}
+		{
+			dependencies: ["124F57059F9A3FA5"]
+			description: [
+				"&a化学结晶机(Chemical Crystallizer)&f把洁净泥浆结晶成&a结晶(crystal_*)&f，熔炼即得&a5 锭&f。"
+				""
+				"中间产物 crystal_copper/gold/iron/lead/osmium/tin/uranium。"
+			]
+			id: "25AF81220805E5E8"
+			rewards: [{
+				id: "158A528D189E197A"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "洁净泥浆→结晶"
+			tasks: [{
+				id: "21E9420A275E7449"
+				item: "mekanism:chemical_crystallizer"
+				type: "item"
+			}]
+			title: "化学结晶机"
+			x: 18.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["25AF81220805E5E8"]
+			description: [
+				"完整 5 倍线：&a溶解仓(原矿+硫酸→泥浆)&f → &a清洗机(+水→洁净泥浆)&f → &a结晶器(→结晶)&f → &a冶炼炉(→5 锭)&f。"
+				""
+				"旁支：&a氧化机+灌注机&f自产硫酸；&a压力反应室(pressurized_reaction_chamber)&f可做氢+煤+水→气体燃料等组合反应。"
+				""
+				"建议：先用 4 倍线过渡，攒够材料再上 5 倍；5 倍线耗电大，先保证供电。"
+			]
+			icon: "mekanism:chemical_crystallizer"
+			id: "213B217F730060F3"
+			rewards: [{
+				id: "7B95C9074EDFD3F2"
+				type: "xp"
+				xp: 30
+			}]
+			subtitle: "终极矿物处理"
+			tasks: [{
+				id: "691DE56EBC15D49D"
+				title: "跑通 5 倍产线"
+				type: "checkmark"
+			}]
+			title: "跑通 5 倍产线"
+			x: 19.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["5A491FBB45FB5C57"]
+			description: [
+				"&a组合仓(Combiner)&f把两份材料合成一块：如黑曜石+其它→强化黑曜、把粉/碎片重新组合成锭/块。"
+				""
+				"工厂版：basic/advanced/elite/ultimate_combining_factory。"
+			]
+			id: "149F170570D6F2EC"
+			rewards: [{
+				id: "6058A2BD48B1CA7A"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "碎片合锭/产物合并"
+			tasks: [{
+				id: "635E089228C5B5AC"
+				item: "mekanism:combiner"
+				type: "item"
+			}]
+			title: "组合仓"
+			x: 15.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["6E0C7844305E2000"]
+			description: [
+				"&a旋转冷凝机(Rotary Condensentrator)&f把气体冷凝成液体，也能把液体蒸发回气体。"
+				""
+				"好处：液态气体可用&a流体罐+机械管道&f大容量储运，比气态高效得多。"
+				""
+				"标准做法：氢气液化存起来，需要时转回气态发电/注塑；硫酸、泥浆转运同理。"
+			]
+			id: "71F38BB0B1100381"
+			rewards: [{
+				id: "495134919B1B1C9F"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "气变液，大容量储运"
+			tasks: [{
+				id: "067A6BBA87908F19"
+				item: "mekanism:rotary_condensentrator"
+				type: "item"
+			}]
+			title: "旋转冷凝机：气液互转"
+			x: 10.5d
+			y: 7.5d
+		}
+		{
+			dependencies: ["3381752D20D3AC53"]
+			description: [
+				"&a工厂(Factory)&f是单机版机器的并行版：基础富集工厂一次&a3 槽&f、高级 5 槽、精英 7 槽、终极 9 槽。"
+				""
+				"富集、冶炼、粉碎、压缩、净化、注入、组合、锯木都有对应工厂（basic/advanced/elite/ultimate_*_factory）。"
+				""
+				"4 倍产线+工厂版机器 = 中期矿物处理天花板；用配置卡批量设相同输入输出面。"
+			]
+			id: "387379D5F06FFB0A"
+			rewards: [{
+				id: "21021B95A971A089"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "并行机器"
+			tasks: [{
+				id: "12B90D0409286505"
+				item: "mekanism:basic_enriching_factory"
+				type: "item"
+			}]
+			title: "富集工厂：一台顶多台"
+			x: 9.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["387379D5F06FFB0A"]
+			description: [
+				"通用机械工厂矩阵（每类都有 basic/advanced/elite/ultimate 四档）："
+				""
+				"· &aenriching_factory&f 富集（矿→2 粉）；&asmelting_factory&f 冶炼（粉→锭）；"
+				""
+				"· &acrushing_factory&f 粉碎；&acompacting_factory&f 锇压缩；&apurifying_factory&f 净化(3x)；"
+				""
+				"· &ainjecting_factory&f 注入(4x)；&ainfusing_factory&f 冶金灌注；&acombining_factory&f 组合；&asawing_factory&f 精密锯木。"
+				""
+				"升级工厂用&atier_installer(basic/advanced/elite/ultimate)&f直接给机器升档，不浪费。"
+			]
+			icon: "mekanism:ultimate_enriching_factory"
+			id: "41C0EB3ED306FEFE"
+			rewards: [{
+				id: "33DD5A624C05C571"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "九类工厂一览"
+			tasks: [{
+				id: "290F067D9ED0D44D"
+				title: "工厂大全"
+				type: "checkmark"
+			}]
+			title: "工厂大全"
+			x: 10.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["7C9901B56D5867D6"]
+			description: [
+				"&a物流传输器(Logistical Transporter)&f是 Mek 的物品管道，basic→advanced→elite→ultimate 四级，速度递增。"
+				""
+				"可直接对接箱子和机器：机器输出端自动把产物送进管道。"
+				""
+				"变体：&adiversion_transporter(分流)&f、&arestrictive_transporter(限流)&f用于复杂物流。"
+			]
+			id: "2F2B317C4FA425E3"
+			rewards: [{
+				id: "22A9BDB759D1BC42"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "自动搬运矿粉与锭"
+			tasks: [{
+				id: "41D8EBDE4604A85F"
+				item: "mekanism:basic_logistical_transporter"
+				type: "item"
+			}]
+			title: "物流传输器：物品管道"
+			x: 3.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["2F2B317C4FA425E3"]
+			description: [
+				"&a机械管道(Mechanical Pipe)&f传流体（水、岩浆、液态燃料等），四级。"
+				""
+				"配套：&afluidic_plenisher(流体补给机)&f把管道接成「流体源墙」自动填满一片区域（如给反应堆供水）；&aelectric_pump(电动泵)&f抽水。"
+			]
+			id: "31EB93806C571621"
+			rewards: [{
+				id: "49D938A9127018FB"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "水、岩浆、液态气体"
+			tasks: [{
+				id: "0B33CC337E373F18"
+				item: "mekanism:basic_mechanical_pipe"
+				type: "item"
+			}]
+			title: "机械管道：流体"
+			x: 4.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["2F2B317C4FA425E3"]
+			description: [
+				"&a热力学导管(Thermodynamic Conductor)&f传输&a热量&f（不是 FE），用于把热力锅炉的热量送到汽轮机/其它散热需求。"
+				""
+				"四级；它是「蒸汽/热力」多方块产线的关键血管。"
+			]
+			id: "7F341E15B035BAED"
+			rewards: [{
+				id: "52BCF7CEC9165ABC"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "热量的管道"
+			tasks: [{
+				id: "2A924F94A1AF3CC7"
+				item: "mekanism:basic_thermodynamic_conductor"
+				type: "item"
+			}]
+			title: "热力学导管：传热"
+			x: 4.5d
+			y: 6.0d
+		}
+		{
+			dependencies: ["2F2B317C4FA425E3"]
+			description: [
+				"&a物流分类机(Logistical Sorter)&f贴在机器/箱子上，按设定物品列表自动拉取/推送，实现分类运输。"
+				""
+				"场景：一条矿粉线把铁/金/铜粉分别送进三台冶炼炉；或把产物按类分箱。"
+				""
+				"右键 GUI 添加过滤，支持白/黑名单；配合&a词典(dictionary)&f把不同模组等价物品统一映射。"
+			]
+			id: "01FB9181668AFC3B"
+			rewards: [{
+				id: "09F013A7C3F861A3"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "智能分类漏斗"
+			tasks: [{
+				id: "0DA10C38031E66BA"
+				item: "mekanism:logistical_sorter"
+				type: "item"
+			}]
+			title: "物流分类机"
+			x: 4.5d
+			y: 7.5d
+		}
+		{
+			dependencies: ["2F2B317C4FA425E3"]
+			description: [
+				"&a公式装配机(Formulaic Assemblicator)&f是 Mek 的自动合成台：放一个成品当「配方样板」（crafting_formula），旁边接物品输入输出，按样板反复合成。"
+				""
+				"能读旁边箱子库存，缺料自动暂停；是 AE2/RS 自动合成之外的轻量替代。"
+				""
+				"多台+分类机可组成小型「零件车间」批量造机器。"
+			]
+			id: "25C1876F3F936E52"
+			rewards: [{
+				id: "2BF4E9994015D14A"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "不需要逻辑的合成台"
+			tasks: [{
+				id: "7E28A2783B5B1531"
+				item: "mekanism:formulaic_assemblicator"
+				type: "item"
+			}]
+			title: "公式装配机：自动合成"
+			x: 4.5d
+			y: 10.5d
+		}
+		{
+			dependencies: ["2F2B317C4FA425E3"]
+			description: [
+				"&a配置器(Configurator)&f右键机器/管道调整连接面与模式；&a配置卡(configuration_card)&f复制一台机器的全部配置到另一台。"
+				""
+				"相关：&aoredictionificator(矿物词典)&f把不同模组等价物品互相转换；&anetwork_reader(网络读取器)&f排查物流。"
+			]
+			id: "7C3836DACF39D8AE"
+			rewards: [{
+				id: "2100442FE0077320"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "批量部署神器"
+			tasks: [{
+				id: "780EA52DE6A7B02E"
+				item: "mekanism:configurator"
+				type: "item"
+			}]
+			title: "配置器与配置卡"
+			x: 4.5d
+			y: 9.0d
+		}
+		{
+			dependencies: ["7C3836DACF39D8AE"]
+			description: [
+				"&a量子纠缠器(Quantum Entangloporter)&f两台配对后，跨距离/跨维度同步传输&a物品、流体、气体、能量&f——等于把两台接口「叠」在一起。"
+				""
+				"用法：两端各放一台，用配置卡/绑定配对，一端输入什么，另一端就吐出什么。"
+				""
+				"用途：把下界岩浆、末地资源远程运回主世界基地，不用拉超长管道。"
+			]
+			id: "4B8F91ACC26C154D"
+			rewards: [{
+				id: "418EA383B97ECB48"
+				type: "xp"
+				xp: 20
+			}]
+			subtitle: "不拉线的物品/流体/气体/能量桥"
+			tasks: [{
+				id: "02B02BA473DE3640"
+				item: "mekanism:quantum_entangloporter"
+				type: "item"
+			}]
+			title: "量子纠缠器：跨维度传输"
+			x: 6.0d
+			y: 7.5d
+		}
+		{
+			dependencies: ["7C9901B56D5867D6"]
+			description: [
+				"&a数字采矿机(Digital Miner)&f在设定范围内扫描并挖掘指定方块，产物存自身缓存或通过物品管道输出。"
+				""
+				"用法：放置后打开 GUI 设范围（半径/高度）和过滤（只挖铁矿/远古残骸/钻石）。"
+				""
+				"进阶：在下界挖远古残骸效率极高；接能量+物品管道即全自动。别让它挖基岩。"
+				""
+				"辅助：&aseismic_reader/vibrator(地震仪)&f先探测区块矿物分布，再让矿机精准挖。"
+			]
+			id: "39D970C932B21AB9"
+			rewards: [{
+				id: "2E4C53EABF6DA6A0"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "自动挖矿不碰镐"
+			tasks: [{
+				id: "1795B1A95E90E0C7"
+				item: "mekanism:digital_miner"
+				type: "item"
+			}]
+			title: "数字采矿机"
+			x: 3.0d
+			y: 7.5d
+		}
+		{
+			dependencies: ["39D970C932B21AB9"]
+			description: [
+				"&aQIO&f是数字物品存储：&aQIO 仪表盘(qio_dashboard)&f=访问界面；&aQIO 驱动阵列(qio_drive_array)&f=插 QIO 驱动器扩容；&aqio_drive_base/hyper_dense/supermassive/time_dilating&f 是各级驱动器。"
+				""
+				"&aportable_qio_dashboard(便携面板)&f可随身访问整个 QIO 仓库。"
+				""
+				"对比：QIO 强在海量库存，AE2 强在网络+自动合成，两者可共存。"
+			]
+			id: "603AC3BE2FDD3749"
+			rewards: [{
+				id: "5613E03B442C3CD6"
+				type: "xp"
+				xp: 20
+			}]
+			subtitle: "随身仓库"
+			tasks: [{
+				id: "6848DAB93C444F3E"
+				item: "mekanism:qio_dashboard"
+				type: "item"
+			}]
+			title: "QIO：数字物品存储"
+			x: 4.5d
+			y: 12.0d
+		}
+		{
+			dependencies: ["603AC3BE2FDD3749"]
+			description: [
+				"&aqio_importer(导入器)&f放在箱子旁自动收料进 QIO；&aqio_exporter(导出器)&f按过滤自动从 QIO 取货给机器。"
+				""
+				"&aqio_redstone_adapter(红石适配器)&f让 QIO 响应红石信号，做「库存满了停机」之类逻辑。"
+				""
+				"这是「无管道自动化工坊」的基础：机器要料就从导出器拿，产物丢导入器。"
+			]
+			id: "3097A3A4658BC47D"
+			rewards: [{
+				id: "06A5676BC7D38604"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "无管道自动化"
+			tasks: [{
+				id: "4220D2EA2C6BFC45"
+				item: "mekanism:qio_importer"
+				type: "item"
+			}]
+			title: "QIO 导入导出与红石"
+			x: 6.0d
+			y: 10.5d
+		}
+		{
+			dependencies: ["603AC3BE2FDD3749"]
+			description: [
+				"&a感应矩阵(Induction Matrix)&f多方块巨型电池：用&a感应外壳(induction_casing)&f围成密闭空间，至少一个&a感应端口(induction_port)&f接电。"
+				""
+				"结构：内部可空出任意大腔体，外壳必须完整封闭；端口负责进/出 FE。"
+				""
+				"内部放&a感应电池单元(induction_cell)&f加容量、&a感应供应单元(induction_provider)&f加吞吐，各 basic→advanced→elite→ultimate 四级。"
+			]
+			id: "7A7C6184A46EF0F5"
+			rewards: [{
+				id: "44B27042034CB97B"
+				type: "xp"
+				xp: 20
+			}]
+			subtitle: "多方块巨型电池"
+			tasks: [{
+				id: "5C54F7F9B89E2A33"
+				item: "mekanism:induction_casing"
+				type: "item"
+			}]
+			title: "感应矩阵：基地级储能"
+			x: 6.0d
+			y: 9.0d
+		}
+		{
+			dependencies: ["7A7C6184A46EF0F5"]
+			description: [
+				"&abasic/advanced/elite/ultimate_induction_cell(电池单元)&f决定总容量；&a..._induction_provider(供应单元)&f决定最大输入/输出速率。"
+				""
+				"公式：总容量=Σ(电池单元×等级倍率)，总吞吐=Σ(供应单元×等级倍率)，可无限堆叠扩展。"
+				""
+				"接通量网络插头后即全基地电力蓄水池：发电多充、发电少放。"
+			]
+			id: "679A79799C91A7A7"
+			rewards: [{
+				id: "4D4E16D3B3C5B2D3"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "容量与吞吐"
+			tasks: [{
+				id: "76DE64BE9EDF1F6B"
+				item: "mekanism:basic_induction_cell"
+				type: "item"
+			}]
+			title: "感应单元与供应单元"
+			x: 7.5d
+			y: 7.5d
+		}
+		{
+			dependencies: ["679A79799C91A7A7"]
+			description: [
+				"&a热力锅炉(Thermoelectric Boiler)&f多方块：用&aboiler_casing(锅炉外壳)&f围成腔体，至少一个&aboiler_valve(锅炉阀)&f进出水/蒸汽。"
+				""
+				"内部放&asuperheating_element(过热元件)&f提升温度；用&a热力学导管&f或燃料/热量输入加热。"
+				""
+				"作用：把水烧成&a蒸汽(steam)&f，喂给工业汽轮机发电——是裂变/聚变后的大型蒸汽电源基础。"
+			]
+			id: "5B5702B157BBD18C"
+			rewards: [{
+				id: "6289E5CB53A89347"
+				type: "xp"
+				xp: 20
+			}]
+			subtitle: "多方块蒸汽源"
+			tasks: [{
+				id: "2347D1162B307637"
+				item: "mekanism:boiler_casing"
+				type: "item"
+			}]
+			title: "热力锅炉：把水烧成蒸汽"
+			x: 9.0d
+			y: 7.5d
+		}
+		{
+			dependencies: ["5B5702B157BBD18C"]
+			description: [
+				"&a工业汽轮机(Industrial Turbine)&f多方块：用&aturbine_casing(轮机外壳)&f围成腔体，放&aturbine_rotor(转子)+&aturbine_blade(叶片)&f。"
+				""
+				"关键件：&arotational_complex(旋转总成)&f、&aelectromagnetic_coil(电磁线圈)&f、&aturbine_valve(蒸汽阀)&f进蒸汽、&aturbine_vent(排气)&f排汽、&asaturating_condenser(饱和冷凝器)&f把蒸汽回水循环。"
+				""
+				"蒸汽来自热力锅炉；叶片越多、腔体越大，发电越多。"
+			]
+			id: "4B007F0B7C806EFC"
+			rewards: [{
+				id: "6CF7685611549380"
+				type: "xp"
+				xp: 20
+			}]
+			subtitle: "多方块蒸汽轮机"
+			tasks: [{
+				id: "16D9CACBB877B4CE"
+				item: "mekanismgenerators:turbine_casing"
+				type: "item"
+			}]
+			title: "工业汽轮机：蒸汽发电"
+			x: 10.5d
+			y: 9.0d
+		}
+		{
+			dependencies: ["4B007F0B7C806EFC"]
+			description: [
+				"&a太阳能蒸发器(Solar Evaporation Plant)&f多方块：用&athermal_evaporation_block(蒸发块)&f围成矮池，放&athermal_evaporation_controller(控制器)&f和&athermal_evaporation_valve(阀)&f。"
+				""
+				"原理：把&a盐水(brine)&f抽进池，靠阳光/热量蒸发，逐步产出&a盐(salt)&f→&a溴(brine→lithium 等)&f。"
+				""
+				"它是锂(heavy_water/lithium)、氟石等后期材料的来源，结构通常 9×9 起步。"
+			]
+			id: "5E5F6311EA7FB054"
+			rewards: [{
+				id: "5E33EB3627E71E55"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "多方块蒸发产线"
+			tasks: [{
+				id: "3001672F1CA288BE"
+				item: "mekanism:thermal_evaporation_controller"
+				type: "item"
+			}]
+			title: "太阳能蒸发器：制盐与溴"
+			x: 12.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["5E5F6311EA7FB054"]
+			description: [
+				"&a裂变反应堆(Fission Reactor)&f多方块：用&afission_reactor_casing(外壳)&f围成腔体，放&afission_reactor_port(端口)&f进出燃料/冷却，&afission_fuel_assembly(燃料组件)&f装燃料，&acontrol_rod_assembly(控制棒)&f调节功率。"
+				""
+				"冷却：靠&a重水/水(heavy water)&f或钠(sodium)回路把热量带走，去锅炉产蒸汽→汽轮机发电。"
+				""
+				"安全：温度过高会熔融泄漏，务必接好冷却与&afission_reactor_logic_adapter(逻辑适配器)&f做停机保护；带&ahazmat(防化服)&f靠近，用&ageiger_counter(盖革计数器)&f测辐射。"
+			]
+			id: "2A5EE462530FB9F9"
+			rewards: [{
+				id: "23C6DDC6FFCF5064"
+				type: "xp"
+				xp: 30
+			}]
+			subtitle: "多方块大型核能"
+			tasks: [{
+				id: "33D555C64AD8DF22"
+				item: "mekanismgenerators:fission_reactor_casing"
+				type: "item"
+			}]
+			title: "裂变反应堆"
+			x: 13.5d
+			y: 7.5d
+		}
+		{
+			dependencies: ["2A5EE462530FB9F9"]
+			description: [
+				"&a聚变反应堆(Fusion Reactor)&f多方块：用&afusion_reactor_frame(框架)&f围成大型腔体，&afusion_reactor_controller(控制器)&f点火，&afusion_reactor_port(端口)&f进出氘/氚燃料，&afusion_reactor_logic_adapter&f控逻辑。"
+				""
+				"燃料：氘(deuterium)+氚(tritium)，由重水/锂经&aisotopic_centrifuge(同位素离心机)&f分离得到。"
+				""
+				"点火需先用&alaser(激光)+&alaser_focus_matrix(激光聚焦矩阵)&f加热到临界，之后持续产出巨量能量与等离子体。"
+			]
+			id: "1EB9655C885F072A"
+			rewards: [{
+				id: "2996F3F4AFB1ECD5"
+				type: "xp"
+				xp: 40
+			}]
+			subtitle: "终极能源"
+			tasks: [{
+				id: "311B6E3873D1F035"
+				item: "mekanismgenerators:fusion_reactor_controller"
+				type: "item"
+			}]
+			title: "聚变反应堆"
+			x: 15.0d
+			y: 7.5d
+		}
+		{
+			dependencies: ["1EB9655C885F072A"]
+			description: [
+				"&aSPS(反质子核合成器 Antiprotonic Nucleosynthesizer)&f多方块：用&asps_casing(外壳)&f围成腔体，&asps_port(端口)&f进出材料。"
+				""
+				"功能：把反物质/钋/钚等终极材料在强磁场中合成&apallet_antimatter(反物质 pellet)&f等，供 Meka 终极部件与&asolar_neutron_activator(太阳能中子活化器)&f使用。"
+				""
+				"耗电巨大，务必先有聚变/感应矩阵兜底。"
+			]
+			id: "7F649EEC5656D29B"
+			rewards: [{
+				id: "5A190CF30A49E981"
+				type: "xp"
+				xp: 30
+			}]
+			subtitle: "终极材料工厂"
+			tasks: [{
+				id: "7AF95B7F045A0BFB"
+				item: "mekanism:sps_casing"
+				type: "item"
+			}]
+			title: "SPS：反质子合成"
+			x: 16.5d
+			y: 7.5d
+		}
+		{
+			dependencies: ["5074F3EE33743230"]
+			description: [
+				"&a原子分解器(Atomic Disassembler)&f是电动多功能工具：挖矿、攻击、加速模式，充满电后比铁镐还耐用。"
+				""
+				"它是通用机械入门随身工具；后期升级为&ameka_tool(全能工具)&f（可装模块）。"
+			]
+			id: "723A7676993DB321"
+			rewards: [{
+				id: "5D5D70CDB90B80E7"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "电动多功能镐"
+			tasks: [{
+				id: "25BE6378216F5837"
+				item: "mekanism:atomic_disassembler"
+				type: "item"
+			}]
+			title: "原子分解器"
+			x: 4.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["723A7676993DB321"]
+			description: [
+				"&a自由跑者(Free Runners)&f：穿脚上自动缓冲跌落、走路不摔伤（另有&afree_runners_armored&f装甲版）。"
+				""
+				"&a喷气背包(Jetpack)&f：背在身上飞（另有&ajetpack_armored&f装甲版），耗电驱动。"
+				""
+				"其它随身：&aelectric_bow(电动弓)、&aflamethrower(喷火器)、&alaser(激光枪)+&alaser_amplifier(放大)+&alaser_tractor_beam(牵引光束)&f。"
+			]
+			id: "5AC83800F1377D31"
+			rewards: [{
+				id: "20D3086ED9B0407F"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "移动能力"
+			tasks: [{
+				id: "7A6D7B0692C1A7CC"
+				item: "mekanism:free_runners"
+				type: "item"
+			}]
+			title: "自由跑者与喷气背包"
+			x: 6.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["5AC83800F1377D31"]
+			description: [
+				"&a传送器(Teleporter)&f放置后开 GUI 添加坐标（需&ateleportation_core 传送核心&f），站上去即可跨距传送；&aportable_teleporter(便携传送)&f随身用。"
+				""
+				"配套：&ateleporter_frame(传送框)&f搭结构；&adimensional_stabilizer(维度稳定器)&f保证跨维度稳定。"
+			]
+			id: "654F27093F3CB8FF"
+			rewards: [{
+				id: "61424DEE45222A0C"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "跨距离传送"
+			tasks: [{
+				id: "3659E19B2627124E"
+				item: "mekanism:teleporter"
+				type: "item"
+			}]
+			title: "传送器"
+			x: 7.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["654F27093F3CB8FF"]
+			description: [
+				"&a模块化装备台(Modification Station)&f是给 Meka 工具/护甲安装、升级模块的工作台。"
+				""
+				"所有模块以&amodule_base(模块底座)&f为基础合成，塞进对应槽位即生效；充能用能量立方或无线充电。"
+			]
+			id: "509C95AA47FDA3AC"
+			rewards: [{
+				id: "52BB10A07437BD0E"
+				type: "xp"
+				xp: 20
+			}]
+			subtitle: "组装与升级 Meka"
+			tasks: [{
+				id: "4764B5F7DAA4C78F"
+				item: "mekanism:modification_station"
+				type: "item"
+			}]
+			title: "模块化装备台"
+			x: 9.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["509C95AA47FDA3AC"]
+			description: [
+				"&aMeka 工具(meka_tool)&f是终极全能工具（镐/斧/铲/剑一身）；&aMeka 护甲(mekasuit_helmet/bodyarmor/pants/boots)&f是终极套装。"
+				""
+				"它们通过模块台安装大量模块（见下条），可定制成你想要的任何形态。"
+			]
+			id: "1D629C139CCA46BB"
+			rewards: [{
+				id: "343194F984B97229"
+				type: "xp"
+				xp: 25
+			}]
+			subtitle: "终极装备"
+			tasks: [{
+				id: "237B9A4654C4FC11"
+				item: "mekanism:meka_tool"
+				type: "item"
+			}]
+			title: "Meka 工具与 Meka 护甲"
+			x: 10.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["1D629C139CCA46BB"]
+			description: [
+				"常用模块（在模块台安装）："
+				""
+				"· &amodule_energy_unit(能量)&f供电；&amodule_jetpack_unit(喷气)&f/&ahydraulic_propulsion(液压推进)&f飞；"
+				""
+				"· &amodule_elytra_unit(鞘翅)&f/&agravitational_modulating(重力)&f滑翔；&amodule_teleportation_unit(传送)&f；"
+				""
+				"· &amodule_electrolytic_breathing(电解呼吸)&f水下；&amodule_radiation_shielding(防辐射)&f；"
+				""
+				"· &amodule_vein_mining(矿脉)&f/&afortune(时运)/&asilk_touch(精准)/&aexcavation_escalation(范围升级)/&alocomotive_boosting(疾跑)&f；"
+				""
+				"· &amodule_attack_amplification(攻击)/&ablasting(爆破)/&a_farming/&a_shearing/&amagnetic_attraction(磁吸)&f；"
+				""
+				"· &amodule_vision_enhancement(夜视)/&afrost_walker(冰霜行者)/&anutritional_injection(自动喂食)/&alaser_dissipation(激光护盾)&f等。按需挑选。"
+			]
+			icon: "mekanism:module_energy_unit"
+			id: "1DBF9241ED7809E5"
+			rewards: [{
+				id: "08A8C424E7C67D2F"
+				type: "xp"
+				xp: 20
+			}]
+			subtitle: "装什么能力"
+			tasks: [{
+				id: "6026B23221821B9E"
+				title: "Meka 模块大全"
+				type: "checkmark"
+			}]
+			title: "Meka 模块大全"
+			x: 12.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["509C95AA47FDA3AC"]
+			description: [
+				"&aRobit&f（另有&arobit_allay&f版）：可爱跟随机器人，能拾取掉落物、当便携箱子、当移动工作台，右键领养。"
+				""
+				"随身储物：&apersonal_chest(个人箱)/&apersonal_barrel(个人桶)&f；&abin(basic/advanced/elite/ultimate/creative)&f是可扩容的堆叠方块箱。"
+				""
+				"其它小物：&acardboard_box(纸箱)可整体搬走方块结构；&acanteen(水壶)&f补水。"
+			]
+			id: "1B83BA9103C0DA54"
+			rewards: [{
+				id: "6BEF88E301344451"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "跟随机器人与随身箱"
+			tasks: [{
+				id: "31BEDABDB7D9D7D6"
+				item: "mekanism:robit"
+				type: "item"
+			}]
+			title: "Robit 与个人储物"
+			x: 10.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["2A5EE462530FB9F9"]
+			description: [
+				"&a防化服(hazmat_mask/gown/pants/boots)&f四件穿齐可免疫辐射；&ascuba_mask/scuba_tank&f是水下呼吸装。"
+				""
+				"&ageiger_counter(盖革计数器)&f与&adosimeter(剂量计)&f测周围辐射；靠近裂变反应堆/铀矿务必穿戴。"
+				""
+				"放射性废料(&aradioactive_waste_barrel)&f妥善处理，别乱扔。"
+			]
+			id: "3F07A9C1242B2F83"
+			rewards: [{
+				id: "55F7F19AFB5F5665"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "玩裂变的安全课"
+			tasks: [{
+				id: "60B56414E5F19508"
+				item: "mekanism:hazmat_mask"
+				type: "item"
+			}]
+			title: "辐射防护与盖革计数器"
+			x: 15.0d
+			y: 9.0d
+		}
+		{
+			dependencies: [
+				"213B217F730060F3"
+				"5E5F6311EA7FB054"
+			]
+			description: [
+				"本章终极目标：搭起一条&a全自动 5 倍矿物处理基地&f，并配好能源与存储。"
+				""
+				"最小清单：&a数字采矿机&f(供矿) → &a化学溶解仓+清洗机+结晶器&f(5x) → &a充能冶炼炉&f(出锭)；"
+				""
+				"气体自供：&a电解分离机/氧化机/灌注机&f产硫酸与氢氧；能源侧：&a感应矩阵&f储能 + &a通量网络&f无线送电；"
+				""
+				"物流侧：&a物流传输器+分类机&f分矿分锭，产物入&aQIO&f或 AE2。"
+				""
+				"产量预期：一条 5x 线满负荷下，每块原矿出 5 锭；配终极工厂后可达数十倍吞吐。到这一步，你已经掌握了 ATM9 的矿物处理核心。"
+			]
+			icon: "mekanism:ultimate_enriching_factory"
+			id: "147C90834BE10E01"
+			rewards: [{
+				id: "23062BCCF55D5FF9"
+				type: "xp"
+				xp: 60
+			}]
+			shape: "octagon"
+			size: 1.5d
+			subtitle: "本章综合实战"
+			tasks: [{
+				id: "561BB7AFE6893C11"
+				title: "5 倍矿物处理基地"
+				type: "checkmark"
+			}]
+			title: "5 倍矿物处理基地"
+			x: 21.0d
+			y: 4.5d
+		}
+	]
+	title: "通用机械"
+}

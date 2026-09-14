@@ -1,0 +1,1001 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "t08_storage"
+	group: "00C72C1FB6193A42"
+	icon: "functionalstorage:storage_controller"
+	id: "314E6C5A92A24339"
+	order_index: 8
+	progression_mode: "flexible"
+	quest_links: [ ]
+	quests: [
+		{
+			description: [
+				"本章教你把「一堆散落箱子」升级成「一套仓库」，三条路线："
+				""
+				"· &b功能存储（Functional Storage）&f：一槽一种物品、容量巨大的抽屉，适合大宗原料；"
+				""
+				"· &b精巧存储（Sophisticated Storage）&f：可装升级模块的智能箱子 / 背包，单箱多功能；"
+				""
+				"· &b精致存储（Refined Storage, RS）&f：数字网络 + 自动合成，点一下就能取货 / 下单合成；"
+				""
+				"本章路线：总览 → 抽屉线 → 智能箱线 → RS 线 → 三方对比与互联 → 事例 → 实战。"
+				""
+				"建议：前期抽屉 + 智能箱起步，中期上 RS 数字网络，三者可并存互联。"
+			]
+			icon: "minecraft:chest"
+			id: "2D464938CA84B1D6"
+			shape: "hexagon"
+			size: 1.5d
+			subtitle: "从箱子到数字仓库"
+			tasks: [{
+				id: "689C0BA8A14D35FE"
+				title: "存储思路总览"
+				type: "checkmark"
+			}]
+			title: "存储思路总览"
+			x: 0.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["2D464938CA84B1D6"]
+			description: [
+				"&a功能存储抽屉&f按木材分多种外观，规格有 &b1 槽（_1，1x1）&f、&b2 槽（_2，1x2）&f、&b4 槽（_4，2x2）&f。"
+				""
+				"每个槽只放一种物品，但容量巨大（基础几千，升级后百万级），GUI 上实时显示数量。"
+				""
+				"用法：漏斗 / 管道直接怼抽屉，比箱子更适合矿粉、锭、石头等大宗。"
+				""
+				"进阶：_1 槽适合单一大宗，_4 槽适合多种小宗，按需搭配。"
+			]
+			id: "46F0FD49863F503C"
+			rewards: [{
+				id: "7BAD5CDED0E379F8"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "一槽装十万个"
+			tasks: [{
+				id: "7EB15677CD918DA9"
+				item: "functionalstorage:oak_1"
+				type: "item"
+			}]
+			title: "功能存储：储物抽屉"
+			x: 1.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["46F0FD49863F503C"]
+			description: [
+				"&a压缩抽屉（Compacting Drawer / Simple Compacting Drawer）&f自动把 9 个物品压成块（粉→块、锭→块），存取双向换算，省空间。"
+				""
+				"&a流体抽屉（fluid_1 / fluid_2 / fluid_4）&f专门存液体，容量巨大，适合岩浆 / 水 / 原油。"
+				""
+				"进阶：压缩抽屉存粉和锭自动互转，流体抽屉存大宗液体，搭配用。"
+				""
+				"提示：framed_ 前缀的是「框架版」抽屉，外观可伪装。"
+			]
+			id: "0805DAB8504B7F8E"
+			rewards: [{
+				id: "4A525E91127C2BC3"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "自动 9 合 1、存液体"
+			tasks: [{
+				id: "35CF0A8404C19886"
+				item: "functionalstorage:compacting_drawer"
+				type: "item"
+			}]
+			title: "压缩抽屉与流体抽屉"
+			x: 3.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["0805DAB8504B7F8E"]
+			description: [
+				"&a存储控制器（Storage Controller）&f链接范围内所有抽屉，用一个 GUI 统一查看 / 存取，不用挨个点。"
+				""
+				"&a控制器扩展（Controller Extension）&f扩大控制器覆盖范围；&bframed_storage_controller&f是伪装版。"
+				""
+				"用法：把控制器放在抽屉墙中央，周围抽屉自动入网，点控制器即可存取全部。"
+				""
+				"进阶：控制器也能被 RS / AE2 外部存储接管，让数字网络直接读写抽屉。"
+			]
+			id: "64FC09A304A76EA6"
+			rewards: [{
+				id: "2090A3DDC44D738F"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "一屏管所有抽屉"
+			tasks: [{
+				id: "77A113C98D711331"
+				item: "functionalstorage:storage_controller"
+				type: "item"
+			}]
+			title: "抽屉控制器"
+			x: 4.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["64FC09A304A76EA6"]
+			description: [
+				"&a联动工具（Linking Tool）&f把抽屉与控制器绑定，或把多个抽屉连成「溢出链」（一个存满自动流到下一个）。"
+				""
+				"&a配置工具（Configuration Tool）&f设置抽屉的锁 / 隐藏等属性。"
+				""
+				"进阶：用联动工具把同种物品的多个抽屉串成溢出链，等于无限容量。"
+				""
+				"提示：操作顺序是「右键源 → 右键目标」，别点反。"
+			]
+			id: "1D176FABE6C04D86"
+			rewards: [{
+				id: "14B656C95EC4EBD1"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "绑定与连串抽屉"
+			tasks: [{
+				id: "189689D33192350E"
+				item: "functionalstorage:linking_tool"
+				type: "item"
+			}]
+			title: "联动工具与配置工具"
+			x: 6.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["1D176FABE6C04D86"]
+			description: [
+				"抽屉容量升级按材料递增：&b铜升级 copper_upgrade&f → &b金升级 gold_upgrade&f → &b钻石升级 diamond_upgrade&f → &b下界合金升级 netherite_upgrade&f → &b最大存储升级 max_storage_upgrade&f。"
+				""
+				"&b铁降级 iron_downgrade&f用于降级（不常用）。"
+				""
+				"进阶：大宗矿物抽屉直接拉满下界合金 + 最大升级，单槽百万。"
+				""
+				"提示：升级直接右键抽屉使用，容量立即增加。"
+			]
+			id: "3E4EF51863B975CB"
+			rewards: [{
+				id: "2E24FD0C73409C10"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "铜金钻石下界合金扩容"
+			tasks: [{
+				id: "13F21A0B7576FE64"
+				item: "functionalstorage:diamond_upgrade"
+				type: "item"
+			}]
+			title: "抽屉容量升级"
+			x: 7.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["3E4EF51863B975CB"]
+			description: [
+				"抽屉自动化升级：&b推送升级 pusher_upgrade&f（主动出货到相邻容器）、&b拉取升级 puller_upgrade&f（从相邻容器进货）、&b收集升级 collector_upgrade&f、&b虚空升级 void_upgrade&f（满格自动丢弃多余）、&b红石升级 redstone_upgrade&f。"
+				""
+				"进阶：拉取 + 推送 = 抽屉自动从机器进货、向机器出货，不用铺管道。"
+				""
+				"提示：虚空升级用于「只进不留」的过滤分流。"
+			]
+			id: "54E9813B638DCC94"
+			rewards: [{
+				id: "32C7AB78D2AA9272"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "推送/拉取/收集/虚空"
+			tasks: [{
+				id: "2DA3E30EEF341D61"
+				item: "functionalstorage:pusher_upgrade"
+				type: "item"
+			}]
+			title: "抽屉自动化升级"
+			x: 9.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["3E4EF51863B975CB"]
+			description: [
+				"&a末影抽屉（Ender Drawer）&f通过配对实现跨维度共享同一存储，主世界放一个、下界放一个，存取互通。"
+				""
+				"用法：两个末影抽屉用配置工具配对，即可跨维度存取。"
+				""
+				"进阶：建下界农场刷远古残骸 / 石英，产物直接进末影抽屉传回主世界。"
+				""
+				"提示：它是功能存储里唯一跨维度的方块。"
+			]
+			id: "5E2585E7455AD8D6"
+			rewards: [{
+				id: "7B6530659F5B358D"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "跨维度共享"
+			tasks: [{
+				id: "4C90E374C8726101"
+				item: "functionalstorage:ender_drawer"
+				type: "item"
+			}]
+			title: "末影抽屉"
+			x: 9.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["2D464938CA84B1D6"]
+			description: [
+				"&a精巧存储&f提供可升级的 &b箱子（Chest）&f、&b木桶（Barrel）&f、&b潜影盒（Shulker Box）&f，基础级之外还有铜 / 金 / 钻石 / 下界合金四档。"
+				""
+				"高级档箱子格子更多、升级槽更多；&blimited_barrel&f是限定容量的紧凑版。"
+				""
+				"进阶：前期一个金 / 钻石智能箱就能当主仓库，比原版箱子强太多。"
+				""
+				"提示：智能箱 GUI 自带快捷栏和排序，开箱即用。"
+			]
+			id: "10D6278476D4FE6A"
+			rewards: [{
+				id: "2B9A0895B3554AF3"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "会升级的箱子"
+			tasks: [{
+				id: "4B553E02AB8FE29E"
+				item: "sophisticatedstorage:chest"
+				type: "item"
+			}]
+			title: "精巧存储：智能箱子"
+			x: 1.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["10D6278476D4FE6A"]
+			description: [
+				"精巧箱子用「升档升级」直接升级：&bbasic_to_copper / iron / gold / diamond / netherite&f，以及 &bcopper_to_iron / gold / diamond / netherite&f 等过渡档。"
+				""
+				"升档后格子数和升级槽数量都增加，旧箱子不用重做。"
+				""
+				"进阶：先做基础箱，攒够材料一路升到下界合金，最划算。"
+				""
+				"提示：升档升级右键箱子使用，内容物保留。"
+			]
+			id: "57DD7FDD2907CB61"
+			rewards: [{
+				id: "642EBC0BF320E09E"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "基础→铜→铁→金→钻石→下界合金"
+			tasks: [{
+				id: "7FBEE7B9BD276E64"
+				item: "sophisticatedstorage:basic_to_diamond_tier_upgrade"
+				type: "item"
+			}]
+			title: "智能箱子升档"
+			x: 3.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["57DD7FDD2907CB61"]
+			description: [
+				"&a精巧控制器（Controller）&f把范围内多个智能箱连成一个网络，统一 GUI 访问。"
+				""
+				"&a存储链接（Storage Link）&f和 &b存储工具（Storage Tool）&f用于把箱子链接到网络；&bstorage_io / storage_input / storage_output&f是输入输出接口。"
+				""
+				"进阶：一排下界合金智能箱 + 控制器 = 大容量主仓库。"
+				""
+				"提示：精巧箱子也能被 RS 外部存储接管。"
+			]
+			id: "606F8C7DBD3205A1"
+			rewards: [{
+				id: "0E018ADE1F932C5B"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "多箱一屏、远程访问"
+			tasks: [{
+				id: "012859ACC77DDAB8"
+				item: "sophisticatedstorage:controller"
+				type: "item"
+			}]
+			title: "智能箱控制器与链接工具"
+			x: 4.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["606F8C7DBD3205A1"]
+			description: [
+				"&a堆叠升级（Stack Upgrade）&f分 tier_1~tier_5 及 omega，翻倍每格容量；&a磁铁升级（Magnet Upgrade）&f / 高级磁铁升级自动吸附周围掉落物进箱。"
+				""
+				"进阶：磁铁 + 堆叠 = 行走吸尘器，挖矿打怪掉的东西全进箱。"
+				""
+				"提示：堆叠升级按等级叠放，越高越省格子。"
+			]
+			id: "39B342B10FB6A5E7"
+			rewards: [{
+				id: "15C836FF2DA58C34"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "容量翻倍、自动吸物"
+			tasks: [{
+				id: "457CDA59E94B7493"
+				item: "sophisticatedstorage:magnet_upgrade"
+				type: "item"
+			}]
+			title: "升级：堆叠与磁铁"
+			x: 6.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["39B342B10FB6A5E7"]
+			description: [
+				"&a过滤升级（Filter Upgrade）&f / 高级过滤升级只收白名单物品；&a虚空升级（Void Upgrade）&f / 高级虚空升级满格后自动丢弃多余。"
+				""
+				"&a拾取升级（Pickup Upgrade）&f / 高级拾取升级控制掉落物拾取。"
+				""
+				"进阶：过滤 + 虚空 = 自动分拣（只收要的，不要的直接消失）。"
+				""
+				"提示：虚空升级慎用，别把贵重物品设成丢弃。"
+			]
+			id: "30245764BE9C192B"
+			rewards: [{
+				id: "39948537B2CB1A5D"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "只收指定、满格丢弃"
+			tasks: [{
+				id: "3328F8DA76E9D8E0"
+				item: "sophisticatedstorage:filter_upgrade"
+				type: "item"
+			}]
+			title: "升级：过滤与虚空"
+			x: 7.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["30245764BE9C192B"]
+			description: [
+				"&a自动熔炼升级（Auto Smelting / Blasting / Smoking）&f：收进箱子的矿自动烧成锭；&a喂食升级（Feeding Upgrade）&f / 高级喂食升级自动给玩家 / 动物喂食。"
+				""
+				"&a压缩升级（Compacting / Compacting / Advanced Compacting）&f自动 9 合 1。"
+				""
+				"进阶：自动熔炼 + 过滤 = 挖矿回来矿直接变锭进箱。"
+				""
+				"提示：自动熔炼消耗燃料，记得往箱里塞煤。"
+			]
+			id: "7E89816015F88183"
+			rewards: [{
+				id: "4E0B5084BE28ED32"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "收矿自动烧、自动喂玩家"
+			tasks: [{
+				id: "0E021FA7380B4E5F"
+				item: "sophisticatedstorage:auto_smelting_upgrade"
+				type: "item"
+			}]
+			title: "升级：自动熔炼与喂食"
+			x: 9.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["7E89816015F88183"]
+			description: [
+				"&a泵升级（Pump Upgrade）&f / 高级泵升级让智能箱存 / 抽液体；&a经验泵升级（XP Pump Upgrade）&f自动吸收经验球并存储。"
+				""
+				"&a漏斗升级（Hopper Upgrade）&f / 高级漏斗升级自动从相邻容器吸物。"
+				""
+				"进阶：经验泵升级 = 随身经验池，打怪升级随时存取。"
+				""
+				"提示：流体泵和流体管道对接，让箱子当储罐用。"
+			]
+			id: "6B7445DEB13E0173"
+			rewards: [{
+				id: "564D51ACB7DD3AF0"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "箱子也能装液体和经验"
+			tasks: [{
+				id: "1F9A5EDB08CB4074"
+				item: "sophisticatedstorage:pump_upgrade"
+				type: "item"
+			}]
+			title: "升级：流体与经验泵"
+			x: 10.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["606F8C7DBD3205A1"]
+			description: [
+				"&a打包带（Packing Tape）&f / 超级打包带把整个箱子封起来变成可搬运的方块，搬家不丢内容。"
+				""
+				"&a装饰台（Decoration Table）&f和 &b画笔（Paintbrush）&f给智能箱换颜色 / 外观。"
+				""
+				"进阶：基地大改时用打包带把整排箱子搬走，比倒东西快得多。"
+				""
+				"提示：chipped 系列还有更多工作台升级（裁缝 / 玻璃工等）按需装。"
+			]
+			id: "3F2E468E1346E2E8"
+			rewards: [{
+				id: "2E351BE6494ABAA5"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "封箱搬运、外观定制"
+			tasks: [{
+				id: "18AA2CF78DF1C586"
+				item: {
+					Count: 1
+					id: "sophisticatedstorage:packing_tape"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			title: "打包带与装饰"
+			x: 6.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["2D464938CA84B1D6"]
+			description: [
+				"&aRS 控制器（Controller）&f是数字仓库的大脑，直接接 FE 供电；&a线缆（Cable）&f把所有部件连成一张网。"
+				""
+				"&a机器外壳（Machine Casing）&f和 &b石英强化铁（Quartz Enriched Iron）&f是合成材料；&b硅（Silicon）&f做处理器。"
+				""
+				"搭建：控制器 + 线缆 + 驱动器 + 网格 = 最小可用数字仓库。"
+				""
+				"提示：控制器需要足够电量，电量不足会显示网络离线。"
+			]
+			id: "04F22DA69F4FAF1A"
+			rewards: [{
+				id: "03B3918B395DEB9F"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "数字网络的大脑"
+			tasks: [{
+				id: "16762E1DA621E963"
+				item: "refinedstorage:controller"
+				type: "item"
+			}]
+			title: "精致存储：控制器与线缆"
+			x: 1.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["04F22DA69F4FAF1A"]
+			description: [
+				"&a磁盘驱动器（Disk Drive）&f插存储磁盘，一个驱动器最多 8 张盘；&a存储壳（Storage Housing）&f是单独的磁盘外壳。"
+				""
+				"驱动器通过线缆连进网络，磁盘里的数据跟盘走，拔盘换机不丢。"
+				""
+				"进阶：多台驱动器分担容量，也方便按功能分盘。"
+				""
+				"提示：磁盘要先在驱动器里「格式化 / 插入」才开始存。"
+			]
+			id: "30CFED72B74137D8"
+			rewards: [{
+				id: "1AC96D598A94DC67"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "插磁盘的盒子"
+			tasks: [{
+				id: "0E05F999693DA3B6"
+				item: "refinedstorage:disk_drive"
+				type: "item"
+			}]
+			title: "磁盘驱动器"
+			x: 3.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["30CFED72B74137D8"]
+			description: [
+				"&a存储磁盘&f容量分级：&b1k / 4k / 16k / 64k&f（物品），对应存储 &bpart（零件）&f和 &bstorage_block（方块）&f版本。"
+				""
+				"制作：raw_processor → processor → storage_part → storage_housing → disk；用 &b处理器绑定（Processor Binding）&f组合。"
+				""
+				"进阶：常用大宗用 64k，杂项用 4k~16k，按需搭配别全用最大。"
+				""
+				"提示：磁盘越大搜索越吃性能，合理分配。"
+			]
+			id: "65C28238F75D56B7"
+			rewards: [{
+				id: "4778D08308003AB5"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "1k 到 1024k"
+			tasks: [{
+				id: "6F1C9F474AAF50F2"
+				item: "refinedstorage:64k_storage_disk"
+				type: "item"
+			}]
+			title: "存储磁盘"
+			x: 4.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["65C28238F75D56B7"]
+			description: [
+				"&a流体存储磁盘&f存液体，分级 &b64k / 256k / 1024k / 4096k&f（buckets），也有对应 storage_block / part。"
+				""
+				"&a存储方块（Storage Block）&f是磁盘的「整盒版」，插盘后当一个容器摆，适合不想摆驱动器的玩家。"
+				""
+				"进阶：原油 / 岩浆 / 水 / 精华都用流体磁盘存进数字网络，用流体网格查看。"
+				""
+				"提示：流体网格专门管理液体存取。"
+			]
+			id: "60704F5CBFB37199"
+			rewards: [{
+				id: "6CD23F6670E2125A"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "数字网络也存液体"
+			tasks: [{
+				id: "6CFCA1E3DE6C2790"
+				item: "refinedstorage:64k_fluid_storage_disk"
+				type: "item"
+			}]
+			title: "流体磁盘与存储方块"
+			x: 6.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["30CFED72B74137D8"]
+			description: [
+				"&a网格（Grid）&f是 RS 主界面：搜索框 + 物品列表，点一下存取全网物品。"
+				""
+				"&a合成网格（Crafting Grid）&f带 3x3 合成区，可直接手动合成（自动从仓库取料）；&a模式网格（Pattern Grid）&f编辑自动合成配方；&a流体网格（Fluid Grid）&f管理液体。"
+				""
+				"进阶：网格可染色，多放几个在基地不同位置都访问同一仓库。"
+				""
+				"技巧：搜索支持 @模组、#标签 过滤，找东西飞快。"
+			]
+			id: "1A6C37DBB6B7764A"
+			rewards: [{
+				id: "30B6E8181B725598"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "搜索、存取、合成入口"
+			tasks: [{
+				id: "5864E5B10F34AA9B"
+				item: "refinedstorage:grid"
+				type: "item"
+			}]
+			title: "网格：仓库界面"
+			x: 4.5d
+			y: 6.0d
+		}
+		{
+			dependencies: ["1A6C37DBB6B7764A"]
+			description: [
+				"&a合成器（Crafter）&f是自动合成执行器：把「模式」（配方）放进去，它从网络取料、自动合成、成品送回网络。"
+				""
+				"&a合成管理器（Crafter Manager）&f集中管理所有合成器；&a合成监控（Crafting Monitor）&f显示进行中的合成任务；&a合成升级（Crafting Upgrade）&f开启递归自动合成。"
+				""
+				"用法：模式网格里编配方 → 放进合成器 → 网格里搜成品点「合成」，多步配方自动递归。"
+				""
+				"进阶：机器加工类配方（粉碎 / 熔炼）需要「处理模式」配接口 + 外部机器。"
+			]
+			id: "0D148253BC8A77FD"
+			rewards: [{
+				id: "502980D2DF6E1664"
+				type: "xp"
+				xp: 20
+			}]
+			subtitle: "点一下自动做出来"
+			tasks: [{
+				id: "069AF21C22DFCA4C"
+				item: "refinedstorage:crafter"
+				type: "item"
+			}]
+			title: "自动合成：合成器"
+			x: 6.0d
+			y: 7.5d
+		}
+		{
+			dependencies: ["1A6C37DBB6B7764A"]
+			description: [
+				"&a接口（Interface）&f贴在机器 / 箱子上，让网络往它放料、取走成品；&a流体接口（Fluid Interface）&f同理处理液体。"
+				""
+				"接口是「自动加工」的关键：机器要什么料，网络通过接口送进去；机器出什么，接口收进网络。"
+				""
+				"进阶：接口 + 合成器 = 全自动加工线（粉碎 / 熔炼 / 组装）。"
+				""
+				"提示：接口可设过滤，避免网络把机器里别的东西抽走。"
+			]
+			id: "5E36EE150329FB74"
+			rewards: [{
+				id: "12780CB895FCEDFA"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "网络与外部容器的桥"
+			tasks: [{
+				id: "090C8A5144967A5F"
+				item: "refinedstorage:interface"
+				type: "item"
+			}]
+			title: "接口与流体接口"
+			x: 6.0d
+			y: 9.0d
+		}
+		{
+			dependencies: ["5E36EE150329FB74"]
+			description: [
+				"&a导入总线（Importer）&f把相邻容器物品吸进网络；&a导出总线（Exporter）&f把网络物品送到相邻容器（可设过滤）。"
+				""
+				"用法：机器产物箱旁贴导入器自动入库；机器进料口旁贴导出器自动补料。"
+				""
+				"进阶：导入 / 导出 + 速度升级 / 堆叠升级 = 全自动进出料。"
+				""
+				"提示：总线要贴在容器 / 机器侧面，用线缆连进网络。"
+			]
+			id: "473BF7EF3B05736C"
+			rewards: [{
+				id: "76E15D182F175F17"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "让世界接入网络"
+			tasks: [{
+				id: "07BEAD4C07C0625C"
+				item: "refinedstorage:importer"
+				type: "item"
+			}]
+			title: "导入/导出总线"
+			x: 7.5d
+			y: 9.0d
+		}
+		{
+			dependencies: ["473BF7EF3B05736C"]
+			description: [
+				"&a构造器（Constructor）&f把网络里的物品放置成世界方块；&a破坏器（Destructor）&f把世界方块 / 掉落物收进网络。"
+				""
+				"配合 &b构造核心（Construction Core）&f和 &b破坏核心（Destruction Core）&f使用。"
+				""
+				"进阶：构造器自动铺方块（刷石 / 铺路），破坏器自动回收，做自动化农场 / 挖矿。"
+				""
+				"提示：破坏器可装时运 / 精准采集升级。"
+			]
+			id: "627E5B4B0313157D"
+			rewards: [{
+				id: "237508F46226BFCA"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "网络直接操作世界"
+			tasks: [{
+				id: "67C9392817DDBFA2"
+				item: "refinedstorage:constructor"
+				type: "item"
+			}]
+			title: "构造器与破坏器"
+			x: 9.0d
+			y: 9.0d
+		}
+		{
+			dependencies: ["473BF7EF3B05736C"]
+			description: [
+				"&a外部存储（External Storage）&f贴在箱子 / 抽屉 / 智能箱上，把它直接「变成」网络存储，不用倒货。"
+				""
+				"&a探测器（Detector）&f按物品数量输出红石信号；&a存储监控（Storage Monitor）&f / &b中继器（Relay）&f用于扩展网络。"
+				""
+				"进阶：外部存储贴功能存储抽屉 / 精巧智能箱 = 数字网络直接读写海量大宗，两全其美。"
+				""
+				"提示：这是 RS 与抽屉 / 智能箱互联的关键方块。"
+			]
+			id: "77149D758E9B2E26"
+			rewards: [{
+				id: "04534C269F8E4DE3"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "把箱子/抽屉变成网络"
+			tasks: [{
+				id: "2A6EAC24AAEEBEB7"
+				item: "refinedstorage:external_storage"
+				type: "item"
+			}]
+			title: "外部存储与探测器"
+			x: 9.0d
+			y: 7.5d
+		}
+		{
+			dependencies: ["0D148253BC8A77FD"]
+			description: [
+				"&a磁盘操纵器（Disk Manipulator）&f用来在磁盘之间复制 / 移动 / 整理数据，换盘 / 备份神器。"
+				""
+				"&a便携网格（Portable Grid）&f是内置磁盘的移动网格，随身访问一个小仓库；&bcreative_portable_grid&f是创造版。"
+				""
+				"进阶：服务器上用磁盘操纵器把旧盘数据迁到新盘，平滑扩容。"
+				""
+				"提示：便携网格自带能量，远程访问要充电。"
+			]
+			id: "793FB7BC1C1E94BD"
+			rewards: [{
+				id: "1A6F128A02FB4F04"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "整理磁盘、随身仓库"
+			tasks: [{
+				id: "5F242F2ED78B6AF4"
+				item: "refinedstorage:disk_manipulator"
+				type: "item"
+			}]
+			title: "磁盘操纵器与便携网格"
+			x: 7.5d
+			y: 6.0d
+		}
+		{
+			dependencies: ["0D148253BC8A77FD"]
+			description: [
+				"&a无线发射器（Wireless Transmitter）&f扩大无线范围；&a无线网格（Wireless Grid）&f / &b无线合成监控 / 无线流体网格&f随身访问仓库。"
+				""
+				"&a网络发射器（Network Transmitter）&f + &a网络接收器（Network Receiver）&f + &b网络卡（Network Card）&f跨维度连接两张网络（类似量子桥）。"
+				""
+				"进阶：主世界和下界各放一对收发器，网络跨维度互通。"
+				""
+				"提示：无线设备靠范围升级和能量电池，记得充电。"
+			]
+			id: "1195808A687DC535"
+			rewards: [{
+				id: "6F5841C65880EEC6"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "出门也能管仓库"
+			tasks: [{
+				id: "60F338CB760A01A2"
+				item: "refinedstorage:wireless_transmitter"
+				type: "item"
+			}]
+			title: "无线与跨维度网络"
+			x: 7.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["627E5B4B0313157D"]
+			description: [
+				"&a安全管理器（Security Manager）&f设置网络权限，谁能存取 / 谁能合成；&a安全卡（Security Card / Active / Inactive）&f绑定玩家身份。"
+				""
+				"&a过滤器（Filter）&f定义白名单 / 黑名单，用在导入导出 / 破坏器上。"
+				""
+				"进阶：多人服务器上用安全管理器给队友分权，防止误删贵重品。"
+				""
+				"提示：单人世界可以跳过安全设置。"
+			]
+			id: "72BA1AD435647A4D"
+			rewards: [{
+				id: "7F092907DBEF4DE6"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "设权限、做白名单"
+			tasks: [{
+				id: "0556F3051D85EAE7"
+				item: "refinedstorage:security_manager"
+				type: "item"
+			}]
+			title: "安全终端与过滤"
+			x: 10.5d
+			y: 6.0d
+		}
+		{
+			dependencies: ["5E36EE150329FB74"]
+			description: [
+				"RS 升级卡插进总线 / 构造器 / 破坏器：&b速度升级 speed_upgrade&f（更快）、&b堆叠升级 stack_upgrade&f（一次多搬）、&b范围升级 range_upgrade&f（扩大无线范围）、&b调节器升级 regulator_upgrade&f、&b合成升级 crafting_upgrade&f（自动合成）、&b时运 / 精准采集升级&f（破坏器用）。"
+				""
+				"进阶：导入器插速度 + 堆叠 = 海量物料秒进网络。"
+				""
+				"提示：升级卡可叠加，越多效果越强但越耗能。"
+			]
+			id: "1F67BF553E8D14CD"
+			rewards: [{
+				id: "70A6890C7AAC3904"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "速度/堆叠/范围/合成"
+			tasks: [{
+				id: "3DDCDD90D1B4106C"
+				item: "refinedstorage:speed_upgrade"
+				type: "item"
+			}]
+			title: "RS 升级卡"
+			x: 7.5d
+			y: 7.5d
+		}
+		{
+			dependencies: ["04F22DA69F4FAF1A"]
+			description: [
+				"RS 的核心零件：&b基础处理器 basic_processor&f、&b改进处理器 improved_processor&f、&b高级处理器 advanced_processor&f（各有 raw_ 生料）。"
+				""
+				"材料：&b硅 silicon&f、&b石英强化铁 quartz_enriched_iron&f（及方块）、&b处理器绑定 processor_binding&f、&b构造 / 破坏核心&f。"
+				""
+				"进阶：处理器用量大，建议自动化批量生产 raw_processor。"
+				""
+				"提示：处理器是升级磁盘 / 部件的瓶颈，前期多攒。"
+			]
+			id: "7919795B1846F6DD"
+			rewards: [{
+				id: "4FCA36C3818858BF"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "基础/改进/高级处理器"
+			tasks: [{
+				id: "7FB376CCD6EBB305"
+				item: "refinedstorage:advanced_processor"
+				type: "item"
+			}]
+			title: "RS 处理器与材料"
+			x: 3.0d
+			y: 6.0d
+		}
+		{
+			dependencies: [
+				"64FC09A304A76EA6"
+				"606F8C7DBD3205A1"
+				"04F22DA69F4FAF1A"
+			]
+			description: [
+				"三种存储各有所长，按阶段选用："
+				""
+				"· &b功能存储抽屉&f：单种物品超大容量、直观、便宜，适合矿粉 / 锭 / 石头等大宗；"
+				""
+				"· &b精巧智能箱&f：单箱多功能（自动熔炼 / 磁铁 / 过滤 / 经验），适合随身或单用途仓库；"
+				""
+				"· &b精致存储 RS&f：数字搜索 + 自动合成，点一下取货 / 下单，适合中大型基地；"
+				""
+				"进阶路线：前期抽屉 + 智能箱 → 中期上 RS 数字网 → 后期用 RS 外部存储接抽屉做「数字 + 大宗」双层。"
+				""
+				"三者不冲突，可同时用。"
+			]
+			icon: "refinedstorage:grid"
+			id: "1C6204199EBC3410"
+			rewards: [{
+				id: "798E7368546BF61A"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "抽屉 vs 智能箱 vs RS"
+			tasks: [{
+				id: "72CD98A7C468D403"
+				title: "选型：三种存储怎么选"
+				type: "checkmark"
+			}]
+			title: "选型：三种存储怎么选"
+			x: 6.0d
+			y: 3.0d
+		}
+		{
+			dependencies: [
+				"77149D758E9B2E26"
+				"1C6204199EBC3410"
+			]
+			description: [
+				"把三种存储缝成一套："
+				""
+				"1. &bRS 外部存储&f贴在功能存储抽屉控制器上，抽屉里的大宗直接进 RS 网格可查可取；"
+				""
+				"2. &bRS 外部存储&f贴在精巧智能箱控制器上，智能箱也并入数字网；"
+				""
+				"3. &bRS 导出总线&f把常用材料送进抽屉缓存；&b导入总线&f把机器产物自动入库；"
+				""
+				"4. &b精巧背包&f用存储链接访问家里 RS，随身也能取；"
+				""
+				"最终形态：数字网格统一搜索 + 抽屉海量大宗 + 智能箱自动加工，一个基地三套协同。"
+			]
+			icon: "refinedstorage:external_storage"
+			id: "5F11C884989679F7"
+			rewards: [{
+				id: "4A0E826ABA21C6ED"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "RS 接抽屉 / 智能箱"
+			tasks: [{
+				id: "35D54260BAF03D13"
+				title: "三方互联"
+				type: "checkmark"
+			}]
+			title: "三方互联"
+			x: 10.5d
+			y: 4.5d
+		}
+		{
+			dependencies: [
+				"793FB7BC1C1E94BD"
+				"1F67BF553E8D14CD"
+			]
+			description: [
+				"一套标准 RS 数字仓库："
+				""
+				"1. &a核心&f：控制器（接电）+ 线缆 + 磁盘驱动器（插 16k / 64k 盘）；"
+				""
+				"2. &a界面&f：网格 + 合成网格 + 模式网格 + 流体网格；"
+				""
+				"3. &a进出&f：导入器收机器产物、导出器补机器料、外部存储接抽屉；"
+				""
+				"4. &a合成&f：合成器 + 合成管理器，编好配方后在网格点「合成」自动递归；"
+				""
+				"5. &a远程&f：无线网格 + 网络收发器，出门 / 跨维度也能管；"
+				""
+				"6. &a安全&f：安全管理器设权限，过滤器做白名单；"
+				""
+				"完成后：全基地物品一个界面搜索，缺材料一键自动合成。"
+			]
+			icon: "refinedstorage:crafting_monitor"
+			id: "69D8CEE9A022DBD1"
+			rewards: [{
+				id: "1E52C3EAAEF3CB86"
+				type: "xp"
+				xp: 20
+			}]
+			subtitle: "点一下就有"
+			tasks: [{
+				id: "3BD235F0B69E3327"
+				title: "事例设施：数字仓库 + 自动合成"
+				type: "checkmark"
+			}]
+			title: "事例设施：数字仓库 + 自动合成"
+			x: 9.0d
+			y: 6.0d
+		}
+		{
+			dependencies: [
+				"5F11C884989679F7"
+				"69D8CEE9A022DBD1"
+			]
+			description: [
+				"完成本任务 = 你掌握了基地存储体系："
+				""
+				"1. &a大宗&f：功能存储抽屉（铜→钻石→下界合金扩容）存矿粉 / 锭；"
+				""
+				"2. &a单箱&f：精巧智能箱（自动熔炼 / 磁铁 / 过滤 / 经验）随身或单用途；"
+				""
+				"3. &a数字&f：RS 控制器 + 磁盘 + 网格 + 合成器，点一下取货 / 自动合成；"
+				""
+				"4. &a互联&f：外部存储把抽屉 / 智能箱并入 RS，三套协同；"
+				""
+				"仓库不是终点，而是自动化中枢——矿机产物自动入库，机器缺料自动送出，合成任务自动执行。"
+				""
+				"下一步：把工业先锋 / 热力 / 气动工艺的机器都对接到这张网络，基地就真正「点一下就有」。"
+			]
+			icon: "functionalstorage:storage_controller"
+			id: "3D37A411C4FBDDED"
+			rewards: [{
+				id: "7812162C2BC1BC94"
+				type: "xp"
+				xp: 25
+			}]
+			shape: "octagon"
+			size: 1.5d
+			subtitle: "仓库即自动化中枢"
+			tasks: [{
+				id: "42CD1222027A14D5"
+				title: "存储系统综合实战"
+				type: "checkmark"
+			}]
+			title: "存储系统综合实战"
+			x: 12.0d
+			y: 4.5d
+		}
+	]
+	title: "存储系统"
+}

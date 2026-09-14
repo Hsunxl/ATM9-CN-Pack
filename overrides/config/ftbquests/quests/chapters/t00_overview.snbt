@@ -1,0 +1,1009 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "t00_overview"
+	group: "00C72C1FB6193A42"
+	icon: "create:andesite_alloy"
+	id: "1A63A0C94E511346"
+	order_index: 0
+	progression_mode: "flexible"
+	quest_links: [ ]
+	quests: [
+		{
+			description: [
+				"&a本教程&f是独立于 ATM9 内置任务的一套科技新手向导，目标是让你真正「会用」包里每一个主流科技模组，而不是照抄配方。"
+				""
+				"它不会改动、覆盖或依赖原整合包的任何任务，也不影响你已有存档进度。完成与否完全自愿，按需阅读。"
+				""
+				"任务目标通常是「做出/拿到对应物品」，物品进入背包即自动完成，无需手动提交；部分任务是&a点击型&f（check），点一下就算读完。"
+				""
+				"部分章节开头/结尾是&a里程碑&f：六边形=总览/分支头，八角形=章节结尾综合实战。建议顺着树状连线一路做下来。"
+			]
+			icon: "create:andesite_alloy"
+			id: "65EB71846652F9A9"
+			shape: "hexagon"
+			size: 1.5d
+			subtitle: "独立于主线任务的新手向导"
+			tasks: [{
+				id: "77B7949B8507F360"
+				title: "欢迎来到科技入门教程"
+				type: "checkmark"
+			}]
+			title: "欢迎来到科技入门教程"
+			x: 4.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["65EB71846652F9A9"]
+			description: [
+				"本教程共 &a19 章&f，本章是总览。推荐顺序也正是下面 18 章预告的排列顺序："
+				""
+				"&a① 电力与能源 → ② 通用机械 → ③ 机械动力 → ④ 应用能源2 → ⑤ 植物魔法 → ⑥ 工业先锋&f"
+				""
+				"&a⑦ 气动工艺 → ⑧ 存储系统 → ⑨ 热力系列 → ⑩ 物流管道 → ⑪ 进阶科技综合 → ⑫ 末地接口&f"
+				""
+				"&a⑬ 补充科技 → ⑭ 格雷科技 → ⑮ 匠魂 → ⑯ 神化 → ⑰ 新生魔艺 → ⑱ 魔法与冒险补充&f"
+				""
+				"前四章是地基：先有电，再做矿物处理，然后是自动加工与数字存储；之后各条分支都可以自由探索，不必拘泥顺序。"
+				""
+				"每章都是「树状结构」：一个总览根任务，下方分出多条分支（矿物处理线、物流线、进阶线等），可按自己节奏推进。"
+				""
+				"各模组都自带手册（植物魔法辞典、工程师手册、机械动力 Ponder 动图、气动工艺教程书、匠魂宝典等），配合本教程食用效果最佳。"
+			]
+			icon: "create:brass_ingot"
+			id: "618405E8B7BEDB96"
+			rewards: [{
+				id: "29A14AB8372D4923"
+				type: "xp"
+				xp: 5
+			}]
+			subtitle: "推荐的阅读顺序"
+			tasks: [{
+				id: "604FE33FAE9B28F3"
+				title: "教程路线图"
+				type: "checkmark"
+			}]
+			title: "教程路线图"
+			x: 0.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["65EB71846652F9A9"]
+			description: [
+				"ATM9 内置 &aJEI（物品管理器）&f，几乎所有配方都能查到："
+				""
+				"· 对着物品按 &aR&f 看合成配方，按 &aU&f 看用途（谁会用到它）；"
+				""
+				"· 悬停多方块结构（反应堆、感应矩阵、锅炉、汽轮机等）时按 &aA&f 可查看结构预览；"
+				""
+				"· 按 &aCtrl+R&f 反查该物品出现在哪些配方里；"
+				""
+				"注意：ATM9 用 KubeJS 改过部分配方，一切以 JEI 显示为准，别硬背原版配方。"
+			]
+			icon: "minecraft:crafting_table"
+			id: "6BDD6FC1DCB464B2"
+			rewards: [{
+				id: "1DB023DD3E46EA24"
+				type: "xp"
+				xp: 5
+			}]
+			subtitle: "JEI 是你的万能字典"
+			tasks: [{
+				id: "2084224FF79816EE"
+				title: "先学会查配方"
+				type: "checkmark"
+			}]
+			title: "先学会查配方"
+			x: 1.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["65EB71846652F9A9"]
+			description: [
+				"大多数科技模组共用一套能量体系：&aFE/RF&f（Forge 能量）。发电机产出 FE，线缆传输，机器消耗，电池存储，全互通。"
+				""
+				"很多模组有「等级」概念：基础(basic) → 高级(advanced) → 精英(elite) → 终极(ultimate)，等级越高越快、容量越大，且多支持原地升级。"
+				""
+				"「多方块结构」：多个方块按特定形状围成一台巨型机器（反应堆、感应矩阵、锅炉）。JEI 里按 A 键看结构图。"
+				""
+				"管道按内容分四类：&a物品 / 流体 / 能量 / 气体&f（外加经验、红石等）。不同模组的同类管道基本互通，按需选型即可。"
+			]
+			icon: "mekanism:basic_universal_cable"
+			id: "139C2B6215BB8571"
+			rewards: [{
+				id: "659ACFF61D9B4A8A"
+				type: "xp"
+				xp: 5
+			}]
+			subtitle: "FE、等级、多方块与管道"
+			tasks: [{
+				id: "28F82617C0CBBE4F"
+				title: "科技模组的通用概念"
+				type: "checkmark"
+			}]
+			title: "科技模组的通用概念"
+			x: 3.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["65EB71846652F9A9"]
+			description: [
+				"每章第一个任务（六边形）是&a总览&f，介绍本章要学什么、有哪些分支；"
+				""
+				"从总览引出的连线是&a分支线&f：每条分支专攻一个主题（如「2 倍产线」「5 倍产线」「物流」「进阶」），互不阻塞；"
+				""
+				"分支上的每个任务做完才解锁后续；结尾的八角形任务是&a综合里程碑&f，通常是「把这套系统搭起来」的实战目标；"
+				""
+				"依赖关系：一个任务若有多个前置（deps），必须全部做完才解锁，常用于「多条分支汇合」的设计。"
+			]
+			icon: "create:goggles"
+			id: "3E8DDAAFF8C443EA"
+			rewards: [{
+				id: "7DED839084811D72"
+				type: "xp"
+				xp: 5
+			}]
+			subtitle: "树状分支与里程碑"
+			tasks: [{
+				id: "3F907D696C3BAF65"
+				title: "怎么看懂一章任务"
+				type: "checkmark"
+			}]
+			title: "怎么看懂一章任务"
+			x: 4.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["65EB71846652F9A9"]
+			description: [
+				"· 大部分机器右键可配置输入/输出面（顶部进料、侧面出料），配合管道实现自动化；"
+				""
+				"· 很多模组提供「配置卡/扳手/探测器」类工具，右键机器可复制或调整配置，批量部署神器；"
+				""
+				"· 发电机先接&a电池&f再接机器，避免电网波动导致机器卡顿；"
+				""
+				"· 升级前先看 JEI：多数模组支持「原地升级」（基础→高级），不浪费旧机器；"
+				""
+				"· 卡关先按 &aU&f 查用途，再按 &aA&f 查多方块结构，基本能解决 90% 的问题。"
+			]
+			icon: "minecraft:book"
+			id: "65BF49DEB7BD96A5"
+			rewards: [{
+				id: "4B8793376ABF73D9"
+				type: "xp"
+				xp: 5
+			}]
+			subtitle: "少走弯路的操作细节"
+			tasks: [{
+				id: "12E2921DCEA26B9B"
+				title: "实用小技巧"
+				type: "checkmark"
+			}]
+			title: "实用小技巧"
+			x: 6.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["65EB71846652F9A9"]
+			description: [
+				"通用机械给世界新增了一批矿石，下矿时顺路挖："
+				""
+				"· &a锇(Osmium)&f：通用机械的招牌金属，做机器外壳、锇压缩机、合金；"
+				""
+				"· &a锡(Tin)&f：做线缆、青铜、各种基础零件；"
+				""
+				"· &a铅(Lead)&f：做蓄电池、辐射防护、流体管道；"
+				""
+				"· &a铀(Uranium)&f：后期裂变反应堆燃料，粉磨后走铀处理线；"
+				""
+				"· &a氟石(Fluorite)&f：硫酸/HF 线原料，5 倍产线与 HDPE 都要用到。"
+				""
+				"这些矿会自然生成在主世界，高度参考原版铁/铜分布，前期囤一点不亏。"
+			]
+			icon: "mekanism:raw_osmium"
+			id: "1127306FB8A083A6"
+			rewards: [{
+				id: "500EC21E87E42788"
+				type: "xp"
+				xp: 5
+			}]
+			subtitle: "锡·铅·锇·铀·氟石"
+			tasks: [{
+				id: "4ED018FAF26DF52F"
+				title: "本包新增矿石与材料"
+				type: "checkmark"
+			}]
+			title: "本包新增矿石与材料"
+			x: 7.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["65EB71846652F9A9"]
+			description: [
+				"· &aR&f = 查配方（JEI），&aU&f = 查用途；"
+				""
+				"· &aA&f = 查看多方块结构预览（对准机器/方块）；"
+				""
+				"· &aCtrl+R&f = 反查物品在哪些配方出现；"
+				""
+				"· &aW&f = 机械动力 Ponder 动画演示；"
+				""
+				"· 任务书默认按键可在控制设置里改；拿不准某物品怎么用，永远先 JEI。"
+			]
+			icon: "minecraft:paper"
+			id: "4989972AB9FD8CE6"
+			rewards: [{
+				id: "0250B42BD751D7FE"
+				type: "xp"
+				xp: 5
+			}]
+			subtitle: "玩科技包必记的几个键"
+			tasks: [{
+				id: "3C6F9ED939101939"
+				title: "按键与界面速查"
+				type: "checkmark"
+			}]
+			title: "按键与界面速查"
+			x: 9.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["65EB71846652F9A9"]
+			description: [
+				"科技线的第一道坎是「稳定供电」。四条常见起步路线，按手里的资源挑一条："
+				""
+				"· &a熔炉发电机（Powah）&f：烧煤/木头，最便宜，插上就用，适合开局第一台；"
+				""
+				"· &a能源炉（热力）&f：烧固体/液体燃料，改造成本低，后期可升级；"
+				""
+				"· &a风车 / 水车 / 蒸汽引擎（机械动力）&f：不烧燃料，但要搭应力网络，适合喜欢机械的玩法；"
+				""
+				"· &a通用机械发电机&f：风/光/热/生物质/燃气多线可选，产量高、结构复杂，属于中期方案。"
+				""
+				"建议：先用熔炉发电机把第一台机器点亮，之后到「电力与能源」章升级成 Powah + 通量网络的组合。&c注意&f发电机不要直连机器，中间加一块电池。"
+			]
+			icon: "create:steam_engine"
+			id: "51619170E62020C5"
+			rewards: [{
+				id: "539E5D0B9EB0DC98"
+				type: "xp"
+				xp: 5
+			}]
+			subtitle: "四条起步路线对比"
+			tasks: [{
+				id: "76F9ED9391019396"
+				title: "第一套发电怎么选"
+				type: "checkmark"
+			}]
+			title: "第一套发电怎么选"
+			x: 1.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["65EB71846652F9A9"]
+			description: [
+				"包里所有科技模组共用一套能量单位，看懂这几个就不会被数字绕晕："
+				""
+				"· &aFE / RF&f：1 FE = 1 RF，同一个东西的两个名字（Forge Energy / Redstone Flux）；"
+				""
+				"· &aFE/t&f：每秒产出或消耗的 FE，机器面板上的「耗电」就是它；「发电机 200 FE/t」= 每秒 200；"
+				""
+				"· &amB&f：流体单位，1000 mB = 1 桶。蒸汽、硫酸、氢气、水都用它计量；"
+				""
+				"· &ak / M / G&f：1000 倍进制，1 kFE = 1,000 FE，1 GFE = 10 亿 FE；"
+				""
+				"· &aEU（格雷科技）&f：自成一套体系，用自己的一串电压等级（ULV 一路到 MAX）和专用线缆，不与 FE 混算。"
+				""
+				"实用判据：线缆的传输上限通常比机器耗电更容易成为瓶颈，扩产前先按 &aU&f 看一眼线缆上限。"
+			]
+			icon: "mekanism:module_energy_unit"
+			id: "3AA01A3244559C09"
+			rewards: [{
+				id: "21DCEA26B9BA0EC2"
+				type: "xp"
+				xp: 5
+			}]
+			subtitle: "FE / RF / mB / 进制"
+			tasks: [{
+				id: "009F038271462E29"
+				title: "能量与单位换算速查"
+				type: "checkmark"
+			}]
+			title: "能量与单位换算速查"
+			x: 3.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["65EB71846652F9A9"]
+			description: [
+				"机器没反应、不加工、产出没进箱子，按这个顺序查，大部分能自己解决："
+				""
+				"· &a① 有电吗&f：看机器面板的能量条与 FE/t 读数。整条电网只要有一个断点，后面全停；"
+				""
+				"· &a② 面配错了吗&f：很多机器需要手动设输入/输出面，用扳手或配置工具循环切换；"
+				""
+				"· &a③ 缺配套介质吗&f：通用机械要气体、工业先锋要液体、热力要水或蒸汽，缺了只会空转；"
+				""
+				"· &a④ 堵了吗&f：输出槽满了机器就停，查管道终点是否满箱、抽屉是否已满；"
+				""
+				"· &a⑤ 红石信号&f：部分机器默认「有红石就停」，旁边有红石线/拉杆会罢工，把红石控制设为忽略；"
+				""
+				"· &a⑥ 配方对吗&f：按 &aR&f 对一遍 JEI，包里改过配方，凭记忆做多半是错的。"
+				""
+				"&c注意&f：多方块结构（反应堆、锅炉、感应矩阵）少一个方块都不成形，先按 &aA&f 看结构预览再补。"
+			]
+			icon: "pipez:wrench"
+			id: "1E87E42788050B42"
+			rewards: [{
+				id: "1A815A718D336694"
+				type: "xp"
+				xp: 5
+			}]
+			subtitle: "按六步顺序查"
+			tasks: [{
+				id: "61158CD6CEB1D23A"
+				title: "机器不工作？排查清单"
+				type: "checkmark"
+			}]
+			title: "机器不工作？排查清单"
+			x: 4.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["65EB71846652F9A9"]
+			description: [
+				"刚进世界、还没想好从哪下手时，照这个顺序走："
+				""
+				"· &a1. 一把镐子 + 一个箱子&f：先把出生点收拾成一个工作站；"
+				""
+				"· &a2. 下矿目标&f：铁、铜、煤管够，外加 &a锇 / 锡 / 铅&f 各半组（通用机械要用），顺手捡 &a氟石&f；"
+				""
+				"· &a3. 第一台发电机 + 第一台机器&f：熔炉发电机 → 冶金灌注机，做出第一块钢就算入门了；"
+				""
+				"· &a4. 第一套自动化&f：箱子 + 管道 + 磨粉机，把矿石自动处理成粉，省下大量手动烧炼时间；"
+				""
+				"· &a5. 再看存储&f：先用抽屉（功能存储）顶住，等 AE2 做出来再换数字网络。"
+				""
+				"不必按章节顺序死磕：任何一章做不动，就回到「电力与能源」与「通用机械」补基础。"
+			]
+			icon: "minecraft:iron_ore"
+			id: "681894100844F900"
+			rewards: [{
+				id: "4245CFED83908481"
+				type: "xp"
+				xp: 5
+			}]
+			subtitle: "前两小时的优先级"
+			tasks: [{
+				id: "099D3C63BA8A85D9"
+				title: "开局行动清单"
+				type: "checkmark"
+			}]
+			title: "开局行动清单"
+			x: 6.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["65EB71846652F9A9"]
+			description: [
+				"· 机器别堆太密，同一片区几十台同时跑会掉 TPS，用管道/网络分流；"
+				""
+				"· 大量实体（管道、机器渲染）会吃帧率，远程区域用通量网络/QIO 少拉线；"
+				""
+				"· 后期装优化模组提供的 Foam/性能选项，视距按需；"
+				""
+				"· 自动农场产物及时入箱/入网络，别让掉落物满天飞。"
+			]
+			icon: "minecraft:redstone"
+			id: "1A8ABED8BBC0992E"
+			rewards: [{
+				id: "6CF157F03A8C8B2F"
+				type: "xp"
+				xp: 5
+			}]
+			subtitle: "大基地不掉帧"
+			tasks: [{
+				id: "0840340DF2FC7BAA"
+				title: "防卡与性能建议"
+				type: "checkmark"
+			}]
+			title: "防卡与性能建议"
+			x: 7.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["65EB71846652F9A9"]
+			description: [
+				"本教程覆盖 18 个主题章节，但 ATM9 装了 400 多个模组。剩下的分两类处理："
+				""
+				"· &a被章节顺带覆盖的&f：沉浸工程、CC 电脑、集成动力、RFTools 在「补充科技」章；血魔法、神秘学、Psi、铁咒书、ProjectE 在「魔法与冒险补充」章；龙之研究、神秘农业、HNN 在「进阶科技综合」章；"
+				""
+				"· &a本章程之外的&f：激光IO、XNet、精巧存储这类「工具型」模组会散落在相关章节里提到；纯装饰与纯后期的内容，用到再查即可；"
+				""
+				"判别方法很简单：拿不准某个物品属于哪个模组，按 &aU&f 看用途、按 &aA&f 看多方块结构，再顺着 JEI 的分类标签找到同模组的其它物品，基本就能摸清一条线。"
+			]
+			icon: "minecraft:compass"
+			id: "2F3A4A8D9B1F1535"
+			rewards: [{
+				id: "2CD06C1A1C7F2463"
+				type: "xp"
+				xp: 5
+			}]
+			subtitle: "教程之外的东西怎么查"
+			tasks: [{
+				id: "33C3DDFB1760C369"
+				title: "教程没覆盖的模组"
+				type: "checkmark"
+			}]
+			title: "教程没覆盖的模组"
+			x: 9.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["618405E8B7BEDB96"]
+			description: [
+				"下一章讲三套供电方案：&aPowah&f（七级发电机与电池、可原地升级，还能无线输电）、&a通量网络&f（真正的跨维度无线电网）、&a通用机械发电机&f（风 / 光 / 热 / 生物质 / 燃气多线）。"
+				"''"
+				"核心链路：&a发电 → 输电 → 储能 → 用电&f，中间那块电池决定电网抗波动能力。"
+				"''"
+				"目标：从「烧煤发电」一路升到「全基地无线供电」，后期不再为电发愁。"
+			]
+			icon: "powah:furnator_starter"
+			id: "2B713948A6818941"
+			rewards: [{
+				id: "4D08A372EC4E1475"
+				type: "xp"
+				xp: 5
+			}]
+			subtitle: "先把电搞定"
+			tasks: [{
+				id: "7A60025A00498F1D"
+				title: "模组预告：电力与能源"
+				type: "checkmark"
+			}]
+			title: "模组预告：电力与能源"
+			x: 0.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["2B713948A6818941"]
+			description: [
+				"「通用机械 Mekanism」是本包矿物处理核心：同样的矿石榨出 2~5 倍产出，自带气体工业、多方块发电与终极装备。"
+				"''"
+				"重点：富集→冶炼(2x)、净化→注入(3~4x)、化学溶解→清洗→结晶(5x)、感应矩阵、裂变/聚变反应堆、Meka 护甲。"
+				"''"
+				"这是任务量最大的一章，也是中后期一切科技的地基。"
+			]
+			icon: "mekanism:enrichment_chamber"
+			id: "313BA8A85D94245C"
+			rewards: [{
+				id: "69EB0B9691B5A733"
+				type: "xp"
+				xp: 5
+			}]
+			subtitle: "矿物处理之王"
+			tasks: [{
+				id: "5064273C8627542E"
+				title: "模组预告：通用机械"
+				type: "checkmark"
+			}]
+			title: "模组预告：通用机械"
+			x: 1.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["313BA8A85D94245C"]
+			description: [
+				"&a机械动力 Create&f 不喂电，靠&a应力（Stress）&f：水车 / 风车 / 蒸汽引擎提供旋转动力，传动轴与齿轮把动力送到滚筒、研磨机、搅拌机。"
+				"''"
+				"它擅长：自动农场、自动挖矿、物流传送带、精密加工，以及「看得见的机械结构」。对准机器按 &aW&f 看 Ponder 动画演示。"
+				"''"
+				"与电力模组互补：机械动力偏加工与运输，电力模组偏大规模生产。"
+			]
+			icon: "create:brass_ingot"
+			id: "040844F900099D3C"
+			rewards: [{
+				id: "65142855E3FD2A6D"
+				type: "xp"
+				xp: 5
+			}]
+			subtitle: "用旋转与黄铜做工程"
+			tasks: [{
+				id: "09619170E62020C5"
+				title: "模组预告：机械动力"
+				type: "checkmark"
+			}]
+			title: "模组预告：机械动力"
+			x: 3.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["040844F900099D3C"]
+			description: [
+				"&a应用能源2(AE2)&f 把所有物品塞进一个「网络」：&a控制器&f组网、&a存储元件&f扩容量、&a样板&f自动合成、&a终端&f远程存取。"
+				"''"
+				"它和 QIO 是两种思路：AE2 强在「网络+自动合成」，QIO 强在「海量纯库存」。中后期基地几乎必上 AE2。"
+			]
+			icon: "ae2:controller"
+			id: "117E009F03827146"
+			rewards: [{
+				id: "6FEE7DD7AD56DA82"
+				type: "xp"
+				xp: 5
+			}]
+			subtitle: "数字存储与自动合成"
+			tasks: [{
+				id: "368D781AF6640998"
+				title: "模组预告：应用能源2"
+				type: "checkmark"
+			}]
+			title: "模组预告：应用能源2"
+			x: 4.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["117E009F03827146"]
+			description: [
+				"&a植物魔法 Botania&f 用&a花朵 mana&f 做一切：生产花、功能花、法力池、精灵传送门。"
+				"''"
+				"它偏「魔法科技」，产出的 mana 物品能反哺科技线，也有大量自动化花，是包里最优雅的分支。"
+			]
+			icon: "botania:lexicon"
+			id: "080C208F8B84B41B"
+			rewards: [{
+				id: "13FE8CD1BAB6F3FB"
+				type: "xp"
+				xp: 5
+			}]
+			subtitle: "半自动的魔法科技"
+			tasks: [{
+				id: "25F167150D217525"
+				title: "模组预告：植物魔法"
+				type: "checkmark"
+			}]
+			title: "模组预告：植物魔法"
+			x: 6.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["080C208F8B84B41B"]
+			description: [
+				"&a工业先锋 Industrial Foregoing&f 是「一台机器一个功能」的实用流，摆进基地就能接管脏活。"
+				"''"
+				"· &a材料起点&f：乳胶 → 干橡胶 → 塑料，机器框架从「怜悯」一路升到「至高」，且支持原地升级；"
+				"''"
+				"· &a农业&f：播种机 / 收割机 / 施肥器 / 水培床，全自动种植；"
+				"''"
+				"· &a畜牧&f：动物牧场机、喂食器与屠宰场，把种群循环起来，副产粉红史莱姆；"
+				"''"
+				"· &a采矿&f：激光钻 + 激光基座，从底层抽矿。"
+				"''"
+				"定位：前期替代手工劳动成本最低的一章，做出机器框架后立刻见效。"
+			]
+			icon: "industrialforegoing:machine_frame_simple"
+			id: "6EF9481F8EAD1FFF"
+			rewards: [{
+				id: "70C29E5502266952"
+				type: "xp"
+				xp: 5
+			}]
+			subtitle: "农业、畜牧、采矿一条龙"
+			tasks: [{
+				id: "1D72E2956CD421AB"
+				title: "模组预告：工业先锋"
+				type: "checkmark"
+			}]
+			title: "模组预告：工业先锋"
+			x: 7.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["6EF9481F8EAD1FFF"]
+			description: [
+				"&a气动工艺 PneumaticCraft&f 的动力是&a压缩空气&f：压力越高越快越强，但管路会漏气、也会炸，平衡是本章的核心玩法。"
+				"''"
+				"· &a材料起点&f：压缩铁锭 → 压缩铁块 → 各种结构件；"
+				"''"
+				"· &a特色系统&f：可编程无人机、方块编程（在方块上写逻辑）、气压装甲与气动工具；"
+				"''"
+				"· &a定位&f：适合想把自动化逻辑握在自己手里的玩家，无人机物流是它最出彩的部分。"
+			]
+			icon: "pneumaticcraft:ingot_iron_compressed"
+			id: "3E557306447C23FD"
+			rewards: [{
+				id: "653A4A8D9B1F1535"
+				type: "xp"
+				xp: 5
+			}]
+			subtitle: "压缩空气驱动一切"
+			tasks: [{
+				id: "22D1F53FB297801F"
+				title: "模组预告：气动工艺"
+				type: "checkmark"
+			}]
+			title: "模组预告：气动工艺"
+			x: 7.5d
+			y: 6.0d
+		}
+		{
+			dependencies: ["3E557306447C23FD"]
+			description: [
+				"本章解决「东西放哪儿」，把一堆箱子升级成有组织、可扩容、可自动化的存储体系。"
+				"''"
+				"· &a功能存储&f：储物抽屉一槽装十万个，压缩抽屉自动 9 合 1，抽屉控制器一屏管全部，还有跨维度的末影抽屉；"
+				"''"
+				"· &a精巧存储&f：智能箱子按「基础 → 铜 → 铁 → 金 → 钻石 → 下界合金」逐级升档，配控制器与链接工具可多箱一屏；"
+				"''"
+				"· &a升级方向&f：容量（铜/金/钻石/下界合金）、自动化（推送/拉取/收集/虚空）、实用（堆叠/磁铁/过滤）；"
+				"''"
+				"定位：AE2 数字网络之前最省心的存储方案，成本低、上手快。"
+			]
+			icon: "functionalstorage:storage_controller"
+			id: "5D0C435F7E019017"
+			rewards: [{
+				id: "5172A89D6C3AF91D"
+				type: "xp"
+				xp: 5
+			}]
+			subtitle: "抽屉与智能箱子"
+			tasks: [{
+				id: "16B4345B86910CFC"
+				title: "模组预告：存储系统"
+				type: "checkmark"
+			}]
+			title: "模组预告：存储系统"
+			x: 6.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["5D0C435F7E019017"]
+			description: [
+				"&a热力系列 Thermal&f 是最老派也最稳的科技模组，一台机器管一件事，覆盖加工全流程："
+				"''"
+				"· &a加工线&f：磨粉机（二倍增产）、感应熔炼炉（合金与副产核心）、通量熔炉、锯木机、离心分离器；"
+				"''"
+				"· &a液体线&f：熔融坩埚、结晶器与冷却器、精炼厂（原油分馏）、热解机（木头变炭与油）；"
+				"''"
+				"· &a自动化&f：压机与模具、瓶装机与酿造机、作物培育机；"
+				"''"
+				"定位：造价低、规格全，前中期的加工需求基本都能兜住，与通用机械互补而非替代。"
+			]
+			icon: "thermal:machine_pulverizer"
+			id: "208F8B84B41B78DD"
+			rewards: [{
+				id: "4AB8372D4923EB79"
+				type: "xp"
+				xp: 5
+			}]
+			subtitle: "经典加工全家桶"
+			tasks: [{
+				id: "4224FF79816EE5A1"
+				title: "模组预告：热力系列"
+				type: "checkmark"
+			}]
+			title: "模组预告：热力系列"
+			x: 4.5d
+			y: 6.0d
+		}
+		{
+			dependencies: ["208F8B84B41B78DD"]
+			description: [
+				"自动化做不动，多半是物流没通。本章把「搬运」讲透，一次给四种方案："
+				"''"
+				"· &aPipez&f：一条管道通吃物品 / 流体 / 能量 / 气体，五级升级指数提速，最简单粗暴；"
+				"''"
+				"· &a模块化路由器&f：一个方块承载提取、发送、放置、破坏、流体、能量、玩家、检测等模块，功能最全；"
+				"''"
+				"· &aXNet&f：控制器 + 频道编程，把规则写进频道，适合复杂的大型网络；"
+				"''"
+				"· &aLaserIO&f：激光节点直连、无需线缆，布线最优雅；"
+				"''"
+				"建议：先用 Pipez 把线跑通，规模上来再考虑路由器与 XNet。"
+			]
+			icon: "pipez:item_pipe"
+			id: "06AA496CA18EFC51"
+			rewards: [{
+				id: "150D217525CEB718"
+				type: "xp"
+				xp: 5
+			}]
+			subtitle: "四套物流方案对比"
+			tasks: [{
+				id: "49B8507F3604F167"
+				title: "模组预告：物流管道"
+				type: "checkmark"
+			}]
+			title: "模组预告：物流管道"
+			x: 3.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["06AA496CA18EFC51"]
+			description: [
+				"这一章不讲单一模组，而是讲「把基地升到下一档」的三件事："
+				"''"
+				"· &a资源无限化&f：HNN（数据模型 + 模拟室，用 AI 预测刷怪）、神秘农业（从繁荣碎片种出金属，一路做到觉醒祭坛）；"
+				"''"
+				"· &a终极装备与能源&f：龙之研究（龙金属线、融合工艺多方块、万亿级能量核心、Wyvern 到混沌级工具护甲）；"
+				"''"
+				"· &a规模化&f：把前 10 章的产线从「够用」推到「量产」；"
+				"''"
+				"定位：承上启下的一章——做完它，你才有底气进格雷科技。"
+			]
+			icon: "mysticalagriculture:prosperity_ingot"
+			id: "082F7F4C9D152470"
+			rewards: [{
+				id: "00498F1DCBF49DEB"
+				type: "xp"
+				xp: 5
+			}]
+			subtitle: "资源无限化与终极装备"
+			tasks: [{
+				id: "46652F9A9F60025A"
+				title: "模组预告：进阶科技综合"
+				type: "checkmark"
+			}]
+			title: "模组预告：进阶科技综合"
+			x: 1.5d
+			y: 6.0d
+		}
+		{
+			dependencies: ["082F7F4C9D152470"]
+			description: [
+				"&a末地接口 Ender IO&f 的招牌是&a导管&f：一根线同时跑多种内容，还能在方块内部穿行，基地布线从此不再杂乱。"
+				"''"
+				"· &a材料体系&f：七大合金，从导电铁到末影合金，是本章所有机器与导管的基础；"
+				"''"
+				"· &a导管家族&f：物品（一格多流）、能量与红石（优先供电与信号）、流体与化学（液体与气体），并能对接 AE2 的 ME 网络；"
+				"''"
+				"· &a实用机器&f：合金熔炼炉（煤版→电版）、SAG 磨坊（2 倍矿粉）、电容（1x → 8x 加速）、从斯特林到光伏的发电机；"
+				"''"
+				"定位：布线最优雅的一章，尤其适合基地已经乱成一团的存档。"
+			]
+			icon: "enderio:item_conduit"
+			id: "215BB85719D018FA"
+			rewards: [{
+				id: "6C45A922426A0783"
+				type: "xp"
+				xp: 5
+			}]
+			subtitle: "导管之王"
+			tasks: [{
+				id: "7BD96A538ABED8BB"
+				title: "模组预告：末地接口"
+				type: "checkmark"
+			}]
+			title: "模组预告：末地接口"
+			x: 0.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["215BB85719D018FA"]
+			description: [
+				"本章把四个「各自精彩」的模组打包补完，按兴趣挑一个深入即可："
+				"''"
+				"· &a沉浸工程 IE&f：工程师手册开局，焦煤与焦炉 → 高炉炼钢 → 金属压延机 → 装配机，发电机与传送带构成蒸汽朋克流水线；"
+				"''"
+				"· &aCC：Tweaked&f：用 Lua 写程序控制世界，自动化自由度的天花板；"
+				"''"
+				"· &a集成动力&f：用逻辑卡与变量做条件自动化，思路像写代码；"
+				"''"
+				"· &aRFTools&f：维度建造、储物与实用工具，偏后期。"
+			]
+			icon: {
+				Count: 1
+				id: "immersiveengineering:hammer"
+				tag: {
+					Damage: 0
+				}
+			}
+			id: "069181BE7A0C19BC"
+			rewards: [{
+				id: "09982FE8CD1BAB6F"
+				type: "xp"
+				xp: 5
+			}]
+			subtitle: "IE / CC / 集成动力 / RFTools"
+			tasks: [{
+				id: "293449F9FB715809"
+				title: "模组预告：补充科技"
+				type: "checkmark"
+			}]
+			title: "模组预告：补充科技"
+			x: 0.0d
+			y: 7.5d
+		}
+		{
+			dependencies: ["069181BE7A0C19BC"]
+			description: [
+				"&a格雷科技 GTCEu&f 是本包最硬核的科技线，也是唯一自成体系的："
+				"''"
+				"· &a电压等级&f：ULV 一路爬到 MAX，上一级机器带不动下一级配方；"
+				"''"
+				"· &a电学三概念&f：电压、安培与线缆烧毁——接错线真的会把机器炸掉，本章专门讲这套机制；"
+				"''"
+				"· &a加工链&f：焦炉 → 原始高炉 → 青铜蒸汽机器 → LV 电力机器，材料与副产精细到以「粒」计；"
+				"''"
+				"定位：不急着做。先用电力和通用机械打好地基，再来啃这一章。"
+			]
+			icon: "gtceu:lv_macerator"
+			id: "3FD2A6DDDD6FC1DC"
+			rewards: [{
+				id: "69A64273C8627542"
+				type: "xp"
+				xp: 5
+			}]
+			subtitle: "工业巅峰，也是最硬的一章"
+			tasks: [{
+				id: "3FB6C3DDFB1760C3"
+				title: "模组预告：格雷科技"
+				type: "checkmark"
+			}]
+			title: "模组预告：格雷科技"
+			x: 1.5d
+			y: 7.5d
+		}
+		{
+			dependencies: ["3FD2A6DDDD6FC1DC"]
+			description: [
+				"&a匠魂 TConstruct&f 的核心不是「做一把镐子」，而是「设计一把属于你的镐子」："
+				"''"
+				"· &a流程&f：部件（镐头 / 手柄 / 绑定结）→ 组装 → 强化 → 升级，每一步都能继续塞东西；"
+				"''"
+				"· &a材料&f：不同材料给不同属性（耐久、挖掘速度、幸运、特殊效果），可自由混搭；"
+				"''"
+				"· &a冶炼厂&f：焦黑浆料 → 焦黑砖 → 冶炼炉控制器 / 储罐 / 浇注口 / 浇铸台，搭起来就能批量熔炼浇铸；"
+				"''"
+				"定位：工具能一路用到后期，值得认真做一套，本章从材料科普一路带到金属铸型。"
+			]
+			icon: {
+				Count: 1
+				id: "tconstruct:pickaxe"
+				tag: {
+					Damage: 0
+					tic_broken: 0b
+				}
+			}
+			id: "53F411DD758AF8F7"
+			rewards: [{
+				id: "303D7E501EA6144B"
+				type: "xp"
+				xp: 5
+			}]
+			subtitle: "可定制的工具哲学"
+			tasks: [{
+				id: "135847FEFAE0BE56"
+				title: "模组预告：匠魂 TConstruct"
+				type: "checkmark"
+			}]
+			title: "模组预告：匠魂 TConstruct"
+			x: 3.0d
+			y: 7.5d
+		}
+		{
+			dependencies: ["53F411DD758AF8F7"]
+			description: [
+				"&a神化 Apotheosis&f 改写了「装备」这一块，是纯增强向的模组，和科技线完全不冲突："
+				"''"
+				"· &a强化附魔台&f：突破原版附魔等级上限，靠特殊书架堆叠解锁——地狱系、海洋系、末地系、深渊系四套书架各有门槛；"
+				"''"
+				"· &a词缀与宝石&f：装备带稀有度与词缀（Common → Mythic），可用重铸台反复洗练，宝石可镶嵌叠加；"
+				"''"
+				"· &a地牢与怪物&f：世界会生成神化主题地牢与强化怪，掉落更好的装备；"
+				"''"
+				"定位：随时可做的一章，属于「打怪变强」的独立乐趣。"
+			]
+			icon: "apotheosis:gem"
+			id: "6AE1DC8405E8B7BE"
+			rewards: [{
+				id: "677B760BB8645DAE"
+				type: "xp"
+				xp: 5
+			}]
+			subtitle: "附魔与装备的极限扩展"
+			tasks: [{
+				id: "77BBE6F4744F5491"
+				title: "模组预告：神化 Apotheosis"
+				type: "checkmark"
+			}]
+			title: "模组预告：神化 Apotheosis"
+			x: 4.5d
+			y: 7.5d
+		}
+		{
+			dependencies: ["6AE1DC8405E8B7BE"]
+			description: [
+				"&a新生魔艺 Ars Nouveau&f 是「可编程法术」：自己把法术拼出来，让它在世界里替你干活。"
+				"''"
+				"· &a字形系统&f：法术由「形态 + 效果」拼装（投射 + 伤害 + 强力 = 火球术），同一套系统能造工具、能打怪、能做自动化；"
+				"''"
+				"· &a魔源体系&f：魔源宝石、魔源瓶、中继器组成一张法力电网，魔源浆果丛是它的燃料农业；"
+				"''"
+				"· &a仪式与使魔&f：仪式能白嫖资源（圆石、铁），召唤物可以守家；"
+				"''"
+				"· &a随身手册&f：Worn Notebook 记录全部配方与机制，别丢；"
+				"''"
+				"定位：魔法线里最像「科技」的一章，自动化潜力很大。"
+			]
+			icon: "ars_nouveau:worn_notebook"
+			id: "7FF70096C349B2F2"
+			rewards: [{
+				id: "4F31FDA95D613D64"
+				type: "xp"
+				xp: 5
+			}]
+			subtitle: "可编程法术与召唤"
+			tasks: [{
+				id: "43F12A39BA285B7E"
+				title: "模组预告：新生魔艺"
+				type: "checkmark"
+			}]
+			title: "模组预告：新生魔艺"
+			x: 6.0d
+			y: 7.5d
+		}
+		{
+			dependencies: ["7FF70096C349B2F2"]
+			description: [
+				"本章收束整条魔法与冒险线，一次补齐多个模组。开头先看「魔法模组地图」，再决定深入哪个："
+				"''"
+				"· &a血魔法 Blood Magic&f：用 LP（生命值）供能与施法，从弱血球、献祭匕首一路做到血祭坛与学徒血球；"
+				"''"
+				"· &a神秘学 Occultism&f：召唤精灵、存储魔素，用仪式做资源循环；"
+				"''"
+				"· &aPsi&f：用「程序」驱动魔法，逻辑感最强的魔法模组；"
+				"''"
+				"· &a铁咒书&f：主打冒险与战斗的法术体系；"
+				"''"
+				"· &aProjectE&f：EMC 等价转换，把多余资源换成需要的资源；"
+				"''"
+				"定位：可选分支，挑一个深入即可，本章也讲了魔法与科技怎么搭。"
+			]
+			icon: "bloodmagic:apprenticebloodorb"
+			id: "18FCCD625B24928F"
+			rewards: [{
+				id: "7245BD68AFC769AB"
+				type: "xp"
+				xp: 5
+			}]
+			subtitle: "血魔法 · 神秘学 · Psi · 铁咒书 · ProjectE"
+			tasks: [{
+				id: "5ED32BE16F91FDF3"
+				title: "模组预告：魔法与冒险补充"
+				type: "checkmark"
+			}]
+			title: "模组预告：魔法与冒险补充"
+			x: 7.5d
+			y: 7.5d
+		}
+		{
+			dependencies: ["18FCCD625B24928F"]
+			description: [
+				"到这里你已经认识了整个科技包的地图：会查 JEI、懂 FE/等级/多方块/管道、知道各模组分工，也知道后面 18 章各讲什么。"
+				""
+				"接下来请进入「&a电力与能源&f」章节，做出你的第一台发电机、第一根线缆、第一台吃电机器——那才是真正开始科技之旅。"
+				""
+				"提示：本教程各章可任意顺序读（本章为 flexible，不锁顺序），但强烈建议先电力、再通用机械，后面的模组都依赖电和矿石处理。"
+			]
+			icon: "mekanism:metallurgic_infuser"
+			id: "30539E5D0B9EB0DC"
+			rewards: [{
+				id: "221C8AF9F7A6AE1D"
+				type: "xp"
+				xp: 30
+			}]
+			shape: "octagon"
+			size: 1.5d
+			subtitle: "做出第一台吃电的机器"
+			tasks: [{
+				id: "752956CD421ABF51"
+				title: "新手第一里程碑"
+				type: "checkmark"
+			}]
+			title: "新手第一里程碑"
+			x: 7.5d
+			y: 9.0d
+		}
+	]
+	title: "入门总览"
+}

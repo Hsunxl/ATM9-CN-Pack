@@ -1,0 +1,43 @@
+# 系统与编辑器垃圾
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*~
+.idea/
+.vscode/
+
+# 本地临时文件
+*.tmp
+*.log
+_dl_url*.txt
+_verify*.md
+_baseline*.md
+_upload*.sh
+
+# 绝不提交：游戏实例内容（本仓库只装附加包）
+saves/
+journeymap/
+logs/
+crash-reports/
+screenshots/
+simplebackups/
+backups/
+mods/
+local/
+shaderpacks/
+options.txt
+usercache.json
+usernamecache.json
+ds_private_storage.json
+keys.txt
+rhino.local.properties
+PCL/
+
+# 凭据（车万女仆的 API Key 等）
+**/touhou_little_maid/sites/*.json
+**/available_sites.yml
+*.pem
+*.key
+credentials.json
+token.json

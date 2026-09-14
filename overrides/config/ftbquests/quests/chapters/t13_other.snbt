@@ -1,0 +1,1097 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "t13_other"
+	group: "00C72C1FB6193A42"
+	icon: {
+		Count: 1
+		id: "immersiveengineering:hammer"
+		tag: {
+			Damage: 0
+		}
+	}
+	id: "119022BA284D30E2"
+	order_index: 13
+	progression_mode: "flexible"
+	quest_links: [ ]
+	quests: [
+		{
+			description: [
+				"本章补全包内其余主流科技模组："
+				""
+				"· &a沉浸工程 IE&f：蒸汽朋克多方块工厂；"
+				""
+				"· &aCC:Tweaked&f：Lua 编程与海龟机器人；"
+				""
+				"· &a集成动力/隧道进阶&f：逻辑物流的高阶玩法；"
+				""
+				"· &aRFTools 家族&f：能量电池、建造机、模块化存储、传送与环境控制。"
+				""
+				"提示：这几家非必学，但都极具特色——按兴趣选择。"
+			]
+			icon: {
+				Count: 1
+				id: "immersiveengineering:hammer"
+				tag: {
+					Damage: 0
+				}
+			}
+			id: "1D69382A17A864CC"
+			shape: "hexagon"
+			size: 1.5d
+			subtitle: "IE / CC / 集成动力进阶 / RFTools"
+			tasks: [{
+				id: "608BE1625A04D252"
+				title: "补充科技总览"
+				type: "checkmark"
+			}]
+			title: "补充科技总览"
+			x: 13.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["1D69382A17A864CC"]
+			description: [
+				"&a工程师手册&f（manual）是 IE 的图文教材，涵盖所有多方块结构，务必边玩边查。"
+				""
+				"工具：&a工程师锤&f（hammer）是激活/搭建多方块的必备；&a钢丝钳&f（wirecutter）处理电线；&a蓝图&f（blueprint）是多种机器的合成材料。"
+				""
+				"&a核心组件&f（component_iron / component_steel / component_electronic）逐级是 IE 机器的底座零件。"
+			]
+			id: "73DC540C89454038"
+			rewards: [{
+				id: "58C424A8D3D8792B"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "开局三件套"
+			tasks: [{
+				id: "7DD6C4AB5EF8AE0E"
+				item: "immersiveengineering:manual"
+				type: "item"
+			}]
+			title: "IE：工程师手册与工具"
+			x: 12.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["73DC540C89454038"]
+			description: [
+				"&a焦炉&f（coke_oven）是 3x3x3 多方块（用&a焦炉砖&f cokebrick 围成空心，按手册摆）："
+				""
+				"投入木头/煤，烧出&a焦炭&f（coal_coke / coke）——高炉的燃料与还原剂，同时副产&a杂酚油&f（creosote_bucket）。"
+				""
+				"结构要点：焦炉是封闭空心方块，留一个进料面即可；用工程师锤右键成型。"
+			]
+			id: "465C127B49D79A32"
+			rewards: [{
+				id: "1C40E5C1A3545C90"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "木→焦煤+杂酚油"
+			tasks: [{
+				id: "0D5062E5B20041E2"
+				item: "immersiveengineering:coke_oven"
+				type: "item"
+			}]
+			title: "IE：焦煤与焦炉"
+			x: 1.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["465C127B49D79A32"]
+			description: [
+				"&a高炉&f（blast_furnace）是 3x3x4 多方块：耐火砖围成，投入&a铁锭+焦炭&f烧出&a钢锭&f。"
+				""
+				"&a高级高炉&f（advanced_blast_furnace）+&a高炉预热器&f（blastfurnace_preheater）烧得更快、出副产物。"
+				""
+				"钢是 IE 电网、钢板、机器外壳的核心材料；渣（slag）做成&a渣砖&f（slag_brick）建材。"
+			]
+			id: "4CAE3075531DCB76"
+			rewards: [{
+				id: "15567E22C0E05663"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "铁→钢"
+			tasks: [{
+				id: "2AAC750B86838875"
+				item: "immersiveengineering:blast_furnace"
+				type: "item"
+			}]
+			title: "IE：高炉炼钢"
+			x: 7.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["4CAE3075531DCB76"]
+			description: [
+				"&a金属压延机&f（metal_press）多方块：给金属锭压成半成品，模具决定形状——"
+				""
+				"· mold_plate（板）、mold_rod（杆）、mold_wire（线）、mold_gear（齿轮）、mold_bullet_casing（弹壳）、mold_packing_4 / packing_9 / unpacking（打包）。"
+				""
+				"产物如&a钢板&f（sheetmetal_steel）、钢板用于机器外壳与&a钢板斜坡/槽&f（chute_steel）。"
+			]
+			id: "272487975A7A8F32"
+			rewards: [{
+				id: "1ED7B116F8BF8861"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "锭→板/线/齿轮"
+			tasks: [{
+				id: "116C1787041F3534"
+				item: "immersiveengineering:metal_press"
+				type: "item"
+			}]
+			title: "IE：金属压延机与模具"
+			x: 4.5d
+			y: 6.0d
+		}
+		{
+			dependencies: ["272487975A7A8F32"]
+			description: [
+				"&a装配机&f（assembler）多方块：自动把组件组装成零件/电路板，是 IE 自动化核心。"
+				""
+				"&a合金熔炼炉&f（alloy_smelter）多方块：烧合金，比工作台合成快。"
+				""
+				"配套：&a粉碎机&f（crusher）磨矿、&a锯木厂&f（sawmill）锯木成板、&a电弧炉&f（arc_furnace）高温熔矿/合金（见任务9）。"
+			]
+			id: "46507449E4782D70"
+			rewards: [{
+				id: "253109D2D8B7EF29"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "组装与合金"
+			tasks: [{
+				id: "777E86C85B7102D7"
+				item: "immersiveengineering:assembler"
+				type: "item"
+			}]
+			title: "IE：装配机与合金窑"
+			x: 3.0d
+			y: 7.5d
+		}
+		{
+			dependencies: ["4CAE3075531DCB76"]
+			description: [
+				"&a储罐&f（tank）是任意尺寸多方块：用储罐板围成任意大小空心，封顶即成大容量液体罐，多个可叠放。"
+				""
+				"&a筒仓&f（silo）多方块：竖直堆叠存物品（谷物/粉末），自动进出。"
+				""
+				"这两个是 IE 工厂的「水桶粮仓」。"
+			]
+			id: "499074AC69A21359"
+			rewards: [{
+				id: "287B77F8D9ECE10D"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "液体与方块存储"
+			tasks: [{
+				id: "0D483EEF61B0F1C5"
+				item: "immersiveengineering:tank"
+				type: "item"
+			}]
+			title: "IE：储罐与筒仓"
+			x: 6.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["4CAE3075531DCB76"]
+			description: [
+				"IE 发电：&a柴油发电机&f（diesel_generator）烧生物柴油（biodiesel_bucket）、&a热电发电机&f（thermoelectric_generator）温差发电、&a发电机&f（generator）燃煤。"
+				""
+				"&a电容&f（capacitor_lv / mv / hv）分级储能；&a电流变压器&f（current_transformer）升降电压。"
+				""
+				"电网用&a电线&f（wire_copper / steel / aluminum / electrum / lead）连在&a铝杆&f（alu_post）上，电线会下垂、需绝缘（wirecoil_*_ins），漏电会伤人。"
+			]
+			id: "6BDDBAE97737AA58"
+			rewards: [{
+				id: "25EBFD74328D2CA2"
+				type: "xp"
+				xp: 20
+			}]
+			subtitle: "柴油/热电/燃煤"
+			tasks: [{
+				id: "6DD3FB7BE34A4462"
+				item: "immersiveengineering:diesel_generator"
+				type: "item"
+			}]
+			title: "IE：发电机与电网"
+			x: 7.5d
+			y: 6.0d
+		}
+		{
+			dependencies: ["272487975A7A8F32"]
+			description: [
+				"&a传送带&f：conveyor_basic（基础）、conveyor_extract（提取）、conveyor_splitter（分流）、conveyor_dropper（落下）、conveyor_redstone（红石控制）、conveyor_vertical（竖直）。"
+				""
+				"配合&a钢溜槽&f（chute_steel）竖直投料，可搭「矿石→压延→装配」全自动流水线。"
+				""
+				"&a钢筋/脚手架&f（alu_scaffolding）与&a混凝土&f（concrete）是搭建工厂的建材。"
+			]
+			id: "4012B9D1947D3ADE"
+			rewards: [{
+				id: "76FD4D29EC69F43D"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "蒸汽朋克流水线"
+			tasks: [{
+				id: "76B8ADB77F99977C"
+				item: "immersiveengineering:conveyor_basic"
+				type: "item"
+			}]
+			title: "IE：传送带与物流"
+			x: 4.5d
+			y: 7.5d
+		}
+		{
+			dependencies: ["6BDDBAE97737AA58"]
+			description: [
+				"&a电弧炉&f（arc_furnace）巨型多方块电炉：一次多槽熔矿出 2 倍粉+副产物，还能熔合金、回收工具，耗电巨大——先建好电网。"
+				""
+				"&a挖掘机&f（excavator）多方块：配合&a钻机&f（drill）+&a钻头&f（drillhead_iron / drillhead_steel）在矿脉上自动采掘；&a斗轮挖掘机&f（bucket_wheel）范围更大；&a液体泵&f（fluid_pump）抽油。"
+				""
+				"&a样本钻&f（sample_drill）+&a岩芯样本&f（coresample）用来勘探矿脉。"
+			]
+			id: "2C60F3B9FC145C7F"
+			rewards: [{
+				id: "36793DC78FA86AA6"
+				type: "xp"
+				xp: 25
+			}]
+			subtitle: "终极加工与自动挖矿"
+			tasks: [{
+				id: "128F11B9D6F4C4AB"
+				item: "immersiveengineering:arc_furnace"
+				type: "item"
+			}]
+			title: "IE：电弧炉与采矿机"
+			x: 6.0d
+			y: 7.5d
+		}
+		{
+			dependencies: ["73DC540C89454038"]
+			description: [
+				"&a手持钻&f（drill）：可装钻头并插升级（drillhead_steel 效率、toolupgrade_drill_damage / fortune / lube / waterproof / capacity），挖矿利器；"
+				""
+				"&a工程师锤&f（hammer）激活多方块；&a钢丝钳&f（wirecutter）；"
+				""
+				"&a钢套装甲&f（armor_steel_chestpiece/helmet/leggings/boots）与&a钢斧&f（axe_steel）；"
+				""
+				"&a避雷针&f（lightning_rod）引雷、&a泛光灯/灯泡&f（floodlight / light_bulb / light_engineering）厂区照明。"
+			]
+			id: "73343E64C786FCD2"
+			rewards: [{
+				id: "2BFDEAE89B4DD638"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "钻、盾、锤子"
+			tasks: [{
+				id: "5F16A7C86E1528E1"
+				item: "immersiveengineering:drill"
+				type: "item"
+			}]
+			title: "IE：工具套件"
+			x: 0.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["73DC540C89454038"]
+			description: [
+				"&a左轮手枪&f（revolver）配不同子弹；&a轨道炮&f（railgun）远程高伤（toolupgrade_railgun_capacitors 升级）；"
+				""
+				"&a化学投掷器&f（chemthrower）喷化学液体；&a电击棍&f（shock_baton，shield_shock 升级）近战麻痹；"
+				""
+				"弹药/弹壳由压延机 mold_bullet_casing 生产；&a带刺铁丝&f（razor_wire）做防御工事。"
+			]
+			id: "37AC5E5D761DC6C7"
+			rewards: [{
+				id: "4AB13329E112C776"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "左轮与轨道炮"
+			tasks: [{
+				id: "7790A3F9EEA25C9F"
+				item: "immersiveengineering:revolver"
+				type: "item"
+			}]
+			title: "IE：武器与弹药"
+			x: 3.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["1D69382A17A864CC"]
+			description: [
+				"&aCC:Tweaked&f给你可编程电脑（Lua）：&a普通电脑&f（computer_normal）与&a高级电脑&f（computer_advanced，彩色显示）、&a命令电脑&f（computer_command）。"
+				""
+				"开机输 &alua&f 进交互模式；&aredstone.setOutput(\"back\", true)&f 控红石。"
+				""
+				"&a有线调制解调器&f（wired_modem / wired_modem_full）+&a网络线缆&f（cable）把电脑连网；&a无线调制解调器&f（wireless_modem_normal / wireless_modem_advanced）远程通信。"
+			]
+			id: "17AC9CE9EEF408B2"
+			rewards: [{
+				id: "60BEBC7573208D8A"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "用 Lua 控制世界"
+			tasks: [{
+				id: "16099BD040707AC2"
+				item: "computercraft:computer_normal"
+				type: "item"
+			}]
+			title: "CC：电脑入门"
+			x: 13.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["17AC9CE9EEF408B2"]
+			description: [
+				"&a海龟&f（turtle_normal / turtle_advanced）是移动机器人："
+				""
+				"&aturtle.dig()&f 挖、&aturtle.forward()&f 走、&aturtle.turnLeft()&f 转、&aturtle.refuel()&f 加燃料；"
+				""
+				"经典程序：自动挖 3x3 隧道、自动砍树、自动刷怪塔；网上有大量现成程序可直接用。"
+				""
+				"&a口袋电脑&f（pocket_computer_normal / colour）是可携带的随身终端。"
+			]
+			id: "35BE09B5FC4B561B"
+			rewards: [{
+				id: "71684908B38946B7"
+				type: "xp"
+				xp: 20
+			}]
+			subtitle: "会挖矿的乌龟"
+			tasks: [{
+				id: "2A90EAF592943C81"
+				item: "computercraft:turtle_normal"
+				type: "item"
+			}]
+			title: "CC：海龟机器人"
+			x: 7.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["17AC9CE9EEF408B2"]
+			description: [
+				"&a显示器&f（monitor_normal / monitor_advanced）拼大屏幕做状态面板；&a磁盘驱动器&f（disk_drive）+&a软盘&f（disk）存程序；"
+				""
+				"&a打印机&f（printer）+&a纸/成书&f（printed_page/pages/book）印纸质物品；&a扬声器&f（speaker）出声；&a红石继电器&f（redstone_relay）远程控红石。"
+				""
+				"进阶：电脑通过外设协议与 AE2/机器交互，做「文字指令仓库」。"
+			]
+			id: "5427EFDE29491861"
+			rewards: [{
+				id: "4E4A447B5E67DBC1"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "屏幕、磁盘、声音"
+			tasks: [{
+				id: "5670CA2DA31F1421"
+				item: "computercraft:monitor_normal"
+				type: "item"
+			}]
+			title: "CC：外设与打印"
+			x: 9.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["1D69382A17A864CC"]
+			description: [
+				"集成动力高阶用法："
+				""
+				"· &a运算符&f：算术（+−×÷）、比较（< > =）、逻辑（与/或/非），在逻辑编程器里连线；"
+				""
+				"· &a变量存储&f（variablestore）长期保存变量卡；&a变量转换器&f跨网共享；"
+				""
+				"· &a代理&f（proxy）把网络延伸到远处方块；&a延迟&f（delay）做定时；"
+				""
+				"经典：监控全基地电量 < 阈值 → 红石写入器启动备用发电机。"
+			]
+			id: "2FEDFA2155155F23"
+			rewards: [{
+				id: "3FD63EF1DB75D3D2"
+				type: "xp"
+				xp: 20
+			}]
+			subtitle: "条件、计数与函数"
+			tasks: [{
+				id: "1035635854D7FDC3"
+				item: "integrateddynamics:variable"
+				type: "item"
+			}]
+			title: "ID 进阶：变量与算子"
+			x: 16.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["2FEDFA2155155F23"]
+			description: [
+				"全读取器：part_inventory_reader（物品）、part_fluid_reader（流体）、part_machine_reader（机器）、part_redstone_reader（红石）、part_block_reader（方块）、part_entity_reader（实体）、part_network_reader（网络）、part_audio_reader（音频）、part_extradimensional_reader（跨维度）、part_world_reader（世界）。"
+				""
+				"全写入器：part_inventory_writer、part_machine_writer、part_redstone_writer、part_effect_writer（上 buff）、part_entity_writer、part_audio_writer。"
+			]
+			id: "0E2B8359B5184873"
+			rewards: [{
+				id: "19AA6F04F1FE3F23"
+				type: "xp"
+				xp: 20
+			}]
+			subtitle: "读世界写世界"
+			tasks: [{
+				id: "29633D676E5274EE"
+				item: "integrateddynamics:part_machine_reader"
+				type: "item"
+			}]
+			title: "ID 进阶：读写器全表"
+			x: 25.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["2FEDFA2155155F23"]
+			description: [
+				"&a显示面板&f（part_display_panel）把变量实时显示成文字；&a动态/静态灯板&f做装饰。"
+				""
+				"联动&a集成终端&f（integratedterminals:part_terminal_storage / terminal_storage_portable）做可视化仓库；&a集成合成&f（integratedcrafting:part_interface_crafting / part_crafting_writer）按变量请求自动合成。"
+				""
+				"&a标签机&f（labeller）给变量卡命名，大型网络不乱。"
+			]
+			id: "14280D327A6EA8AF"
+			rewards: [{
+				id: "09658017567FF6FB"
+				type: "xp"
+				xp: 20
+			}]
+			subtitle: "监控大屏"
+			tasks: [{
+				id: "08C7E7B7218C3D15"
+				item: "integrateddynamics:part_display_panel"
+				type: "item"
+			}]
+			title: "ID 进阶：显示面板与终端"
+			x: 27.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["2FEDFA2155155F23"]
+			description: [
+				"&a世界导入/导出隧道&f（part_importer_world_item/fluid/energy/block、part_exporter_world_*）直接与世界方块交互，受变量控制自动挖/放。"
+				""
+				"&a玩家模拟器&f（part_player_simulator）模拟玩家右键；&a接口过滤&f（part_interface_filter_*）筛内容。"
+				""
+				"把逻辑接到 AE2/RS 外设，就成了「会思考的存储网络」。"
+			]
+			id: "7EC8BA6DA0D70986"
+			rewards: [{
+				id: "4CF42F344FA76A92"
+				type: "xp"
+				xp: 25
+			}]
+			subtitle: "逻辑控制的自动挖矿"
+			tasks: [{
+				id: "11A44573324CA00B"
+				item: "integratedtunnels:part_importer_world_item"
+				type: "item"
+			}]
+			title: "ID 进阶：集成隧道世界交互"
+			x: 28.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["1D69382A17A864CC"]
+			description: [
+				"RFTools 家族：base（基座）+ builder（建造）+ power（能量）+ storage（存储）+ utility（实用）+ control（控制）。"
+				""
+				"基础件：&a机器框架&f（machine_frame）、&a机器基座&f（machine_base）、&a注魔机&f（machine_infuser）消耗&a注魔末影珍珠&f（infused_enderpearl）与&a维度碎片&f（dimensionalshard）强化机器；"
+				""
+				"&a智能扳手&f（smartwrench）与&a信息平板&f（tablet / tablet_filled）是随身工具。"
+			]
+			id: "3B30F784E223856D"
+			rewards: [{
+				id: "247E53FC50C0478A"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "家族入门"
+			tasks: [{
+				id: "5093E5A2FA06545B"
+				item: "rftoolsbase:machine_frame"
+				type: "item"
+			}]
+			title: "RFTools：基座与材料"
+			x: 15.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["3B30F784E223856D"]
+			description: [
+				"&a能量电池&f（cell1 / cell2 / cell3）区块级储能，用&a能量核心&f（power_core1/2/3）升级；"
+				""
+				"&a维度电池&f（dimensionalcell / dimensionalcell_simple / dimensionalcell_advanced）跨维度共享同一能量池，是廉价的全维度无线供电；"
+				""
+				"&a能量单元卡&f（powercell_card_unlinked → linked）把电池连到用电器；&a能量监测器&f（power_monitor）与&a末影监测器&f（ender_monitor）看电量；"
+				""
+				"发电：&a燃煤发电机&f（coalgenerator）、&a烈焰发电机&f（blazing_generator）。"
+			]
+			id: "4769924C423AC0D4"
+			rewards: [{
+				id: "5F0D8A2AB029F54C"
+				type: "xp"
+				xp: 20
+			}]
+			subtitle: "Cell 与维度电池"
+			tasks: [{
+				id: "6AC35301D067E9EB"
+				item: "rftoolspower:cell1"
+				type: "item"
+			}]
+			title: "RF：能量电池与无线供电"
+			x: 15.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["3B30F784E223856D"]
+			description: [
+				"&a模块化存储&f（modular_storage）插&a存储模块&f（storage_module0/1/2/3/6）扩容，一个方块=数字仓库；"
+				""
+				"&a存储扫描仪&f（storage_scanner）把周围箱子虚拟化成统一界面；&a存储控制模块&f（storage_control_module）批量管理；&a配方管理&f（crafting_manager）做自动合成；&a平板扫描仪&f（tablet_scanner）远程访问。"
+			]
+			id: "7531E0BFB3E17141"
+			rewards: [{
+				id: "70688D2449C3CFFC"
+				type: "xp"
+				xp: 20
+			}]
+			subtitle: "随身数字仓库"
+			tasks: [{
+				id: "499B0E8181622B3C"
+				item: "rftoolsstorage:modular_storage"
+				type: "item"
+			}]
+			title: "RF：模块化存储"
+			x: 13.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["3B30F784E223856D"]
+			description: [
+				"&a建造机&f（builder）插&a形状卡&f定义区域："
+				""
+				"· shape_card_quarry（采石/区块挖矿，配 fortune/silk 变体）；"
+				""
+				"· shape_card_pump / pump_clear（抽液体）；"
+				""
+				"· shape_card_def（自定义）、shape_card_void（清除）、shape_card_liquid；"
+				""
+				"&a空间室&f（space_chamber + space_chamber_controller + space_chamber_card）传送整个区域（搬家）；&a移动器&f（mover / mover_controller）整块搬运结构。"
+			]
+			id: "1C2CBCED53C12457"
+			rewards: [{
+				id: "5E7288EB69772929"
+				type: "xp"
+				xp: 25
+			}]
+			subtitle: "一键建造/挖掘"
+			tasks: [{
+				id: "270D5CC346A5E402"
+				item: "rftoolsbuilder:builder"
+				type: "item"
+			}]
+			title: "RF：建造机与形状卡"
+			x: 18.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["3B30F784E223856D"]
+			description: [
+				"&a物质传送器&f（matter_transmitter / matter_receiver / matter_booster）跨距离传送物品；&a物质光柱&f（matter_beamer）。"
+				""
+				"&a拨号装置&f（dialing_device）设定传送目的地；&a充能传送器&f（charged_porter / advanced_charged_porter）充能后随身瞬移；&a传送探针&f（teleport_probe）探测目的地。"
+				""
+				"&a简单拨号器&f（simple_dialer）快速选点。"
+			]
+			id: "24B78241D402BF21"
+			rewards: [{
+				id: "52000F862C10E82A"
+				type: "xp"
+				xp: 20
+			}]
+			subtitle: "瞬移网络"
+			tasks: [{
+				id: "7CFE3193203E7D2D"
+				item: "rftoolsutility:matter_transmitter"
+				type: "item"
+			}]
+			title: "RF：传送与拨号"
+			x: 19.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["3B30F784E223856D"]
+			description: [
+				"&a环境控制器&f（environmental_controller）给范围内玩家上持续 buff，插模块生效：flight_module（飞行）、speed_module、haste_module、nightvision_module、waterbreathing_module、regeneration_module、saturation_module、luck_module 等。"
+				""
+				"&a屏幕&f（screen + screen_controller + screen_link）显示信息，配&a文本/能量/物品/红石模块&f（text_module / energy_module / inventory_module / redstone_module）做基地监控面板。"
+				""
+				"&a注射器&f（syringe）给玩家临时效果。"
+			]
+			id: "60569ABEA789E44F"
+			rewards: [{
+				id: "78DBA29978ACC7CD"
+				type: "xp"
+				xp: 25
+			}]
+			subtitle: "随身 buff 与监控屏"
+			tasks: [{
+				id: "5D343AAA48ADE885"
+				item: "rftoolsutility:environmental_controller"
+				type: "item"
+			}]
+			title: "RF：环境控制器与屏幕"
+			x: 16.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["3B30F784E223856D"]
+			description: [
+				"&a处理器&f（processor）+&a程序员&f（programmer）+&a程序卡&f（program_card）：用节点连线做可视化编程自动化。"
+				""
+				"CPU 核心 cpu_core_500/1000/2000 决定性能；&a令牌卡&f（token）、&a网络卡&f（network_card / advanced_network_card）、&a节点&f（node）组网；"
+				""
+				"&a图形卡/变量模块/交互模块&f（graphics_card / variable_module / interaction_module）扩展能力。这是 RFTools 的「自动化大脑」。"
+			]
+			id: "16DBCA86214B6C95"
+			rewards: [{
+				id: "0B68A507E9EC5423"
+				type: "xp"
+				xp: 25
+			}]
+			subtitle: "节点连线自动化"
+			tasks: [{
+				id: "63600FE6D2AD70FF"
+				item: "rftoolscontrol:processor"
+				type: "item"
+			}]
+			title: "RF：处理器与可视化编程"
+			x: 21.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["3B30F784E223856D"]
+			description: [
+				"&a合成器&f（crafter1 / crafter2 / crafter3）自动合成；&a刷怪器&f（spawner）控制刷怪；"
+				""
+				"&a计数器/定时/顺序器&f（counter / timer / sequencer）做时序逻辑；&a红石发送/接收器&f（redstone_transmitter / receiver）远程传红石；"
+				""
+				"&a环境/护盾模板方块&f（rftoolsbuilder:shield_block1~4）做防护墙。"
+			]
+			id: "390F9129D80C6FEF"
+			rewards: [{
+				id: "2367EF05EF438FF4"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "发射器与经验喷泉"
+			tasks: [{
+				id: "5016594446EF58FF"
+				item: "rftoolsutility:crafter1"
+				type: "item"
+			}]
+			title: "RF：其他实用方块"
+			x: 22.5d
+			y: 3.0d
+		}
+		{
+			dependencies: [
+				"2C60F3B9FC145C7F"
+				"73343E64C786FCD2"
+			]
+			description: [
+				"一条 IE 钢铁线："
+				""
+				"1. 焦炉烧焦炭 + 杂酚油；"
+				""
+				"2. 高炉+预热器把铁+焦炭烧成钢；"
+				""
+				"3. 金属压延机用 mold_plate/rod/wire/gear 把钢压成钢板/杆/线/齿轮；"
+				""
+				"4. 柴油发电机+电线+电容 LV 供电给电弧炉；"
+				""
+				"5. 传送带串联各机，储罐存油，筒仓存粉。"
+				""
+				"蒸汽朋克工厂既视感拉满。"
+			]
+			id: "1A06A87A3FFEB553"
+			rewards: [{
+				id: "46D99A43AF930200"
+				type: "xp"
+				xp: 30
+			}]
+			subtitle: "焦炉→高炉→压延→电网"
+			tasks: [{
+				id: "37F3805AC25B62A2"
+				item: "immersiveengineering:arc_furnace"
+				type: "item"
+			}]
+			title: "事例：IE 蒸汽朋克钢铁厂"
+			x: 3.0d
+			y: 9.0d
+		}
+		{
+			dependencies: ["35BE09B5FC4B561B"]
+			description: [
+				"用高级海龟做自动采矿："
+				""
+				"1. 海龟装无线调制解调器便于回收；"
+				""
+				"2. 写入程序：refuel 加燃料 → dig/forward 挖 3x3 隧道 → 遇熔岩绕过；"
+				""
+				"3. 装满后返回扔货箱；"
+				""
+				"4. 高级海龟可接显示器与电脑远程查看进度。"
+				""
+				"不会编程也能直接用社区现成脚本。"
+			]
+			id: "4C1BE2D62CE2EAC2"
+			rewards: [{
+				id: "7DC38341642A5D87"
+				type: "xp"
+				xp: 25
+			}]
+			subtitle: "一只龟挖穿山"
+			tasks: [{
+				id: "7E5F7450D2656501"
+				item: "computercraft:turtle_advanced"
+				type: "item"
+			}]
+			title: "事例：CC 自动挖矿海龟"
+			x: 9.0d
+			y: 4.5d
+		}
+		{
+			dependencies: [
+				"4769924C423AC0D4"
+				"7531E0BFB3E17141"
+				"60569ABEA789E44F"
+			]
+			description: [
+				"懒人基地组合："
+				""
+				"1. 维度电池阵列做全维度无线供电；"
+				""
+				"2. 模块化存储+扫描仪做随身仓库；"
+				""
+				"3. 建造机+采石形状卡自动挖矿；"
+				""
+				"4. 空间室把整片工厂搬到口袋维度；"
+				""
+				"5. 拨号传送器+环境控制器做入口 buff 站；"
+				""
+				"6. 屏幕矩阵监控电量与库存。"
+			]
+			id: "29A198E086315359"
+			rewards: [{
+				id: "4F8D6E7EC7A3EA20"
+				type: "xp"
+				xp: 30
+			}]
+			subtitle: "建造机+电池+传送"
+			tasks: [{
+				id: "4C132509ACD55430"
+				item: "rftoolsbuilder:space_chamber"
+				type: "item"
+			}]
+			title: "事例：RFTools 全自动基地"
+			x: 12.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["73DC540C89454038"]
+			description: [
+				"IE 多方块通用流程："
+				""
+				"1. 按手册/蓝图用对应外壳方块围成结构；"
+				""
+				"2. 留好端口与控制器位置；"
+				""
+				"3. 拿&a工程师锤&f右键核心方块「激活」，结构成型；"
+				""
+				"4. 不成型时对照手册查缺块/方向；"
+				""
+				"5. 拆除也用锤子右键。"
+			]
+			id: "1407C09929901B3D"
+			rewards: [{
+				id: "4110CB1AC8D67423"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "锤子成型"
+			tasks: [{
+				id: "5E24125BBCD3A6FF"
+				item: "immersiveengineering:blueprint"
+				type: "item"
+			}]
+			title: "IE 多方块搭建要诀"
+			x: 4.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["17AC9CE9EEF408B2"]
+			description: [
+				"CC 进阶方向："
+				""
+				"· 贴有线调制解调器在机器上即可通过 peripheral 调用；"
+				""
+				"· 配合 GPS（4 个基站）做海龟定位；"
+				""
+				"· 显示器大屏做基地 HUD；"
+				""
+				"· 与 AE2/RS 外设协议对接做语音/文字控制仓库。"
+			]
+			id: "6F322A0C1BB4A290"
+			rewards: [{
+				id: "6F94A9BA45365F7C"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "外设协议"
+			tasks: [{
+				id: "3C138267887BB3E5"
+				item: "computercraft:wired_modem_full"
+				type: "item"
+			}]
+			title: "CC 与其他模组联动"
+			x: 10.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["3B30F784E223856D"]
+			description: [
+				"RFTools 子包速记："
+				""
+				"· 想无线供电 → rftoolspower（维度电池）；"
+				""
+				"· 想一键盖房/挖矿 → rftoolsbuilder；"
+				""
+				"· 想随身大仓库 → rftoolsstorage；"
+				""
+				"· 想传送/buff/监控屏 → rftoolsutility；"
+				""
+				"· 想可视化编程自动控制 → rftoolscontrol。"
+				""
+				"按需取用，不必全装。"
+			]
+			id: "758C09E4E4EDCE28"
+			rewards: [{
+				id: "4D7BF37625ADE3B3"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "哪个扩展装什么"
+			tasks: [{
+				id: "28F95F4EED01B0F8"
+				item: "rftoolsbase:smartwrench"
+				type: "item"
+			}]
+			title: "RFTools 选型建议"
+			x: 24.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["73DC540C89454038"]
+			description: [
+				"&a混凝土&f（concrete / concrete_brick）是 IE 主流建材，用搅拌机混合；"
+				""
+				"&a麻&f（hemp / hemp_fiber / hemp_fabric）与&a麻纤维混凝土&f（hempcrete）是种植/建筑材料；"
+				""
+				"&a渣砖&f（slag_brick / slag_glass / slag_gravel）用高炉渣做成，便宜好看。"
+			]
+			id: "56572C14B926A577"
+			rewards: [{
+				id: "2A0E92409CD0011E"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "混凝土/麻/渣"
+			tasks: [{
+				id: "717859252F25F38E"
+				item: "immersiveengineering:concrete"
+				type: "item"
+			}]
+			title: "IE：建材与农业"
+			x: 6.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["6BDDBAE97737AA58"]
+			description: [
+				"&a避雷针&f（lightning_rod）引雷并可蓄电；"
+				""
+				"&a泛光灯/灯泡/工程灯&f（floodlight / light_bulb / light_engineering）照亮厂区；"
+				""
+				"高压电线附近务必装避雷，雷暴天更安全。"
+			]
+			id: "1783745CA4986C71"
+			rewards: [{
+				id: "1AACBA72595FEB48"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "厂区安全"
+			tasks: [{
+				id: "48897EDE17B65444"
+				item: "immersiveengineering:lightning_rod"
+				type: "item"
+			}]
+			title: "IE：防雷与照明"
+			x: 7.5d
+			y: 7.5d
+		}
+		{
+			dependencies: ["17AC9CE9EEF408B2"]
+			description: [
+				"&a命令电脑&f（computer_command）拥有管理员级权限（需开启），可执行游戏指令；"
+				""
+				"&aGPS 系统&f：在四个高度不同的角落放调制解调器基站，海龟/电脑即可定位坐标；"
+				""
+				"&a有线调制解调器全功能版&f（wired_modem_full）做中心交换机。"
+			]
+			id: "73DA6456D18A78C8"
+			rewards: [{
+				id: "229D60B31F47B4EA"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "管理员级与定位"
+			tasks: [{
+				id: "18F9C7D06B2EC402"
+				item: "computercraft:computer_command"
+				type: "item"
+			}]
+			title: "CC：命令电脑与 GPS"
+			x: 12.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["7531E0BFB3E17141"]
+			description: [
+				"建造机的&a形状卡&f决定干什么："
+				""
+				"· quarry / quarry_fortune / quarry_silk / quarry_clear*：区块挖矿（带幸运/精准）；"
+				""
+				"· pump / pump_clear：抽干液体；· void：清空；· liquid：放液体；· def：自定义；"
+				""
+				"配&a超收获工具&f（superharvestingtool）提升采集效果。"
+			]
+			id: "00AC2365A7ACD3C5"
+			rewards: [{
+				id: "00A9373EFE279114"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "区域定义"
+			tasks: [{
+				id: "691D69EB3FEF6E01"
+				item: "rftoolsbuilder:shape_card_quarry"
+				type: "item"
+			}]
+			title: "RF：形状卡大全"
+			x: 10.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["60569ABEA789E44F"]
+			description: [
+				"&a屏幕&f（screen）+&a屏幕控制器&f（screen_controller）+&a屏幕链接&f（screen_link）搭建显示墙；"
+				""
+				"插槽模块：text_module（文字）、energy_module/energyplus_module（电量）、inventory_module（物品）、fluid_module（流体）、redstone_module（红石）、clock_module（时钟）。"
+				""
+				"基地做一面监控墙很有仪式感。"
+			]
+			id: "59143B3C034CEEFE"
+			rewards: [{
+				id: "63995139033BE5EE"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "基地仪表盘"
+			tasks: [{
+				id: "129ED2491CB0048A"
+				item: "rftoolsutility:screen_controller"
+				type: "item"
+			}]
+			title: "RF：屏幕与模块"
+			x: 13.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["60569ABEA789E44F"]
+			description: [
+				"环境控制器插模块给范围内玩家上 buff："
+				""
+				"flight_module（飞行）、speed/haste/regeneration/saturation/nightvision/waterbreathing/luck_module；"
+				""
+				"还有 plus 版更强；peaceful_module 让范围内不刷怪、blindness/slowness/poison_module 用于陷阱区。"
+				""
+				"在基地入口放一个，全体常驻增益。"
+			]
+			id: "05C0E5742FD1FB26"
+			rewards: [{
+				id: "6623CCEAAF2A4E08"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "入口增益站"
+			tasks: [{
+				id: "0C32115115FB9B51"
+				item: "rftoolsutility:flight_module"
+				type: "item"
+			}]
+			title: "RF：环境 buff 模块"
+			x: 15.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["1D69382A17A864CC"]
+			description: [
+				"回顾本章："
+				""
+				"· &aIE&f：蒸汽朋克多方块工厂；&aCC&f：Lua 编程与海龟；"
+				""
+				"· &a集成动力&f：图形化逻辑物流；&aRFTools&f：能量/建造/存储/传送全家桶。"
+				""
+				"这些模组与前面章节的电力、加工、物流、存储体系叠加，构成 ATM9 完整的科技图景。"
+				""
+				"完成本任务 = 你已经把全包的主流科技模组连成一张网，剩下的就是按兴趣深挖某一条线。祝游戏愉快！"
+			]
+			icon: "rftoolsbase:machine_frame"
+			id: "525C98C19DF8191B"
+			rewards: [{
+				id: "221577B39902781D"
+				type: "xp"
+				xp: 45
+			}]
+			shape: "octagon"
+			size: 1.5d
+			subtitle: "四大家族融会贯通"
+			tasks: [{
+				id: "43D753E5684741F0"
+				title: "补充科技毕业"
+				type: "checkmark"
+			}]
+			title: "补充科技毕业"
+			x: 10.5d
+			y: 1.5d
+		}
+	]
+	title: "补充科技"
+}

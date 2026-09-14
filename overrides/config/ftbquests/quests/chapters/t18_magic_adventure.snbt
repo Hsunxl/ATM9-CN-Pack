@@ -1,0 +1,1400 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "t18_magic_adventure"
+	group: "00C72C1FB6193A42"
+	icon: "bloodmagic:apprenticebloodorb"
+	id: "69BB463B1D468304"
+	order_index: 18
+	progression_mode: "flexible"
+	quest_links: [ ]
+	quests: [
+		{
+			description: [
+				"本章是「魔法模组全家桶」：5 个核心模组各成独立分支，其余模组做总览。"
+				""
+				"&a血魔法 Blood Magic&f：用自己血献祭换 LP，多方块血祭坛升级，仪式与感知护甲。"
+				""
+				"&a神秘学 Occultism&f：召唤恶魔当苦力，维度采矿、远程存储。"
+				""
+				"&aPsi&f：可视化编程法术，CAD 装置当核心，像写代码一样拼法术子弹。"
+				""
+				"&a铁咒书 Iron's Spells&f：职业法术书，法师/牧师/术士，法术栏快捷键施法。"
+				""
+				"&a等价交换 ProjectE&f：EMC 体系，转换桌万物可换，暗物质/红物质装备。"
+				""
+				"其余：邪恶工艺、禁忌与奥秘、圣物、路石、炼金术、神术做总览介绍。"
+			]
+			icon: "bloodmagic:apprenticebloodorb"
+			id: "29AAC7BA24C48CE6"
+			shape: "hexagon"
+			size: 1.5d
+			subtitle: "血魔法·神秘学·Psi·铁咒书·ProjectE"
+			tasks: [{
+				id: "696CC8ADEE869A51"
+				title: "魔法与冒险补充总览"
+				type: "checkmark"
+			}]
+			title: "魔法与冒险补充总览"
+			x: 9.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["29AAC7BA24C48CE6"]
+			description: [
+				"· &a血魔法&f=自残换资源，后期装备强；"
+				""
+				"· &a神秘学&f=召唤恶魔打工，自动采矿/自动合成；"
+				""
+				"· &aPsi&f=编程式法术，灵活但要花时间学；"
+				""
+				"· &a铁咒书&f=传统法师职业，打怪升级学法术；"
+				""
+				"· &aProjectE&f=万物可换，后期资源自由；"
+				""
+				"· &a路石&f=传送网络；&a邪恶工艺&f=黑科技环境控制；&a炼金术&f=元素分解；&a神术&f=仪式与法球。"
+			]
+			icon: "minecraft:book"
+			id: "78EB209388A4272E"
+			rewards: [{
+				id: "65A590ACC6D33F1D"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "哪个模组干什么"
+			tasks: [{
+				id: "7521330E92DF3A9F"
+				title: "魔法模组地图"
+				type: "checkmark"
+			}]
+			title: "魔法模组地图"
+			x: 7.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["29AAC7BA24C48CE6"]
+			description: [
+				"魔法模组各有自己的「资源条」："
+				""
+				"· 血魔法=&aLP(生命精华)&f，靠献祭自己/动物获取；"
+				""
+				"· 新生魔艺=&a魔源 Source&f，靠浆果/源质链接生成；"
+				""
+				"· Psi=&aPsi 能量&f，靠 CAD 电池存，施法消耗；"
+				""
+				"· 铁咒书=&a法术冷却+魔法值&f，靠法术书放法术；"
+				""
+				"· ProjectE=&aEMC&f，物品都有能量值，转换桌里存 EMC 换万物。"
+				""
+				"各体系独立，不互通，但装备/工具能混搭。"
+			]
+			icon: "minecraft:experience_bottle"
+			id: "1414B3F06C4C2062"
+			rewards: [{
+				id: "33C4A75C4575E15C"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "LP/魔源/Psi能量/EMC"
+			tasks: [{
+				id: "50617FFDE0272666"
+				title: "通用魔法资源概念"
+				type: "checkmark"
+			}]
+			title: "通用魔法资源概念"
+			x: 9.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["29AAC7BA24C48CE6"]
+			description: [
+				"魔法模组和科技模组不是二选一，而是互补："
+				""
+				"· ProjectE 的 EMC 可以一键生成科技线材料，跳过挖矿；"
+				""
+				"· 神秘学的恶魔矿工自动挖矿，喂给通用机械 5 倍产线；"
+				""
+				"· 血魔法的仪式加速作物，喂给自动农场；"
+				""
+				"· Psi 的建造法术可以快速搭机器外壳；"
+				""
+				"· 路石给全基地建传送网络，不用跑图。"
+			]
+			icon: "minecraft:crafting_table"
+			id: "04A52255C937DDE6"
+			rewards: [{
+				id: "5D88ECE91B3F94C4"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "魔法+科技怎么搭"
+			tasks: [{
+				id: "10D06C2CDAEEA32A"
+				title: "跨模组联动思路"
+				type: "checkmark"
+			}]
+			title: "跨模组联动思路"
+			x: 10.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["78EB209388A4272E"]
+			description: [
+				"前期推荐顺序：&a路石&f（立刻方便跑图）→ &a铁咒书/新生魔艺&f（战斗+施法）→ &a血魔法&f（自残换资源，中期发力）→ &aProjectE&f（后期万物自由）。"
+				""
+				"Psi 适合喜欢编程的玩家，学习曲线陡但上限极高；神秘学适合喜欢自动化的玩家。"
+				""
+				"别一上来就堆所有魔法模组，先玩通一个再碰下一个。"
+			]
+			icon: "minecraft:compass"
+			id: "2BE6BFFA526A4FC8"
+			rewards: [{
+				id: "3E2B1E370B617DE2"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "前期选哪个"
+			tasks: [{
+				id: "20C02FF320EEC187"
+				title: "实用技巧：资源体系对比"
+				type: "checkmark"
+			}]
+			title: "实用技巧：资源体系对比"
+			x: 0.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["78EB209388A4272E"]
+			description: [
+				"自动化能力排名：&a神秘学&f（恶魔矿工/自动合成）> &aProjectE&f（转换桌自动输出）> &a血魔法仪式&f（资源生成）> 其他。"
+				""
+				"想偷懒：神秘学+ProjectE 组合，恶魔挖矿喂转换桌，EMC 换万物。"
+				""
+				"想纯手工体验：铁咒书+新生魔艺，打怪升级拼法术，乐趣在战斗本身。"
+			]
+			icon: "minecraft:hopper_minecart"
+			id: "056C006A55609A98"
+			rewards: [{
+				id: "59163BB63F6904B3"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "哪个模组自动化最强"
+			tasks: [{
+				id: "74F785FB5784777E"
+				title: "实用技巧：自动化与资源选择"
+				type: "checkmark"
+			}]
+			title: "实用技巧：自动化与资源选择"
+			x: 1.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["1414B3F06C4C2062"]
+			description: [
+				"&a弱血球(Weak Blood Orb)&f是血魔法入门工具，右键自己抽血，把生命值转成&aLP(生命精华)&f存进球里。"
+				""
+				"血球等级：weak → apprentice(学徒) → adept(熟练) → magician(魔术师) → archmage(大法师) → master(大师)，每级 LP 容量和祭坛等级解锁新配方。"
+				""
+				"前期抽血要小心，别把自己抽死——留半血再抽。"
+			]
+			id: "1989D2C3D14B4044"
+			rewards: [{
+				id: "39F842A86F7A171D"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "Weak Blood Orb"
+			tasks: [{
+				id: "3D4A2E6BECD3A3D5"
+				item: "bloodmagic:weakbloodorb"
+				type: "item"
+			}]
+			title: "血魔法：弱血球起步"
+			x: 3.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["1989D2C3D14B4044"]
+			description: [
+				"&a献祭匕首(Sacrificial Dagger)&f右键自己/动物，把生物血量转成 LP。"
+				""
+				"&a献祭匕首(Dagger of Sacrifice)&f对动物用，动物死了掉大量 LP；&a仪式匕首(Ritual Tinkerer)&f用于仪式操作。"
+				""
+				"前期杀猪养牛抽 LP，后期用&a献祭符文(Sacrificial Rune)&f自动抽附近动物。"
+			]
+			id: "7E0F5A8091BFFF06"
+			rewards: [{
+				id: "31154C5578BB6EBC"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "Sacrificial Dagger"
+			tasks: [{
+				id: "191063C74D82A4CC"
+				item: "bloodmagic:sacrificialdagger"
+				type: "item"
+			}]
+			title: "献祭匕首"
+			x: 3.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["7E0F5A8091BFFF06"]
+			description: [
+				"&a血祭坛(Blood Altar)&f是血魔法核心方块，把 LP 注进去才能合成高级物品。"
+				""
+				"祭坛是&a多方块&f：靠&a祭坛容量符文(Altar Capacity Rune)&f和结构升级围出来，等级越高容量越大、能合成的物品越高级。"
+				""
+				"LP 从血球右键祭坛注入；合成时消耗 LP，要持续献祭补充。"
+			]
+			id: "4A88F4F006E41C49"
+			rewards: [{
+				id: "73719777ED0703C8"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "Blood Altar 多方块核心"
+			tasks: [{
+				id: "321F996E54EC205D"
+				item: "bloodmagic:altar"
+				type: "item"
+			}]
+			title: "血祭坛"
+			x: 4.5d
+			y: 6.0d
+		}
+		{
+			dependencies: ["4A88F4F006E41C49"]
+			description: [
+				"&a献祭符文(Sacrificial Rune)&f是祭坛升级组件，围在祭坛周围提升 LP 容量和献祭效率。"
+				""
+				"还有&a容量符文(Orb Capacity Rune)&f提升血球容量、&a祭坛容量符文(Altar Capacity Rune)&f提升祭坛容量。"
+				""
+				"符文是多方块结构的一部分，按 JEI/A 键看摆放预览。"
+			]
+			id: "3211E41BF7559040"
+			rewards: [{
+				id: "33DCF3221637825E"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "Sacrificial Rune"
+			tasks: [{
+				count: 4L
+				id: "04CC97C688BD60C8"
+				item: "bloodmagic:sacrificerune"
+				type: "item"
+			}]
+			title: "献祭符文"
+			x: 4.5d
+			y: 7.5d
+		}
+		{
+			dependencies: ["3211E41BF7559040"]
+			description: [
+				"&a学徒血球(Apprentice Blood Orb)&f解锁祭坛 2 级配方，能做更高级的血魔法工具。"
+				""
+				"升级路线：weak → apprentice → adept → magician → archmage → master，每级都需要在更高等级祭坛里合成。"
+			]
+			id: "443539B8BCC8CF3A"
+			rewards: [{
+				id: "0A7C5300376F1506"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "Apprentice Blood Orb"
+			tasks: [{
+				id: "23B594459FABFC93"
+				item: "bloodmagic:apprenticebloodorb"
+				type: "item"
+			}]
+			title: "学徒血球"
+			x: 4.5d
+			y: 9.0d
+		}
+		{
+			dependencies: ["443539B8BCC8CF3A"]
+			description: [
+				"&a恶魔结晶器(Demon Crystallizer)&f把恶魔意志(Demon Will)结晶化，是血魔法后期多方块的核心。"
+				""
+				"恶魔意志从下界/恶魔生物身上获取，结晶后用于高级仪式和工具。"
+			]
+			id: "57A7E6966FEFA090"
+			rewards: [{
+				id: "65C8A5CC2F47E224"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "Demon Crystallizer"
+			tasks: [{
+				id: "6DB27088D4AA9F09"
+				item: "bloodmagic:demoncrystallizer"
+				type: "item"
+			}]
+			title: "恶魔结晶器"
+			x: 6.0d
+			y: 10.5d
+		}
+		{
+			dependencies: ["57A7E6966FEFA090"]
+			description: [
+				"&a恶魔石板(Demon Slate)&f是后期血魔法建筑材料，也是恶魔多方块的结构方块。"
+				""
+				"配合&a恶魔熔炉(Demon Crucible)&f、&a恶魔塔(Demon Pylon)&f组成后期多方块，处理大量恶魔意志。"
+			]
+			id: "47464150B94F5650"
+			rewards: [{
+				id: "2772D0634D4F6B3F"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "Demon Slate"
+			tasks: [{
+				count: 4L
+				id: "35308FBD01814B4A"
+				item: "bloodmagic:demonslate"
+				type: "item"
+			}]
+			title: "恶魔石板"
+			x: 6.0d
+			y: 12.0d
+		}
+		{
+			dependencies: ["47464150B94F5650"]
+			description: [
+				"&a灵魂熔炉(Soul Forge)&f是血魔法高级合成台，把灵魂碎片和材料锻造成&a灵魂工具(Soul Axe/Pickaxe/Sword/Scythe)&f。"
+				""
+				"灵魂工具带特殊效果（如吸血、范围挖矿），是血魔法战斗/采集主力。"
+			]
+			id: "5E60F67FE4BBBF52"
+			rewards: [{
+				id: "4EE5801E39005150"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "Soul Forge"
+			tasks: [{
+				id: "2644F8123D3F4F2F"
+				item: "bloodmagic:soulforge"
+				type: "item"
+			}]
+			title: "灵魂熔炉"
+			x: 7.5d
+			y: 13.5d
+		}
+		{
+			dependencies: ["5E60F67FE4BBBF52"]
+			description: [
+				"&a灵魂武器（Soul Sword / Soul Scythe / Soul Axe 等）&f是血魔法主力武备：用&a恶魔意志&f强化，越强越锋利。"
+				""
+				"&a灵魂镰刀（Soul Scythe）&f收割怪物灵魂效率高；配合&a灵魂网&f（Soul Snare）捕获怪物升级武器。"
+			]
+			id: "3F2452C0E8066F76"
+			rewards: [{
+				id: "288B132D6F1CDDBD"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "Soul Weapons"
+			tasks: [{
+				id: "364DE71C04423A0C"
+				item: {
+					Count: 1
+					id: "bloodmagic:soulsword"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			title: "灵魂武器：血魔法武备"
+			x: 7.5d
+			y: 15.0d
+		}
+		{
+			dependencies: ["5E60F67FE4BBBF52"]
+			description: [
+				"&a仪式石(Ritual Stone)&f是血魔法仪式的方块，多种元素变体（风/水/火/地/光/暗），按仪式布局摆放。"
+				""
+				"血魔法仪式是多方块：仪式石+罗盘+材料，启动后持续生效（如自动烧矿、自动种植、传送）。"
+			]
+			id: "6DE1C471A67D0503"
+			rewards: [{
+				id: "23D9C8E8DFC7817E"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "Ritual Stone"
+			tasks: [{
+				count: 4L
+				id: "7D08ECB39BB4A98F"
+				item: "bloodmagic:ritualstone"
+				type: "item"
+			}]
+			title: "仪式石"
+			x: 9.0d
+			y: 15.0d
+		}
+		{
+			dependencies: ["1414B3F06C4C2062"]
+			description: [
+				"&a灵体辞典(Dictionary of Spirits)&f是神秘学手册，里面写清了所有恶魔阶层、仪式配方、召唤方法。"
+				""
+				"恶魔阶层从低到高：&aFoliot(小鬼)→Djinni(镇尼)→Afrit(炎魔)→Marid(海王)&f，等级越高能干的活越多。"
+			]
+			id: "55F1D001D8C83D38"
+			rewards: [{
+				id: "48EBE6CA233D62DF"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "Dictionary of Spirits"
+			tasks: [{
+				id: "7BD338164AA439C7"
+				item: "occultism:dictionary_of_spirits"
+				type: "item"
+			}]
+			title: "神秘学：灵体辞典"
+			x: 6.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["55F1D001D8C83D38"]
+			description: [
+				"&a粉笔(Chalk)&f在地上画仪式阵，颜色决定阶层：白(Foliot)、紫(Djinni)、金(Afrit)、红(Marid)。"
+				""
+				"&a不纯粉笔(Impure)&f是材料版，烧炼成纯粉笔。仪式阵必须画得方正，否则仪式失败。"
+			]
+			id: "7CBE7181305BD1A3"
+			rewards: [{
+				id: "4AAED32F98D6E4F2"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "Chalk"
+			tasks: [{
+				count: 4L
+				id: "15FEAA35BEA776B6"
+				item: {
+					Count: 1
+					id: "occultism:chalk_gold"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			title: "神秘粉笔"
+			x: 6.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["7CBE7181305BD1A3"]
+			description: [
+				"&a献祭碗(Sacrificial Bowl)&f是仪式中心，放材料和生物尸体，启动召唤仪式。"
+				""
+				"&a金献祭碗(Golden Sacrificial Bowl)&f是高级版，支持更复杂的仪式。"
+			]
+			id: "4E388A464A967D66"
+			rewards: [{
+				id: "340E0F346BB16F3F"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "Sacrificial Bowl"
+			tasks: [{
+				id: "70978EC75A1D6B7A"
+				item: "occultism:sacrificial_bowl"
+				type: "item"
+			}]
+			title: "献祭碗"
+			x: 6.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["4E388A464A967D66"]
+			description: [
+				"&a封印之书(Book of Binding)&f把召唤来的恶魔「封」进书里，让它帮你干活。"
+				""
+				"Foliot 能干简单活：清扫、伐木、运输物品；Djinni 能管理机器；Afrit 能粉碎/控天气；Marid 能做主矿工。"
+			]
+			id: "3030DD244CCAD57F"
+			rewards: [{
+				id: "06A3E6E989AA0B2C"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "Book of Binding"
+			tasks: [{
+				id: "512BE381AC4BECEE"
+				item: "occultism:book_of_binding_foliot"
+				type: "item"
+			}]
+			title: "封印之书：Foliot"
+			x: 7.5d
+			y: 7.5d
+		}
+		{
+			dependencies: ["3030DD244CCAD57F"]
+			description: [
+				"&a存储控制器(Storage Controller)&f是神秘学的远程存储核心，配合&a稳定器(Storage Stabilizer)&f扩展容量。"
+				""
+				"用&a存储遥控器(Storage Remote)&f跨维度访问存储，相当于魔法版 AE2 终端。"
+			]
+			id: "64A381D5092C34D5"
+			rewards: [{
+				id: "7B4CC6038AADE08A"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "Storage Controller"
+			tasks: [{
+				id: "07450583EC372E41"
+				item: "occultism:storage_controller"
+				type: "item"
+			}]
+			title: "存储控制器"
+			x: 9.0d
+			y: 9.0d
+		}
+		{
+			dependencies: ["3030DD244CCAD57F"]
+			description: [
+				"&a维度矿井(Dimensional Mineshaft)&f是神秘学的招牌多方块：召唤恶魔矿工进维度挖矿，自动产出矿石。"
+				""
+				"不同阶层矿工挖不同矿：Foliot 挖普通矿、Djinni 挖矿石、Afrit 挖深层矿、Marid 挖大师级矿。"
+			]
+			id: "3FAC75055CA222DD"
+			rewards: [{
+				id: "4A722535BEA77752"
+				type: "xp"
+				xp: 20
+			}]
+			subtitle: "Dimensional Mineshaft"
+			tasks: [{
+				id: "7224A2CA5A1983F3"
+				item: "occultism:dimensional_mineshaft"
+				type: "item"
+			}]
+			title: "维度矿井"
+			x: 10.5d
+			y: 9.0d
+		}
+		{
+			dependencies: ["3FAC75055CA222DD"]
+			description: [
+				"&aFoliot 矿工(Miner Foliot)&f是入门级自动矿工，放一个维度矿井方块，Foliot 会自己进去挖。"
+				""
+				"前期放一个，挂机收矿，不用下矿。后期升级到 Djinni/Afrit/Marid 矿工。"
+			]
+			id: "523CE5A8D29F9EAB"
+			rewards: [{
+				id: "2720050B10D56FEA"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "Miner Foliot"
+			tasks: [{
+				id: "309310629FBE18E4"
+				item: {
+					Count: 1
+					id: "occultism:miner_foliot_unspecialized"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			title: "Foliot 矿工"
+			x: 9.0d
+			y: 10.5d
+		}
+		{
+			dependencies: ["1414B3F06C4C2062"]
+			description: [
+				"&aCAD(CAD)&f是 Psi 的核心工具，像一把「可编程魔杖」：里面装法术子弹，右键释放拼好的法术。"
+				""
+				"CAD 等级：iron → gold → psimetal → ebony/ivory psimetal → creative，等级越高组件槽越多、Psi 能量池越大。"
+				""
+				"CAD 本身不施法，法术是你在&a编程器(Programmer)&f里拼出来的。"
+			]
+			id: "43017481648AF7BA"
+			rewards: [{
+				id: "37CF7404CD105890"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "CAD 施法核心"
+			tasks: [{
+				id: "0E394FD78EA657E6"
+				item: "psi:cad"
+				type: "item"
+			}]
+			title: "Psi：CAD 装置"
+			x: 7.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["43017481648AF7BA"]
+			description: [
+				"&a编程器(Programmer)&f是拼法术子弹的工作台：把&法术子弹(Spell Bullet)&f按序列拖进去，像可视化编程一样连接「序列/循环/条件/触发器」。"
+				""
+				"法术子弹分：&a触发器(Trick)&f（造成什么效果）、&a连接器(Connector)&f（控制流程）、&a向量(Vector)&f（目标方向）。"
+			]
+			id: "65988E2F74B67FAC"
+			rewards: [{
+				id: "25803DF68230B349"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "Programmer 可视化编程"
+			tasks: [{
+				id: "0D6A42FD23DC59C7"
+				item: "psi:programmer"
+				type: "item"
+			}]
+			title: "Psi 编程器"
+			x: 7.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["65988E2F74B67FAC"]
+			description: [
+				"&aCAD 电池(Battery)&f装在 CAD 上，存 Psi 能量。施法消耗能量，电池越大放得越多。"
+				""
+				"等级：basic → extended → ultradense → creative。还有&a核心(Core)&f影响施法速度、&a插座(Socket)&f决定组件槽数。"
+			]
+			id: "7FCE5507BA3B3B9E"
+			rewards: [{
+				id: "0ED46D9B75AD5719"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "CAD Battery"
+			tasks: [{
+				id: "672AFEA04C8594B8"
+				item: "psi:cad_battery_basic"
+				type: "item"
+			}]
+			title: "CAD 电池"
+			x: 7.5d
+			y: 6.0d
+		}
+		{
+			dependencies: ["65988E2F74B67FAC"]
+			description: [
+				"&aCAD 插座(Socket)&f决定 CAD 能装多少组件，等级越高插座越多。"
+				""
+				"等级：basic → large → huge → signaling → transmissive。插座越多，能同时装电池+核心+信号组件，法术越强。"
+			]
+			id: "7CAD487DFEF6C413"
+			rewards: [{
+				id: "16081A1560AE18FC"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "CAD Socket"
+			tasks: [{
+				id: "30A5CB325B510DC5"
+				item: "psi:cad_socket_basic"
+				type: "item"
+			}]
+			title: "CAD 插座"
+			x: 9.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["65988E2F74B67FAC"]
+			description: [
+				"&a法术子弹(Spell Bullet)&f是拼法术的积木，分形态：&aProjectile(投射)/Loop(循环)/Charge(蓄力)/Circle(环形)/Mine(地雷)/Grenade(手雷)&f。"
+				""
+				"效果：挖方块、放置方块、伤害、治疗、发光、拉物品……像乐高一样拼出你想要的法术。"
+			]
+			id: "0722E744EA03253C"
+			rewards: [{
+				id: "2927C0FCEC28237E"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "Spell Bullet"
+			tasks: [{
+				count: 4L
+				id: "70A569AE126D7E68"
+				item: "psi:spell_bullet"
+				type: "item"
+			}]
+			title: "法术子弹"
+			x: 10.5d
+			y: 6.0d
+		}
+		{
+			dependencies: ["1414B3F06C4C2062"]
+			description: [
+				"&a法术书(Spell Book)&f是铁咒书核心，手持它施法。不同书对应不同职业：火焰/冰霜/雷电/神圣/自然/鲜血/奥术/死灵。"
+				""
+				"法术书等级：wimpy → copper → iron → gold → diamond → dragonskin → netherite → legendary，等级越高法术槽越多、冷却越短。"
+			]
+			id: "43C250FB91DB26A9"
+			rewards: [{
+				id: "728237F872DE899C"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "Spell Book 职业核心"
+			tasks: [{
+				id: "2DE70115D1E9FF8F"
+				item: "irons_spellbooks:iron_spell_book"
+				type: "item"
+			}]
+			title: "铁咒书：法术书"
+			x: 9.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["43C250FB91DB26A9"]
+			description: [
+				"&a铭刻台(Inscription Table)&f把&a法术卷轴(Scroll)&f上的法术铭刻进法术书，让你学会它。"
+				""
+				"法术卷轴从地牢宝箱/法师怪掉落，或用&a墨水(Ink)+符文(Rune)&f合成。"
+			]
+			id: "208E71F67DE21971"
+			rewards: [{
+				id: "0AD2E6F9F281F319"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "Inscription Table"
+			tasks: [{
+				id: "4022879A6BB9657B"
+				item: "irons_spellbooks:inscription_table"
+				type: "item"
+			}]
+			title: "铭刻台"
+			x: 9.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["208E71F67DE21971"]
+			description: [
+				"&a奥术铁砧(Arcane Anvil)&f给法术书附魔/升级：用&a升级宝珠(Upgrade Orb)&f提升法术槽、冷却时间、施法速度。"
+				""
+				"还能修方法术书和魔法武器。"
+			]
+			id: "3E7698738132AFB9"
+			rewards: [{
+				id: "78F1371A8DED2597"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "Arcane Anvil"
+			tasks: [{
+				id: "29936B313D3320F0"
+				item: "irons_spellbooks:arcane_anvil"
+				type: "item"
+			}]
+			title: "奥术铁砧"
+			x: 12.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["208E71F67DE21971"]
+			description: [
+				"&a法术卷轴（Scroll）&f是通用物品：卷轴内封存一个法术，配合&a法术书&f研习即可学会。"
+				""
+				"元素包括：火焰/冰霜/雷电/神圣/自然/鲜血/奥术/唤醒/禁忌；获取途径见 JEI（战利品/商人/合成）。"
+			]
+			id: "46B6B5C0F716572F"
+			rewards: [{
+				id: "12EA2BE42279C949"
+				type: "xp"
+				xp: 5
+			}]
+			subtitle: "Scroll of Fire"
+			tasks: [{
+				count: 2L
+				id: "18395C5C07267B00"
+				item: "irons_spellbooks:scroll"
+				type: "item"
+			}]
+			title: "火焰卷轴"
+			x: 13.5d
+			y: 6.0d
+		}
+		{
+			dependencies: ["3E7698738132AFB9"]
+			description: [
+				"&a焰术士套装(Pyromancer)&f是火焰系职业护甲，加火焰伤害、减少火焰法术消耗。"
+				""
+				"其他职业套装：&a冰霜(Cryomancer)/&a雷电(Electromancer)/&a牧师(Priest)/&a瘟疫(Plagued)/&a潜行者(Shadowwalker)&f，按你选的元素穿。"
+			]
+			id: "4F2BF815BEDD22C2"
+			rewards: [{
+				id: "4E9E8E024A59529B"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "Pyromancer Chestplate"
+			tasks: [{
+				id: "6E511B9DDBC0D8FE"
+				item: {
+					Count: 1
+					id: "irons_spellbooks:pyromancer_chestplate"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			title: "焰术士法袍"
+			x: 9.0d
+			y: 7.5d
+		}
+		{
+			dependencies: ["1414B3F06C4C2062"]
+			description: [
+				"&a转换桌(Transmutation Table)&f是等价交换核心：把物品扔进桌上转成&aEMC(能量值)&f，再用 EMC 取出任何已「学习」的物品。"
+				""
+				"等价交换规则：所有物品都有 EMC 值，9 个低 EMC 物品 = 1 个高 EMC 物品，反之亦可。学会的物品永久解锁。"
+				""
+				"这是后期「万物自由」的起点。"
+			]
+			id: "3EDE0581888619BB"
+			rewards: [{
+				id: "7A82DB5A533034D7"
+				type: "xp"
+				xp: 20
+			}]
+			subtitle: "Transmutation Table"
+			tasks: [{
+				id: "139D1A17624245FF"
+				item: "projecte:transmutation_table"
+				type: "item"
+			}]
+			title: "ProjectE：转换桌"
+			x: 4.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["3EDE0581888619BB"]
+			description: [
+				"&aKlein 星(Klein Star)&f是便携 EMC 电池，存 EMC 随身用。等级：Ein → Zwei → Drei → Vier → Sphere → Omega。"
+				""
+				"放转换桌里充能，放背包里给其他 ProjectE 物品供 EMC。"
+			]
+			id: "2CD9CFA3E99208C6"
+			rewards: [{
+				id: "5AC85CCAA9891350"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "Klein Star"
+			tasks: [{
+				id: "31BB728D70A20E1B"
+				item: "projecte:klein_star_ein"
+				type: "item"
+			}]
+			title: "Klein 星：EMC 电池"
+			x: 4.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["2CD9CFA3E99208C6"]
+			description: [
+				"&a能量收集器(Energy Collector)&f在阳光下自动生成 EMC，等级：mk1 → mk2 → mk3。"
+				""
+				"配合&a反物质继电器(Anti-Matter Relay)&f把 EMC 送进凝矿器/转换桌，形成 EMC 自动闭环。"
+			]
+			id: "780028255963A084"
+			rewards: [{
+				id: "515621891DBB62CC"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "Energy Collector"
+			tasks: [{
+				id: "78DE655933ED40BF"
+				item: "projecte:collector_mk1"
+				type: "item"
+			}]
+			title: "能量收集器"
+			x: 3.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["780028255963A084"]
+			description: [
+				"&a凝矿器(Condenser)&f把一堆物品压成 EMC，再用 EMC 生成另一种物品——等于「以物换物」的中间站。"
+				""
+				"mk2 容量更大。配合能量收集器，可以做到「阳光→EMC→任意物品」。"
+			]
+			id: "68C6D4DE1B69D1EE"
+			rewards: [{
+				id: "75BCD52ECD765DE7"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "Condenser"
+			tasks: [{
+				id: "733E8A231CCE483A"
+				item: "projecte:condenser_mk1"
+				type: "item"
+			}]
+			title: "凝矿器"
+			x: 6.0d
+			y: 7.5d
+		}
+		{
+			dependencies: ["68C6D4DE1B69D1EE"]
+			description: [
+				"&a反物质继电器(Relay)&f在能量收集器和凝矿器/转换桌之间传 EMC，等级 mk1 → mk2 → mk3。"
+				""
+				"布局：收集器 → 继电器 → 凝矿器，EMC 自动流动，挂机即产 EMC。"
+			]
+			id: "01428E324F0D55CC"
+			rewards: [{
+				id: "137861DB46BEB77C"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "Anti-Matter Relay"
+			tasks: [{
+				id: "57388E0D41831E9B"
+				item: "projecte:relay_mk1"
+				type: "item"
+			}]
+			title: "反物质继电器"
+			x: 6.0d
+			y: 9.0d
+		}
+		{
+			dependencies: ["01428E324F0D55CC"]
+			description: [
+				"&a暗物质(Dark Matter)&f是 ProjectE 中期材料，做暗物质块、暗物质装备、暗物质工具。"
+				""
+				"暗物质工具：自动烧炼、范围采集；暗物质护甲：飞行、极速、免疫伤害。"
+			]
+			id: "6EA74C6850043A04"
+			rewards: [{
+				id: "39D51D693DC1C1CF"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "Dark Matter"
+			tasks: [{
+				count: 4L
+				id: "15198B0328DF9AC6"
+				item: "projecte:dark_matter"
+				type: "item"
+			}]
+			title: "暗物质"
+			x: 7.5d
+			y: 10.5d
+		}
+		{
+			dependencies: ["6EA74C6850043A04"]
+			description: [
+				"&a红物质(Red Matter)&f是暗物质的升级版，做红物质装备/工具，比暗物质更强。"
+				""
+				"红物质剑一击秒杀、红物质铲范围挖矿、红物质护甲无限飞行+无敌，是 ProjectE 毕业装备。"
+			]
+			id: "24664B98B239EF92"
+			rewards: [{
+				id: "3C681278DD82E022"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "Red Matter"
+			tasks: [{
+				count: 4L
+				id: "4E9056D7B39AC356"
+				item: "projecte:red_matter"
+				type: "item"
+			}]
+			title: "红物质"
+			x: 7.5d
+			y: 12.0d
+		}
+		{
+			dependencies: ["04A52255C937DDE6"]
+			description: [
+				"&a血液注入器(Blood Infuser)&f是邪恶工艺核心机器，用血液作为能源/材料给物品充能、注入魔法。"
+				""
+				"血液从&a血液提取器(Blood Extractor)&f从生物身上抽，存进&a暗罐(Dark Tank)&f。"
+			]
+			id: "0A901ECDD5122C7B"
+			rewards: [{
+				id: "30A28DC2FB63A0DE"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "Blood Infuser"
+			tasks: [{
+				id: "1AB5E83F6EE1C83F"
+				item: "evilcraft:blood_infuser"
+				type: "item"
+			}]
+			title: "邪恶工艺：血液注入器"
+			x: 10.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["0A901ECDD5122C7B"]
+			description: [
+				"&a环境累加器(Environmental Accumulator)&f控制天气：随时晴天/雨天/雷暴，不用睡觉等天气。"
+				""
+				"&a血色版(Sanguinary)&f更强，能控制更复杂的环境效果。"
+			]
+			id: "2AF5F1FF18205926"
+			rewards: [{
+				id: "2C1EB07E5EF0A62A"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "Environmental Accumulator"
+			tasks: [{
+				id: "44D81CC58421753A"
+				item: "evilcraft:environmental_accumulator"
+				type: "item"
+			}]
+			title: "邪恶工艺：环境累加器"
+			x: 10.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["0A901ECDD5122C7B"]
+			description: [
+				"&a永恒闭合箱(Box of Eternal Closure)&f能把刷怪笼「收」进箱子里，带到自己基地放出来。"
+				""
+				"等于把地牢刷怪笼搬回家做刷怪塔，不用找地牢。"
+			]
+			id: "41A4533FE389002E"
+			rewards: [{
+				id: "4A692F3A79185A3B"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "Box of Eternal Closure"
+			tasks: [{
+				id: "61AAE3CFA322896E"
+				item: "evilcraft:box_of_eternal_closure"
+				type: "item"
+			}]
+			title: "邪恶工艺：永恒闭合箱"
+			x: 12.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["04A52255C937DDE6"]
+			description: [
+				"&a永恒之星(Eternal Stella)&f是禁忌与奥秘的招牌物品：右键冻结时间范围内的一切，战斗/采集神器。"
+				""
+				"它靠&aStellarite(星骸)&f充能，冷却后再用。"
+			]
+			id: "44045AF77145527E"
+			rewards: [{
+				id: "30D1C7B72BA8C17F"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "Eternal Stella"
+			tasks: [{
+				id: "0638DF2840399CDE"
+				item: "forbidden_arcanus:eternal_stella"
+				type: "item"
+			}]
+			title: "禁忌与奥秘：永恒之星"
+			x: 12.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["44045AF77145527E"]
+			description: [
+				"&a黑石台座(Darkstone Pedestal)&f是展示/效果方块：把物品放上去，周围产生魔法效果（照明、增益、仪式触发）。"
+				""
+				"&a磁化座(Magnetized)&f能把附近物品吸过来，配合自动农场做收集。"
+			]
+			id: "3445E9E2E851130A"
+			rewards: [{
+				id: "1B732752F53C44D7"
+				type: "xp"
+				xp: 5
+			}]
+			subtitle: "Darkstone Pedestal"
+			tasks: [{
+				id: "08694A31064A53F9"
+				item: "forbidden_arcanus:darkstone_pedestal"
+				type: "item"
+			}]
+			title: "禁忌与奥秘：黑石台座"
+			x: 13.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["04A52255C937DDE6"]
+			description: [
+				"&a圣手雷(Holy Hand Grenade)&f是圣物模组的搞笑+实用爆炸物，扔出去唱完诗才炸，范围超大。"
+				""
+				"圣物模组还有各种魔法杖（冰川/召唤/末影）、怪物护符腰带、猎枪弹，都是娱乐+实用向小道具。"
+			]
+			id: "3A3C69EB5464AB64"
+			rewards: [{
+				id: "60A0B03374CF9F0A"
+				type: "xp"
+				xp: 5
+			}]
+			subtitle: "Holy Hand Grenade"
+			tasks: [{
+				id: "57694E80DFE27C37"
+				item: "reliquary:holy_hand_grenade"
+				type: "item"
+			}]
+			title: "圣物：圣手雷"
+			x: 13.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["04A52255C937DDE6"]
+			description: [
+				"&a路石(Waystone)&f放下去右键命名，之后任何路石之间都能传送。放基地、矿洞、下界据点，形成传送网络。"
+				""
+				"&a传送卷轴(Warp Scroll)&f一次性传送回路石；&a共享石(Sharestone)&f和玩家互相绑定；&a门石(Portstone)&f私人传送点。"
+				""
+				"跑图必备，强烈建议开局先做一个。"
+			]
+			id: "401F16F0E782EF07"
+			rewards: [{
+				id: "6D7A07EC87116B93"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "Waystone"
+			tasks: [{
+				id: "61D14C33D4C2F45A"
+				item: "waystones:waystone"
+				type: "item"
+			}]
+			title: "路石：传送网络"
+			x: 15.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["04A52255C937DDE6"]
+			description: [
+				"&a溶解器(Dissolver)&f把物品拆成元素（如铁拆成铁原子、金拆成金原子），&a组合器(Combiner)&f把元素合成新物品。"
+				""
+				"炼金术是「原子级物品分解/重组」，能把多余物品拆成元素再合成你要的。还有&a裂变/聚变反应堆&f做元素转换。"
+			]
+			id: "616FE77D32C1F1B4"
+			rewards: [{
+				id: "14A3518FD98FCD4C"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "Dissolver"
+			tasks: [{
+				id: "0F5685C3C0BD233A"
+				item: "alchemistry:dissolver"
+				type: "item"
+			}]
+			title: "炼金术：溶解器"
+			x: 16.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["04A52255C937DDE6"]
+			description: [
+				"&a神术(Theurgy)&f是一套仪式+法球体系：煅烧炉把材料烧成&a炼金硫(Alchemical Sulfur)&f，再通过仪式合成魔法物品。"
+				""
+				"神术偏「仪式炼金」，不像其他魔法模组直接战斗，更像流程型魔法工厂。用到再查 JEI。"
+			]
+			id: "5C24A75138DAD29E"
+			rewards: [{
+				id: "6447F04D21D984AE"
+				type: "xp"
+				xp: 5
+			}]
+			subtitle: "Calcination Oven"
+			tasks: [{
+				id: "259AC8E346487526"
+				item: "theurgy:calcination_oven"
+				type: "item"
+			}]
+			title: "神术：煅烧炉"
+			x: 18.0d
+			y: 3.0d
+		}
+		{
+			dependencies: [
+				"443539B8BCC8CF3A"
+				"5E60F67FE4BBBF52"
+			]
+			description: [
+				"一套血魔法 LP 闭环："
+				""
+				"1. 旁边养一圈牛/猪，用&a献祭符文&f自动抽 LP 进祭坛；"
+				""
+				"2. 祭坛升到 3 级，开始合成&a灵魂工具&f；"
+				""
+				"3. 后期上&a恶魔结晶器&f+&a恶魔石板&f多方块，处理恶魔意志；"
+				""
+				"4. 做出&a灵魂武器&f套装，战斗毕业。"
+			]
+			icon: "bloodmagic:altar"
+			id: "1AC6B5C4E4322089"
+			rewards: [{
+				id: "2C7B67499B88F7F2"
+				type: "xp"
+				xp: 20
+			}]
+			subtitle: "献祭→祭坛→合成"
+			tasks: [{
+				id: "162D210922426E11"
+				title: "事例设施：血魔法 LP 闭环"
+				type: "checkmark"
+			}]
+			title: "事例设施：血魔法 LP 闭环"
+			x: 6.0d
+			y: 15.0d
+		}
+		{
+			dependencies: [
+				"780028255963A084"
+				"01428E324F0D55CC"
+			]
+			description: [
+				"一套 EMC 自动闭环："
+				""
+				"1. 露天放一排&a能量收集器 mk2&f，太阳直晒；"
+				""
+				"2. 每个收集器接&a反物质继电器 mk2&f；"
+				""
+				"3. 继电器汇接到&a凝矿器 mk2&f；"
+				""
+				"4. 凝矿器里放一张&a低 EMC 物品&f当「燃料」，EMC 自动涨；"
+				""
+				"5. 把转换桌放旁边，随时用 EMC 换任何学会的物品。"
+			]
+			icon: "projecte:collector_mk1"
+			id: "725D34EF707F2B7B"
+			rewards: [{
+				id: "0821D317A30FEE41"
+				type: "xp"
+				xp: 20
+			}]
+			subtitle: "阳光→EMC→万物"
+			tasks: [{
+				id: "3B3721C0C803E736"
+				title: "事例设施：ProjectE EMC 闭环"
+				type: "checkmark"
+			}]
+			title: "事例设施：ProjectE EMC 闭环"
+			x: 4.5d
+			y: 10.5d
+		}
+		{
+			dependencies: [
+				"4A88F4F006E41C49"
+				"47464150B94F5650"
+			]
+			description: [
+				"血祭坛是多方块：中心祭坛方块，周围按等级摆&a献祭符文/容量符文&f，再外围摆&a恶魔石板/恶魔塔&f。"
+				""
+				"等级越高，围的符文越多、离祭坛越远。JEI 里按 A 键看结构预览。"
+				""
+				"升级顺序：weak → apprentice → adept → magician → archmage → master，每级都要重新围结构。"
+			]
+			icon: "bloodmagic:altar"
+			id: "66840A23DE86D04C"
+			rewards: [{
+				id: "7703DCCA199CC45F"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "符文围祭坛"
+			tasks: [{
+				id: "7D3238A3E8D55791"
+				title: "机器结构：血祭坛升级多方块"
+				type: "checkmark"
+			}]
+			title: "机器结构：血祭坛升级多方块"
+			x: 6.0d
+			y: 13.5d
+		}
+		{
+			dependencies: [
+				"4E388A464A967D66"
+				"3030DD244CCAD57F"
+			]
+			description: [
+				"神秘学仪式结构：地上用&a对应阶层粉笔&f画阵，中心放&a献祭碗&f，周围摆书、蜡烛、材料。"
+				""
+				"启动后恶魔出现，按仪式要求给材料，它就帮你干活（挖矿/合成/清怪）。"
+				""
+				"仪式失败通常是粉笔画歪了或材料不对，重画一次即可。"
+			]
+			icon: {
+				Count: 1
+				id: "occultism:chalk_gold"
+				tag: {
+					Damage: 0
+				}
+			}
+			id: "3133C130A5358549"
+			rewards: [{
+				id: "527E3999C94615D7"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "粉笔+献祭碗+书"
+			tasks: [{
+				id: "1A6414C9293D2D4B"
+				title: "机器结构：神秘学仪式阵"
+				type: "checkmark"
+			}]
+			title: "机器结构：神秘学仪式阵"
+			x: 7.5d
+			y: 9.0d
+		}
+		{
+			dependencies: [
+				"1AC6B5C4E4322089"
+				"725D34EF707F2B7B"
+				"66840A23DE86D04C"
+				"3133C130A5358549"
+			]
+			description: [
+				"到这里你已经认识了本包全部主流魔法模组：血魔法、神秘学、Psi、铁咒书、ProjectE，外加路石/邪恶工艺/禁忌奥秘/圣物/炼金术/神术。"
+				""
+				"实战建议：选 1-2 个深入玩，别全堆。常见组合："
+				""
+				"· &aProjectE + 神秘学&f = 自动化资源自由；"
+				""
+				"· &a铁咒书 + 新生魔艺&f = 传统法师战斗流；"
+				""
+				"· &a血魔法 + 路石&f = 自残换资源+快速跑图。"
+				""
+				"魔法模组和科技模组不是竞争关系，而是互补——把它们接进你的基地网络，效率翻倍。"
+			]
+			icon: "irons_spellbooks:iron_spell_book"
+			id: "1C7F28EE1DCEDB0B"
+			rewards: [{
+				id: "1A73FCD637752507"
+				type: "xp"
+				xp: 50
+			}]
+			shape: "octagon"
+			size: 1.5d
+			subtitle: "五系魔法全掌握"
+			tasks: [{
+				id: "18D4BA16AC21E2CB"
+				title: "魔法大师毕业里程碑"
+				type: "checkmark"
+			}]
+			title: "魔法大师毕业里程碑"
+			x: 6.0d
+			y: 16.5d
+		}
+	]
+	title: "魔法与冒险补充"
+}

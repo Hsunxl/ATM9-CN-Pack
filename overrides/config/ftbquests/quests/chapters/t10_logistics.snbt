@@ -1,0 +1,1043 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "t10_logistics"
+	group: "00C72C1FB6193A42"
+	icon: "pipez:item_pipe"
+	id: "4C1E7F34B230D2EE"
+	order_index: 10
+	progression_mode: "flexible"
+	quest_links: [ ]
+	quests: [
+		{
+			description: [
+				"本章覆盖本包全部主流&a物流方案&f：Pipez 管道、模块化路由器、XNet 网络化、LaserIO 激光网络、集成动力+集成隧道逻辑物流。"
+				""
+				"选型速记："
+				""
+				"· &a简单搬运&f → Pipez（最快上手）；"
+				""
+				"· &a单块多功能&f → 模块化路由器（一个方块干所有事）；"
+				""
+				"· &a多通道统一布线&f → XNet（频道制，一根线传四种内容）；"
+				""
+				"· &a无线远距离/可视化调试&f → LaserIO（激光束直连）；"
+				""
+				"· &a条件/逻辑物流&f → 集成动力 + 集成隧道（可编程）。"
+				""
+				"提示：五套系统可以互相嵌套——LaserIO 抽矿机产物、Pipez 送进熔炉、集成动力做条件判断，再用路由器单点收尾。"
+			]
+			icon: "pipez:item_pipe"
+			id: "4C1CC525FD3FED42"
+			shape: "hexagon"
+			size: 1.5d
+			subtitle: "把东西从 A 搬到 B"
+			tasks: [{
+				id: "61AE7F09B6EB02DE"
+				title: "物流管道总览"
+				type: "checkmark"
+			}]
+			title: "物流管道总览"
+			x: 16.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["4C1CC525FD3FED42"]
+			description: [
+				"&aPipez&f提供四类基础管道：&a物品管道&f（item_pipe）、&a流体管道&f（fluid_pipe）、&a能量管道&f（energy_pipe）、&a气体管道&f（gas_pipe），另有大容量&a通用管道&f（universal_pipe）一管走全部。"
+				""
+				"用法：把管道放在两个容器/机器之间，右键一端设「提取」（从容器抽），另一端设「输入」（送进容器）；用&a管道扳手&f（pipez:wrench）调整连接面。"
+				""
+				"进阶：右键管道可设置&a红石控制&f（有信号才传输）与&a传输频率&f；查看管道里当前在跑什么。"
+				""
+				"优点：合成便宜、布线简单、不吃电（物品管道），是开局到中期最省心的物流。"
+			]
+			id: "553231B659C1248D"
+			rewards: [{
+				id: "3C990684516BE4F2"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "物品/流体/能量/气体"
+			tasks: [{
+				id: "7908DCB6BCC1A195"
+				item: "pipez:item_pipe"
+				type: "item"
+			}]
+			title: "Pipez：四合一管道"
+			x: 15.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["553231B659C1248D"]
+			description: [
+				"Pipez 升级共五级，&a右键管道再右键升级&f即可装入："
+				""
+				"· &a基础升级&f（basic_upgrade）→ &a改进升级&f（improved_upgrade）→ &a高级升级&f（advanced_upgrade）→ &a终极升级&f（ultimate_upgrade）→ &a无限升级&f（infinity_upgrade）。"
+				""
+				"每升一级，传输速率/单次吞吐与缓冲容量大幅提升；无限升级是后期给 AE2 接口、多方块机器供料的标配。"
+				""
+				"提示：升级按管道段生效——一段管道插一个升级即可，不必每格都插。"
+			]
+			id: "1A23E844AAE7BC87"
+			rewards: [{
+				id: "59F9A19D27188337"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "速度与容量指数增长"
+			tasks: [{
+				id: "3B09AD00E6B58FC4"
+				item: "pipez:basic_upgrade"
+				type: "item"
+			}]
+			title: "Pipez 五级升级"
+			x: 0.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["553231B659C1248D"]
+			description: [
+				"&a目的地工具&f（filter_destination_tool）：先右键「源管道」标记，再右键「目标容器」标记，物品就会按标记点对点传输——适合一条主管道上多机分流。"
+				""
+				"&a管道扳手&f（wrench）：右键连接点切换「连接/断开」，潜行右键改变管道朝向。"
+				""
+				"Pipez 的过滤在管道 GUI 里直接白/黑名单物品与标签，无需单独合成过滤物品。"
+				""
+				"技巧：通用管道（universal_pipe）配合目的地工具，就是一条万能总线。"
+			]
+			id: "198CE773A5458D91"
+			rewards: [{
+				id: "524CA1A75D452099"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "指定目的地"
+			tasks: [{
+				id: "2A21A5FAD60DCE50"
+				item: "pipez:filter_destination_tool"
+				type: "item"
+			}]
+			title: "Pipez 定向与过滤工具"
+			x: 1.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["4C1CC525FD3FED42"]
+			description: [
+				"&a模块化路由器&f（modular_router）是「可插拔模块」的物流核心：插&a模块&f决定行为，插&a升级&f提升性能，插&a增强&f改细节。"
+				""
+				"它只有 1 格大，但无需管道即可独立工作：把它贴在箱子/机器旁，插对模块就能抓取、发送、放置、破坏、抽流体、输能量。"
+				""
+				"典型用法：路由器+提取模块=自动从箱子抓矿送熔炉；路由器+放置模块=自动种树；路由器+破坏模块=自动挖矿。"
+				""
+				"路由器最多 9 个模块位，组合自由度极高，是「单点自动化」之王。"
+			]
+			id: "15B19252F21DEE54"
+			rewards: [{
+				id: "751F8A34F041BA4D"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "一个方块，无数功能"
+			tasks: [{
+				id: "2BC1BDD43DED266C"
+				item: "modularrouters:modular_router"
+				type: "item"
+			}]
+			title: "模块化路由器：万能物流方块"
+			x: 16.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["15B19252F21DEE54"]
+			description: [
+				"&a抓取模块&f（puller_module_1 / puller_module_2）：从相邻容器按过滤抽取物品；"
+				""
+				"&a发送模块&f（sender_module_1 / sender_module_2 / sender_module_3）：把路由器内物品送到指定方向的容器，等级越高一次送越多；"
+				""
+				"&a分配模块&f（distributor_module / distributor_module_pull）：均衡分配到多个容器；"
+				""
+				"&a真空模块&f（vacuum_module）：直接吸周围地面掉落物进路由器，配合范围增强就是吸尘器。"
+				""
+				"提示：抓取模块有提取延迟，配合&a快速拾取增强&f（fast_pickup_augment）可高速抽吸。"
+			]
+			id: "0756E2E65F89F888"
+			rewards: [{
+				id: "178D2E83E18B2770"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "从哪拿、送到哪"
+			tasks: [{
+				id: "06A54483DF6D6457"
+				item: "modularrouters:puller_module_1"
+				type: "item"
+			}]
+			title: "路由器：提取与发送模块"
+			x: 7.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["15B19252F21DEE54"]
+			description: [
+				"&a放置模块&f（placer_module）：把路由器内方块放置到世界（种树、放火把、铺方块）；"
+				""
+				"&a破坏模块&f（breaker_module）：破坏面前方块（自动挖矿、收作物）；"
+				""
+				"&a投掷模块&f（dropper_module）：把物品扔出去；&a飞射模块&f（flinger_module）：把物品/实体抛向远处；"
+				""
+				"&a挤出模块&f（extruder_module_1 / extruder_module_2）：像活塞一样推出/收回方块。"
+				""
+				"进阶：放置模块+树苗=自动林场；破坏模块+范围升级=3x3 自动矿道。"
+			]
+			id: "177B3D729A9CB387"
+			rewards: [{
+				id: "019C8496384A4F34"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "自动建造与挖矿"
+			tasks: [{
+				id: "0A95FFF96883BB52"
+				item: "modularrouters:placer_module"
+				type: "item"
+			}]
+			title: "路由器：放置与破坏模块"
+			x: 9.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["15B19252F21DEE54"]
+			description: [
+				"&a流体模块&f（fluid_module / fluid_module_2）：抽/放相邻储罐的液体；"
+				""
+				"&a能量输出/分配模块&f（energy_output_module / energy_distributor_module）：给相邻机器充/取 RF；"
+				""
+				"&a玩家模块&f（player_module）：模拟玩家右键/使用物品（自动喝药水、自动使用工具）；"
+				""
+				"&a检测模块&f（detector_module）：检测相邻方块/实体状态并输出红石；&a激活模块&f（activator_module）：右键交互方块；"
+				""
+				"&a虚空模块&f（void_module）：销毁物品（垃圾处理）。"
+			]
+			id: "1D9CC10758F43EEF"
+			rewards: [{
+				id: "2F771C3FA310608E"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "扩展到流体与红石"
+			tasks: [{
+				id: "31C189D520D67EB7"
+				item: "modularrouters:fluid_module"
+				type: "item"
+			}]
+			title: "路由器：流体/能量/玩家/检测模块"
+			x: 10.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["15B19252F21DEE54"]
+			description: [
+				"&a升级&f决定硬件性能：&a速度升级&f（speed_upgrade，缩短动作间隔）、&a堆叠升级&f（stack_upgrade，每次处理更多）、&a同步升级&f（sync_upgrade，模块同步执行）、&a能量升级&f（energy_upgrade，扩展供能）、&a流体升级&f（fluid_upgrade）、&a安全升级&f（security_upgrade）、&a隔音升级&f（muffler_upgrade）。"
+				""
+				"&a增强&f（augment）改行为细节：&a推挤增强&f（pushing_augment）、&a堆叠增强&f（stack_augment）、&a范围上/下增强&f（range_up_augment / range_down_augment）扩大作用面、&a红石增强&f（redstone_augment）按信号工作、&a调节增强&f（regulator_augment）精确控量、&a伪装增强&f（mimic_augment）。"
+				""
+				"提示：路由器纯物品模块不耗电；流体/能量/破坏模块需要供能。"
+			]
+			id: "1C42CB304F5AB275"
+			rewards: [{
+				id: "7BFCD957F1489219"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "更快、更远、更聪明"
+			tasks: [{
+				id: "61F6C242CC1FFBAC"
+				item: "modularrouters:speed_upgrade"
+				type: "item"
+			}]
+			title: "路由器：升级与增强"
+			x: 12.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["4C1CC525FD3FED42"]
+			description: [
+				"&aXNet&f是「频道制」物流网络：&a控制器&f（controller，大脑）+ &a网络线缆&f（netcable_red/blue/green/yellow/routing）+ &a连接器&f（connector_red/blue/green/yellow）+ &a路由器&f（router）。"
+				""
+				"一根线缆同时跑 4 色频道，每色频道可传物品/流体/能量/红石中的一种——布线极其整洁。"
+				""
+				"把连接器贴在箱子/机器上，线缆把连接器连到控制器，右键控制器打开网络编程界面。"
+				""
+				"进阶：&a高级线缆&f与&a路由线缆&f（netcable_routing）支持更复杂的分支；&afacade&f（管线伪装）可把线缆藏进墙里。"
+			]
+			id: "6EA7C774CB17EB0B"
+			rewards: [{
+				id: "160BB8A4D68D25FF"
+				type: "xp"
+				xp: 20
+			}]
+			subtitle: "频道制网络的大脑"
+			tasks: [{
+				id: "175EE30FD433956F"
+				item: "xnet:controller"
+				type: "item"
+			}]
+			title: "XNet：控制器与线缆"
+			x: 19.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["6EA7C774CB17EB0B"]
+			description: [
+				"右键&a连接器&f打开该频道的配置："
+				""
+				"· 方向：&a提取&f（从容器抽）或&a输入&f（送入容器）；"
+				""
+				"· 过滤：物品/流体列表，支持白名单、标签、数量阈值；"
+				""
+				"· 速率/数量：每次传输多少、多久一次；"
+				""
+				"· 红石模式：始终 / 有信号 / 无信号才工作。"
+				""
+				"经典应用：写规则「熔炉铁粉 < 64 时自动补 64」——比无差别傻抽高效得多，也不会抽干机器缓存。"
+			]
+			id: "64221816A198A3C8"
+			rewards: [{
+				id: "4E0BF2D758EF5D4D"
+				type: "xp"
+				xp: 20
+			}]
+			subtitle: "把规则写进频道"
+			tasks: [{
+				id: "63238748235DA037"
+				item: "xnet:connector_red"
+				type: "item"
+			}]
+			title: "XNet：连接器与频道编程"
+			x: 22.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["6EA7C774CB17EB0B"]
+			description: [
+				"&a高级连接器&f（advanced_connector_red/blue/green/yellow）：单连接口支持更多频道与更高吞吐；"
+				""
+				"&a路由连接器/线缆&f（connector_routing / netcable_routing）：在节点处按规则分流，做复杂网络拓扑；"
+				""
+				"&a红石代理&f（redstone_proxy / redstone_proxy_upd）：把网络里的条件转成世界红石信号，或把外部信号接入网络；"
+				""
+				"&a终端&f（terminal）：远程查看网络状态；&a天线三件套&f（antenna / antenna_base / antenna_dish）实现无线连接；"
+				""
+				"&a连接器升级&f（connector_upgrade）提升单口速率。"
+			]
+			id: "7F3A3272FFF9A631"
+			rewards: [{
+				id: "15C231417B7C9DA9"
+				type: "xp"
+				xp: 20
+			}]
+			subtitle: "16 频道与逻辑"
+			tasks: [{
+				id: "14D774A567D46F31"
+				item: "xnet:advanced_connector_routing"
+				type: "item"
+			}]
+			title: "XNet：高级连接器与路由"
+			x: 24.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["4C1CC525FD3FED42"]
+			description: [
+				"&aLaserIO&f用&a激光节点&f（laser_node）组成无线网络：节点面朝容器/机器摆放，节点之间用&a激光束&f自动连接（范围内），或用&a激光连接器&f（laser_connector / laser_connector_advanced）做中继。"
+				""
+				"节点 6 个面都可独立插卡配置，无需拉线缆——是「所见即所得」的无线物流。"
+				""
+				"用&a激光扳手&f（laser_wrench）对准两个节点即可建立/断开激光连接。"
+				""
+				"优点：可视化调试极好（右键节点看传输状态），布局清爽，适合中小型整洁基地。"
+			]
+			id: "1C1F543817D99ACE"
+			rewards: [{
+				id: "5D398D79199FEF9B"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "节点直连，无需线缆"
+			tasks: [{
+				id: "21B5A96C147580D0"
+				item: "laserio:laser_node"
+				type: "item"
+			}]
+			title: "LaserIO：激光节点入门"
+			x: 18.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["1C1F543817D99ACE"]
+			description: [
+				"卡片分&a传输&f与&a提取&f两类："
+				""
+				"· &a物品卡&f（card_item / card_item_extract）；"
+				""
+				"· &a流体卡&f（card_fluid / card_fluid_extract）；"
+				""
+				"· &a能量卡&f（card_energy / card_energy_extract）：一张卡代替一条能量线；"
+				""
+				"· &a红石卡&f（card_redstone / card_redstone_extract）：传红石信号；"
+				""
+				"还有&a传感器卡&f（*_sensor，检测库存/能量并发信号）与&a库存卡&f（*_stock，按需补货）。"
+				""
+				"&a卡夹&f（card_holder）整理卡片；&a克隆卡&f（card_cloner）复制卡片配置；&a超频卡/超频节点&f（overclocker_card / overclocker_node）提升速率。"
+			]
+			id: "3654377F582CCBA6"
+			rewards: [{
+				id: "5BABCF463BF2D497"
+				type: "xp"
+				xp: 20
+			}]
+			subtitle: "每张卡是一个小程序"
+			tasks: [{
+				id: "1D553982F9C47881"
+				item: "laserio:card_item"
+				type: "item"
+			}]
+			title: "LaserIO：卡片大全"
+			x: 18.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["3654377F582CCBA6"]
+			description: [
+				"过滤器插在卡片槽上实现精准筛选："
+				""
+				"· &a基础过滤器&f（filter_basic）：物品白/黑名单；"
+				""
+				"· &a数量过滤器&f（filter_count）：按数量阈值；"
+				""
+				"· &a模组过滤器&f（filter_mod）：按来源 mod；"
+				""
+				"· &a标签过滤器&f（filter_tag）：按 ore 标签；"
+				""
+				"· &aNBT 过滤器&f（filter_nbt）：按 NBT/附魔/耐久。"
+				""
+				"应用：一张物品节点配不同过滤器，就能把混合矿物分拣进不同箱子，等于小型分拣站。"
+			]
+			id: "59C98D2981625450"
+			rewards: [{
+				id: "4DC963EE7159D878"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "精准筛选"
+			tasks: [{
+				id: "0986CBFC77C506CF"
+				item: "laserio:filter_basic"
+				type: "item"
+			}]
+			title: "LaserIO：过滤器"
+			x: 22.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["4C1CC525FD3FED42"]
+			description: [
+				"&a集成动力（Integrated Dynamics）&f是逻辑驱动的物流：&a逻辑导演&f（logic_director，处理单元）+ &a逻辑编程器&f（logic_programmer / portable_logic_programmer，编程界面）+ &a变量卡&f（variable）+ &a线缆&f（cable）。"
+				""
+				"核心思想：用&a方面（Aspect）&f读取方块/物品/流体/实体的属性成&a变量&f，再用&a运算符&f（与/或/非/比较/加减乘）组合成表达式，最后驱动写入器。"
+				""
+				"&a变量存储&f（variablestore）长期存卡；&a代理&f（proxy）把网络扩展到远处；&a延迟&f（delay）做定时逻辑；&a标签机&f（labeller）给卡命名。"
+				""
+				"它是真正的「图形化编程」，难度最高，但能做其他物流做不到的条件判断。"
+			]
+			id: "6440946581D23CBB"
+			rewards: [{
+				id: "48EB976DE174745C"
+				type: "xp"
+				xp: 20
+			}]
+			subtitle: "把世界变成数据"
+			tasks: [{
+				id: "5513806C4EEF0AFC"
+				item: "integrateddynamics:logic_director"
+				type: "item"
+			}]
+			title: "集成动力：逻辑导演与变量"
+			x: 21.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["6440946581D23CBB"]
+			description: [
+				"&a读取器&f贴在方块上把状态读进网络："
+				""
+				"· &a库存读取&f（part_inventory_reader）读物品数量；&a流体读取&f（part_fluid_reader）读液体；"
+				""
+				"· &a机器读取&f（part_machine_reader）读机器进度/能量；&a红石读取&f（part_redstone_reader）读信号；"
+				""
+				"· &a方块读取&f（part_block_reader）、&a实体读取&f（part_entity_reader）、&a网络读取&f（part_network_reader）、&a音效读取&f（part_audio_reader）、&a跨维度读取&f（part_extradimensional_reader）。"
+				""
+				"&a写入器&f作用回世界：&a库存写入&f（part_inventory_writer）放物品、&a红石写入&f（part_redstone_writer）发信号、&a机器写入&f（part_machine_writer）操作机器、&a效果写入&f（part_effect_writer）给玩家上 buff、&a实体写入&f（part_entity_writer）操控实体。"
+			]
+			id: "611DD36F58752A2B"
+			rewards: [{
+				id: "7D4182FE16D09384"
+				type: "xp"
+				xp: 20
+			}]
+			subtitle: "网络与世界的接口"
+			tasks: [{
+				id: "21196D9DCDF61D94"
+				item: "integrateddynamics:part_inventory_reader"
+				type: "item"
+			}]
+			title: "集成动力：读取器与写入器"
+			x: 30.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["6440946581D23CBB"]
+			description: [
+				"&a显示面板&f（part_display_panel）：把变量实时显示成文字/数字，做基地监控屏；&a动态/静态灯板&f（part_dynamic_light_panel / part_static_light_panel）做装饰灯。"
+				""
+				"&a变量转换器&f（variable_transformer_input / variable_transformer_output）：在多个网络之间共享变量，组网分布式逻辑。"
+				""
+				"&a煤发电机&f（coal_generator）与&a电池&f（energy_battery）：给集成动力网络供电；&a脱水盆/机械脱水盆&f（drying_basin / mechanical_drying_basin）与&a压榨机/机械压榨机&f（squeezer / mechanical_squeezer）是它的附属加工。"
+				""
+				"经典案例：监控 5 台熔炉燃料总量 < 64 → 红石写入器触发路由器补煤。"
+			]
+			id: "1B192D2A94C1D5AC"
+			rewards: [{
+				id: "42093001D852CEEC"
+				type: "xp"
+				xp: 20
+			}]
+			subtitle: "监控屏与逻辑门"
+			tasks: [{
+				id: "1EAE0BF7F5EB8220"
+				item: "integrateddynamics:part_display_panel"
+				type: "item"
+			}]
+			title: "集成动力：显示与变量进阶"
+			x: 31.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["6440946581D23CBB"]
+			description: [
+				"&a集成隧道（Integrated Tunnels）&f是集成动力的「搬运层」，贴在方块上："
+				""
+				"· &a物品导入/导出&f（part_importer_item / part_exporter_item）；"
+				""
+				"· &a流体导入/导出&f（part_importer_fluid / part_exporter_fluid）；"
+				""
+				"· &a能量导入/导出&f（part_importer_energy / part_exporter_energy）；"
+				""
+				"· &a世界导入/导出&f（part_importer_world_item / part_exporter_world_item 等）：直接与世界方块交互。"
+				""
+				"隧道受变量逻辑控制：可写「当 X 成立时以 Y 速率传 Z」——逻辑与物流合一。"
+			]
+			id: "71397BEFF1DCB4FE"
+			rewards: [{
+				id: "45443D6E1817A05C"
+				type: "xp"
+				xp: 25
+			}]
+			subtitle: "把逻辑变成搬运"
+			tasks: [{
+				id: "04975F9B40261BF1"
+				item: "integratedtunnels:part_importer_item"
+				type: "item"
+			}]
+			title: "集成隧道：导入导出接口"
+			x: 28.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["71397BEFF1DCB4FE"]
+			description: [
+				"&a接口&f（part_interface_item / part_interface_fluid / part_interface_energy）：作为网络与外部库存的缓冲区；"
+				""
+				"&a接口过滤&f（part_interface_filter_item / part_interface_filter_fluid / part_interface_filter_energy）：给接口加过滤规则；"
+				""
+				"&a玩家模拟器&f（part_player_simulator）：模拟玩家右键/使用（自动使用工具、自动开方块）。"
+				""
+				"联动：配合&a集成合成&f（integratedcrafting:part_interface_crafting）可按变量请求自动合成；&a集成终端&f（integratedterminals:part_terminal_storage）做成可视化仓库。"
+			]
+			id: "29DF9076D0F02008"
+			rewards: [{
+				id: "1D479AC03D990DE2"
+				type: "xp"
+				xp: 20
+			}]
+			subtitle: "高级接口"
+			tasks: [{
+				id: "27952DBFA5D0307B"
+				item: "integratedtunnels:part_interface_item"
+				type: "item"
+			}]
+			title: "集成隧道：接口过滤与玩家模拟"
+			x: 24.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["553231B659C1248D"]
+			description: [
+				"一条 Pipez 产线模板："
+				""
+				"1. 箱子里放原矿，用&a物品管道&f连熔炉输入面（设为提取）；"
+				""
+				"2. &a能量管道&f从发电机连熔炉供电；"
+				""
+				"3. &a物品管道&f从熔炉输出面连成品箱（设为输入）；"
+				""
+				"4. 管道插&a基础→高级升级&f提速；需要过滤时在管道 GUI 白名单目标物品。"
+				""
+				"完成后矿石自动进去、锭自动出来，零手动。"
+			]
+			id: "6BFC17D244D70947"
+			rewards: [{
+				id: "2356774BE78EAA78"
+				type: "xp"
+				xp: 20
+			}]
+			subtitle: "箱子→熔炉→箱子"
+			tasks: [{
+				id: "141640C288FCB27E"
+				item: "pipez:universal_pipe"
+				type: "item"
+			}]
+			title: "事例：Pipez 紧凑熔炉线"
+			x: 3.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["15B19252F21DEE54"]
+			description: [
+				"用路由器做全自动林场："
+				""
+				"1. 路由器贴在树苗位置，插&a放置模块&f放树苗；"
+				""
+				"2. 插&a破坏模块&f砍成熟的木头；"
+				""
+				"3. 插&a真空模块&f吸走原木与树苗掉落；"
+				""
+				"4. 插&a发送模块&f把原木送进箱子、树苗送回路由器；"
+				""
+				"5. 范围增强扩大到一整片；配&a调节增强&f控制节奏避免树苗浪费。"
+			]
+			id: "13F2ECC8CBDF5962"
+			rewards: [{
+				id: "1A792AC33D0524BD"
+				type: "xp"
+				xp: 25
+			}]
+			subtitle: "种树+砍树一体"
+			tasks: [{
+				id: "0CF2A83C7D767C5F"
+				item: "modularrouters:modular_router"
+				type: "item"
+			}]
+			title: "事例：路由器自动林场"
+			x: 13.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["6EA7C774CB17EB0B"]
+			description: [
+				"用 XNet 搭一条整洁总线："
+				""
+				"1. 中央放&a控制器&f，周围拉&nrouting 线缆&f到各机器；"
+				""
+				"2. 每台机器贴一个连接器：红色频道传物品、蓝色传流体、绿色传能量、黄色传红石；"
+				""
+				"3. 在控制器里给每个频道写「取料过滤+送入阈值」；"
+				""
+				"4. 用&a红石代理&f把「机器空闲」信号接回网络实现启停。"
+				""
+				"结果：一条线缆同时供料、补液、充电、发信号，基地布线像城市地铁图一样干净。"
+			]
+			id: "20816DABDDE968A7"
+			rewards: [{
+				id: "212839E57F95A036"
+				type: "xp"
+				xp: 25
+			}]
+			subtitle: "一线走四类内容"
+			tasks: [{
+				id: "08F17A6BF7CBD733"
+				item: "xnet:controller"
+				type: "item"
+			}]
+			title: "事例：XNet 多通道总线"
+			x: 25.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["1C1F543817D99ACE"]
+			description: [
+				"用 LaserIO 做无线分拣："
+				""
+				"1. 混合箱旁放一个&a物品提取节点&f；"
+				""
+				"2. 每个分类箱子旁放一个&a物品传输节点&f，节点间用激光扳手对准连成光束；"
+				""
+				"3. 在传输节点上插&a基础/NBT 过滤器&f，分别指定铁、铜、金；"
+				""
+				"4. 用&a库存传感器卡&f控制箱子满了就停。"
+				""
+				"全程无地面线缆，节点靠激光束无线组网，挖完矿站在远处就能看到分拣状态。"
+			]
+			id: "7A6D208496A126D8"
+			rewards: [{
+				id: "50064A56710FA2F4"
+				type: "xp"
+				xp: 25
+			}]
+			subtitle: "节点光束分拣"
+			tasks: [{
+				id: "611B9525EBB239AA"
+				item: "laserio:laser_node"
+				type: "item"
+			}]
+			title: "事例：LaserIO 无线分拣站"
+			x: 19.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["6440946581D23CBB"]
+			description: [
+				"用集成动力做智能补货："
+				""
+				"1. 在熔炉燃料箱贴&a库存读取器&f，读出「煤数量」变量；"
+				""
+				"2. 在&a逻辑编程器&f写表达式「煤数量 < 32」；"
+				""
+				"3. 把布尔输出接到&a红石写入器&f，触发一条 Pipez 补煤管道；"
+				""
+				"4. 需要更复杂时用&a比较/与或非运算符&f叠加多个条件，用&a延迟&f做防抖。"
+				""
+				"这是其他管道系统做不到的「带判断」物流，也是集成动力的核心价值。"
+			]
+			id: "483A8C0C84579119"
+			rewards: [{
+				id: "58BA65BE0ABA8225"
+				type: "xp"
+				xp: 30
+			}]
+			subtitle: "会思考的物流"
+			tasks: [{
+				id: "58666568DF40D398"
+				item: "integrateddynamics:part_redstone_writer"
+				type: "item"
+			}]
+			title: "事例：集成动力逻辑补货"
+			x: 33.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["4C1CC525FD3FED42"]
+			description: [
+				"各物流系统的过滤方式："
+				""
+				"· &a模块化路由器&f：bulk_item_filter（批量物品）、mod_filter（按 mod）、tag_filter（标签）、regex_filter（正则）、inspection_filter（检视）；"
+				""
+				"· &aLaserIO&f：filter_basic / count / mod / tag / nbt；"
+				""
+				"· &aXNet&f：在连接器 GUI 直接配白名单与阈值；"
+				""
+				"· &a集成隧道&f：part_interface_filter_*；"
+				""
+				"· &aPipez&f：管道 GUI 内建过滤，无需单独物品。"
+			]
+			id: "153412BE8197B42A"
+			rewards: [{
+				id: "1AAC5EE4223B1C4A"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "各系统怎么过滤"
+			tasks: [{
+				id: "5AD806899797C6D5"
+				item: "modularrouters:regex_filter"
+				type: "item"
+			}]
+			title: "物流过滤器家族速查"
+			x: 12.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["553231B659C1248D"]
+			description: [
+				"物流升级节奏建议："
+				""
+				"· 前期：原版漏斗 + Pipez 裸管（无升级）；"
+				""
+				"· 中期：Pipez 高级升级 + 模块化路由器单点收尾；"
+				""
+				"· 中后期：XNet 总线替换零散管道，LaserIO 做无线分拣；"
+				""
+				"· 后期：无限升级喂 AE2 接口，集成动力做全局条件逻辑；"
+				""
+				"· 终极：RS/AE2 网格做主存储，以上全部作为「外设」对接。"
+			]
+			id: "1FBCB5AF0DFC3E45"
+			rewards: [{
+				id: "7024BC378013CCC1"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "什么时候换什么"
+			tasks: [{
+				id: "16207DD02D46D61A"
+				item: "pipez:infinity_upgrade"
+				type: "item"
+			}]
+			title: "管道升级路线图"
+			x: 4.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["15B19252F21DEE54"]
+			description: [
+				"经典模块组合："
+				""
+				"· 吸尘器 = vacuum_module + range_up_augment + 快速拾取增强；"
+				""
+				"· 自动挖矿 = breaker_module + range 增强 + 能量升级；"
+				""
+				"· 自动种树 = placer_module（树苗）+ breaker_module（木头）；"
+				""
+				"· 加油机 = fluid_module + regulator_augment（精确控量）；"
+				""
+				"· 垃圾站 = void_module + detector_module（只销毁指定物品）。"
+			]
+			id: "78695220C3CECBC9"
+			rewards: [{
+				id: "529C71CDE3DC5537"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "常见配方"
+			tasks: [{
+				id: "017A824C3C6AD2BE"
+				item: "modularrouters:sync_upgrade"
+				type: "item"
+			}]
+			title: "路由器模块组合速查"
+			x: 15.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["6EA7C774CB17EB0B"]
+			description: [
+				"XNet 用熟后不乱的秘诀："
+				""
+				"· 固定色约定：红=物品、蓝=流体、绿=能量、黄=红石，全程不变；"
+				""
+				"· 用&a路由器&f（router）接入频道，在控制器 GUI 里巡检各频道状态；"
+				""
+				"· 远距离/跨区域用&a无线路由器+天线&f（wireless_router / antenna_dish）替代拉长线；"
+				""
+				"· 大网络用&a路由线缆&f分树状拓扑，避免单控制器过载；"
+				""
+				"· 用&afacade&f把线缆伪装成周围方块，整洁度拉满。"
+			]
+			id: "63E574722C30FADC"
+			rewards: [{
+				id: "2009076A70933219"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "不混乱的秘密"
+			tasks: [{
+				id: "59EF2A0F8B565C73"
+				item: "xnet:router"
+				type: "item"
+			}]
+			title: "XNet 频道规划技巧"
+			x: 27.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["1C1F543817D99ACE"]
+			description: [
+				"LaserIO 排错清单："
+				""
+				"· 节点是否面向容器（背面朝墙不工作）；"
+				""
+				"· 是否插对卡片方向（传输 vs 提取）；"
+				""
+				"· 激光束是否被方块挡住或超出&a激光连接器&f中继范围；"
+				""
+				"· 红石卡/传感器卡是否误触发；"
+				""
+				"· 速率不够就上&a超频节点&f（overclocker_node）与&a超频卡&f。"
+				""
+				"右键节点界面会直接显示当前传输内容与错误原因，是它最好用的设计。"
+			]
+			id: "2EAFCA723F540383"
+			rewards: [{
+				id: "3DECF87E18FD09FC"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "为什么没在传"
+			tasks: [{
+				id: "61C126F26BAE7BA3"
+				item: "laserio:overclocker_node"
+				type: "item"
+			}]
+			title: "LaserIO 调试技巧"
+			x: 21.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["6440946581D23CBB"]
+			description: [
+				"集成动力入门心法："
+				""
+				"· 第一步：用读取器把世界状态变成&a变量&f（数字/物品/布尔）；"
+				""
+				"· 第二步：在逻辑编程器里用&a运算符&f把变量拼成表达式（条件/计算）；"
+				""
+				"· 第三步：用写入器把表达式结果作用回世界；"
+				""
+				"· 复杂网络用&a变量转换器&f跨网共享，用&a代理&f延伸距离；"
+				""
+				"记住：它和 ComputerCraft 的区别是——ID 用图形化连线，CC 写 Lua 代码。"
+			]
+			id: "0C8DC0E75CA6204F"
+			rewards: [{
+				id: "14EEF0A303D2D180"
+				type: "xp"
+				xp: 20
+			}]
+			subtitle: "变量=值，表达式=规则"
+			tasks: [{
+				id: "5F18516704527E37"
+				item: "integrateddynamics:variable_transformer_output"
+				type: "item"
+			}]
+			title: "集成动力逻辑思维"
+			x: 34.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["553231B659C1248D"]
+			description: [
+				"&a气体管道&f（gas_pipe）专传气动/通用机械的气体；"
+				""
+				"&a通用管道&f（universal_pipe）单管同时走物品+流体+能量+气体，适合不想分线的紧凑布局；"
+				""
+				"通用管道也要插升级提速，但同管多流时优先保证物品侧升级到位。"
+			]
+			id: "5CF3B63851F2FAB9"
+			rewards: [{
+				id: "097E12D383547587"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "一管走全部"
+			tasks: [{
+				id: "2F3E1909450CE83A"
+				item: "pipez:gas_pipe"
+				type: "item"
+			}]
+			title: "Pipez 气体与通用管道"
+			x: 6.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["15B19252F21DEE54"]
+			description: [
+				"&a模块化路由器手册&f是该模组的 Patchouli 图文教程（配方见 JEI，搜 Modular Routers Manual），逐项讲解模块/增强/升级用法。"
+				""
+				"合成路由器时别忘了在路由器 GUI 里把模块拖进模块槽——不装模块的路由器什么都不会做。"
+				""
+				"&a空白模块&f（blank_module）与&a空白升级&f（blank_upgrade）是合成基础件；&a覆盖卡&f（override_card）可临时覆写配置。"
+			]
+			id: "6004C41A9CDCB2C0"
+			rewards: [{
+				id: "64CE7162E095CEAE"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "官方图文教程"
+			tasks: [{
+				id: "08581D6D284DBF73"
+				item: "patchouli:guide_book"
+				type: "item"
+			}]
+			title: "模块化路由器手册"
+			x: 16.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["6440946581D23CBB"]
+			description: [
+				"&a集成动力手册&f（on_the_dynamics_of_integration）是学习这套逻辑物流的必读：从变量、方面到运算符一步步图文讲解。"
+				""
+				"建议先照手册做一个「读箱子数量 → 红石输出」的最小示例，理解变量流向后再玩复杂网络。"
+				""
+				"它是本章难度最高的系统，前期不必硬啃，等遇到真正的条件需求再回来学。"
+			]
+			id: "79AC7FC30073C7BF"
+			rewards: [{
+				id: "14C060DF1FE7E0FE"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "最难也最强的物流"
+			tasks: [{
+				id: "7CF39B254DAC1D22"
+				item: "integrateddynamics:on_the_dynamics_of_integration"
+				type: "item"
+			}]
+			title: "集成动力官方手册"
+			x: 36.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["4C1CC525FD3FED42"]
+			description: [
+				"回顾本章五条路线："
+				""
+				"· &aPipez&f：便宜简单，全局通用；"
+				""
+				"· &a模块化路由器&f：单块万能，单点自动化；"
+				""
+				"· &aXNet&f：频道总线，整洁大网络；"
+				""
+				"· &aLaserIO&f：无线激光，可视化调试；"
+				""
+				"· &a集成动力+隧道&f：可编程逻辑，最灵活。"
+				""
+				"实战节奏：先用 Pipez 跑通产线 → 复杂了换 XNet/LaserIO → 出现「条件需求」再上集成动力。"
+				""
+				"完成本任务 = 你已能根据需求选型并把五套系统组合成完整的自动化物流体系。"
+			]
+			icon: "integrateddynamics:cable"
+			id: "5563705A8F06F31A"
+			rewards: [{
+				id: "25368AFF378D613B"
+				type: "xp"
+				xp: 40
+			}]
+			shape: "octagon"
+			size: 1.5d
+			subtitle: "选对工具，自动一切"
+			tasks: [{
+				id: "0CFED9C986C576D7"
+				title: "物流大师：综合实战"
+				type: "checkmark"
+			}]
+			title: "物流大师：综合实战"
+			x: 13.5d
+			y: 1.5d
+		}
+	]
+	title: "物流管道"
+}

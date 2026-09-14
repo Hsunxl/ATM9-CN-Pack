@@ -1,0 +1,813 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "t01_power"
+	group: "00C72C1FB6193A42"
+	icon: "powah:furnator_starter"
+	id: "483635A12AAE8222"
+	order_index: 1
+	progression_mode: "flexible"
+	quest_links: [ ]
+	quests: [
+		{
+			description: [
+				"本包所有科技机器都吃同一种电：&aFE&f。Powah 发电、通用机械输电、热力储能、AE2 用电，自由混搭、完全互通。"
+				""
+				"一套电网四要素：&a发电机&f（产出）→ &a线缆&f（传输）→ &a电池&f（缓冲）→ &a机器&f（消耗）。"
+				""
+				"本章主修三条线：&aPowah&f（最顺手的一键式电源）、&a通量网络&f（无线电网）、&a通用机械发电机&f（多场景）。"
+				""
+				"分支说明：总览→Powah 全套（任务1-15）、通量无线网络（任务16-19）、通用机械发电（任务20-29），最后汇合到结尾实战（任务30）。"
+			]
+			icon: "powah:energy_cell_starter"
+			id: "26D949C5883016D5"
+			shape: "hexagon"
+			size: 1.5d
+			subtitle: "发电→输电→储能→用电"
+			tasks: [{
+				id: "6F605A9908EC2ADB"
+				title: "电力入门：FE 体系"
+				type: "checkmark"
+			}]
+			title: "电力入门：FE 体系"
+			x: 6.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["26D949C5883016D5"]
+			description: [
+				"&a熔炉发电机（Furnator）&f是 Powah 最基础的发电机：放入煤、木炭等固体燃料即发电，开局就能做。"
+				""
+				"Powah 有等级体系：&a起步(starter)→基础(basic)→硬化(hardened)→炽热(blazing)→niotic→spirited→nitro→创造&f，等级越高发电越快、缓存越大，且支持原地升级（JEI 查升级配方）。"
+				""
+				"进阶：用漏斗/管道自动往燃料槽塞煤，把能量用线缆接进电池，就是第一套「自动供电系统」。"
+				""
+				"燃料：煤/木炭最通用；后期可改烈焰棒、煤炭块等高热值燃料。"
+			]
+			id: "1191D97C744BBAE4"
+			rewards: [{
+				id: "738E0EB4E056E441"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "烧燃料，出电力"
+			tasks: [{
+				id: "4C6CB067EF6E2E15"
+				item: "powah:furnator_starter"
+				type: "item"
+			}]
+			title: "第一台发电机：熔炉发电机"
+			x: 4.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["1191D97C744BBAE4"]
+			description: [
+				"Powah 全部设备（发电机/电池/线缆/传送器）都分 starter→basic→hardened→blazing→niotic→spirited→nitro→creative。"
+				""
+				"核心元件是&a电容(Capacitor)&f与&a水晶(Crystal)&f：capacitor_basic/hardened/blazing/niotic/nitro，crystal_blazing/niotic/spirited/nitro，等级越高机器产出/缓存越大。"
+				""
+				"升级做法：用对应等级的电容+机器在工作台/装配台合成「升级版」，旧机器不浪费，直接换。"
+				""
+				"线缆等级决定&a最大传输速率&f：起步级只够小网络，基地扩大后换 blazing/nitro 线缆。"
+			]
+			icon: "powah:capacitor_blazing"
+			id: "72E58038F36EC971"
+			rewards: [{
+				id: "76528CA2DDF00C4A"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "别拆旧机器，直接升"
+			tasks: [{
+				id: "5A02FF1A8B3AD3C6"
+				title: "Powah 的等级与原地升级"
+				type: "checkmark"
+			}]
+			title: "Powah 的等级与原地升级"
+			x: 0.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["1191D97C744BBAE4"]
+			description: [
+				"&a岩浆发电机（Magmator）&f消耗岩浆（或岩浆膏）发电，不需要固体燃料。"
+				""
+				"最大好处是&a稳定&f：持续供岩浆就不断电。去下界放泵抽岩浆，或做岩浆农场刷岩浆膏。"
+				""
+				"进阶：用流体管道把岩浆从储罐源源不断送入，配合能量管道输出，是中期非常省心的电源。"
+				""
+				"小技巧：岩浆膏烧成岩浆再喂，等价于「半无限燃料」。"
+			]
+			id: "5938DE4A49AA180F"
+			rewards: [{
+				id: "6C53F425094A0262"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "只喝岩浆，不挑燃料"
+			tasks: [{
+				id: "5CCDA7B8D6730BA6"
+				item: "powah:magmator_starter"
+				type: "item"
+			}]
+			title: "岩浆发电机"
+			x: 3.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["1191D97C744BBAE4"]
+			description: [
+				"&a热力发电机（Thermo Generator）&f利用「热源+冷源」温差发电：底下放岩浆（或烈焰粉加热），上面放水/雪/冰，持续产出。"
+				""
+				"它是最适合挂机的电源之一：热源用岩浆管道持续供给，冷源保持一格水，之后不用管。"
+				""
+				"配套元件：&a热电板(thermoelectric_plate)&f与&a绝缘套管(dielectric_*)&f是升级它到高级的材料。"
+			]
+			id: "725894E845D8A649"
+			rewards: [{
+				id: "1D21669EC3765126"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "温差发电，零维护挂机"
+			tasks: [{
+				id: "1F006E667B5D0604"
+				item: "powah:thermo_generator_starter"
+				type: "item"
+			}]
+			title: "热力发电机"
+			x: 6.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["1191D97C744BBAE4"]
+			description: [
+				"&a太阳能板（Solar Panel）&f白天发电、可多块堆叠（多层叠放提升产出），夜间停摆，适合做辅助电源。"
+				""
+				"升级线：solar_panel_starter→basic→hardened→blazing→niotic→spirited→nitro。"
+				""
+				"注意：必须露天见天，放高处、别被遮挡；高级太阳能板（mekanismgenerators）产出更高，见后条分支。"
+			]
+			id: "6E8DA6095F03D257"
+			rewards: [{
+				id: "5FA40A1EF680D251"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "白天发电，可堆叠"
+			tasks: [{
+				id: "1BC271576A6DCD8E"
+				item: "powah:solar_panel_starter"
+				type: "item"
+			}]
+			title: "太阳能板"
+			x: 1.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["1191D97C744BBAE4"]
+			description: [
+				"&a能量电池（Energy Cell）&f是 Powah 的储能方块：发电机多发的电存进电池，用电高峰由电池补充，避免「发多少用多少」的波动。"
+				""
+				"电池可多台并联扩容；右键可配置输入/输出面，指定哪些面进电、哪些面出电。"
+				""
+				"等级：energy_cell_starter→basic→hardened→blazing→niotic→spirited→nitro→creative；还有&a能量放电器(energy_discharger)&f把电池里的电定向放出。"
+				""
+				"便携版见任务9；基地级大容量储能见通用机械「感应矩阵」。"
+			]
+			id: "4ABB577B7F1C71BB"
+			rewards: [{
+				id: "55C31F2F12D578D6"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "缓冲与续航"
+			tasks: [{
+				id: "45C483880471A2D7"
+				item: "powah:energy_cell_starter"
+				type: "item"
+			}]
+			title: "能量电池：把电存起来"
+			x: 4.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["4ABB577B7F1C71BB"]
+			description: [
+				"&a能量线缆（Energy Cable）&f连接发电机、电池和机器，等级决定传输速率：starter/basic/hardened/blazing/niotic/spirited/nitro。"
+				""
+				"混用自由：不同模组的线缆都是 FE 体系，Powah 线缆接通用机械的机器完全没问题。"
+				""
+				"规划：基地小就一条主干线+分支；基地大了直接上通量网络（任务16起），告别拉线。"
+			]
+			id: "40BD5B01BE676D02"
+			rewards: [{
+				id: "54D154592BEE2E76"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "把电送到每个角落"
+			tasks: [{
+				id: "6A3D181979A3605E"
+				item: "powah:energy_cable_starter"
+				type: "item"
+			}]
+			title: "能量线缆"
+			x: 3.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["40BD5B01BE676D02"]
+			description: [
+				"&aPowah 扳手（Wrench）&f右键线缆可切断/恢复某段连接，防止线缆在墙角乱接；右键机器可配置连接面。"
+				""
+				"它是 Powah 体系的「万能配置工具」，配合能量电池的输入输出面设定，就是最基础的配电箱。"
+			]
+			id: "6F3E9BD29879DBDB"
+			rewards: [{
+				id: "352BDF0C393D1C9F"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "配置线缆与机器"
+			tasks: [{
+				id: "03CCFA7F3E55B668"
+				item: "powah:wrench"
+				type: "item"
+			}]
+			title: "Powah 扳手"
+			x: 3.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["4ABB577B7F1C71BB"]
+			description: [
+				"&a便携电池（Battery）&f是随身版储能：放背包里给工具/护甲自动充电，等级 battery_starter→basic→hardened→blazing→niotic→spirited→nitro。"
+				""
+				"还有&a能量漏斗(energy_hopper)&f：既能抽/放物品，又能带电，给自动化机器边供料边供电。"
+				""
+				"进阶：把便携电池放玩家传送器附近（任务11），就是「走到哪充到哪」。"
+			]
+			id: "638EB60403373F66"
+			rewards: [{
+				id: "01A2B66A54B71018"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "随身充电"
+			tasks: [{
+				id: "58373D0008DD6610"
+				item: "powah:battery_starter"
+				type: "item"
+			}]
+			title: "便携电池与能量漏斗"
+			x: 4.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["6E8DA6095F03D257"]
+			description: [
+				"攒够硬化材料后，把 starter 熔炉发电机升级成&a硬化(hardened)&f，产出与缓存显著提升；岩浆/热力/太阳能同理可升。"
+				""
+				"关键材料：&a赋能钢(energized_steel)&f、&a绝缘套管(dielectric_rod)&f、&a绝缘膏(dielectric_paste)&f、&a绝缘外壳(dielectric_casing)&f——这些是 Powah 中高级机器的通用零件。"
+				""
+				"再往上是 blazing/niotic/spirited/nitro，靠对应水晶（crystal_blazing 等）解锁。"
+			]
+			id: "173DEEC5DF10B9D3"
+			rewards: [{
+				id: "5CFAE9F9B38ADCFF"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "把 starter 换成 hardened"
+			tasks: [{
+				id: "079045841882E0C5"
+				item: "powah:furnator_hardened"
+				type: "item"
+			}]
+			title: "升级到高级发电机"
+			x: 1.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["4ABB577B7F1C71BB"]
+			description: [
+				"&a玩家传送器（Player Transmitter）&f向绑定玩家身上的充电物品（工具、护甲、便携电池）无线输电。"
+				""
+				"用法：放好后用&a绑定卡(binding_card)&f右键它完成绑定，再手持绑定卡右键自己。"
+				""
+				"等级：player_transmitter_starter / basic / hardened / blazing / niotic / spirited / nitro，等级越高给玩家充电越快。"
+			]
+			id: "5BD59EAECA920A88"
+			rewards: [{
+				id: "0AAF01B0EEE089FE"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "走到哪充到哪"
+			tasks: [{
+				id: "2CF0E0B92F94221B"
+				item: "powah:player_transmitter_basic"
+				type: "item"
+			}]
+			title: "玩家传送器：无线充人"
+			x: 6.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["5BD59EAECA920A88"]
+			description: [
+				"&a绑定卡（Binding Card）&f是 Powah 的「配对钥匙」：先右键一台设备（传送器/末影门）记录，再右键另一台完成绑定。"
+				""
+				"相关：&a空白卡(blank_card)&f是未写入的卡；&a末影卡(binding_card_dim)&f支持跨维度绑定。"
+				""
+				"典型流程：绑定卡 A→传送器→玩家；绑定卡 B→发送末影门→接收末影门。"
+			]
+			id: "1700B8ECF9FE85C9"
+			rewards: [{
+				id: "785A45CA27A3A63B"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "配对两台设备"
+			tasks: [{
+				id: "3EB8F0EF3B746ED5"
+				item: "powah:binding_card"
+				type: "item"
+			}]
+			title: "绑定卡与空白卡"
+			x: 4.5d
+			y: 6.0d
+		}
+		{
+			dependencies: ["1700B8ECF9FE85C9"]
+			description: [
+				"&a末影门（Ender Gate）&f实现两个位置之间的跨距能量传输：一端放发送门、另一端放接收门，用绑定卡配对。"
+				""
+				"适合给远处的矿机、农场供电，不用拉一长串线缆。等级 ender_gate_starter→…→nitro。"
+				""
+				"配套：&a末影电池(ender_cell_*)&f是专门配合末影门的储能；&a末影核心(ender_core)&f是其材料。"
+			]
+			id: "71ADFCDE0518AA90"
+			rewards: [{
+				id: "0879C48AC616890D"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "不拉线的定点送电"
+			tasks: [{
+				id: "5359B1E81BE1BF1C"
+				item: "powah:ender_gate_starter"
+				type: "item"
+			}]
+			title: "末影门：跨距离能量传输"
+			x: 3.0d
+			y: 7.5d
+		}
+		{
+			dependencies: ["173DEEC5DF10B9D3"]
+			description: [
+				"&aPowah 反应堆（Reactor）&f是多方块结构的大型发电机，靠&a铀铀矿(uraninite)&f作为燃料，产出远超普通发电机。"
+				""
+				"结构：用反应堆方块按 JEI/A 键预览的形状围成，内部放燃料与冷却，接能量端口输出。"
+				""
+				"燃料线：挖&a沥青铀矿(uraninite_ore/dense/poor)&f→&a铀铀石(uraninite)&f→加工成燃料棒。等级 reactor_starter→…→nitro。"
+				""
+				"注意：反应堆发热，要预留冷却空间；建议先小后大。"
+			]
+			id: "7D5A1DC3A3B438A5"
+			rewards: [{
+				id: "412E45339A6D334B"
+				type: "xp"
+				xp: 20
+			}]
+			subtitle: "中后期主力电源"
+			tasks: [{
+				id: "4F9E1032B1790D01"
+				item: "powah:reactor_starter"
+				type: "item"
+			}]
+			title: "Powah 反应堆（多方块）"
+			x: 1.5d
+			y: 6.0d
+		}
+		{
+			dependencies: ["7D5A1DC3A3B438A5"]
+			description: [
+				"&a沥青铀矿(uraninite_ore/dense/poor，含深板岩变体)&f生成在地下，&a铀铀石(uraninite)&f是其处理产物，是 Powah 反应堆燃料的源头。"
+				""
+				"下矿时顺路挖，密集矿(dense)产料最多；存进&a铀铀矿块(uraninite_block)&f方便堆放。"
+				""
+				"对比：通用机械也有自己的铀/裂变线（见 t02 章任务40），两套铀体系各管各的，别混用燃料。"
+			]
+			id: "092FFD72C37CC58E"
+			rewards: [{
+				id: "6AFB516F326009EB"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "反应堆的粮食"
+			tasks: [{
+				count: 8L
+				id: "38F63493F0CC2C16"
+				item: "powah:uraninite"
+				type: "item"
+			}]
+			title: "铀矿与燃料闭环"
+			x: 1.5d
+			y: 7.5d
+		}
+		{
+			dependencies: ["26D949C5883016D5"]
+			description: [
+				"&a通量网络（Flux Networks）&f提供真正意义上的「无线电网」，中后期基地供电首选。"
+				""
+				"三大核心方块：&a通量控制器(flux_controller)&f（网络大脑）；&a能量点(flux_point)&f（用电设备上取电）；&a能量插头(flux_plug)&f（发电/储能设备上送电）。"
+				""
+				"同一网络所有能量点共享电力，支持跨维度；用&a通量配置器(flux_configurator)&f管理。"
+				""
+				"材料：&a通量核心(flux_core)、&a通量尘(flux_dust)。"
+			]
+			id: "10860CBD029364C1"
+			rewards: [{
+				id: "6D36970D220A5905"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "Flux Networks 跨维度输电"
+			tasks: [{
+				id: "3806363A560957C0"
+				item: "fluxnetworks:flux_controller"
+				type: "item"
+			}]
+			title: "通量网络：真正的无线电网"
+			x: 6.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["10860CBD029364C1"]
+			description: [
+				"&a能量插头(flux_plug)&f贴在发电机/电池旁把电送入网络；&a能量点(flux_point)&f贴在用电机器旁从网络取电。"
+				""
+				"一个网络只需一个控制器；插头/能量点数量不限，每个都有最大传输速率（右键可调）。"
+				""
+				"典型布局：发电场建在下界/自家，插头接发电机，全基地各处放能量点，机器直接吸电，一根线都不用拉。"
+			]
+			id: "7E1D6BDC37545905"
+			rewards: [{
+				id: "2A0F0416AD81D765"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "送电端与取电端"
+			tasks: [{
+				id: "7D6E985536D0AA15"
+				item: "fluxnetworks:flux_point"
+				type: "item"
+			}]
+			title: "能量点与插头的摆放"
+			x: 7.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["7E1D6BDC37545905"]
+			description: [
+				"&a通量存储（Flux Storage）&f可以直接挂进网络当储能：&abasic_flux_storage&f → &aherculean_flux_storage&f → &agargantuan_flux_storage&f，容量逐级暴涨。"
+				""
+				"把它贴着控制器/网络放置即可被网络识别，发电多时充电、用电高峰放电，等效「无线电池阵列」。"
+			]
+			id: "59AB9E0BD85D8AC4"
+			rewards: [{
+				id: "34FA6638BD1BCF8D"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "在网络里堆电池"
+			tasks: [{
+				id: "69EEEDDF3807270F"
+				item: "fluxnetworks:basic_flux_storage"
+				type: "item"
+			}]
+			title: "通量存储"
+			x: 7.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["59AB9E0BD85D8AC4"]
+			description: [
+				"手持&a通量配置器(flux_configurator)&f右键控制器打开网络面板，可以："
+				""
+				"· 修改网络名称、设置访问密码（防止别人蹭电）；"
+				""
+				"· 给每个点设置&a优先级&f（谁先用电）、限制最大传输量；"
+				""
+				"· 查看网络总产/总耗/存储，排查缺电。"
+				""
+				"进阶：建「发电网」和「基建设备网」两个网络分开管理，互不干扰。"
+			]
+			id: "545293F8BE80DFFD"
+			rewards: [{
+				id: "1F03D7E501EA6144"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "频道、优先级与加密"
+			tasks: [{
+				id: "7D6D765EAB6A9555"
+				item: "fluxnetworks:flux_configurator"
+				type: "item"
+			}]
+			title: "通量配置器与网络管理"
+			x: 6.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["26D949C5883016D5"]
+			description: [
+				"通用机械（Mekanism Generators）也有自己的发电机族："
+				""
+				"· &a热力发电机(heat_generator)&f：烧固体燃料，最基础；"
+				""
+				"· &a风能发生器(wind_generator)&f：Y 越高风越大，顶部不能有遮挡，适合建高处；"
+				""
+				"· &a太阳能发电机(solar_generator)/&a高级太阳能(advanced_solar_generator)&f：白天发电、可堆叠；"
+				""
+				"· &a生物发电机(bio_generator)&f：烧&a生物燃料(bio_fuel)&f，与农业结合；"
+				""
+				"· &a燃气燃烧发电机(gas_burning_generator)&f：烧氢气等气体，是电解水线的天然配套（见任务24/27）。"
+			]
+			id: "716DE431C03E656E"
+			rewards: [{
+				id: "72B9B9AACD8FAF8B"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "烧燃料的 Mek 版"
+			tasks: [{
+				id: "7DCB7AC049E2D89F"
+				item: "mekanismgenerators:heat_generator"
+				type: "item"
+			}]
+			title: "通用机械：热力发电机"
+			x: 7.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["716DE431C03E656E"]
+			description: [
+				"&a风能发生器(wind_generator)&f发电功率随高度提升：放得越高、上方越空旷，产出越高。"
+				""
+				"建议搭高塔连片放置，用通用线缆汇流到能量立方；不烧燃料、不占资源，是白嫖电。"
+				""
+				"缺点：占地大、受高度限制；平地效率一般。"
+			]
+			id: "2194F5EE5BEE8DAA"
+			rewards: [{
+				id: "70F62DCD3303A8F9"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "越高越猛"
+			tasks: [{
+				id: "45DFE7E0611DBA6D"
+				item: "mekanismgenerators:wind_generator"
+				type: "item"
+			}]
+			title: "风能发生器"
+			x: 9.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["2194F5EE5BEE8DAA"]
+			description: [
+				"&a高级太阳能发电机(advanced_solar_generator)&f比普通太阳能产出更高，且内部带小电池缓冲，夜间也能放一点余电。"
+				""
+				"它与 Powah 太阳能板可共存：白天高级太阳能主发，夜间靠电池/燃气发电机补。"
+			]
+			id: "6C2C3CC579CE317F"
+			rewards: [{
+				id: "4F881DB43C1538E5"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "白天主力"
+			tasks: [{
+				id: "4AD1E0F9F88EC786"
+				item: "mekanismgenerators:advanced_solar_generator"
+				type: "item"
+			}]
+			title: "高级太阳能发电机"
+			x: 9.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["716DE431C03E656E"]
+			description: [
+				"&a生物发电机(bio_generator)&f烧&a生物燃料(bio_fuel)&f发电：植物、种子、农作物压成 bio_fuel 后喂给它。"
+				""
+				"和自动农场（工业先锋/植物魔法）配合：农产品过剩 → 压成生物燃料 → 发电，是「变废为宝」的清洁电源。"
+			]
+			id: "1BCCF41B5BCFA57D"
+			rewards: [{
+				id: "34747A4C80DBC484"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "把农产品变成电"
+			tasks: [{
+				id: "5855387A70D8883C"
+				item: "mekanismgenerators:bio_generator"
+				type: "item"
+			}]
+			title: "生物发电机"
+			x: 12.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["716DE431C03E656E"]
+			description: [
+				"&a燃气燃烧发电机(gas_burning_generator)&f消耗氢气等气体发电，是电解水制氢产线的天然配套。"
+				""
+				"用法：用压力管道把氢气从化学罐接进来，它就持续烧气发电；进气口可接多种气体，热值不同产出不同。"
+				""
+				"这条线让你理解「气体」这一第三维资源——后续通用机械章节大量依赖它。"
+			]
+			id: "43ECF440601914FC"
+			rewards: [{
+				id: "75EC166A46C540AC"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "氢气的归宿"
+			tasks: [{
+				id: "06DFCC9C9EB5B7C5"
+				item: "mekanismgenerators:gas_burning_generator"
+				type: "item"
+			}]
+			title: "燃气燃烧发电机"
+			x: 10.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["43ECF440601914FC"]
+			description: [
+				"&a能量立方(Energy Cube)&f是通用机械的储能方块，basic→advanced→elite→ultimate 四级（另有 creative 创造级）。"
+				""
+				"完全兼容 FE：可直接接 Powah、热力、AE2 任何 FE 设备。右键立方可设输入/输出面。"
+				""
+				"进阶：用&a配置卡(configuration_card)&f把一台立方的侧键配置复制到另一台，批量部署。"
+			]
+			id: "6364E2C6D1271DB8"
+			rewards: [{
+				id: "77EF8FB32F00EC6F"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "四级电池"
+			tasks: [{
+				id: "18E22077245BD68A"
+				item: "mekanism:basic_energy_cube"
+				type: "item"
+			}]
+			title: "能量立方：Mek 版储能"
+			x: 10.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["6364E2C6D1271DB8"]
+			description: [
+				"&a通用线缆(Universal Cable)&f是通用机械的能量管道，basic→advanced→elite→ultimate 四级，吞吐逐级提升。"
+				""
+				"它和 Powah 线缆互通，混接没问题；基地主干建议用高级/终极线缆避免瓶颈。"
+				""
+				"记住 Mek 传输四件套：&a通用线缆=电、物流传输器=物品、机械管道=流体、压力管道=气体&f（详见 t02）。"
+			]
+			id: "665B70D0D957E218"
+			rewards: [{
+				id: "45A4EEB3BECE3C81"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "Mek 的能量血管"
+			tasks: [{
+				id: "1FDC7DF2912490A2"
+				item: "mekanism:basic_universal_cable"
+				type: "item"
+			}]
+			title: "通用线缆"
+			x: 9.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["43ECF440601914FC"]
+			description: [
+				"&a电解分离机(Electrolytic Separator)&f用电把水分解成&a氢气&f和&a氧气&f，是通用机械气体工业的起点。"
+				""
+				"水从机械管道接水池自动抽；气体用&a压力管道(pressurized_tube)&f传输、&a化学罐(chemical_tank)&f存储。"
+				""
+				"用途：氧气→净化仓（3x 产线）；氢气→化学注入仓（4x 产线）+燃气发电机。"
+			]
+			id: "54958F33BBD62C89"
+			rewards: [{
+				id: "2A0ECA032056263B"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "气体工业起点"
+			tasks: [{
+				id: "18EFEF01B6FAF2AF"
+				item: "mekanism:electrolytic_separator"
+				type: "item"
+			}]
+			title: "电解分离机：水变氢氧"
+			x: 12.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["54958F33BBD62C89"]
+			description: [
+				"&a化学罐(Chemical Tank)&f是气体存储方块，basic→advanced→elite→ultimate→creative 五级；"
+				""
+				"&a压力管道(Pressurized Tube)&f是气体管道，同四级，可缓存少量气体、缓冲瞬时波动。"
+				""
+				"配套：&a基础流体罐(fluid_tank)&f存流体，&a动态罐(dynamic_tank)+&a动态阀(dynamic_valve)&f是多方块巨型流体储罐。"
+			]
+			id: "16136CA3827DD13B"
+			rewards: [{
+				id: "7FC769AB560FC916"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "存气、运气"
+			tasks: [{
+				id: "304E5B3B23E54801"
+				item: "mekanism:basic_chemical_tank"
+				type: "item"
+			}]
+			title: "化学罐与压力管道"
+			x: 10.5d
+			y: 6.0d
+		}
+		{
+			dependencies: ["6364E2C6D1271DB8"]
+			description: [
+				"单块电池不够用时，上&a感应矩阵(Induction Matrix)&f：用&a感应外壳(induction_casing)&f围成密闭空间，至少一个&a感应端口(induction_port)&f接电。"
+				""
+				"内部放&a感应电池单元(induction_cell)&f（加容量）和&a感应供应单元(induction_provider)&f（加吞吐），各 basic→ultimate 四级。"
+				""
+				"容量与吞吐=单元数量×等级倍率，可无限扩展；接通量网络插头后即全基地「电力蓄水池」。"
+				""
+				"（本任务仅为预告，完整搭建见 t02 章任务35-36。）"
+			]
+			id: "6CB317BBDF619812"
+			rewards: [{
+				id: "650F2231CB4AAAE0"
+				type: "xp"
+				xp: 20
+			}]
+			subtitle: "多方块巨型电池"
+			tasks: [{
+				id: "3CC9E695DE574BB8"
+				item: "mekanism:induction_casing"
+				type: "item"
+			}]
+			title: "基地级储能预告：感应矩阵"
+			x: 7.5d
+			y: 6.0d
+		}
+		{
+			dependencies: [
+				"173DEEC5DF10B9D3"
+				"545293F8BE80DFFD"
+				"6CB317BBDF619812"
+			]
+			description: [
+				"到这里你应该已经搭起：&a一套 Powah/通用机械发电&f、&a一个通量无线网络&f、&a一处基地储能（能量立方/感应矩阵）&f。"
+				""
+				"检验标准：拔掉所有线缆，机器仍能从通量网络取电；夜里/发电机停摆时，电池仍能撑住关键产线。"
+				""
+				"下一步进入「&a通用机械&f」章节，用这些电去把矿石处理成 2~5 倍产出——电力只是入场券，矿物处理才是 ATM9 的真正主线。"
+			]
+			icon: "fluxnetworks:flux_controller"
+			id: "74227BD546F253AF"
+			rewards: [{
+				id: "0AA99D2A7826AFC8"
+				type: "xp"
+				xp: 40
+			}]
+			shape: "octagon"
+			size: 1.5d
+			subtitle: "发电+无线+储能 三合一小结"
+			tasks: [{
+				id: "657D4E7B692DF39C"
+				title: "基地电网成型"
+				type: "checkmark"
+			}]
+			title: "基地电网成型"
+			x: 4.5d
+			y: 7.5d
+		}
+	]
+	title: "电力与能源"
+}

@@ -1,0 +1,1278 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "t04_ae2"
+	group: "00C72C1FB6193A42"
+	icon: "ae2:controller"
+	id: "19D691359AB81DBF"
+	order_index: 4
+	progression_mode: "flexible"
+	quest_links: [ ]
+	quests: [
+		{
+			description: [
+				"应用能源2（AE2）是本包&a数字存储与自动合成&f核心：物品变成「数据」存进 ME 网络，要什么自动合成什么。"
+				""
+				"核心概念：&aME 网络&f（控制器/驱动器/终端/线缆组成的局域网）、&a频道Channels&f（限流）、&a能量AE/t&f、&a存储组件&f（决定容量）、&a样板&f（自动合成配方）。"
+				""
+				"它解决的问题：告别满箱杂物，全基地物品数字化、一键搜索、自动补产。"
+				""
+				"本章路线：总览 -> 材料（石英/压印/处理器）-> 存储（驱动器/组件/单元）-> 终端 -> 线缆总线 -> 自动合成 -> 高级（量子/P2P/空间）-> 附属 -> 事例 -> 多方块 -> 实战。"
+			]
+			icon: "ae2:controller"
+			id: "39B0ACD4878C1845"
+			shape: "hexagon"
+			size: 1.5d
+			subtitle: "物品即数据的数字网络"
+			tasks: [{
+				id: "5DAC4C8C0FC86D82"
+				title: "应用能源2总览"
+				type: "checkmark"
+			}]
+			title: "应用能源2总览"
+			x: 0.0d
+			y: 7.5d
+		}
+		{
+			dependencies: ["39B0ACD4878C1845"]
+			description: [
+				"&a赛特斯石英（Certus Quartz Crystal）&f在主世界矿脉或陨石旁开采；磨成&c石英尘&f后烧制可得水晶。"
+				""
+				"它是 ME 网络一切材料的源头；&c充能赛特斯&f、&c福鲁伊克斯&f都由它派生。"
+				""
+				"用&c陨星罗盘（Meteorite Compass）&f可找到陨石，里面有&c星空石&f和大量赛特斯。"
+			]
+			id: "694A01D755E249B9"
+			rewards: [{
+				id: "5AB3D4CA1AF29922"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "Certus Quartz"
+			tasks: [{
+				id: "428E360C6E7BC2D0"
+				item: "ae2:certus_quartz_crystal"
+				type: "item"
+			}]
+			title: "赛特斯石英：材料起点"
+			x: 1.5d
+			y: 7.5d
+		}
+		{
+			dependencies: ["694A01D755E249B9"]
+			description: [
+				"&a压印机（Inscriber）&f是 AE2 的加工机器：上下放&c压印板&f（逻辑板/计算板/工程板/硅板/命名板），中间放材料，压出印刷电路。"
+				""
+				"压印板：&clogic_processor_press / calculation_processor_press / engineering_processor_press / silicon_press / name_press。"
+				""
+				"它本身不需要接 ME 网络，前期手工放材料即可；后期可被接口自动化。"
+			]
+			id: "63C68E0CA7D4751B"
+			rewards: [{
+				id: "093C64195D4E40BF"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "Inscriber"
+			tasks: [{
+				id: "4421420F0DDBCB39"
+				item: "ae2:inscriber"
+				type: "item"
+			}]
+			title: "压印机与压印板"
+			x: 3.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["63C68E0CA7D4751B"]
+			description: [
+				"&a逻辑处理器（Logic）、计算处理器（Calculation）、工程处理器（Engineering）&f是终端、驱动器、合成单元的核心零件。"
+				""
+				"链：&c印刷硅片（Printed Silicon）&f + 对应印刷电路（Printed Logic/Calc/Engineering）+ 福鲁伊克斯 -> 处理器。"
+				""
+				"三种都要大量囤，后期每个终端/接口都消耗它们。"
+			]
+			id: "475931CB4BFEF3FE"
+			rewards: [{
+				id: "66D088903DDBA14A"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "Logic/Calc/Engineering"
+			tasks: [{
+				id: "0488E6FB6E9B4FD7"
+				item: "ae2:logic_processor"
+				type: "item"
+			}]
+			title: "三种处理器"
+			x: 4.5d
+			y: 6.0d
+		}
+		{
+			dependencies: ["694A01D755E249B9"]
+			description: [
+				"&a充能器（Charger）&f接收红石信号/网络能量后，给物品充能；把赛特斯水晶放进去得到&c充能赛特斯石英（Charged Certus）&f。"
+				""
+				"充能赛特斯 + 红石 + 下界石英粉丢进水里，合成&c福鲁伊克斯水晶（Fluix Crystal）&f。"
+			]
+			id: "02907376725C4794"
+			rewards: [{
+				id: "5A334F39B4B19A4C"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "Charger"
+			tasks: [{
+				id: "6A7496D656C947C5"
+				item: "ae2:charger"
+				type: "item"
+			}]
+			title: "充能器与充能石英"
+			x: 3.0d
+			y: 7.5d
+		}
+		{
+			dependencies: ["02907376725C4794"]
+			description: [
+				"&a福鲁伊克斯水晶（Fluix）&f= 充能赛特斯 + 红石 + 下界石英粉在水中合成；&c福鲁伊克斯尘/珍珠&f是它的产物。"
+				""
+				"福鲁伊克斯是线缆、压印板、处理器、合成单元的「万能合金」，用量巨大。"
+				""
+				"它也能像赛特斯一样用种子+催生加速器批量生产。"
+			]
+			id: "0398A3991770F0AD"
+			rewards: [{
+				id: "711C48E4DDBED9F7"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "Fluix 万能合金"
+			tasks: [{
+				id: "2D66BB1C3779B8BC"
+				item: "ae2:fluix_crystal"
+				type: "item"
+			}]
+			title: "福鲁伊克斯水晶"
+			x: 4.5d
+			y: 7.5d
+		}
+		{
+			dependencies: ["0398A3991770F0AD"]
+			description: [
+				"&a晶体催生加速器（Growth Accelerator）&f围在&c晶洞石英芽（Quartz Bud）&f/福鲁伊克斯种子旁，加速水晶生长；越多越快。"
+				""
+				"建一个水池，周围一圈加速器，自动漏斗收水晶，就是全自动水晶农场。"
+				""
+				"开局就建，后期存储组件需求极大。"
+			]
+			id: "34EEC9BF9B1F552A"
+			rewards: [{
+				id: "19A70C405C44B4FD"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "水晶农场"
+			tasks: [{
+				id: "540CAB8FC4FF368B"
+				item: "ae2:growth_accelerator"
+				type: "item"
+			}]
+			title: "晶体催生加速器"
+			x: 6.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["39B0ACD4878C1845"]
+			description: [
+				"&a网络工具（Network Tool）&f右键任意网络元件，显示该方块占用的频道、所在子网络、故障原因，是排障神器。"
+				""
+				"&c记忆卡（Memory Card）&f记录设备设置（如无线终端绑定、P2P 配对、样板配置），右键复制到另一个同型方块。"
+				""
+				"频道报警时第一反应就是拿网络工具点一下红线方块。"
+			]
+			id: "75C9A556053F72E8"
+			rewards: [{
+				id: "10E96DAC9A295177"
+				type: "xp"
+				xp: 5
+			}]
+			subtitle: "Network Tool / Memory Card"
+			tasks: [{
+				id: "34A992AFEAC0046A"
+				item: "ae2:network_tool"
+				type: "item"
+			}]
+			title: "实用技巧：网络工具与记忆卡"
+			x: 1.5d
+			y: 6.0d
+		}
+		{
+			dependencies: ["39B0ACD4878C1845"]
+			description: [
+				"每根普通线缆传 8 频道，致密线缆 32；每个设备（总线/终端/接口）占 1~2 频道。"
+				""
+				"规划：主干用&c致密智能线缆&f，分支用普通线缆；&c石英纤维（Quartz Fiber）&f只传能量不传频道，适合跨网络供能。"
+				""
+				"频道不够时加&c控制器&f（每面 32 通道），或用&cP2P 隧道&f压缩；ATM9 若关闭频道限制，理解概念仍有助于设计。"
+			]
+			icon: "ae2:fluix_smart_cable"
+			id: "179709034D854DF9"
+			rewards: [{
+				id: "04CB6A2E1F8CE22C"
+				type: "xp"
+				xp: 5
+			}]
+			subtitle: "Channels"
+			tasks: [{
+				id: "56615B5196789AB6"
+				title: "实用技巧：频道规划与子网络"
+				type: "checkmark"
+			}]
+			title: "实用技巧：频道规划与子网络"
+			x: 1.5d
+			y: 9.0d
+		}
+		{
+			dependencies: ["0398A3991770F0AD"]
+			description: [
+				"&aME 控制器（Controller）&f是网络核心：它提供频道和能量调度，必须由控制器「连网」才算 ME 网络。"
+				""
+				"多方块：多个控制器可在 7x7x7 范围内任意相邻，组成更大的控制器阵列，每面提供 32 频道。"
+				""
+				"控制器不接电时红灯；接电后蓝白闪烁。"
+			]
+			id: "29E56314D9B01D4E"
+			rewards: [{
+				id: "2387E79F96961DC8"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "Controller"
+			tasks: [{
+				id: "56722D2D717222F1"
+				item: "ae2:controller"
+				type: "item"
+			}]
+			title: "ME 控制器：网络大脑"
+			x: 6.0d
+			y: 7.5d
+		}
+		{
+			dependencies: ["29E56314D9B01D4E"]
+			description: [
+				"&a能量接收器（Energy Acceptor）&f把 FE 电网接入 ME 网络，是唯一电源入口；&c能量单元（Energy Cell）/&c致密能量单元（Dense Energy Cell）&f做缓冲。"
+				""
+				"网络耗电 = 方块数 × 基础耗电 + 设备耗电；用&c转换监控器/网络工具&f查看。"
+				""
+				"建议把能量接收器接到 Flux Networks 能量点上，全基地网络自动供电。"
+			]
+			id: "607AA818A232FC3A"
+			rewards: [{
+				id: "7B9A59FACEE94871"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "给网络供电"
+			tasks: [{
+				id: "5BA9F54658317E71"
+				item: "ae2:energy_acceptor"
+				type: "item"
+			}]
+			title: "能量接收器与能量单元"
+			x: 7.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["29E56314D9B01D4E"]
+			description: [
+				"&a石英纤维（Quartz Fiber）&f只把能量从一个网络传到另一个，&c不连接频道、不合并物品网络&f。"
+				""
+				"典型用法：让两个独立 ME 网络共享一个电源，而不变成一个网络。"
+			]
+			id: "0EF0E023EF57047D"
+			rewards: [{
+				id: "33B241AB6BC2049B"
+				type: "xp"
+				xp: 5
+			}]
+			subtitle: "Quartz Fiber"
+			tasks: [{
+				id: "543990195541F635"
+				item: "ae2:quartz_fiber"
+				type: "item"
+			}]
+			title: "石英纤维：只传能不连网"
+			x: 7.5d
+			y: 7.5d
+		}
+		{
+			dependencies: ["29E56314D9B01D4E"]
+			description: [
+				"&aME 驱动器（Drive）&f有 10 个槽位，插入存储单元；它是数字仓库的实体机箱。"
+				""
+				"多个驱动器并排可扩；驱动器连在控制器线缆上即入网。"
+			]
+			id: "143EA0188FC486A5"
+			rewards: [{
+				id: "58AA048B1AFA7D75"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "Drive"
+			tasks: [{
+				id: "10881404D458B393"
+				item: "ae2:drive"
+				type: "item"
+			}]
+			title: "ME 驱动器：数字书架"
+			x: 7.5d
+			y: 6.0d
+		}
+		{
+			dependencies: ["143EA0188FC486A5"]
+			description: [
+				"&a存储组件（Cell Component）&f分 1k / 4k / 16k / 64k / 256k，决定存储单元能存多少种物品。"
+				""
+				"把组件装进&c单元外壳（Item/Fluid Housing）&f就成存储单元；等级越高每种物品可存越多。"
+				""
+				"前期 4k~16k，中期 64k~256k，后期换 MegaCells 的 1m~256m。"
+			]
+			id: "58712569A62D5188"
+			rewards: [{
+				id: "50972C8CD27600B7"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "Cell Component"
+			tasks: [{
+				id: "4ED9F9366C3A2078"
+				item: "ae2:cell_component_1k"
+				type: "item"
+			}]
+			title: "存储组件：1k 到 256k"
+			x: 9.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["58712569A62D5188"]
+			description: [
+				"&a物品存储单元（Item Storage Cell）&f存物品；&c流体存储单元（Fluid Storage Cell）&f存液体，同样分 1k~256k。"
+				""
+				"单元插在驱动器里；可在&c单元工作台（Cell Workbench）&f加装升级卡（模糊/反熵/容量）。"
+			]
+			id: "083249D2AB893A35"
+			rewards: [{
+				id: "74D63002C3D3F40F"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "数字箱子"
+			tasks: [{
+				id: "008CBB92B3EB995B"
+				item: "ae2:item_storage_cell_1k"
+				type: "item"
+			}]
+			title: "物品/流体存储单元"
+			x: 10.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["083249D2AB893A35"]
+			description: [
+				"&aME 箱（ME Chest）&f右键打开直接访问所在网络，也能临时放单元离线存取。"
+				""
+				"&c便携物品/流体单元（Portable Cell）&f可拿在手上当背包数字仓，连无线终端后远程取网络物品。"
+			]
+			id: "1B9413FBD218623C"
+			rewards: [{
+				id: "7FE2EF6617CF6BE8"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "ME Chest / Portable Cell"
+			tasks: [{
+				id: "4410229CE8F660FB"
+				item: "ae2:chest"
+				type: "item"
+			}]
+			title: "ME 箱与便携单元"
+			x: 12.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["083249D2AB893A35"]
+			description: [
+				"&aIO 端口（IO Port）&f把旧存储单元的内容批量导出到新单元（升级容量时搬家），也能把单元里的东西灌进网络。"
+				""
+				"&c单元工作台（Cell Workbench）&f编辑单元：装升级卡、清空、查看存储分布。"
+			]
+			id: "50F52E92CD54D759"
+			rewards: [{
+				id: "76FDA34454ABE7C3"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "IO Port"
+			tasks: [{
+				id: "701FD4AF57733A68"
+				item: "ae2:io_port"
+				type: "item"
+			}]
+			title: "IO 端口与单元工作台"
+			x: 12.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["143EA0188FC486A5"]
+			description: [
+				"&aME 终端（Terminal）&f右键打开全网络物品列表，支持搜索、数量、自动提取，是日常存取入口。"
+				""
+				"多个终端分散放在基地各处，都连同一张线缆即可。"
+			]
+			id: "7187954FE4922FD6"
+			rewards: [{
+				id: "16E1500DD537B600"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "Terminal"
+			tasks: [{
+				id: "1AD366D6F93BF0EA"
+				item: "ae2:terminal"
+				type: "item"
+			}]
+			title: "ME 终端：访问界面"
+			x: 9.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["7187954FE4922FD6"]
+			description: [
+				"&a合成终端（Crafting Terminal）&f= 终端 + 内置合成网格：缺物品时右键合成图标，网络自动用 CPU 帮你造。"
+				""
+				"是「自动合成」面向玩家的入口；前提是网络里已有对应样板。"
+			]
+			id: "221ECEDE3617290A"
+			rewards: [{
+				id: "0203AC0276C0FEC6"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "Crafting Terminal"
+			tasks: [{
+				id: "7C8282D379371BA8"
+				item: "ae2:crafting_terminal"
+				type: "item"
+			}]
+			title: "合成终端：自动合成入口"
+			x: 10.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["221ECEDE3617290A"]
+			description: [
+				"&a样板编码终端（Pattern Encoding Terminal）&f：放&c空白样板&f+ 配方材料，点编码把配方写进样板。"
+				""
+				"&c样板访问终端（Pattern Access Terminal）&f在基地任意位置查看/管理所有样板。"
+			]
+			id: "7F7EEDED85122A0B"
+			rewards: [{
+				id: "232299D49605F293"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "Pattern Terminal"
+			tasks: [{
+				id: "53D38E764B8FC4AA"
+				item: "ae2:pattern_encoding_terminal"
+				type: "item"
+			}]
+			title: "样板终端：编码配方"
+			x: 12.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["7187954FE4922FD6"]
+			description: [
+				"&a网络工具（Network Tool）&f右键任意网络节点，弹出全网络透视：通道占用、设备清单、能量与存储状态。"
+				""
+				"排障神器：设备连不上、报「无通道」时，先用它查通道与连接；注意 AE2 15.4 已移除旧版安保站。"
+			]
+			id: "1A0024B46A744B34"
+			rewards: [{
+				id: "3321D0BB5B35008A"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "Network Tool"
+			tasks: [{
+				id: "302305164575EF9F"
+				item: "ae2:network_tool"
+				type: "item"
+			}]
+			title: "网络工具：透视全网络"
+			x: 10.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["7187954FE4922FD6"]
+			description: [
+				"&a无线终端（Wireless Terminal）&f用记忆卡绑定网络后，随时随地访问仓库；&c无线合成终端（Wireless Crafting Terminal）&f还能远程下单合成。"
+				""
+				"消耗能量；范围由&c无线接入点（Wireless Access Point）&f决定。"
+			]
+			id: "491E3A14713C8D0A"
+			rewards: [{
+				id: "63239E620E1D19EE"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "Wireless"
+			tasks: [{
+				id: "7696ECAD97360CB3"
+				item: "ae2:wireless_terminal"
+				type: "item"
+			}]
+			title: "无线终端：随身仓库"
+			x: 10.5d
+			y: 7.5d
+		}
+		{
+			dependencies: ["491E3A14713C8D0A"]
+			description: [
+				"&a无线接入点（Wireless Access Point）&f连在线缆上，向空中广播无线信号；&c无线增幅器（Wireless Booster）&f塞进接入点提升范围。"
+				""
+				"接入点建得越高、增幅器越多，无线覆盖越广；跨维度要用&c量子链路&f中转。"
+			]
+			id: "48110C83F0724601"
+			rewards: [{
+				id: "4B9FF1A4E5C9868E"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "Wireless Booster"
+			tasks: [{
+				id: "0CD91C51FDF5ADD2"
+				item: "ae2:wireless_access_point"
+				type: "item"
+			}]
+			title: "无线接入点与增幅器"
+			x: 12.0d
+			y: 7.5d
+		}
+		{
+			dependencies: ["29E56314D9B01D4E"]
+			description: [
+				"AE2 线缆：&c玻璃线缆（Glass）&f最细、&c包覆线缆（Covered）&f可贴墙、&c智能线缆（Smart）&f显示频道占用颜色、&c致密线缆（Dense）&f32 频道。"
+				""
+				"颜色可用&c调色球（Paint Ball）&f改，把不同子网染不同色便于走线。"
+			]
+			id: "3715B4DCD22D4B5C"
+			rewards: [{
+				id: "0437795FE2BFE5FC"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "Cable"
+			tasks: [{
+				id: "557513A0AC634187"
+				item: "ae2:fluix_smart_cable"
+				type: "item"
+			}]
+			title: "线缆家族"
+			x: 7.5d
+			y: 9.0d
+		}
+		{
+			dependencies: ["3715B4DCD22D4B5C"]
+			description: [
+				"&a输入总线（Import Bus）&f从相邻容器/机器抽物品进网络；&c输出总线（Export Bus）&f把网络物品送到相邻容器/机器，可设过滤。"
+				""
+				"两者都是网络「接触外部世界」的手脚；可插升级卡提速度/容量。"
+			]
+			id: "421AD79010F3BC71"
+			rewards: [{
+				id: "684777D0E3F6FA8C"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "Import/Export Bus"
+			tasks: [{
+				id: "02B8A86B8366BF35"
+				item: "ae2:import_bus"
+				type: "item"
+			}]
+			title: "输入总线与输出总线"
+			x: 9.0d
+			y: 12.0d
+		}
+		{
+			dependencies: ["421AD79010F3BC71"]
+			description: [
+				"&a存储总线（Storage Bus）&f贴在箱子/抽屉上，把外部箱子直接变成网络存储（网络直接读写），省掉数字化搬运。"
+				""
+				"廉价扩容方案：一大排抽屉接存储总线 = 海量缓存；缺点是不能被自动合成直接调用。"
+			]
+			id: "6EFC4ACD795073AD"
+			rewards: [{
+				id: "5490EBD61D368CD4"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "Storage Bus"
+			tasks: [{
+				id: "643961A5CD608085"
+				item: "ae2:storage_bus"
+				type: "item"
+			}]
+			title: "存储总线：接管外部箱子"
+			x: 10.5d
+			y: 12.0d
+		}
+		{
+			dependencies: ["421AD79010F3BC71"]
+			description: [
+				"&aME 接口（Interface）&f一面接网络、一面接机器：网络把材料推进接口缓存，机器取用；机器成品再被收回网络。"
+				""
+				"经典：接口 + 冶炼炉 = 炉子自动从网络拿矿、烧完送还。"
+			]
+			id: "590860EFBB44D14B"
+			rewards: [{
+				id: "36EA775AF441C509"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "Interface"
+			tasks: [{
+				id: "21DCDA2E414FD4C5"
+				item: "ae2:interface"
+				type: "item"
+			}]
+			title: "ME 接口：网络与机器桥梁"
+			x: 10.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["421AD79010F3BC71"]
+			description: [
+				"&a湮灭面板（Annihilation Plane）&f把世界里的方块/掉落物直接吸进网络；&c成型面板（Formation Plane）&f把网络物品以方块形式放到世界。"
+				""
+				"配合&c湮灭核心/成型核心&f升级；用于自动破坏/放置结构（如空间塔、自动农场）。"
+			]
+			id: "2A0C8F0E5AE5AFC2"
+			rewards: [{
+				id: "2F29AB16E71D9B55"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "Planes"
+			tasks: [{
+				id: "5BDB2DDE9EFF5A24"
+				item: "ae2:annihilation_plane"
+				type: "item"
+			}]
+			title: "湮灭面板与成型面板"
+			x: 10.5d
+			y: 13.5d
+		}
+		{
+			dependencies: ["421AD79010F3BC71"]
+			description: [
+				"&a速度卡（Speed）&f加速总线/接口；&c容量卡（Capacity）&f一次搬更多；&c红石卡（Redstone）&f让总线受红石控制；&c模糊卡（Fuzzy）&f匹配任意耐久/伤害值；&c合成卡（Crafting）&f让总线请求自动合成。"
+				""
+				"还有&c虚空卡（Void）&f丢弃溢出、&c反熵/能量卡&f、&c均衡卡（Equal Distribution）&f平均分配、&c反转卡（Inverter）&f反转红石极性。"
+				""
+				"总线性能全靠塞卡，重要总线至少插 1~2 张速度卡。"
+			]
+			id: "1FAD1C886E89661F"
+			rewards: [{
+				id: "09B2998FE035872C"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "Cards"
+			tasks: [{
+				id: "33C73503B4DE20EF"
+				item: "ae2:speed_card"
+				type: "item"
+			}]
+			title: "升级卡大全"
+			x: 10.5d
+			y: 10.5d
+		}
+		{
+			dependencies: ["7F7EEDED85122A0B"]
+			description: [
+				"&a空白样板（Blank Pattern）&f在样板终端编码成：&c合成样板（Crafting Pattern）&f（给分子装配室做配方）或&c处理样板（Processing Pattern）&f（把矿粉->锭这类交给外部机器）。"
+				""
+				"处理样板用于「网络请求锭时自动把矿粉送进冶炼炉、回收成品」。"
+			]
+			id: "048C5CDB9BB4F119"
+			rewards: [{
+				id: "2C6215C0BB2710E0"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "Blank/Crafting/Processing Pattern"
+			tasks: [{
+				id: "47080461838FC7C7"
+				item: "ae2:blank_pattern"
+				type: "item"
+			}]
+			title: "空白样板与两种样板"
+			x: 13.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["048C5CDB9BB4F119"]
+			description: [
+				"&a样板提供器（Pattern Provider）&f贴在机器/分子装配室上，放样板后网络自动按配方向它供料、回收成品。"
+				""
+				"处理样板贴冶炼炉，合成样板贴分子装配室；是自动合成的「出料口」。"
+			]
+			id: "6D28851EAE354C88"
+			rewards: [{
+				id: "10D6D0185BD9325C"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "Pattern Provider"
+			tasks: [{
+				id: "0E0A867292C284FB"
+				item: "ae2:pattern_provider"
+				type: "item"
+			}]
+			title: "样板提供器"
+			x: 15.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["6D28851EAE354C88"]
+			description: [
+				"&a分子装配室（Molecular Assembler）&f按样板提供器送来的合成配方自动摆工作台合成，一次合成一格材料。"
+				""
+				"1 个样板提供器围 6 个分子装配室 = 小型合成中心；多机并行可加速。"
+			]
+			id: "503319B6A225B885"
+			rewards: [{
+				id: "5C82C952ADAE0BA1"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "Molecular Assembler"
+			tasks: [{
+				id: "66026A5B00620AC4"
+				item: "ae2:molecular_assembler"
+				type: "item"
+			}]
+			title: "分子装配室：自动工作台"
+			x: 16.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["6D28851EAE354C88"]
+			description: [
+				"&a合成 CPU&f是多方块：&c合成单元（Crafting Unit）&f + &c并行处理器（Crafting Accelerator）&f + &c合成监控器（Crafting Monitor）&f相邻组成，负责调度自动合成任务。"
+				""
+				"在合成终端点「合成」某物品，CPU 自动调样板、调库存、派发分子装配室/样板提供器执行。"
+			]
+			id: "08B454DC2B45BDE6"
+			rewards: [{
+				id: "3D4C924199F95CE5"
+				type: "xp"
+				xp: 20
+			}]
+			subtitle: "Crafting Co-Processor"
+			tasks: [{
+				id: "7817BD2BEA043F91"
+				item: "ae2:crafting_unit"
+				type: "item"
+			}]
+			title: "合成 CPU：合成大脑"
+			x: 16.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["08B454DC2B45BDE6"]
+			description: [
+				"&a合成存储器（Crafting Storage）&f分 1k~64k，放在合成 CPU 里缓存合成中间产物。"
+				""
+				"合成大件（如反应堆、机甲）时用大容量合成存储，避免中间材料塞满网络。"
+			]
+			id: "5F7BCACD42D773F1"
+			rewards: [{
+				id: "351682DF9A9E931E"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "Crafting Storage"
+			tasks: [{
+				id: "4FAEE56A56B09431"
+				item: "ae2:1k_crafting_storage"
+				type: "item"
+			}]
+			title: "合成存储器"
+			x: 18.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["7187954FE4922FD6"]
+			description: [
+				"&a量子环（Quantum Ring）&f多方块：5 个量子环摆成环 + 1 个&c量子链路（Quantum Link）&f + 能量；用&c量子纠缠奇异点（Quantum Entangled Singularity）&f配对两处量子环。"
+				""
+				"配对后两个网络合并成一个，跨维度共享存储；无线终端也能跨维使用。"
+			]
+			id: "7C427ED92B5F11EC"
+			rewards: [{
+				id: "76067D03FB096264"
+				type: "xp"
+				xp: 20
+			}]
+			subtitle: "Quantum"
+			tasks: [{
+				id: "5A5A8C1AB962E993"
+				item: "ae2:quantum_ring"
+				type: "item"
+			}]
+			title: "量子桥：跨维度网络"
+			x: 10.5d
+			y: 6.0d
+		}
+		{
+			dependencies: ["3715B4DCD22D4B5C"]
+			description: [
+				"&aP2P 隧道（P2P Tunnel）&f把多个频道打包进一根线缆，另一端解开，节省骨干线频道。"
+				""
+				"类型：&cME 网络、物品、流体、FE 能量、红石、光&f；两侧用记忆卡配对。"
+				""
+				"大型基地必备：远程总线/终端全用 P2P 接回主网，通道数瞬间翻倍。"
+			]
+			id: "276C8EF4A75E6D95"
+			rewards: [{
+				id: "3F7A59CE07C7EFC5"
+				type: "xp"
+				xp: 20
+			}]
+			subtitle: "P2P Tunnel"
+			tasks: [{
+				id: "4B370F14E265721E"
+				item: "ae2:me_p2p_tunnel"
+				type: "item"
+			}]
+			title: "P2P 隧道：频道压缩"
+			x: 9.0d
+			y: 7.5d
+		}
+		{
+			dependencies: ["7187954FE4922FD6"]
+			description: [
+				"&a空间塔（Spatial Pylon）&f摆成 3x3 角，中间放&c空间 IO 端口（Spatial IO Port）&f；把&c空间存储组件（Spatial Cell 2/16/128）&f放进去，就能「读取并搬走」一片方块区域。"
+				""
+				"&c空间锚（Spatial Anchor）&f区块加载，让远程机器离线也工作。"
+				""
+				"用于跨维度搬机器、把整套矿机打包带走。"
+			]
+			id: "26DA19DD23C9CEFF"
+			rewards: [{
+				id: "55550EB92FF7D946"
+				type: "xp"
+				xp: 20
+			}]
+			subtitle: "Spatial"
+			tasks: [{
+				id: "65F1465E26CA3A4F"
+				item: "ae2:spatial_pylon"
+				type: "item"
+			}]
+			title: "空间塔：移动整片区域"
+			x: 10.5d
+			y: 9.0d
+		}
+		{
+			dependencies: ["421AD79010F3BC71"]
+			description: [
+				"&a等级发射器（Level Emitter）&f检测网络内某物品数量，达到阈值发红石信号，用于「缺矿就自动补」。"
+				""
+				"&c转换监控器（Conversion Monitor）&f自动把放入的物品按样板转换；&c存储监控器（Storage Monitor）&f显示某物品数量。"
+			]
+			id: "58A84B4132B5E4AE"
+			rewards: [{
+				id: "4814B51343537CFB"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "Level Emitter"
+			tasks: [{
+				id: "73A6AC2D81034B23"
+				item: "ae2:level_emitter"
+				type: "item"
+			}]
+			title: "等级发射器与监控器"
+			x: 10.5d
+			y: 15.0d
+		}
+		{
+			dependencies: ["083249D2AB893A35"]
+			description: ["&a物料分解器（Condenser）&f把不需要的垃圾熔成&c物料球（Matter Ball）&f，再合成&c奇点（Singularity）&f，是处理海量垃圾与做高级材料的地方。"]
+			id: "7004971ABE6D788D"
+			rewards: [{
+				id: "65CF33AFEF4C9BF5"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "Condenser"
+			tasks: [{
+				id: "5A7F15A12D1958D4"
+				item: "ae2:condenser"
+				type: "item"
+			}]
+			title: "物料分解器：垃圾变材料"
+			x: 12.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["0398A3991770F0AD"]
+			description: [
+				"&a物料炮（Matter Cannon）&f用福鲁伊克斯/石英当弹药发射，远程传送物品到网络/总线，比管道还灵活。"
+				""
+				"&c熵控器（Entropy Manipulator）&f一端加热融化、一端冷却结冰，可快速烧水/结冰；&c充能手杖（Charged Staff）&f给方块充能。"
+			]
+			id: "7B2BE70F918DEB0C"
+			rewards: [{
+				id: "249E89FD083FF6C0"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "Matter Cannon"
+			tasks: [{
+				id: "63EEEE4AC31D4554"
+				item: "ae2:matter_cannon"
+				type: "item"
+			}]
+			title: "物料炮与熵控器"
+			x: 6.0d
+			y: 9.0d
+		}
+		{
+			dependencies: ["694A01D755E249B9"]
+			description: [
+				"AE2 提供&c赛特斯石英工具&f（镐/斧/铲/剑/锄/剪刀/扳手）与&c福鲁伊克斯工具&f，前期可用，福鲁伊克斯工具带范围挖掘。"
+				""
+				"都是过渡工具，后期有更好的就换下。"
+			]
+			id: "018D0B55EB9D8D12"
+			rewards: [{
+				id: "7740EE0673D861A9"
+				type: "xp"
+				xp: 5
+			}]
+			subtitle: "Tools"
+			tasks: [{
+				id: "7117BEE65949E519"
+				item: {
+					Count: 1
+					id: "ae2:certus_quartz_pickaxe"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			title: "赛特斯与福鲁伊克斯工具"
+			x: 3.0d
+			y: 9.0d
+		}
+		{
+			dependencies: ["694A01D755E249B9"]
+			description: [
+				"&a星空石（Sky Stone）&f只在陨石里生成；用&c陨星罗盘（Meteorite Compass）&f指引找到最近陨石。"
+				""
+				"陨石内有大量赛特斯水晶和星空石箱；星空石可做&c星空石箱/储罐&f等装饰容器。"
+			]
+			id: "5492FB3A3F92E90E"
+			rewards: [{
+				id: "50C5B60E803D73A7"
+				type: "xp"
+				xp: 5
+			}]
+			subtitle: "Sky Stone"
+			tasks: [{
+				id: "709EDBBDC212778F"
+				item: "ae2:sky_stone_block"
+				type: "item"
+			}]
+			title: "星空石与陨星罗盘"
+			x: 3.0d
+			y: 10.5d
+		}
+		{
+			dependencies: ["7B2BE70F918DEB0C"]
+			description: [
+				"&a奇点（Singularity）&f由大量物料球在分解器中浓缩而成，是量子环、P2P 等高级部件的材料。"
+				""
+				"量产方法：把海量垃圾（圆石/沙）灌进分解器，自动吐物料球->奇点。"
+			]
+			id: "78F93DD015A6C5A2"
+			rewards: [{
+				id: "291F9B2FD0099A36"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "Singularity"
+			tasks: [{
+				id: "07B2340CFF355141"
+				item: "ae2:singularity"
+				type: "item"
+			}]
+			title: "奇点与物料球"
+			x: 7.5d
+			y: 10.5d
+		}
+		{
+			dependencies: ["083249D2AB893A35"]
+			description: [
+				"&aMegaCells&f提供&c1m/4m/16m/64m/256m 存储组件&f与&c物品/流体存储单元&f，容量是原版的千倍。"
+				""
+				"还有&c大宗物品单元（Bulk Item Cell）&f：单种物品可存超大量，适合泥土/圆石/矿粉等海量物品。"
+			]
+			id: "36D128771B0954F3"
+			rewards: [{
+				id: "7DA4DF552B049F6B"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "1m~256m"
+			tasks: [{
+				id: "534F3128ABAC0C3D"
+				item: "megacells:cell_component_1m"
+				type: "item"
+			}]
+			title: "MegaCells：巨型存储"
+			x: 12.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["36D128771B0954F3"]
+			description: [
+				"&cMega 接口（Mega Interface）、Mega 样板提供器&f一次处理更多物品；&cMega 能量单元&f超大网络电池。"
+				""
+				"&c单元对接坞（Cell Dock）&f把单元外置插入，便于热插拔扩容。"
+			]
+			id: "2C7DB8F5C002EAF9"
+			rewards: [{
+				id: "653FE7745BAD89E9"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "Mega Interface"
+			tasks: [{
+				id: "1C39298DC5F77D0E"
+				item: "megacells:mega_interface"
+				type: "item"
+			}]
+			title: "Mega 接口与能量单元"
+			x: 13.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["607AA818A232FC3A"]
+			description: [
+				"&cAppFlux&f提供&cFE 存储单元（FE Cell 1k~256m）&f，把 FE 电能直接存进 ME 网络；&c通量访问器（Flux Accessor）&f从网络抽 FE 给外部设备。"
+				""
+				"网络自带电池池，省掉外部电池；&c充电红石（Charged Redstone）&f是其材料。"
+			]
+			id: "4EEEC18ED9F80B97"
+			rewards: [{
+				id: "622097A5FE9B3D95"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "Flux in ME"
+			tasks: [{
+				id: "3973182D267DA431"
+				item: "appflux:fe_1k_cell"
+				type: "item"
+			}]
+			title: "AppFlux：FE 直存网络"
+			x: 9.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["3715B4DCD22D4B5C"]
+			description: [
+				"&a装饰面板（Facade）&f把线缆伪装成任意方块，让基地走线看不见；&c线缆锚（Cable Anchor）&f把线缆固定在任意面。"
+				""
+				"大型基地美化必备，线缆藏墙里。"
+			]
+			id: "728A17CDA4704184"
+			rewards: [{
+				id: "6B8E98BD2C29C181"
+				type: "xp"
+				xp: 5
+			}]
+			subtitle: "Facade"
+			tasks: [{
+				id: "20A7358F0F1FD2AD"
+				item: "ae2:facade"
+				type: "item"
+			}]
+			title: "装饰面板与线缆锚"
+			x: 9.0d
+			y: 9.0d
+		}
+		{
+			dependencies: ["3715B4DCD22D4B5C"]
+			description: [
+				"&a调色工具（Color Applicator）&f配合&c调色球（Paint Ball）/&c荧光调色球&f给线缆、面板染色，区分子网。"
+				""
+				"建议主干/分支按功能染不同色，排障时一眼看清。"
+			]
+			id: "21745561C1A432CB"
+			rewards: [{
+				id: "15AAE33F10FE0B85"
+				type: "xp"
+				xp: 5
+			}]
+			subtitle: "Color"
+			tasks: [{
+				id: "43C56FF4B8EABC2E"
+				item: "ae2:color_applicator"
+				type: "item"
+			}]
+			title: "调色球与颜色工具"
+			x: 9.0d
+			y: 10.5d
+		}
+		{
+			dependencies: ["1FAD1C886E89661F"]
+			description: [
+				"&a虚空卡（Void Card）&f塞进总线/单元，把溢出物品直接销毁，防止箱子爆炸；&c均衡卡&f把物品平均分配到多个容器。"
+				""
+				"处理垃圾产物、防满仓溢出必备。"
+			]
+			id: "7FE66A345E57628A"
+			rewards: [{
+				id: "1E33A88BC625164F"
+				type: "xp"
+				xp: 5
+			}]
+			subtitle: "Void Card"
+			tasks: [{
+				id: "485178E031278B36"
+				item: "ae2:void_card"
+				type: "item"
+			}]
+			title: "虚空卡与特殊升级"
+			x: 12.0d
+			y: 9.0d
+		}
+		{
+			dependencies: [
+				"590860EFBB44D14B"
+				"503319B6A225B885"
+				"5F7BCACD42D773F1"
+			]
+			description: [
+				"布局：控制器阵列 + 驱动器（插满单元）+ 能量接收器接电网。"
+				""
+				"物流：挖掘机/粉碎机 -> &cME 接口&f自动把矿粉入库；冶炼炉旁放&c样板提供器&f贴&c处理样板&f，网络请求锭时自动送矿粉进炉、收锭回网。"
+				""
+				"合成：&c合成 CPU（合成单元+并行处理器）&f + 围绕的&c分子装配室&f + &c样板提供器&f；玩家在合成终端点「钢板」，CPU 自动调铁锭、派装配机合成。"
+				""
+				"产量预期：一套中型网络可同时并行数条合成任务，库存数字化后基地几乎不再需要箱子。"
+			]
+			icon: "ae2:interface"
+			id: "6FF139E414284509"
+			rewards: [{
+				id: "34296FD0078D5170"
+				type: "xp"
+				xp: 20
+			}]
+			shape: "hexagon"
+			size: 1.5d
+			subtitle: "完整示范"
+			tasks: [{
+				id: "2E24E3E61BA76354"
+				title: "事例产线：烧矿-入库-自动合成"
+				type: "checkmark"
+			}]
+			title: "事例产线：烧矿-入库-自动合成"
+			x: 19.5d
+			y: 3.0d
+		}
+		{
+			dependencies: [
+				"29E56314D9B01D4E"
+				"08B454DC2B45BDE6"
+				"48110C83F0724601"
+			]
+			description: [
+				"&a控制器&f：多个控制器在 7x7x7 内任意相邻连通即组成阵列，每面提供 32 频道；别让两个控制器阵列直接相连（会冲突报警）。"
+				""
+				"&a合成 CPU&f：合成单元/并行处理器/合成监控器必须相邻贴成一块，旁接网络线缆；每个 CPU 独立工作，多 CPU 并行多任务。"
+				""
+				"&a无线塔&f：无线接入点越高、塞越多增幅器，范围越大；想全图覆盖就建高塔。"
+			]
+			icon: "ae2:crafting_accelerator"
+			id: "2FC8C9218CBEF11C"
+			rewards: [{
+				id: "4B779D661209425E"
+				type: "xp"
+				xp: 20
+			}]
+			shape: "hexagon"
+			size: 1.5d
+			subtitle: "结构要点"
+			tasks: [{
+				id: "788C6F0DE2308F9A"
+				title: "多方块：控制器阵列·合成CPU·无线塔"
+				type: "checkmark"
+			}]
+			title: "多方块：控制器阵列·合成CPU·无线塔"
+			x: 18.0d
+			y: 6.0d
+		}
+		{
+			dependencies: [
+				"6FF139E414284509"
+				"2FC8C9218CBEF11C"
+			]
+			description: [
+				"一套成熟 AE2 基地："
+				""
+				"1. &a核心&f：控制器阵列 + 满单元驱动器 + 能量接收器；"
+				""
+				"2. &a访问&f：主基地放合成终端，随身带无线合成终端；"
+				""
+				"3. &a接入&f：机器旁接口/样板提供器，箱子旁存储总线；"
+				""
+				"4. &a合成&f：样板编配方，多合成 CPU 并行，分子装配室执行；"
+				""
+				"5. &a扩展&f：量子桥连分基地，P2P 压缩频道，MegaCells 扩容量，AppFlux 把 FE 存进网络；"
+				""
+				"6. &a联动&f：存储总线接管抽屉，等级发射器触发自动化。"
+				""
+				"完成本任务 = 你拥有「要什么自动做什么」的基地大脑，AE2 毕业。"
+			]
+			icon: "ae2:crafting_terminal"
+			id: "4F941AA3F87EFC80"
+			rewards: [{
+				id: "67DA4B6E634A3586"
+				type: "xp"
+				xp: 30
+			}]
+			shape: "octagon"
+			size: 1.5d
+			subtitle: "从玩具到操作系统"
+			tasks: [{
+				id: "0B2BE0F6744F79FE"
+				title: "综合实战：基地数字中枢"
+				type: "checkmark"
+			}]
+			title: "综合实战：基地数字中枢"
+			x: 21.0d
+			y: 4.5d
+		}
+	]
+	title: "应用能源2"
+}

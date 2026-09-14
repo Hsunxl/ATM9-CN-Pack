@@ -1,0 +1,951 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "t12_enderio"
+	group: "00C72C1FB6193A42"
+	icon: "enderio:item_conduit"
+	id: "02EB636624217F09"
+	order_index: 12
+	progression_mode: "flexible"
+	quest_links: [ ]
+	quests: [
+		{
+			description: [
+				"&a末地接口（EnderIO）&f以&a导管系统&f闻名：一根导管占一格，却能把物品+流体+能量+红石+气体叠加在同一格里，是包内最省空间的物流。"
+				""
+				"它还提供：合金熔炼/SAG 磨粉、电容加速机器、灵魂绑定、传送石碑、光电太阳能、真空收集等便利设备。"
+				""
+				"本章结构：总览 → 合金材料 → 加工机器 → 导管大全 → 发电与电容 → 灵魂与传送 → 实用机器 → 实战。"
+			]
+			icon: "enderio:item_conduit"
+			id: "19E1FED5FC76C4FD"
+			shape: "hexagon"
+			size: 1.5d
+			subtitle: "导管之王与实用机器"
+			tasks: [{
+				id: "4DA2BB1C0B22FFFA"
+				title: "末地接口总览"
+				type: "checkmark"
+			}]
+			title: "末地接口总览"
+			x: 6.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["19E1FED5FC76C4FD"]
+			description: [
+				"EnderIO 有自己的合金链（都在合金熔炼炉里合成）："
+				""
+				"· &a导电合金&f（conductive_alloy_ingot）：电线/能量导管；"
+				""
+				"· &a脉冲合金&f（pulsating_alloy_ingot）：机器框架核心；"
+				""
+				"· &a振动合金&f（vibrant_alloy_ingot）：高端导管/组件；"
+				""
+				"· &a红石合金&f（redstone_alloy_ingot）：红石导管；"
+				""
+				"· &a能量合金&f（energetic_alloy_ingot）：发电/光伏；"
+				""
+				"· &a暗钢&f（dark_steel_ingot）：工具/装备；&a末钢&f（end_steel_ingot）：终极材料；&a灵魂钢&f（soularium_ingot）：灵魂相关。"
+			]
+			id: "4D0E78056E10343F"
+			rewards: [{
+				id: "3D49C93E61739116"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "七大合金"
+			tasks: [{
+				id: "03A3190C1FD2A437"
+				item: "enderio:conductive_alloy_ingot"
+				type: "item"
+			}]
+			title: "EnderIO 合金材料体系"
+			x: 4.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["4D0E78056E10343F"]
+			description: [
+				"&a原始合金熔炼炉&f（primitive_alloy_smelter）烧煤即可工作，开局不耗电就能合成合金；"
+				""
+				"升级成&a合金熔炼炉&f（alloy_smelter）后用电，三输入槽可一次熔三种金属、做合金配方，是 EnderIO 材料制造中心。"
+				""
+				"联动：它 + SAG 磨坊 = 「矿粉进去，合金出来」全自动。"
+			]
+			id: "4B96C1D7001D2F8E"
+			rewards: [{
+				id: "71F8423739D55EFA"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "煤版到电版"
+			tasks: [{
+				id: "39CB3DF4A835EBD1"
+				item: "enderio:primitive_alloy_smelter"
+				type: "item"
+			}]
+			title: "第一台机器：合金熔炼炉"
+			x: 3.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["4B96C1D7001D2F8E"]
+			description: [
+				"&aSAG 磨坊&f（sag_mill）把原矿磨成 2 倍矿粉，并可磨石头、石英等。"
+				""
+				"它吃&a研磨球&f（grinding ball）提升副产物倍率，各合金都有球：conductive_alloy_grinding_ball、copper_alloy_grinding_ball、dark_steel_grinding_ball、end_steel_grinding_ball、soularium_grinding_ball、vibrant_alloy_grinding_ball。"
+				""
+				"研磨球会逐渐损耗，记得自动补充。"
+			]
+			id: "3FD81FCF31F74034"
+			rewards: [{
+				id: "17B8359E9809578E"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "2 倍矿粉"
+			tasks: [{
+				id: "1D92643B60434CAF"
+				item: "enderio:sag_mill"
+				type: "item"
+			}]
+			title: "SAG 磨坊与研磨球"
+			x: 3.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["4B96C1D7001D2F8E"]
+			description: [
+				"&a电容&f是 EnderIO 的灵魂：机器右键插电容决定速度/能耗："
+				""
+				"· &a基础电容&f（basic_capacitor）1x → &a双层电容&f（double_layer_capacitor）2x → &a八边形电容&f（octadic_capacitor）4x+；"
+				""
+				"· &a战利品电容&f（loot_capacitor）提升战利品掉落；"
+				""
+				"电容可随时取出换给别的机器；高阶电容需要振动合金与末影水晶。"
+				""
+				"&a电容箱&f（basic/advanced/vibrant_capacitor_bank）是堆叠式储能方块。"
+			]
+			id: "120C2F888999B58E"
+			rewards: [{
+				id: "767508E9BEB9EFA2"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "1x 到 8x 加速"
+			tasks: [{
+				id: "7898BB9688538935"
+				item: "enderio:basic_capacitor"
+				type: "item"
+			}]
+			title: "电容：机器的心脏"
+			x: 4.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["4B96C1D7001D2F8E"]
+			description: [
+				"&a物品导管&f（item_conduit）：右键打开面板，给每个连接面独立设「提取/输入/禁用 + 过滤 + 优先级」。"
+				""
+				"招牌特性：物品、流体、能量、红石导管可以放进&a同一格&f（通过 conduit 堆叠），布线极度紧凑。"
+				""
+				"&a提取速度升级&f（extraction_speed_upgrade_1~4）提高抽取速率；&a基本/高级物品过滤器&f（basic_item_filter / advanced_item_filter）精准筛选。"
+			]
+			id: "5FBD0C89EF26AB59"
+			rewards: [{
+				id: "28C35BBADA9CDFC5"
+				type: "xp"
+				xp: 20
+			}]
+			subtitle: "同槽布线"
+			tasks: [{
+				id: "592489E682BB5E91"
+				item: "enderio:item_conduit"
+				type: "item"
+			}]
+			title: "物品导管：一格多流"
+			x: 6.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["5FBD0C89EF26AB59"]
+			description: [
+				"&a能量导管&f（energy_conduit）传 FE，面板可设&a优先方向&f：缺电时按优先级给机器分配电力。"
+				""
+				"&a红石导管&f（redstone_conduit）传红石信号；配合&a红石逻辑过滤器&f（redstone_and/or/not/nand/nor/xor/xnor_filter）、&a计时/开关/计数过滤器&f（redstone_timer/toggle/counting/sensor_filter）可在导管里直接做红石逻辑。"
+				""
+				"能量导管与物品/流体导管同格铺设，一管多用。"
+			]
+			id: "540DF3D24252AE7A"
+			rewards: [{
+				id: "5650F8F76DE8A343"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "优先供电与信号"
+			tasks: [{
+				id: "1136DB157D526B90"
+				item: "enderio:energy_conduit"
+				type: "item"
+			}]
+			title: "能量与红石导管"
+			x: 1.5d
+			y: 6.0d
+		}
+		{
+			dependencies: ["5FBD0C89EF26AB59"]
+			description: [
+				"&a流体导管&f（fluid_conduit）传液体；&a高压流体导管&f（pressurized_fluid_conduit）更快；&a末影流体导管&f（ender_fluid_conduit）跨维度。"
+				""
+				"&a化学导管&f（chemical_conduit）传气体；&a高压化学导管&f（pressurized_chemical_conduit）与&a末影化学导管&f（ender_chemical_conduit）对应升级。"
+				""
+				"&a热导管&f（heat_conduit）传热；用&a基本流体过滤器&f（basic_fluid_filter）选液体。"
+			]
+			id: "74B0973C3C6B2CA6"
+			rewards: [{
+				id: "3CF5D1FC1F5671EA"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "液体与气体"
+			tasks: [{
+				id: "65697A9D695968F2"
+				item: "enderio:fluid_conduit"
+				type: "item"
+			}]
+			title: "流体与化学导管"
+			x: 3.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["5FBD0C89EF26AB59"]
+			description: [
+				"&aME 导管&f（me_conduit / dense_me_conduit）对接 AE2 网络，把物品直接送进/取出 ME 系统；"
+				""
+				"&aRefined Storage 导管&f（refined_storage_conduit）对接 RS 网络；"
+				""
+				"&a导管面&f（enderface_conduits / enderface_items 等）是多类型合一的连接块。"
+				""
+				"这些导管让 EnderIO 物流直接接入你的数字存储网格。"
+			]
+			id: "013DD29DC8C33E50"
+			rewards: [{
+				id: "6446482D8E868BAA"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "对接 AE2 与 RS"
+			tasks: [{
+				id: "1005806E6B2326DB"
+				item: "enderio:me_conduit"
+				type: "item"
+			}]
+			title: "ME/RF 兼容与导管框架"
+			x: 4.5d
+			y: 6.0d
+		}
+		{
+			dependencies: ["5FBD0C89EF26AB59"]
+			description: [
+				"&a导管探测器&f（conduit_probe / conduit_probe_copy / conduit_probe_probe）：复制一段导管配置粘贴到另一段，批量配置神器；"
+				""
+				"&a导管粘结剂&f（conduit_binder / conduit_binder_composite）：给导管涂装/伪装成周围方块，把线藏进墙里；"
+				""
+				"&aEnderIO 扳手&f（yeta_wrench）：调整导管连接面与管道朝向。"
+				""
+				"大工厂用探测器成百上千次复制配置，效率拉满。"
+			]
+			id: "3D33102A41DC3E09"
+			rewards: [{
+				id: "794670FC69DA31CA"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "探测、复制、伪装"
+			tasks: [{
+				id: "6BD82260CB6B2F79"
+				item: "enderio:conduit_probe"
+				type: "item"
+			}]
+			title: "导管工具"
+			x: 6.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["19E1FED5FC76C4FD"]
+			description: [
+				"EnderIO 发电设备："
+				""
+				"· &a斯特林发电机&f（stirling_generator）烧固态燃料；"
+				""
+				"· &a僵尸电极&f（zombie_electrode）烧怪物掉落物发电；"
+				""
+				"· &a灵魂引擎&f（soul_engine）烧灵魂发电；"
+				""
+				"· &a光伏模块&f（energetic/pulsating/vibrant_photovoltaic_module）贴天花板被动发电，等级递增；"
+				""
+				"&a光伏板/复合板/电池片&f（photovoltaic_plate / composite / cell）是合成光伏的材料。"
+			]
+			id: "3044D12CDDEB9507"
+			rewards: [{
+				id: "60E268A840B51345"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "从斯特林到光伏"
+			tasks: [{
+				id: "428F562986F0399A"
+				item: "enderio:stirling_generator"
+				type: "item"
+			}]
+			title: "EnderIO 发电机"
+			x: 7.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["3044D12CDDEB9507"]
+			description: [
+				"&a有线充电器&f（wired_charger）：给放在其上的物品/护甲无线充电；"
+				""
+				"&a电容箱&f（basic_capacitor_bank / advanced_capacitor_bank / vibrant_capacitor_bank）堆叠扩展储能；"
+				""
+				"&a脉冲/能量/振动水晶&f（pulsating/vibrant/prescient crystal）与&a末影谐振器&f（ender_resonator）是高端材料。"
+				""
+				"用法：发电机 → 电容箱 → 能量导管 → 各机器，构成紧凑电网。"
+			]
+			id: "1B0BA3360DD56F12"
+			rewards: [{
+				id: "63460AAD64B80082"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "有线充电与电池"
+			tasks: [{
+				id: "1B9A429E494C43E8"
+				item: "enderio:wired_charger"
+				type: "item"
+			}]
+			title: "供电与充电"
+			x: 6.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["19E1FED5FC76C4FD"]
+			description: [
+				"&a空灵魂瓶&f（empty_soul_vial）右键怪物装灵魂成&a满灵魂瓶&f（filled_soul_vial）；"
+				""
+				"&a灵魂绑定机&f（soul_binder）用灵魂+材料合成高级物品（灵魂钢、灵魂引擎组件、末影之眼升级）；"
+				""
+				"&a灵魂尘&f（soul_powder）与&a灵魂锁链&f（soul_chain）是灵魂线材料；&a附魔底盘&f（ensouled_chassis / void_chassis）。"
+				""
+				"提示：需要大量灵魂时配合刷怪塔，或与 HNN 联动。"
+			]
+			id: "2E02C4B96D9624FB"
+			rewards: [{
+				id: "011E3DDC735C6A6B"
+				type: "xp"
+				xp: 20
+			}]
+			subtitle: "把怪物装进瓶"
+			tasks: [{
+				id: "58E7C592377FB9E1"
+				item: "enderio:soul_binder"
+				type: "item"
+			}]
+			title: "灵魂绑定：瓶子与绑定机"
+			x: 9.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["19E1FED5FC76C4FD"]
+			description: [
+				"&a旅行锚&f（travel_anchor / painted_travel_anchor）：放置后右键打开列表，传送到其他旅行锚——基地交通网；"
+				""
+				"&a旅行权杖&f（staff_of_travelling）：右键远程传送（消耗经验/耐久）；&a悬浮权杖&f（staff_of_levity）：缓慢下落/滑翔；"
+				""
+				"&a末影导管&f（ender_fluid/chemical_conduit）可跨维度传物；&a坐标选择器&f（coordinate_selector）标记位置。"
+			]
+			id: "21802D64298396FF"
+			rewards: [{
+				id: "11707837B4D9F53D"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "快速移动"
+			tasks: [{
+				id: "6E5BB86B982B9147"
+				item: "enderio:travel_anchor"
+				type: "item"
+			}]
+			title: "旅行锚与传送杖"
+			x: 3.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["19E1FED5FC76C4FD"]
+			description: [
+				"便利设备："
+				""
+				"· &a附魔器&f（enchanter）：附魔书+物品直接可控附魔；"
+				""
+				"· &a合成机&f（crafter）：自动合成；&a切片拼合机&f（slice_and_splice）：多方块合成下界之星等；"
+				""
+				"· &a真空箱&f（vacuum_chest）吸周围掉落物；&a经验真空&f（xp_vacuum）吸经验；&a经验碑&f（xp_obelisk）存取经验；"
+				""
+				"· &a涂装机&f（painting_machine）给方块换皮；&a脉冲漏斗&f（impulse_hopper）高速漏；&a流体罐&f（fluid_tank / pressurized_fluid_tank）存液体；"
+				""
+				"· &a厌恶碑&f（aversion_obelisk）驱赶怪物；&a电力刷怪笼&f（powered_spawner）。"
+			]
+			id: "1C1EA82A497FDC09"
+			rewards: [{
+				id: "052AFF71FF617C19"
+				type: "xp"
+				xp: 20
+			}]
+			subtitle: "附魔、真空、经验"
+			tasks: [{
+				id: "140EEC84774F6052"
+				item: "enderio:enchanter"
+				type: "item"
+			}]
+			title: "实用机器与便利方块"
+			x: 10.5d
+			y: 1.5d
+		}
+		{
+			dependencies: [
+				"4B96C1D7001D2F8E"
+				"5FBD0C89EF26AB59"
+				"1B0BA3360DD56F12"
+			]
+			description: [
+				"一条紧凑产线模板："
+				""
+				"1. SAG 磨坊磨矿得矿粉，合金熔炼炉熔成合金，两台机器并排；"
+				""
+				"2. 同一格里铺：&a物品导管&f（料/成品）+&a能量导管&f（供电）+&a红石导管&f（控制）；"
+				""
+				"3. 两台机器都插&a双层/八边形电容&f提速；"
+				""
+				"4. 真空箱收碎屑，有线充电器待命，旅行锚通勤；"
+				""
+				"5. 用导管探测器复制配置批量扩展。"
+			]
+			id: "6B62414FB9974DE2"
+			rewards: [{
+				id: "34B58A4FF5602C95"
+				type: "xp"
+				xp: 25
+			}]
+			subtitle: "一格多流"
+			tasks: [{
+				id: "1E3A101653F7E419"
+				item: "enderio:alloy_smelter"
+				type: "item"
+			}]
+			title: "事例：EnderIO 紧凑合金厂"
+			x: 12.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["74B0973C3C6B2CA6"]
+			description: [
+				"用末影导管做跨维度物流："
+				""
+				"1. 在主世界基地放&a末影流体/化学导管&f（ender_fluid_conduit / ender_chemical_conduit）；"
+				""
+				"2. 在下界/末地对应管道会自动跨维度连接；"
+				""
+				"3. 配合 ME 导管把产物直接汇入 AE2；"
+				""
+				"4. 旅行锚+末影导管 = 跨维度「分身基地」。"
+				""
+				"适合在下界烧下界岩、在末地收龙矿而不用每次跑图。"
+			]
+			id: "5FDB766636EE8821"
+			rewards: [{
+				id: "1F7FB144628C62ED"
+				type: "xp"
+				xp: 25
+			}]
+			subtitle: "末影导管直通车"
+			tasks: [{
+				id: "506AE67CF6EE2CBA"
+				item: "enderio:ender_fluid_conduit"
+				type: "item"
+			}]
+			title: "事例：跨维度物资网"
+			x: 3.0d
+			y: 7.5d
+		}
+		{
+			dependencies: ["5FBD0C89EF26AB59"]
+			description: [
+				"导管面板心法："
+				""
+				"· 每个面都能单独设提取/输入/过滤/优先级；"
+				""
+				"· 用&a高级物品过滤器&f做 NBT/白黑名单；&a实体过滤器&f（entity_filter）筛实体；"
+				""
+				"· 物品导管设「圆梦模式」精确数量，避免一次抽太多；"
+				""
+				"· 能量导管设优先级，让熔炉优先于灯；"
+				""
+				"· 批量复制用探测器，别一格格手点。"
+			]
+			id: "6BA992B7489369BB"
+			rewards: [{
+				id: "3CC92B9D901E3C88"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "每面独立设置"
+			tasks: [{
+				id: "48EFC5581FE3B275"
+				item: "enderio:advanced_item_filter"
+				type: "item"
+			}]
+			title: "导管面配置技巧"
+			x: 7.5d
+			y: 6.0d
+		}
+		{
+			dependencies: ["120C2F888999B58E"]
+			description: [
+				"电容分配建议："
+				""
+				"· 主力加工机（SAG 磨坊、合金熔炼炉）插八边形电容；"
+				""
+				"· 常用但次要机器插双层电容；"
+				""
+				"· 偶尔用的机器用基础电容；"
+				""
+				"· 战利品电容给刷怪/刷宝相关机器；"
+				""
+				"· 闲置时把高级电容拔下转给新机器，电容是可携带的。"
+			]
+			id: "36058AD714E2D258"
+			rewards: [{
+				id: "153EC6FB78992445"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "好钢用在刀刃上"
+			tasks: [{
+				id: "2DE533CB07E90E9F"
+				item: "enderio:octadic_capacitor"
+				type: "item"
+			}]
+			title: "电容分配策略"
+			x: 0.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["2E02C4B96D9624FB"]
+			description: [
+				"灵魂体系延伸："
+				""
+				"· 灵魂绑定的工具/装备死亡不掉落；"
+				""
+				"· 灵魂引擎把怪物灵魂变成电；"
+				""
+				"· &a破碎刷怪笼&f（broken_spawner）+灵魂可做成&a电力刷怪笼&f（powered_spawner）；"
+				""
+				"· 配合厌恶碑与经验碑，挂机基地全自动运转。"
+			]
+			id: "3B1548EA858529F7"
+			rewards: [{
+				id: "08BC7A1A38D74B73"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "不死与资源"
+			tasks: [{
+				id: "7AEB14D8716983FA"
+				item: "enderio:filled_soul_vial"
+				type: "item"
+			}]
+			title: "灵魂绑定保命与刷怪"
+			x: 9.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["4D0E78056E10343F"]
+			description: [
+				"&a导电合金&f（conductive_alloy_ingot）是做能量导管与电线的入门材料；"
+				""
+				"&a脉冲合金&f（pulsating_alloy_ingot）带末影脉动，做机器框架与脉冲光伏；"
+				""
+				"两者都在合金熔炼炉里合成，是 EnderIO 起步最先解锁的金属。"
+			]
+			id: "1FCC245ACF50E409"
+			rewards: [{
+				id: "34CEF090785987F3"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "入门两合金"
+			tasks: [{
+				id: "04851D2A17640237"
+				item: "enderio:conductive_alloy_ingot"
+				type: "item"
+			}]
+			title: "EnderIO：导电与脉冲合金"
+			x: 0.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["4D0E78056E10343F"]
+			description: [
+				"&a振动合金&f（vibrant_alloy_ingot）是高端导管与八边形电容的材料；"
+				""
+				"&a红石合金&f（redstone_alloy_ingot）用于红石导管与逻辑件；"
+				""
+				"&a能量合金&f（energetic_alloy_ingot）用于发电与光伏模块。"
+			]
+			id: "3A952164FFE2E67B"
+			rewards: [{
+				id: "0E2205B8CDE427AE"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "中阶材料"
+			tasks: [{
+				id: "46E076CA6F2F192A"
+				item: "enderio:vibrant_alloy_ingot"
+				type: "item"
+			}]
+			title: "EnderIO：振动与红石合金"
+			x: 1.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["4D0E78056E10343F"]
+			description: [
+				"&a暗钢&f（dark_steel_ingot）做工具/武器（dark_steel_sword）与建筑方块（dark_steel_block / bars / ladder）；"
+				""
+				"&a末钢&f（end_steel_ingot）是 EnderIO 终极金属；"
+				""
+				"&a灵魂钢&f（soularium_ingot）用于灵魂绑定线。"
+			]
+			id: "6CCC18E557CEDE59"
+			rewards: [{
+				id: "5787DA1A22B9DAE3"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "装备与终极"
+			tasks: [{
+				id: "29CAD0931BC18A7F"
+				item: "enderio:dark_steel_ingot"
+				type: "item"
+			}]
+			title: "EnderIO：暗钢与末钢"
+			x: 4.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["4B96C1D7001D2F8E"]
+			description: [
+				"&a齿轮&f：wood_gear / stone_gear / iron_gear / energized_gear / vibrant_gear / dark_bimetal_gear，是各级机器的合成件；"
+				""
+				"SAG 磨坊吃的&a研磨球&f按合金分级（conductive/copper/dark_steel/end_steel/soularium/vibrant_grinding_ball），越高级副产物越多。"
+			]
+			id: "672CF8E4D190DE3E"
+			rewards: [{
+				id: "7F0E4CECE30C6FF2"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "机器零件"
+			tasks: [{
+				id: "2DE2E725FC7756B3"
+				item: "enderio:energized_gear"
+				type: "item"
+			}]
+			title: "EnderIO：齿轮与研磨球"
+			x: 7.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["5FBD0C89EF26AB59"]
+			description: [
+				"&a脉冲漏斗&f（impulse_hopper）比原版漏斗更快抽取物品；"
+				""
+				"&a流体罐&f（fluid_tank）与&a加压流体罐&f（pressurized_fluid_tank）存液体；"
+				""
+				"配合流体导管，做小型液体中转。"
+			]
+			id: "541AAE030E1A58D1"
+			rewards: [{
+				id: "11CEE2CC9F8A3468"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "高速搬运"
+			tasks: [{
+				id: "16CEB8CAF9F25654"
+				item: "enderio:impulse_hopper"
+				type: "item"
+			}]
+			title: "EnderIO：脉冲漏斗与流体罐"
+			x: 9.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["540DF3D24252AE7A"]
+			description: [
+				"EnderIO 红石导管可直接在面板上做逻辑："
+				""
+				"· redstone_and/or/not/nand/nor/xor/xnor_filter 组合门电路；"
+				""
+				"· redstone_timer_filter 定时、redstone_toggle_filter 开关、redstone_counting_filter 计数、redstone_sensor_filter 传感；"
+				""
+				"不需要额外红石粉，导管本身就是逻辑线。"
+			]
+			id: "132D190048104506"
+			rewards: [{
+				id: "3A3EEDD1A86D35A6"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "导管里做电路"
+			tasks: [{
+				id: "4BBAABC255E3B539"
+				item: "enderio:redstone_toggle_filter"
+				type: "item"
+			}]
+			title: "EnderIO：红石逻辑导管"
+			x: 1.5d
+			y: 7.5d
+		}
+		{
+			dependencies: ["013DD29DC8C33E50"]
+			description: [
+				"&aME 导管&f（me_conduit）普通带宽，&a密集 ME 导管&f（dense_me_conduit）高带宽，直接接入 AE2 网络；"
+				""
+				"机器产物经 ME 导管自动进入 ME 系统，不必经过箱子；"
+				""
+				"与&aRF 导管&f（refined_storage_conduit）分别对应两套数字存储。"
+			]
+			id: "0D04EF610985058F"
+			rewards: [{
+				id: "7F2D542CD71E1855"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "直连 AE2"
+			tasks: [{
+				id: "402662428BEA63F7"
+				item: "enderio:dense_me_conduit"
+				type: "item"
+			}]
+			title: "EnderIO：ME 导管深入"
+			x: 4.5d
+			y: 7.5d
+		}
+		{
+			dependencies: ["3044D12CDDEB9507"]
+			description: [
+				"&a光伏模块&f分三级：energetic → pulsating → vibrant_photovoltaic_module，贴在天花板/日照面被动发电；"
+				""
+				"合成材料 photovoltaic_cell / photovoltaic_composite / photovoltaic_plate；"
+				""
+				"适合给小型基地/充电站供电，不适合主力电源。"
+			]
+			id: "32F3CDDD39046B7D"
+			rewards: [{
+				id: "7635C5961E6E2348"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "被动电源"
+			tasks: [{
+				id: "0E1EE28939FE0C6B"
+				item: "enderio:energetic_photovoltaic_module"
+				type: "item"
+			}]
+			title: "EnderIO：光伏太阳能"
+			x: 7.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["2E02C4B96D9624FB"]
+			description: [
+				"&a空灵魂瓶&f（empty_soul_vial）装灵魂；&a灵魂尘&f（soul_powder）与&a灵魂锁链&f（soul_chain）是合成材料；"
+				""
+				"&a灵魂钢&f（soularium_ingot）做灵魂引擎与灵魂绑定配方；"
+				""
+				"满灵魂瓶（filled_soul_vial）在绑定机里转成高级产物。"
+			]
+			id: "649589E6B367D799"
+			rewards: [{
+				id: "29BA845C07A6C9F0"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "怪物材料化"
+			tasks: [{
+				id: "5C4F6F9970B20521"
+				item: "enderio:empty_soul_vial"
+				type: "item"
+			}]
+			title: "EnderIO：灵魂瓶与灵魂钢"
+			x: 10.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["1C1EA82A497FDC09"]
+			description: [
+				"&a经验碑&f（xp_obelisk）存取大量经验；&a经验真空&f（xp_vacuum）自动吸经验球；"
+				""
+				"&a真空箱&f（vacuum_chest）吸周围掉落物，挖矿/挂机时摆一个；"
+				""
+				"两者配合 = 经验与掉落全自动收进箱子。"
+			]
+			id: "3915FF5A7EB2A9C0"
+			rewards: [{
+				id: "751C66FC90F3492D"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "挂机生活质量"
+			tasks: [{
+				id: "29658B4F5F4FCE73"
+				item: "enderio:xp_obelisk"
+				type: "item"
+			}]
+			title: "EnderIO：经验与真空收集"
+			x: 13.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["2E02C4B96D9624FB"]
+			description: [
+				"&a电力刷怪笼&f（powered_spawner）用电驱动，可控制刷怪速率；&a破碎刷怪笼&f（broken_spawner）是材料；"
+				""
+				"&a厌恶碑&f（aversion_obelisk）在范围内驱赶怪物，保护基地；"
+				""
+				"配合灵魂瓶可批量养殖怪物灵魂。"
+			]
+			id: "3A3F64F8C7F08A96"
+			rewards: [{
+				id: "3FBADEB5F4997835"
+				type: "xp"
+				xp: 20
+			}]
+			subtitle: "电力刷怪笼"
+			tasks: [{
+				id: "6F3C46A2DDCFAA76"
+				item: "enderio:powered_spawner"
+				type: "item"
+			}]
+			title: "EnderIO：刷怪与驱赶"
+			x: 12.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["1C1EA82A497FDC09"]
+			description: [
+				"&a附魔器&f（enchanter）用附魔书精准给物品附魔；&a合成机&f（crafter）按配方自动合成；"
+				""
+				"&a切片拼合机&f（slice_and_splice）多方块合成下界之星等；"
+				""
+				"&a涂装机&f（painting_machine）批量给方块换色，建城很方便。"
+			]
+			id: "3D7CAABD45E7DE75"
+			rewards: [{
+				id: "2E9B33AF0394E5ED"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "自动化工匠"
+			tasks: [{
+				id: "0F89E583DFD73479"
+				item: "enderio:crafter"
+				type: "item"
+			}]
+			title: "EnderIO：附魔与合成"
+			x: 15.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["19E1FED5FC76C4FD"]
+			description: [
+				"&a电力灯&f（powered_light / powered_light_inverted）与&a无线电力灯&f（powered_light_wireless / powered_light_inverted_wireless）：无需拉线的照明，受红石控制；"
+				""
+				"&a光&f（light / light_inverted）与&a清玻璃/熔石英玻璃&f（clear_glass / fused_quartz_*）做整洁建筑。"
+			]
+			id: "66681B9B257A4158"
+			rewards: [{
+				id: "349C49921C60390B"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "无线照明"
+			tasks: [{
+				id: "001D3609398145AA"
+				item: "enderio:powered_light_wireless"
+				type: "item"
+			}]
+			title: "EnderIO：无线灯与装饰"
+			x: 6.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["3D33102A41DC3E09"]
+			description: [
+				"&aEnderIO 扳手&f（yeta_wrench）调整导管连接；&a导管探测器&f复制配置；&a导管粘结剂&f涂装；"
+				""
+				"&a坐标选择器&f（coordinate_selector）配合传送；&a末影谐振器&f（ender_resonator）做末影材料；"
+				""
+				"&aZ 逻辑控制器&f（z_logic_controller）做信号中继。"
+			]
+			id: "204F4746B3B05B72"
+			rewards: [{
+				id: "44E99109BB87D87C"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "扳手/探测器/过滤器"
+			tasks: [{
+				id: "2502CF9246D95B63"
+				item: "enderio:yeta_wrench"
+				type: "item"
+			}]
+			title: "EnderIO：工具与配件"
+			x: 6.0d
+			y: 7.5d
+		}
+		{
+			dependencies: ["5FBD0C89EF26AB59"]
+			description: [
+				"EnderIO 哲学：把尽可能多的内容压进一格导管，用电容压榨机器性能，用灵魂与传送提升生活质量。"
+				""
+				"完整产线 = SAG 磨坊 + 合金熔炼炉 + 一格三用导管 + 高级电容 + 真空/经验/附魔配套 + 旅行锚通勤。"
+				""
+				"完成本任务 = 你已掌握「一格多流」的紧凑工厂美学，基地可以做得极小而强大。"
+			]
+			icon: "enderio:alloy_smelter"
+			id: "20975EC45EB37943"
+			rewards: [{
+				id: "587E9D45E0C6F6F3"
+				type: "xp"
+				xp: 35
+			}]
+			shape: "octagon"
+			size: 1.5d
+			subtitle: "一管到底的紧凑工厂"
+			tasks: [{
+				id: "3E92EE9E3BFC0004"
+				title: "末地接口实战"
+				type: "checkmark"
+			}]
+			title: "末地接口实战"
+			x: 10.5d
+			y: 6.0d
+		}
+	]
+	title: "末地接口"
+}

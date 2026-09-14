@@ -1,0 +1,997 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "t06_industrial_foregoing"
+	group: "00C72C1FB6193A42"
+	icon: "industrialforegoing:machine_frame_simple"
+	id: "692A74EFC04638BF"
+	order_index: 6
+	progression_mode: "flexible"
+	quest_links: [ ]
+	quests: [
+		{
+			description: [
+				"工业先锋（Industrial Foregoing）是一套「吃电干活」的实用机器合集：农业自动化、畜牧自动化、激光钻井、怪物处理、经验附魔、黑洞存储、生物发电，几乎包揽日常后勤。"
+				""
+				"所有机器都消耗 &aFE（红石通量）&f，外壳是 &a机器框架&f：怜悯→简易→高级→至高 四档，档位越高速度越快；在机器 GUI 的升级槽里塞高档框架即可就地升级。"
+				""
+				"本章路线：总览 → 材料线（乳胶/塑料/框架/粉红史莱姆/溶解室）→ 农牧线 → 激光与怪物线 → 资源处理与存储线 → 升级件与工具 → 事例设施 → 机器结构 → 综合实战。"
+				""
+				"提示：游戏内有 &a工业先锋手册&f（industrialforegoing:book_manual），合成后随进度解锁详细说明，务必随身携带。"
+			]
+			icon: "industrialforegoing:machine_frame_simple"
+			id: "1C33CBED8C6BA208"
+			shape: "hexagon"
+			size: 1.5d
+			subtitle: "农业、畜牧、采矿、怪物一条龙"
+			tasks: [{
+				id: "44CDDB57441B41A8"
+				title: "工业先锋概览"
+				type: "checkmark"
+			}]
+			title: "工业先锋概览"
+			x: 6.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["1C33CBED8C6BA208"]
+			description: [
+				"&a乳胶（Latex）&f由 &a乳胶收集器&f贴在橡胶木原木上采集（模拟割胶）；用桶或流体管道接走。"
+				""
+				"乳胶烧炼 / 加工成 &a干橡胶（Dry Rubber）&f，再得到 &a小干橡胶粒（Tiny Dry Rubber）&f，是塑料的前身。"
+				""
+				"进阶：种一排橡胶树 + 一排乳胶收集器 + 漏斗自动收乳胶，就能形成自给自足的橡胶农场。"
+				""
+				"提示：本包橡胶木由热力基础提供（thermal:rubberwood），可自动育苗种植。"
+			]
+			id: "0472595C5DFC029D"
+			rewards: [{
+				id: "2902022D62C04872"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "工业先锋的起点"
+			tasks: [{
+				id: "12D54C7482EE086D"
+				item: "industrialforegoing:dryrubber"
+				type: "item"
+			}]
+			title: "乳胶与干橡胶"
+			x: 6.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["0472595C5DFC029D"]
+			description: [
+				"干橡胶烧炼成 &a塑料（Plastic）&f，塑料 + 铁锭等合成 &a机器框架&f。"
+				""
+				"&a机器框架&f分怜悯 / 简易 / 高级 / 至高 四档，是工业先锋几乎所有机器的底座；档位直接决定机器处理速度。"
+				""
+				"进阶：前期用「怜悯 / 简易」框架足够，等粉红史莱姆和机器外壳攒够了再升「高级 / 至高」。"
+				""
+				"提示：框架升级是「换壳不换机」——把旧机器拆掉换成高档框架，JEI 查对应配方即可。"
+			]
+			id: "51F2F1AD2979A580"
+			rewards: [{
+				id: "7B0FE49FC0A9AE5F"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "机器的外壳"
+			tasks: [{
+				id: "0A9DC043A2F6EC24"
+				item: "industrialforegoing:machine_frame_simple"
+				type: "item"
+			}]
+			title: "塑料与机器框架"
+			x: 6.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["51F2F1AD2979A580"]
+			description: [
+				"&amachine_frame_pity（怜悯）&f：最廉价起步；&amachine_frame_simple（简易）&f：中期主力。"
+				""
+				"&amachine_frame_advanced（高级）&f：速度明显提升；&amachine_frame_supreme（至高）&f：极速，需要大量粉红史莱姆。"
+				""
+				"用法：在已放好的机器 GUI 里把低等级框架取出、放入高等级框架，机器原地升级，不用重做。"
+				""
+				"进阶：配合后面要讲的 &a速度升级件&f，至高框架机器 = 产能怪物。"
+			]
+			id: "341BA1A5A9C9A275"
+			rewards: [{
+				id: "1AE931CB3ADB1FAA"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "怜悯→简易→高级→至高"
+			tasks: [{
+				id: "1A28CF0942FB2E4B"
+				item: "industrialforegoing:machine_frame_advanced"
+				type: "item"
+			}]
+			title: "框架等级与就地升级"
+			x: 1.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["51F2F1AD2979A580"]
+			description: [
+				"&a粉红史莱姆（Pink Slime）&f是工业先锋特色液体：由 &a屠宰场（Mob Slaughter Factory）&f杀动物收集，凝固成 &a粉红史莱姆锭&f。"
+				""
+				"粉红史莱姆锭是高级框架、高级升级件的关键材料，没有它升不了至高。"
+				""
+				"进阶：建「动物繁育→屠宰场」闭环，肉 / 皮革 / 粉红史莱姆三收，材料再也不愁。"
+				""
+				"提示：粉红史莱姆液体用 pink_slime_bucket 桶接，可走流体管道。"
+			]
+			id: "5CBF54ECEEB334D5"
+			rewards: [{
+				id: "7526B8682DCA5B57"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "屠宰动物的精华副产"
+			tasks: [{
+				id: "4EC274CF06BBA7F8"
+				item: "industrialforegoing:pink_slime_ingot"
+				type: "item"
+			}]
+			title: "粉红史莱姆"
+			x: 3.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["5CBF54ECEEB334D5"]
+			description: [
+				"&a溶解室（Dissolution Chamber）&f是工业先锋的「合成中枢」：物品 + 液体按配方反应出产物（各种升级件、合金、生物燃料等）。"
+				""
+				"用法：接流体管道供液，物品从输入口进，产物从输出口出；它是高级框架和进阶机器的必经之路。"
+				""
+				"进阶：把溶解室自动化（管道供液 + 物品总线进料 + 产物接 RS/抽屉），就能批量生产机器零件。"
+				""
+				"提示：JEI 里筛「溶解室」配方可看全部可合成物品。"
+			]
+			id: "41BC18F0040A1913"
+			rewards: [{
+				id: "57E3B8C79BA478DF"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "物品+液体按配方合成"
+			tasks: [{
+				id: "05F4C29C86E88581"
+				item: "industrialforegoing:dissolution_chamber"
+				type: "item"
+			}]
+			title: "溶解室：液体合成机"
+			x: 1.5d
+			y: 6.0d
+		}
+		{
+			dependencies: ["51F2F1AD2979A580"]
+			description: [
+				"&a播种机（Plant Sower）&f会自动在前方耕地播下种子 / 树苗 / 地狱疣，种小麦、胡萝卜、土豆、南瓜、西瓜、树苗都行。"
+				""
+				"它需要在下方摆好 &a机械土（Mechanical Dirt）&f或水培床作为种植区，并持续通电。"
+				""
+				"进阶：一排播种机 + 一排收割机 = 连片自动农场；种子用管道自动补进播种机。"
+				""
+				"提示：播种机只播种不收割，必须搭配下面的收割机才完整。"
+			]
+			id: "518C9AA8D6C3F86B"
+			rewards: [{
+				id: "2F64840160F81A4C"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "全自动下地"
+			tasks: [{
+				id: "2C67860F42335B04"
+				item: "industrialforegoing:plant_sower"
+				type: "item"
+			}]
+			title: "农业：播种机"
+			x: 4.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["518C9AA8D6C3F86B"]
+			description: [
+				"&a收割机（Plant Gatherer）&f自动收割前方成熟作物，连树叶、树苗都能收（配合剪叶升级）。"
+				""
+				"&a施肥机（Plant Fertilizer）&f自动给作物施 &a肥料（Fertilizer，工业先锋版骨粉）&f催熟。"
+				""
+				"组合：播种机 + 收割机 + 施肥机 = 完全无人农场，作物源源不断。"
+				""
+				"进阶：肥料可由 &a污水堆肥厂&f（sewage_composter）把污泥 / 污水变成，见后面资源处理线。"
+			]
+			id: "5901952921177ABE"
+			rewards: [{
+				id: "11EDA01BBB1FAD20"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "自动收、自动催熟"
+			tasks: [{
+				id: "28E3BB7EBFA4C54D"
+				item: "industrialforegoing:plant_gatherer"
+				type: "item"
+			}]
+			title: "农业：收割机与施肥"
+			x: 3.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["5901952921177ABE"]
+			description: [
+				"&a水培床（Hydroponic Bed）&f是播种机 / 收割机的种植基底，需要供水才能工作；&a机械土（Mechanical Dirt）&f是更廉价的替代基底。"
+				""
+				"&a凝水器（Water Condensator）&f从空气中凝结出水，是无水源建农场的供水方案。"
+				""
+				"进阶：凝水器 → 流体管道 → 水培床，整套水培系统不依赖自然水。"
+				""
+				"提示：农业机器都要占地成排布局，先规划好长宽再开工。"
+			]
+			id: "2DCF78F6E48403F1"
+			rewards: [{
+				id: "5A4B10CAE77EA5EB"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "不靠雨水的种植区"
+			tasks: [{
+				id: "293D8EDBF78F488A"
+				item: "industrialforegoing:hydroponic_bed"
+				type: "item"
+			}]
+			title: "农业：水培床与凝水器"
+			x: 3.0d
+			y: 7.5d
+		}
+		{
+			dependencies: ["51F2F1AD2979A580"]
+			description: [
+				"&a动物牧场机（Animal Rancher）&f自动对范围内成年动物「挤奶 / 剪羊毛 / 收集产物」，产出牛奶桶、羊毛、蛋等。"
+				""
+				"它不杀动物，只是温和收集，适合做羊毛 / 牛奶 / 染料这类可持续牧场。"
+				""
+				"进阶：牧场机 + 围栏 + 动物喂食器 = 全自动牧场，产物接管道进箱子。"
+				""
+				"提示：注意它只作用于成年动物，幼崽要靠喂食器养到成年。"
+			]
+			id: "6A196D7E69531B2C"
+			rewards: [{
+				id: "132D76199CFD12CE"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "挤奶、剪毛、收集"
+			tasks: [{
+				id: "29CAA78E828C67D3"
+				item: "industrialforegoing:animal_rancher"
+				type: "item"
+			}]
+			title: "畜牧：动物牧场机"
+			x: 6.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["6A196D7E69531B2C"]
+			description: [
+				"&a动物喂食器（Animal Feeder）&f自动喂范围内动物食物，促使它们繁殖；&a动物幼崽分离机（Animal Baby Separator）&f把幼崽从成年中挑出，保证种群不被一锅端。"
+				""
+				"配合 &a成人过滤器（Adult Filter）&f可以精确筛选只处理成年个体。"
+				""
+				"闭环：喂食器繁殖 → 幼崽分离机分流 → 牧场机收成年产物 / 屠宰场杀多余成年。"
+				""
+				"进阶：这是「可持续畜牧」的核心三件套，种群永远维持稳定数量。"
+			]
+			id: "58EA2926DA10DB86"
+			rewards: [{
+				id: "134CFC48208793BC"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "让种群循环起来"
+			tasks: [{
+				id: "345065B6E4CD4CA6"
+				item: "industrialforegoing:animal_feeder"
+				type: "item"
+			}]
+			title: "畜牧：喂食器与幼崽分离"
+			x: 6.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["58EA2926DA10DB86"]
+			description: [
+				"&a屠宰场（Mob Slaughter Factory）&f自动杀死范围内动物，收集掉落物（肉 / 皮 / 羽毛）并产出 &a粉红史莱姆液体&f与少量 &a液体经验&f。"
+				""
+				"它是粉红史莱姆锭（任务 4）的唯一自动化来源，也是材料线的关键。"
+				""
+				"闭环：喂食器繁殖 → 幼崽分离留种 → 屠宰场杀多余成年 → 肉皮 + 粉红史莱姆 + 经验全收。"
+				""
+				"提示：把屠宰场和牧场机分开放，别让它误杀你想留着挤奶的牛。"
+			]
+			id: "4C8F447A6A326C5C"
+			rewards: [{
+				id: "5F6055B910700B4F"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "把动物变成肉与粉红史莱姆"
+			tasks: [{
+				id: "43AFEBE0FAECB54A"
+				item: "industrialforegoing:mob_slaughter_factory"
+				type: "item"
+			}]
+			title: "畜牧：屠宰场"
+			x: 6.0d
+			y: 7.5d
+		}
+		{
+			dependencies: ["51F2F1AD2979A580"]
+			description: [
+				"&a激光钻（Laser Drill）&f是工业先锋的自动采矿核心：它向下打穿基岩，从基岩下方「抽取」矿物 / 资源。"
+				""
+				"激光钻必须和 &a矿石激光基座（Ore Laser Base）&f组合使用：基座决定抽哪类资源，激光钻供能并出矿。"
+				""
+				"搭建：基岩上方放激光钻，基座摆在指定位置，接上镜头，接电 + 接管道收矿。"
+				""
+				"进阶：多台激光钻 + 多种镜头并行，就是一套永不枯竭的矿物农场。"
+			]
+			id: "4AEC36255A922F96"
+			rewards: [{
+				id: "127653D32B118038"
+				type: "xp"
+				xp: 20
+			}]
+			subtitle: "打穿基岩抽矿物"
+			tasks: [{
+				id: "1FDD5BCF2DE09E78"
+				item: "industrialforegoing:laser_drill"
+				type: "item"
+			}]
+			title: "采矿：激光钻与激光基座"
+			x: 7.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["4AEC36255A922F96"]
+			description: [
+				"&a激光镜头（Laser Lens）&f有 0~15 共 16 种颜色（laser_lens0 ~ laser_lens15），每种对应一类矿物 / 资源，决定激光钻抽出什么。"
+				""
+				"&a反色镜头（Laser Lens Inverted）&f（laser_lens_inverted0~15）&f则「排除」对应类别，用于过滤不想要的矿。"
+				""
+				"用法：把镜头插进激光钻 GUI 的镜头槽，JEI 可查每种镜头对应抽什么资源。"
+				""
+				"进阶：想刷铁就插铁色镜头，想筛掉石头就用反色镜头，组合调配出你要的矿物组合。"
+			]
+			id: "33FF1D3D3CC3CA86"
+			rewards: [{
+				id: "31FD9F40B61F9E87"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "选矿与反选"
+			tasks: [{
+				id: "6F40D7398A8B3AE8"
+				item: "industrialforegoing:laser_lens0"
+				type: "item"
+			}]
+			title: "采矿：激光镜头"
+			x: 10.5d
+			y: 6.0d
+		}
+		{
+			dependencies: ["4AEC36255A922F96"]
+			description: [
+				"&a流体激光基座（Fluid Laser Base）&f让激光钻抽取基岩下方的 &a液体&f（岩浆 / 水等），是「无限岩浆 / 无限水」的自动化来源。"
+				""
+				"用法：和矿石激光基座类似，但出的是流体而非物品，接流体管道 / 储罐导出。"
+				""
+				"进阶：流体激光抽出的岩浆直接喂给岩浆发电机，形成稳定的无限电源。"
+				""
+				"提示：流体基座与矿石基座不能混用，想双收就各摆一套激光钻。"
+			]
+			id: "032EE260287DD194"
+			rewards: [{
+				id: "2AAF44F7A97E5317"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "无限岩浆与水"
+			tasks: [{
+				id: "1B31B0003663666D"
+				item: "industrialforegoing:fluid_laser_base"
+				type: "item"
+			}]
+			title: "采矿：流体激光基座"
+			x: 7.5d
+			y: 6.0d
+		}
+		{
+			dependencies: ["51F2F1AD2979A580"]
+			description: [
+				"&a怪物监禁工具（Mob Imprisonment Tool）&f右键点怪，就能把那只怪连同它的 NBT（装备 / 属性）装进瓶子里。"
+				""
+				"抓到的怪物瓶是 &a怪物复制机&f（下一条）的「模板」：复制机照着它无限生成同种怪。"
+				""
+				"进阶：抓一只僵尸 / 苦力怕 / 末影人，就能在基地里建任意怪物农场。"
+				""
+				"提示：不同怪要分别抓瓶；这是工业先锋「自定义刷怪塔」的入口。"
+			]
+			id: "0715BE4FE81E477A"
+			rewards: [{
+				id: "5EB8DF326CAF093C"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "把怪物装瓶"
+			tasks: [{
+				id: "5155A8FD30489A48"
+				item: "industrialforegoing:mob_imprisonment_tool"
+				type: "item"
+			}]
+			title: "怪物：监禁工具"
+			x: 9.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["0715BE4FE81E477A"]
+			description: [
+				"&a怪物复制机（Mob Duplicator）&f消耗 FE + &a精华（Essence）&f，照着「怪物瓶」无限生成你抓到的怪。"
+				""
+				"精华由 &a怪物破碎机&f杀怪掉落 / 处理获得，形成「复制怪→破碎机杀→精华→复制更多」的闭环。"
+				""
+				"用法：把怪物瓶放进复制机，接电和精华，它就持续刷怪到前方空间。"
+				""
+				"进阶：复制苦力怕 → 做火药农场；复制末影人 → 做末影珍珠农场；复制烈焰人 → 做烈焰棒农场。"
+			]
+			id: "2DA5694F28044E44"
+			rewards: [{
+				id: "6DBA177834EBEE39"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "耗能量+精华生成指定怪"
+			tasks: [{
+				id: "6B53C502B7D938EB"
+				item: "industrialforegoing:mob_duplicator"
+				type: "item"
+			}]
+			title: "怪物：复制机"
+			x: 9.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["2DA5694F28044E44"]
+			description: [
+				"&a怪物破碎机（Mob Crusher）&f自动击杀范围内怪物，收集掉落物并产出 &a精华（Essence）&f。"
+				""
+				"它和 &a怪物检测器（Mob Detector）&f配合可以精确只处理某类怪，避免误杀。"
+				""
+				"闭环：复制机刷怪 → 破碎机杀 → 掉落物 + 精华进箱子 / 储罐，精华回流复制机。"
+				""
+				"提示：破碎机有范围和过滤设置，别把家里的动物也卷进去。"
+			]
+			id: "38F63244F5D2E4B1"
+			rewards: [{
+				id: "078446A78349593D"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "自动杀怪掉物"
+			tasks: [{
+				id: "5CCEA4298CBFAE82"
+				item: "industrialforegoing:mob_crusher"
+				type: "item"
+			}]
+			title: "怪物：破碎机"
+			x: 7.5d
+			y: 7.5d
+		}
+		{
+			dependencies: ["38F63244F5D2E4B1"]
+			description: [
+				"&a精华（Essence）&f是怪物破碎机的副产流体（essence_bucket 桶装），是怪物复制机的消耗品。"
+				""
+				"精华也可以用 &a污水 / 污泥&f经处理间接转化，形成完整的「生物废料→精华」链。"
+				""
+				"进阶：精华存进 &a黑洞储罐&f（见任务 24），复制机无限消耗不用补。"
+				""
+				"提示：essence_block 是精华的方块存储形态。"
+			]
+			id: "4FDC6BEABEFAD0DE"
+			rewards: [{
+				id: "0EFE279DABBC44C9"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "Essence 是复制机的弹药"
+			tasks: [{
+				id: "59BB719800B8A525"
+				item: "industrialforegoing:essence_bucket"
+				type: "item"
+			}]
+			title: "怪物：精华液系统"
+			x: 7.5d
+			y: 9.0d
+		}
+		{
+			dependencies: ["2DCF78F6E48403F1"]
+			description: [
+				"&a流体提取器（Fluid Extractor）&f自动抽相邻容器 / 泉眼中的液体；&a流体放置机（Fluid Placer）&f自动把液体倒到世界里；&a流体收集机（Fluid Collector）&f把世界中的液体收回。"
+				""
+				"三者组合：流体收集机抽岩浆湖 → 储罐 → 发电机；或流体放置机铺水 / 岩浆做刷石机。"
+				""
+				"进阶：配合 &a流体传输模块&f（pull/push 各方向）可以贴在机器上做定向抽液。"
+				""
+				"提示：这是做「无限岩浆农场」和「液体铺路」的基础工具。"
+			]
+			id: "0250EE3FDDF07129"
+			rewards: [{
+				id: "7EB7A845292018B0"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "液体也自动化"
+			tasks: [{
+				id: "6E95D27777D3BC7A"
+				item: "industrialforegoing:fluid_extractor"
+				type: "item"
+			}]
+			title: "流体：提取·放置·收集"
+			x: 3.0d
+			y: 9.0d
+		}
+		{
+			dependencies: ["0250EE3FDDF07129"]
+			description: [
+				"农业机器会产出 &a污水（Sewage）&f；&a污水堆肥厂（Sewage Composter）&f把污水堆成 &a肥料（Fertilizer）&f回喂农场。"
+				""
+				"&a污泥精炼机（Sludge Refiner）&f处理 &a污泥（Sludge）&f，产出矿物 / 盐类等副产物；&a污水厂（Sewer）&f负责收集污水。"
+				""
+				"闭环：农场产污水 → 堆肥厂变肥料 → 回喂农场；污泥 → 精炼 → 矿物副产。"
+				""
+				"提示：sewage_bucket / sludge_bucket 是对应流体的桶装形态。"
+			]
+			id: "40232A55482E19D5"
+			rewards: [{
+				id: "44399C5711ECE18B"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "废料变肥料"
+			tasks: [{
+				id: "62404011D503076D"
+				item: "industrialforegoing:sludge_refiner"
+				type: "item"
+			}]
+			title: "资源：污泥精炼与污水堆肥"
+			x: 4.5d
+			y: 10.5d
+		}
+		{
+			dependencies: ["40232A55482E19D5"]
+			description: [
+				"&a洗涤厂（Washing Factory）&f用水冲洗矿渣 / 碎片，洗出额外矿物（小矿粒、副产矿物），提升矿石利用率。"
+				""
+				"它是激光钻井 / 粉碎产线的下游：原始矿渣进洗涤厂 → 额外矿粒出来。"
+				""
+				"进阶：洗涤厂需要持续供水（凝水器或水池），产物接管道进分拣。"
+				""
+				"提示：配合 &a污泥精炼机&f，矿渣几乎不浪费。"
+			]
+			id: "60CE8034E453483B"
+			rewards: [{
+				id: "50913FC03F911691"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "洗掉副产矿物"
+			tasks: [{
+				id: "3348026273552E43"
+				item: "industrialforegoing:washing_factory"
+				type: "item"
+			}]
+			title: "资源：洗涤厂"
+			x: 6.0d
+			y: 12.0d
+		}
+		{
+			dependencies: ["2DCF78F6E48403F1"]
+			description: [
+				"&a生物反应器（Bioreactor）&f把植物 / 种子 / 肉 / 秸秆等有机物发酵成 &a生物燃料（Biofuel）&f；&a生物燃料发电机（Biofuel Generator）&f烧生物燃料发电。"
+				""
+				"闭环：自动农场产小麦 → 生物反应器 → 生物燃料 → 发电机 → 供电给整个农场，盈余接电网。"
+				""
+				"&a可怜虫发电机（Pitiful Generator）&f是前期最廉价的烧固体燃料发电机，应急用。"
+				""
+				"进阶：这套「农业→电力」体系自给自足，不想挖矿烧煤就靠它。"
+			]
+			id: "653C450A5D6C9D62"
+			rewards: [{
+				id: "70D120109B1ECAB1"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "农场变电力"
+			tasks: [{
+				id: "1241042B157F9BE1"
+				item: "industrialforegoing:biofuel_generator"
+				type: "item"
+			}]
+			title: "能源：生物反应器与燃料发电机"
+			x: 4.5d
+			y: 9.0d
+		}
+		{
+			dependencies: ["51F2F1AD2979A580"]
+			description: [
+				"&a黑洞单元（Black Hole Unit）&f单个格子存海量同类物品（百万级），分怜悯 / 普通 / 简易 / 高级 / 至高 五档，容量递增。"
+				""
+				"&a黑洞储罐（Black Hole Tank）&f同理存流体（岩浆 / 生物燃料 / 精华 / 污水）。"
+				""
+				"用法：把农场 / 矿机的产物箱换成黑洞单元，永远不会爆箱。"
+				""
+				"进阶：黑洞单元接 RS 存储总线后，等于给数字仓库加了「无限大宗缓存」。"
+			]
+			id: "3C739ACE1E9C27B8"
+			rewards: [{
+				id: "15CBC768CD9C1895"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "一格装百万"
+			tasks: [{
+				id: "3FF944B8D245200F"
+				item: "industrialforegoing:common_black_hole_unit"
+				type: "item"
+			}]
+			title: "存储：黑洞单元"
+			x: 10.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["3C739ACE1E9C27B8"]
+			description: [
+				"&a黑洞控制器（Black Hole Controller）&f同时管理 18 个黑洞单元 / 储罐，右键打开统一 GUI 一次性存取全部。"
+				""
+				"它是工业先锋的「超大储物墙」核心：18 格 × 百万容量 = 海量无碎片存储。"
+				""
+				"进阶：控制器接管道可批量导出；和抽屉 / RS 搭配做「大宗 + 数字」双层仓库。"
+				""
+				"提示：高级 / 至高黑洞单元容量更大，后期逐步替换。"
+			]
+			id: "7AB4D772D0B489D7"
+			rewards: [{
+				id: "63E5828556FAAFED"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "一屏管 18 个单元"
+			tasks: [{
+				id: "3BA712D08A114915"
+				item: "industrialforegoing:black_hole_controller"
+				type: "item"
+			}]
+			title: "存储：黑洞控制器"
+			x: 12.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["4C8F447A6A326C5C"]
+			description: [
+				"&a附魔工厂（Enchantment Factory）&f自动把附魔书 + 物品合成附魔装备（批量附魔台）。"
+				""
+				"&a附魔抽取机（Enchantment Extractor）&f从装备抽经验；&a附魔应用机（Enchantment Applicator）&f把经验灌回装备；&a附魔分拣机（Enchantment Sorter）&f按附魔分拣物品。"
+				""
+				"配合屠宰场产出的液体经验，实现「杀怪攒经验→自动附魔」全流程。"
+				""
+				"进阶：附魔工厂插速度升级件，批量生产满级附魔装备。"
+			]
+			id: "25237E38D2874216"
+			rewards: [{
+				id: "51C23AF162650624"
+				type: "xp"
+				xp: 20
+			}]
+			subtitle: "批量附魔"
+			tasks: [{
+				id: "29EFB40A9FDED383"
+				item: "industrialforegoing:enchantment_factory"
+				type: "item"
+			}]
+			title: "经验：附魔工厂"
+			x: 6.0d
+			y: 9.0d
+		}
+		{
+			dependencies: ["518C9AA8D6C3F86B"]
+			description: [
+				"&a传送带（Conveyor）&f把物品实体从 A 运到 B，贴地铺设，方向可右键切换。"
+				""
+				"传送带升级件丰富：&b跳跃 / 检测 / 提取 / 插入 / 分拣 / 掉落 / 闪烁&f 等，控制物品行为。"
+				""
+				"用法：播种机收割的作物落到传送带上 → 送进箱子 / 加工机，比漏斗更紧凑。"
+				""
+				"进阶：多段传送带 + 分拣升级 = 小型物品分流线。"
+			]
+			id: "2618162E9F14D4D1"
+			rewards: [{
+				id: "620D2804848C41AC"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "物品在机器间流动"
+			tasks: [{
+				id: "7927A9C9BE611CE7"
+				item: "industrialforegoing:conveyor"
+				type: "item"
+			}]
+			title: "物流：传送带"
+			x: 4.5d
+			y: 6.0d
+		}
+		{
+			dependencies: ["2618162E9F14D4D1"]
+			description: [
+				"&a方块放置机（Block Placer）&f自动把背包里的方块放到前方；&a方块破坏机（Block Breaker）&f自动破坏前方方块。"
+				""
+				"两者组合：放置机刷圆石 / 黑曜石，破坏机回收，就是自动刷石 / 刷资源线。"
+				""
+				"进阶：配合红石门 / 探测器做定时 / 定条件的方块操作。"
+				""
+				"提示：这俩机器对红石信号敏感，可被开关控制。"
+			]
+			id: "49CCE4BB9469558F"
+			rewards: [{
+				id: "0E71E17402B59A80"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "自动摆方块、自动拆"
+			tasks: [{
+				id: "77CDDEBF8AFD5481"
+				item: "industrialforegoing:block_placer"
+				type: "item"
+			}]
+			title: "物流：方块放置与破坏"
+			x: 4.5d
+			y: 7.5d
+		}
+		{
+			dependencies: ["341BA1A5A9C9A275"]
+			description: [
+				"工业先锋机器 GUI 里有升级槽，可塞各种 &a升级件（Addon）&f："
+				""
+				"&b速度升级件 speed_addon_1/2&f（更快）、&b效率升级件 efficiency_addon_1/2&f（省电）、&b能量升级件 energy_field_addon&f（增大储能）、&b处理升级件 processing_addon_1/2&f（提高处理等级）、&b时运升级件 fortune_addon&f（更多掉落）。"
+				""
+				"合理搭配比单堆速度更划算：速度 + 效率组合最省电高产。"
+				""
+				"进阶：高级机器升级槽更多，全插满就是「极速版」。"
+			]
+			id: "6923D3E3BF8A6DD4"
+			rewards: [{
+				id: "5EE4DB0FE12799DD"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "速度/效率/能量/范围/处理"
+			tasks: [{
+				id: "598FA3F31F9C84DD"
+				item: "industrialforegoing:speed_addon_1"
+				type: "item"
+			}]
+			title: "机器升级件大全"
+			x: 0.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["6923D3E3BF8A6DD4"]
+			description: [
+				"&a范围升级（Range Addon）&f有 0~11 共 12 级（range_addon0 ~ range_addon11），扩大机器的工作半径。"
+				""
+				"&a流体传输模块&f（fluid_transfer_addon_pull/push 上/下/东南西北）&f贴在机器上做定向流体抽送。"
+				""
+				"&a物品堆叠传输模块&f（itemstack_transfer_addon_pull/push 各方向）&f同理做物品定向抽送，比管道更紧凑。"
+				""
+				"进阶：范围升级让一台机器覆盖整片农场 / 牧场，省机器数量。"
+			]
+			id: "48F3C6796712DA0E"
+			rewards: [{
+				id: "4F8DF756FA17AA56"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "扩大半径、定向物流"
+			tasks: [{
+				id: "7E29316BCE7E6352"
+				item: "industrialforegoing:range_addon0"
+				type: "item"
+			}]
+			title: "范围升级与传输模块"
+			x: 1.5d
+			y: 7.5d
+		}
+		{
+			dependencies: ["7AB4D772D0B489D7"]
+			description: [
+				"工业先锋后期提供 &a无限工具&f：&b无限钻（Infinity Drill）&f挖矿、&b无限锯（Infinity Saw）&f伐木、&b无限锤（Infinity Hammer）&f打、&b无限发射器 / 三叉戟&f远程、&b无限核弹&f（慎用）。"
+				""
+				"&a无限充电器（Infinity Charger）&f给这些工具持续供能；&a无限背包（Infinity Backpack）&f是随身大仓库。"
+				""
+				"进阶：全套无限工具 + 无限背包 = 后期探索 / 基建利器，不用再带一堆电池。"
+				""
+				"提示：合成材料昂贵，建议在材料线跑顺后再做。"
+			]
+			id: "7AEF97765402AE7F"
+			rewards: [{
+				id: "64573EC08FA3BA7B"
+				type: "xp"
+				xp: 20
+			}]
+			subtitle: "后期的神器"
+			tasks: [{
+				id: "0434BC76A7CC6984"
+				item: "industrialforegoing:infinity_drill"
+				type: "item"
+			}]
+			title: "无限工具系列"
+			x: 10.5d
+			y: 7.5d
+		}
+		{
+			dependencies: [
+				"4C8F447A6A326C5C"
+				"653C450A5D6C9D62"
+			]
+			description: [
+				"一套工业先锋「自给自足农牧场」布局："
+				""
+				"1. &a能源&f：生物燃料发电机（农场小麦→生物燃料）供电；"
+				""
+				"2. &a种植区&f：水培床 + 播种机 + 收割机 + 施肥机，小麦 / 土豆 / 树苗自动产；"
+				""
+				"3. &a畜牧区&f：喂食器繁殖 + 幼崽分离 + 牧场机收奶毛 + 屠宰场杀多余；"
+				""
+				"4. &a废料循环&f：污水→堆肥厂→肥料回农场；污泥→精炼机→副产矿物；"
+				""
+				"5. &a存储&f：肉 / 皮 / 作物进黑洞单元，粉红史莱姆锭送材料线；"
+				""
+				"这套设施跑通后，食物、材料、电力全部自给。"
+			]
+			icon: "industrialforegoing:plant_gatherer"
+			id: "1CD12F15B9219766"
+			rewards: [{
+				id: "0674ADF36191CA3A"
+				type: "xp"
+				xp: 25
+			}]
+			subtitle: "农场+牧场+燃料自洽"
+			tasks: [{
+				id: "4A315ABEF581D823"
+				title: "事例设施：全自动农牧闭环"
+				type: "checkmark"
+			}]
+			title: "事例设施：全自动农牧闭环"
+			x: 6.0d
+			y: 10.5d
+		}
+		{
+			dependencies: [
+				"032EE260287DD194"
+				"38F63244F5D2E4B1"
+			]
+			description: [
+				"一套「不出门也有矿」的激光矿场："
+				""
+				"1. &a采矿&f：多台激光钻 + 矿石激光基座，插不同颜色镜头分抽铁 / 铜 / 金 / 钻石等；"
+				""
+				"2. &a流体&f：流体激光基座抽岩浆，喂岩浆发电机 / 储罐；"
+				""
+				"3. &a加工&f：矿渣进洗涤厂 + 污泥精炼机，额外矿粒收进来；"
+				""
+				"4. &a怪物&f：复制机刷苦力怕 / 末影人 → 破碎机杀 → 火药 / 末影珍珠 + 精华闭环；"
+				""
+				"5. &a存储&f：矿石进黑洞单元，精华 / 岩浆进黑洞储罐；"
+				""
+				"这套设施让你告别手挖，矿物源源不断。"
+			]
+			icon: "industrialforegoing:laser_drill"
+			id: "3FC4E948FAA28715"
+			rewards: [{
+				id: "2B96282DD4278231"
+				type: "xp"
+				xp: 25
+			}]
+			subtitle: "激光钻+镜头+怪物农场"
+			tasks: [{
+				id: "518D132192869164"
+				title: "事例设施：激光自动矿场"
+				type: "checkmark"
+			}]
+			title: "事例设施：激光自动矿场"
+			x: 9.0d
+			y: 9.0d
+		}
+		{
+			dependencies: ["33FF1D3D3CC3CA86"]
+			description: [
+				"工业先锋没有真正的多方块机器，但 &a激光钻 + 激光基座&f 是一套必须按规则摆放的组合结构："
+				""
+				"· &b激光钻（Laser Drill）&f摆在基岩上方正对基岩，负责向下发射激光；"
+				""
+				"· &b矿石激光基座（Ore Laser Base）&f摆在激光钻旁，决定「抽什么矿」；"
+				""
+				"· &b流体激光基座（Fluid Laser Base）&f则负责抽液体，与矿石基座二选一或各摆一套；"
+				""
+				"· &b镜头（Laser Lens）&f插进激光钻 GUI 的镜头槽，决定矿物类型 / 反选；"
+				""
+				"· 接 FE 电 + 接管道收矿 / 收液，激光打穿基岩后开始产出。"
+				""
+				"注意：基座位置不对、镜头没插、没接电，激光钻都不会出矿，逐一排查。"
+			]
+			icon: "industrialforegoing:ore_laser_base"
+			id: "5BC9DF705DEACE19"
+			rewards: [{
+				id: "531EBE49287F181D"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "激光钻+基座+镜头的摆放"
+			tasks: [{
+				id: "7257415514D1FFF0"
+				title: "机器结构：激光钻井组合"
+				type: "checkmark"
+			}]
+			title: "机器结构：激光钻井组合"
+			x: 9.0d
+			y: 7.5d
+		}
+		{
+			dependencies: [
+				"1CD12F15B9219766"
+				"3FC4E948FAA28715"
+			]
+			description: [
+				"完成本任务意味着你掌握了工业先锋全部体系："
+				""
+				"1. &a材料&f：乳胶→塑料→四档框架→粉红史莱姆→溶解室，材料自给；"
+				""
+				"2. &a农牧&f：播种收割 + 牧场屠宰，食物与生物材料自由；"
+				""
+				"3. &a采矿&f：激光钻 + 镜头 + 流体基座，矿物与岩浆自动；"
+				""
+				"4. &a怪物&f：监禁→复制→破碎→精华，自定义刷怪塔；"
+				""
+				"5. &a处理&f：洗涤 / 污泥 / 污水堆肥，废料不浪费；"
+				""
+				"6. &a存储&f：黑洞单元 + 控制器，百万级无爆箱；"
+				""
+				"最后把这整套对接到 RS / AE2 数字网络（导入导出总线），工业先锋就成为你基地的全自动后勤保障。"
+			]
+			icon: "industrialforegoing:black_hole_controller"
+			id: "0D1F8FBCF8FBA3A7"
+			rewards: [{
+				id: "51A2FA0A19F290E0"
+				type: "xp"
+				xp: 30
+			}]
+			shape: "octagon"
+			size: 1.5d
+			subtitle: "把整条后勤线串成基地"
+			tasks: [{
+				id: "0EACA8DBA1DEE25E"
+				title: "工业先锋综合实战"
+				type: "checkmark"
+			}]
+			title: "工业先锋综合实战"
+			x: 7.5d
+			y: 12.0d
+		}
+	]
+	title: "工业先锋"
+}

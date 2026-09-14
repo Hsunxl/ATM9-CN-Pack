@@ -1,0 +1,1482 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "t03_create"
+	group: "00C72C1FB6193A42"
+	icon: "create:brass_ingot"
+	id: "30E4B1472686EDE2"
+	order_index: 3
+	progression_mode: "flexible"
+	quest_links: [ ]
+	quests: [
+		{
+			description: [
+				"机械动力（Create）不用 FE 电网，而用&a旋转应力&f（Stress Units，SU）驱动：动力源旋转 -> 轴/齿轮/皮带传动 -> 磨石、粉碎轮、压机等加工机器。"
+				""
+				"核心概念三件事：&a应力SU&f（扭矩，决定能带几台机器）、&a转速RPM&f（决定单机快慢）、&a动力源与传动&f（水车/风车/蒸汽机 -> 轴 -> 机器）。"
+				""
+				"它解决的问题：把「手搓物品」变成「看得见运转的自动化流水线」，并通过&a机械臂、机械合成器、列车&f与 AE2/RS 存储对接，成为中期工厂骨架。"
+				""
+				"本章路线：总览 -> 入门材料 -> 工具 -> 动力源 -> 传动 -> 加工机器 -> 物流 -> 流体 -> 红石自动化 -> 移动结构 -> 列车 -> 工具建造 -> 事例 -> 多方块 -> 综合实战。"
+				""
+				"学习捷径：游戏内对任意机械方块按 &aW&f 打开 Ponder 动画，逐帧看它怎么转，比读任何文字都直观。"
+			]
+			icon: "create:goggles"
+			id: "08FAC959FFF939E0"
+			shape: "hexagon"
+			size: 1.5d
+			subtitle: "旋转、传动与看得见的工厂"
+			tasks: [{
+				id: "1C255BC73E40E4A0"
+				title: "机械动力总览"
+				type: "checkmark"
+			}]
+			title: "机械动力总览"
+			x: 15.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["08FAC959FFF939E0"]
+			description: [
+				"&a安山合金（Andesite Alloy）&f由安山岩+铁粒合成，是轴、齿轮、曲柄、漏斗的基础零件。"
+				""
+				"刷安山岩：用&a手摇曲柄&f带动&a磨石&f，把圆石磨成沙砾再磨成沙，途中副产安山岩；或直接挖安山岩脉。"
+				""
+				"前期优先做：&a工程师护目镜&f（看应力转速）、&a扳手&f（旋转/拆卸方块），再开始铺第一条轴。"
+				""
+				"进阶：&a安山合金块&f与&c安山机壳&f是后期机械外壳材料。"
+			]
+			id: "6D5D7659AEB1CE8B"
+			rewards: [{
+				id: "7A1D2910554B2365"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "安山岩 + 铁粒"
+			tasks: [{
+				id: "6F38A45E246F246A"
+				item: "create:andesite_alloy"
+				type: "item"
+			}]
+			title: "安山合金：一切的起点"
+			x: 16.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["6D5D7659AEB1CE8B"]
+			description: [
+				"&a黄铜（Brass）&f= 铜+锌在炉中熔炼；&a锌（Zinc）&f在主世界与铜矿共生，挖&czinc_ore&f烧出锌锭。"
+				""
+				"&a玫瑰石英（Rose Quartz）&f：打磨紫水晶得到；玫瑰石英 + 黄铜板 -> &a电子管（Electron Tube）&f；电子管+金板 -> &a精密构件（Precision Mechanism）&f。"
+				""
+				"精密构件是&c机械臂、机械合成器、智能漏斗、列车&f的材料，标志你从「手摇作坊」进入「自动工厂」。"
+				""
+				"找不到锌就查 JEI：粉碎轮处理铜矿时也有概率副产锌。"
+			]
+			id: "52B6190F80254442"
+			rewards: [{
+				id: "79A5AE9679A63946"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "从毛坯到精密"
+			tasks: [{
+				id: "6CC297F739701A44"
+				item: "create:brass_ingot"
+				type: "item"
+			}]
+			title: "黄铜时代：锌·玫瑰石英·精密构件"
+			x: 15.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["6D5D7659AEB1CE8B"]
+			description: [
+				"&a工程师护目镜（Goggles）&f戴上后看任意轴/齿轮/机器，直接显示当前&a应力SU占用&f与&a转速RPM&f，排障必备。"
+				""
+				"&a扳手（Wrench）&f：右键旋转机器朝向，潜行右键整体拆卸方块，是布置产线的标准动作。"
+				""
+				"配合&a应力计（Stressometer）&f与&a速度表（Speedometer）&f可以把数据贴在机器上供观察。"
+				""
+				"技巧：扳手右键轴可以切换轴/连接器形态，搭线前先戴护目镜。"
+			]
+			id: "74B8393DABB9BDC8"
+			rewards: [{
+				id: "02A5F421EB9382EA"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "观察与改造工具"
+			tasks: [{
+				id: "0868694717628502"
+				item: "create:goggles"
+				type: "item"
+			}]
+			title: "工程师护目镜与扳手"
+			x: 21.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["6D5D7659AEB1CE8B"]
+			description: [
+				"&a手摇曲柄（Hand Crank）&f直接装在磨石侧面，右键狂摇出动力，是测试用临时动力源。"
+				""
+				"把&a磨石（Millstone）&f立好，安山合金做曲柄，手摇后把圆石/矿石放进去：矿石 -> 矿粉（2倍增产）、圆石 -> 沙砾 -> 沙、小麦 -> 面粉。"
+				""
+				"输入从上方/侧面漏斗投料，产物从正下方掉落，放个箱子接即可。"
+				""
+				"手摇只是验证流程，下一阶段立刻换水车；记住转速越高加工越快。"
+			]
+			id: "66F5B075C8E6B773"
+			rewards: [{
+				id: "52A5A7C3E335473A"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "零动力启动"
+			tasks: [{
+				id: "6AB36CAC65587575"
+				item: "create:hand_crank"
+				type: "item"
+			}]
+			title: "手摇曲柄与第一台磨石"
+			x: 13.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["08FAC959FFF939E0"]
+			description: [
+				"机械动力每个机器都有&aPonder 演示&f：把准星对准机器按 &aW&f，弹出动画窗口，能暂停、逐帧、放大，看机器内部怎么传动、怎么进料。"
+				""
+				"遇到「这玩意儿到底怎么接」时，先 W 一下，90% 的疑问当场解决；Ponder 里还会标出推荐布局。"
+				""
+				"快捷键：手持扳手对机器潜行右键可旋转；&aE&f打开携带物品；大部分机器不用 GUI，靠朝向和红石控制。"
+				""
+				"把 Ponder 当成官方内置教程，遇到新方块第一反应就是 W。"
+			]
+			icon: "create:millstone"
+			id: "44AD632FD8259230"
+			rewards: [{
+				id: "5BE4E8DAA34DC0E6"
+				type: "xp"
+				xp: 5
+			}]
+			subtitle: "按 W 看懂一切"
+			tasks: [{
+				id: "30E3E3D44094F6B2"
+				title: "实用技巧：Ponder 动画系统"
+				type: "checkmark"
+			}]
+			title: "实用技巧：Ponder 动画系统"
+			x: 15.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["74B8393DABB9BDC8"]
+			description: [
+				"&a应力计（Stressometer）&f贴在轴上，红=过载（机器卡顿不动）、绿=余量充足；&a速度表（Speedometer）&f显示当前 RPM。"
+				""
+				"经验法则：动力源总 SU 必须严格大于所有机器 SU 之和，否则整条线一起罢工。"
+				""
+				"转速与机器数量无关，只影响单台加工速度；用&a转速控制器&f把高速源降到机器适合的 RPM。"
+				""
+				"基地布局时把应力计贴在主干轴上，一眼判断要不要加动力源。"
+			]
+			id: "1C0FBEE9D1C2339A"
+			rewards: [{
+				id: "3EE7575C69AF773E"
+				type: "xp"
+				xp: 5
+			}]
+			subtitle: "别让机器带不动"
+			tasks: [{
+				id: "50EF1D916668883C"
+				item: "create:stressometer"
+				type: "item"
+			}]
+			title: "实用技巧：读应力与转速"
+			x: 33.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["6D5D7659AEB1CE8B"]
+			description: [
+				"&a安山合金块&f、&a铜机壳（Copper Casing）&f、&c黄铜机壳（Brass Casing）&f、&a铁路机壳（Railway Casing）&f是各种高级机器的外壳。"
+				""
+				"&c坚固板材（Sturdy Sheet）&f由钢板在滚筒/压板下制成，是列车、大型机械的结构材料。"
+				""
+				"装饰类（窗框、梯架、百叶、招牌、座位）纯美观，可按需带过，不影响功能。"
+				""
+				"建议把常用机壳各囤一组，后期铺产线随用随取。"
+			]
+			id: "213FB5B12D181303"
+			rewards: [{
+				id: "1C4D099A259F50EA"
+				type: "xp"
+				xp: 5
+			}]
+			subtitle: "安山/黄铜/铜机壳"
+			tasks: [{
+				id: "7619DDA7EDF4C9C9"
+				item: "create:andesite_alloy_block"
+				type: "item"
+			}]
+			title: "机壳与板材：建筑材料"
+			x: 12.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["52B6190F80254442"]
+			description: [
+				"&a机械压片机&f把铜/铁/金/锌锭压成&c铜板、铁板、金板、锌板&f，电路板、机壳、管道都要板。"
+				""
+				"&ccreateaddition:rolling_mill（滚轮轧机）&f也能把锭轧成线/板，是黄铜时代配套加工。"
+				""
+				"铜会随时间氧化，涂蜡可锁住颜色；装饰用途自行选择氧化阶段。"
+			]
+			id: "3D452E1330B3AAD0"
+			rewards: [{
+				id: "5CA34C086413B7FB"
+				type: "xp"
+				xp: 5
+			}]
+			subtitle: "铜铁金锌板"
+			tasks: [{
+				id: "639F52C28518F40C"
+				item: "create:copper_sheet"
+				type: "item"
+			}]
+			title: "板材与轧制"
+			x: 4.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["66F5B075C8E6B773"]
+			description: [
+				"&a水车（Water Wheel）&f两侧有水流动（一格水流过叶片）就会转，把轴接在水车正面即可输出应力。"
+				""
+				"简单可靠，开局首选：找条小溪或自己倒两排水，水车一轴就能带磨石+几台基础机器。"
+				""
+				"多台水车通过轴并联可叠加应力；摆成一排水效率更高。"
+			]
+			id: "14B9DE0E42E6A933"
+			rewards: [{
+				id: "44E1687255B15E56"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "水流即动力"
+			tasks: [{
+				id: "05D961D42510136A"
+				item: "create:water_wheel"
+				type: "item"
+			}]
+			title: "水车：第一份稳定动力"
+			x: 1.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["14B9DE0E42E6A933"]
+			description: [
+				"&a大水车（Large Water Wheel）&f尺寸更大、叶片更多，同样水流下产出的应力比小车高数倍。"
+				""
+				"需要更大空间和更多水流推动；一台大水车足以撑起中期作坊。"
+				""
+				"配合&a动力泵浦&f把水抽到高处循环，可以摆脱自然水源，做成封闭水循环水车阵列。"
+			]
+			id: "04463A46C588BDCB"
+			rewards: [{
+				id: "69CCADAE6B80829D"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "双层叶片"
+			tasks: [{
+				id: "162662B2A6A68EEF"
+				item: "create:large_water_wheel"
+				type: "item"
+			}]
+			title: "大水车：更强的水车"
+			x: 6.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["14B9DE0E42E6A933"]
+			description: [
+				"&a风车轴承（Windmill Bearing）&f是旋转基座，在它上方搭一个由&c帆骨架（Sail Frame）&f+&c白帆（White Sail）&f组成的「帆墙」（最大约 7x7），风就带动轴承旋转。"
+				""
+				"Y 坐标越高、帆面积越大，产出 SU 与 RPM 越高；建议建在山顶或高塔顶部。"
+				""
+				"风车不耗水不耗燃料，是中期主力之一；缺点是要爬高、占地大。"
+			]
+			id: "655E4633030AEC86"
+			rewards: [{
+				id: "15F1003E92BD1A37"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "轴承 + 帆"
+			tasks: [{
+				id: "2075C9349105BD7E"
+				item: "create:windmill_bearing"
+				type: "item"
+			}]
+			title: "风车：高空的动力"
+			x: 4.5d
+			y: 6.0d
+		}
+		{
+			dependencies: ["52B6190F80254442"]
+			description: [
+				"&a蒸汽引擎（Steam Engine）&f贴在&a锅炉&f（由&c动力炉/加热室+水室组成的多方块）侧面，锅炉烧沸后引擎大量输出应力。"
+				""
+				"加热用&a烈焰人燃烧室（Blaze Burner）&f：把烈焰人蛋糕/烈焰棒喂进去；或用附属的&c液态烈焰人燃烧室&f烧液体燃料。"
+				""
+				"一组 4~9 台引擎并联可带动整个工坊；转速稳定在 60 RPM 上下。"
+				""
+				"锅炉必须持续供水（机械泵浦）和持续加热，缺一不可。"
+			]
+			id: "39A39B831C8F055C"
+			rewards: [{
+				id: "462DAEA9C1F7BDE7"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "锅炉 + 引擎"
+			tasks: [{
+				id: "668016F1DBD9A27C"
+				item: "create:steam_engine"
+				type: "item"
+			}]
+			title: "蒸汽引擎：中期主力"
+			x: 7.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["39A39B831C8F055C"]
+			description: [
+				"&a飞轮（Flywheel）&f接在蒸汽引擎/动力源旁，像蓄电池一样平滑应力输出，吸收瞬时负载波动。"
+				""
+				"机器突然大量启动时飞轮避免应力塌陷；引擎侧装飞轮是标准做法。"
+				""
+				"飞轮本身不产动力，只做缓冲，别指望它单独带机器。"
+			]
+			id: "0A1DF0047F1F8FB8"
+			rewards: [{
+				id: "1B0273090D404997"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "平滑输出"
+			tasks: [{
+				id: "206C311C6625FE0D"
+				item: "create:flywheel"
+				type: "item"
+			}]
+			title: "飞轮：应力缓冲"
+			x: 10.5d
+			y: 6.0d
+		}
+		{
+			dependencies: ["39A39B831C8F055C"]
+			description: [
+				"&a烈焰人燃烧室（Blaze Burner）&f是 Create 的加热核心：喂&a烈焰人蛋糕&f或&a烈焰棒&f即可持续燃烧，给锅炉、大锅等供热。"
+				""
+				"想烧液体燃料，可用 Create 附属的&c液态烈焰人燃烧室&f（createaddition:liquid_blaze_burner）直烧生物乙醇。"
+				""
+				"喂蛋糕比喂烈焰棒烧得更久；用机械手/管道自动补料即可全自动加热。"
+			]
+			id: "484FE5378CA23024"
+			rewards: [{
+				id: "405137D021409F35"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "Create 加热"
+			tasks: [{
+				id: "168F2AA7878556BC"
+				item: "create:blaze_burner"
+				type: "item"
+			}]
+			title: "烈焰人燃烧室：加热核心"
+			x: 7.5d
+			y: 6.0d
+		}
+		{
+			dependencies: ["39A39B831C8F055C"]
+			description: [
+				"&ccreateaddition:electric_motor（电动马达）&f把 FE 电网转成机械旋转，从此机械动力设备可以直接吃你的大电网。"
+				""
+				"&ccreateaddition:alternator（交流发电机）&f反过来：用水车/风车/蒸汽机带动它发电，白嫖 FE。"
+				""
+				"&c接线柱（Connector）+&c铜线/电银线&f传电，&c蓄电器（Accumulator）/&c电容（Capacitor）&f储能；&ctesla_coil（特斯拉线圈）&f无线输电。"
+				""
+				"应用：风车上挂发电机全天发电存蓄电器；或用大电网给整个机械工坊供电，摆脱水车/蒸汽应力上限。"
+			]
+			id: "623A5064585D80C6"
+			rewards: [{
+				id: "7770D5B3BC9B37EC"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "马达·发电机·特斯拉线圈"
+			tasks: [{
+				id: "308A7DD74B19BE7D"
+				item: "createaddition:electric_motor"
+				type: "item"
+			}]
+			title: "电动时代：FE 与 SU 互通"
+			x: 12.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["6D5D7659AEB1CE8B"]
+			description: [
+				"&a传动轴（Shaft）&f沿直线传递旋转；&c齿轮（Cogwheel）&f改变方向并向相邻面传动力；&c大齿轮（Large Cogwheel）&f覆盖两格，适合跨距传动。"
+				""
+				"动力从动力源出发，经轴/齿轮到达机器；右键机器用扳手旋转朝向。"
+				""
+				"轴与机器必须同轴同转速；不同转速段之间用&c齿轮箱/转速控制器&f隔离。"
+			]
+			id: "25F33FA609B1BB9B"
+			rewards: [{
+				id: "12A6D97D3827E49B"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "把旋转送到机器"
+			tasks: [{
+				id: "07B6C1ADA47D404B"
+				item: "create:shaft"
+				type: "item"
+			}]
+			title: "传动：轴·齿轮·大齿轮"
+			x: 19.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["25F33FA609B1BB9B"]
+			description: [
+				"&a齿轮箱（Gearbox）&f把一根输入轴同时向多个方向输出，是分线枢纽。"
+				""
+				"&c立式齿轮箱（Vertical Gearbox）&f专门把水平轴折成垂直方向，适合上下分层产线。"
+				""
+				"配合&c轴套（Encased Shaft/Cogwheel）&f可以把传动轴藏进墙里，保持基地美观。"
+			]
+			id: "15AB747BF586377E"
+			rewards: [{
+				id: "18B0F2B2380D0C52"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "多向输出"
+			tasks: [{
+				id: "1C2E92B8EB28E878"
+				item: "create:gearbox"
+				type: "item"
+			}]
+			title: "齿轮箱：一拖多"
+			x: 30.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["25F33FA609B1BB9B"]
+			description: [
+				"&a离合器（Clutch）&f：红石信号切断/接通传动，相当于远程动力开关。"
+				""
+				"&c换挡器（Gearshift）&f：红石信号反转旋转方向，用于正反转切换（如机械臂左右摆）。"
+				""
+				"两者配合&c红石链路&f可以在远处控制某条产线启停，不用爬上去动手。"
+			]
+			id: "274025E8146DD265"
+			rewards: [{
+				id: "5BD6BB0FE95D11BA"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "开关与换向"
+			tasks: [{
+				id: "4F2AD5AE4802FB36"
+				item: "create:clutch"
+				type: "item"
+			}]
+			title: "离合器与换挡器"
+			x: 28.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["274025E8146DD265"]
+			description: [
+				"&a序列换挡器（Sequenced Gearshift）&f按「步」输出多段旋转：每一步可设正向/反向/停止+持续刻数，像编程序列。"
+				""
+				"典型用法：控制机械臂/投掷器做「抓-转-放」节奏，或让活塞结构按节拍动作。"
+				""
+				"打开 GUI 添加步骤、设置每段时长，是自动化机器流程的节拍器。"
+			]
+			id: "375C4BAF59716223"
+			rewards: [{
+				id: "6C931883E84AD832"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "按节奏输出"
+			tasks: [{
+				id: "0A1073284511E5B3"
+				item: "create:sequenced_gearshift"
+				type: "item"
+			}]
+			title: "序列换挡器：可编程动作"
+			x: 22.5d
+			y: 6.0d
+		}
+		{
+			dependencies: ["274025E8146DD265"]
+			description: [
+				"&a转速控制器（Rotation Speed Controller，RSC）&f把输入转速转换成你设定的目标转速（可正可负，范围约 ±256 RPM）。"
+				""
+				"用法：两端各接一根轴，打开 GUI 输入目标 RPM，它会自动降速（不能升速）。"
+				""
+				"配合护目镜查看输出 RPM；不同机器用不同 RSC 调速，互不干扰。"
+			]
+			id: "464DD305ACB4DF2F"
+			rewards: [{
+				id: "15B4EF2CFAFED4AF"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "把高速降到需要的 RPM"
+			tasks: [{
+				id: "5C4C1B8705266030"
+				item: "create:rotation_speed_controller"
+				type: "item"
+			}]
+			title: "转速控制器：任意变速"
+			x: 24.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["25F33FA609B1BB9B"]
+			description: [
+				"&a链传动（Encased Chain Drive）&f用链条把多根平行轴连成一条线，适合沿墙/沿顶长距离布置。"
+				""
+				"&c可调链传动（Adjustable Chain Gearshift）&f：用红石信号调节传动比/张紧，可切换接合与断开。"
+				""
+				"比一排轴更省材料、更整齐，是大型厂房传动首选。"
+			]
+			id: "4522AF84862EDE0D"
+			rewards: [{
+				id: "30710BF2EE9DD6D1"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "Encased Chain Drive"
+			tasks: [{
+				id: "402ADFD8CC787E2C"
+				item: "create:encased_chain_drive"
+				type: "item"
+			}]
+			title: "链传动：长距离平行"
+			x: 31.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["66F5B075C8E6B773"]
+			description: [
+				"&a磨石（Millstone）&f把矿石磨成 2 份矿粉（2 倍增产），圆石 -> 沙砾 -> 沙，小麦 -> 面粉。"
+				""
+				"输入上/侧，输出正下方；转速越高越快。前期矿粉 -> 冶炼 -> 锭的 2 倍线用它即可。"
+			]
+			id: "57F4543A724B5041"
+			rewards: [{
+				id: "4F7988181F1422C7"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "磨粉第一道"
+			tasks: [{
+				id: "60A413C57FCEA075"
+				item: "create:millstone"
+				type: "item"
+			}]
+			title: "磨石：矿石2倍增产"
+			x: 0.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["57F4543A724B5041"]
+			description: [
+				"&a粉碎轮（Crushing Wheel）&f成对反向旋转，夹碎物品：矿石出 2 倍矿粉+额外副产物（金矿出金粒、绿宝石等）。"
+				""
+				"搭建：两个粉碎轮相对放置（一左旋一右旋），中间两格空当投料，下方掉出产物用漏斗/传送带接。"
+				""
+				"转速 32~64 RPM 即可稳定，应力需求大，多挂在主蒸汽轴上。"
+			]
+			id: "1841AEC274D8DC9F"
+			rewards: [{
+				id: "071A52376EFDC33D"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "一对反向轮子"
+			tasks: [{
+				id: "6DF2185AC99D0A49"
+				item: "create:crushing_wheel"
+				type: "item"
+			}]
+			title: "粉碎轮：强力粉碎与副产物"
+			x: 3.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["52B6190F80254442"]
+			description: [
+				"&a机械压片机（Mechanical Press）&f把锭压成板/片，也能把物品「压进」填充板（如小麦 -> 面团、圆石 -> 石板）。"
+				""
+				"下方放&c基座（Depot）&f接料，传送带可连续送料实现全自动压板。"
+				""
+				"压片机有加工队列，配合传送带节奏一次压多块。"
+			]
+			id: "3DB18314676B9A0B"
+			rewards: [{
+				id: "2B4C03E1B1352C80"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "锭 -> 板"
+			tasks: [{
+				id: "545821331693F218"
+				item: "create:mechanical_press"
+				type: "item"
+			}]
+			title: "机械压片机：压板与成型"
+			x: 3.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["52B6190F80254442"]
+			description: [
+				"&a盆（Basin）&f是承接容器，放在机器下方；&c机械混合机（Mechanical Mixer）&f从上方旋转搅拌盆内物品。"
+				""
+				"经典配方：沙+沙砾+碎石+水（经喷口）-> 混凝土粉；多种矿粉混合 -> 合金浆；配合&c喷口（Spout）&f注液。"
+				""
+				"混合机+盆+喷口+泵浦 = 全自动流体/固体混合产线。"
+			]
+			id: "063F11BA37CCDE65"
+			rewards: [{
+				id: "0B90D755644E99A3"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "多材料混合"
+			tasks: [{
+				id: "343092BC4EDDC6B9"
+				item: "create:basin"
+				type: "item"
+			}]
+			title: "搅拌盆与混合机"
+			x: 9.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["52B6190F80254442"]
+			description: [
+				"&a动力锯（Mechanical Saw）&f自动把原木锯成木板/木棍，也能切石头类方块；方块被推到锯口即自动加工。"
+				""
+				"配合传送带+机械臂 = 全自动木材厂；比手砍快一个数量级。"
+			]
+			id: "153EDE446EA8AF20"
+			rewards: [{
+				id: "01998F8A6A9FEF9F"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "原木 -> 木板"
+			tasks: [{
+				id: "3BC90EF9626D97D4"
+				item: "create:mechanical_saw"
+				type: "item"
+			}]
+			title: "动力锯：自动切割"
+			x: 12.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["52B6190F80254442"]
+			description: [
+				"&a动力钻（Mechanical Drill）&f装在&c机械活塞/轴承&f上可以挖方块；贴地面时配合移动结构当掘进机。"
+				""
+				"经典：轴承+钻 = 旋转挖矿机；活塞+钻 = 水平隧道掘进。"
+				""
+				"钻在移动结构上挖掉的方块会进&c便携存储接口&f，自动运回箱子。"
+			]
+			id: "6D41629E67F2D14E"
+			rewards: [{
+				id: "215A9146835CEC2A"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "装在移动结构上"
+			tasks: [{
+				id: "1F5B30B4BF726332"
+				item: "create:mechanical_drill"
+				type: "item"
+			}]
+			title: "动力钻：挖掘与钻井"
+			x: 13.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["52B6190F80254442"]
+			description: [
+				"&a机械收割机（Mechanical Harvester）&f自动成熟作物；&c机械犁（Plough）&f自动耕地；配合移动结构沿田垄移动即可全自动农场。"
+				""
+				"把它们装在由活塞/轴承驱动的移动结构上，沿一排作物来回走。"
+				""
+				"作物掉落用&c漏斗/机械臂&f收回，种子由&c投掷器&f自动补种。"
+			]
+			id: "7725576FD64B1862"
+			rewards: [{
+				id: "23BBB810134CCBB4"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "播种耕地收割"
+			tasks: [{
+				id: "75E071295779D94D"
+				item: "create:mechanical_harvester"
+				type: "item"
+			}]
+			title: "收割机与犁：自动农场"
+			x: 15.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["52B6190F80254442"]
+			description: [
+				"&a滚筒（Mechanical Roller）&f把上方掉落的方块压/压平：如沙子压成砂石、泥土压成草径、圆石压成板。"
+				""
+				"放在基座上方，物品掉过即被加工；适合做建材自动化。"
+			]
+			id: "3FCDCACBC7CD0903"
+			rewards: [{
+				id: "3866BB9846712C5D"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "Crushing 与 packing"
+			tasks: [{
+				id: "2A82CB04E0984F84"
+				item: "create:mechanical_roller"
+				type: "item"
+			}]
+			title: "滚筒压辊：处理泥土"
+			x: 16.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["52B6190F80254442"]
+			description: [
+				"&a投掷器（Deployer）&f是一只会「使用」手持物品的机械臂：放方块、用喷壶浇水、右键机器、模拟玩家右键动作。"
+				""
+				"配合红石信号做定时动作（如每 8 秒放一次种子）；多台投掷器围工作台可模拟玩家自动合成。"
+				""
+				"经典：投掷器放种 + 机械臂收作物 = 全自动种植机。"
+			]
+			id: "126CE554CE6CEE07"
+			rewards: [{
+				id: "63E5EEE134527FF7"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "Deployer"
+			tasks: [{
+				id: "2A481FCCC8CCF6D3"
+				item: "create:deployer"
+				type: "item"
+			}]
+			title: "投掷器：万能机械手"
+			x: 21.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["52B6190F80254442"]
+			description: [
+				"&a鼓风机（Encased Fan）&f装&c扇叶（Propeller）&f后吹风，气流可以推动掉落物、吹走烟雾、加速冷却/加热。"
+				""
+				"把方块放在气流路径上可做「吹风筛矿」「自由落体破碎」等处理。"
+			]
+			id: "7C2287084B11D915"
+			rewards: [{
+				id: "11AAAF70BC96DDA3"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "吹风送物"
+			tasks: [{
+				id: "700DFB799A8B1266"
+				item: "create:encased_fan"
+				type: "item"
+			}]
+			title: "鼓风机：风扇加工"
+			x: 22.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["6D5D7659AEB1CE8B"]
+			description: [
+				"&a传送带（Belt Connector）&f铺在两轴之间，物品沿带移动；它同时也在两轴间传递旋转。"
+				""
+				"带可以上下爬坡、转弯、交叉；用扳手调整方向。是机械动力物流的地基。"
+			]
+			id: "2C165A445A47252C"
+			rewards: [{
+				id: "2957AD037A744053"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "Belt"
+			tasks: [{
+				id: "32D3D1F14A235AAA"
+				item: "create:belt_connector"
+				type: "item"
+			}]
+			title: "传送带：物品运输"
+			x: 16.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["2C165A445A47252C"]
+			description: [
+				"&c安山漏斗（Andesite Funnel）&f贴在容器上，默认把物品从传送带/上方吸入容器；加红石信号可反转为推出。"
+				""
+				"&c黄铜漏斗（Brass Funnel）&f支持白名单/黑名单过滤，只进出指定物品，是分拣关键件。"
+			]
+			id: "20BAF77E3DBCB2B1"
+			rewards: [{
+				id: "57FAD72B008E3956"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "Funnel"
+			tasks: [{
+				id: "3FD027F99F1865DF"
+				item: "create:brass_funnel"
+				type: "item"
+			}]
+			title: "漏斗：进出容器"
+			x: 18.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["20BAF77E3DBCB2B1"]
+			description: [
+				"&c溜槽（Chute）&f让物品竖直下落到下方容器；&c智能溜槽（Smart Chute）&f可设过滤并受红石信号暂停/放行。"
+				""
+				"粉碎轮出多种矿物粉时，用多个智能溜槽分别导入对应冶炼炉。"
+			]
+			id: "62E1B506AE236AC6"
+			rewards: [{
+				id: "1E2A0C4E977C5CF5"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "竖直下料"
+			tasks: [{
+				id: "3E88D680CADE6FC5"
+				item: "create:smart_chute"
+				type: "item"
+			}]
+			title: "溜槽与智能溜槽"
+			x: 16.5d
+			y: 6.0d
+		}
+		{
+			dependencies: ["52B6190F80254442"]
+			description: [
+				"&a机械臂（Mechanical Arm）&f在范围内自动抓取/放置，支持白/黑名单过滤，可处理传送带上物品。"
+				""
+				"用法：放置后 GUI 添加抓取点与放置点（右键方块标记），设定过滤。"
+				""
+				"多台机械臂接力覆盖大范围；是粉碎轮 -> 冶炼 -> 入库的核心搬运工。"
+			]
+			id: "5636D71C11EE77C5"
+			rewards: [{
+				id: "4906E68B23BEB8D2"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "能看会挑"
+			tasks: [{
+				id: "14BF9CCA77B4F922"
+				item: "create:mechanical_arm"
+				type: "item"
+			}]
+			title: "机械臂：智能抓取"
+			x: 6.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["2C165A445A47252C"]
+			description: [
+				"&a物品保险库（Item Vault）&f是机械动力自带的大容量箱子，多个可并排扩容，外观工业风。"
+				""
+				"适合临时缓存产线中间产物；最终入库建议对接 AE2/RS。"
+			]
+			id: "55E76B888128F6CA"
+			rewards: [{
+				id: "1093A44B800C1789"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "Item Vault"
+			tasks: [{
+				id: "6478D1886D91990C"
+				item: "create:item_vault"
+				type: "item"
+			}]
+			title: "物品保险库：大容量箱"
+			x: 24.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["62E1B506AE236AC6"]
+			description: [
+				"&c库存开关（Stockpile Switch）&f检测某容器内物品数量，按阈值输出红石信号，用于「箱子满了就停线」。"
+				""
+				"&c内容观测器（Content Observer）&f检测传送带经过物品并发出红石脉冲，用于分拣计数。"
+				""
+				"配合黄铜漏斗可以做到「满箱停、缺料补」的闭环控制。"
+			]
+			id: "1A5A825CC75EA79B"
+			rewards: [{
+				id: "5F80214FF9E5FBB3"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "分拣与检测"
+			tasks: [{
+				id: "402ADBFF4B966864"
+				item: "create:stockpile_switch"
+				type: "item"
+			}]
+			title: "传送带附件：库存开关与观测器"
+			x: 12.0d
+			y: 7.5d
+		}
+		{
+			dependencies: ["52B6190F80254442"]
+			description: [
+				"&a机械泵浦（Mechanical Pump）&f给流体提供压力，让流体在&c流体管道&f里流动；泵浦必须接动力。"
+				""
+				"抽岩浆、给锅炉供水、做自动流体产线都靠它；转速影响泵送速度。"
+			]
+			id: "136CD4F340C561DE"
+			rewards: [{
+				id: "6C526BEE6FCB7EB2"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "Mechanical Pump"
+			tasks: [{
+				id: "1834F5C65178B46A"
+				item: "create:mechanical_pump"
+				type: "item"
+			}]
+			title: "机械泵浦：流体动力"
+			x: 10.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["136CD4F340C561DE"]
+			description: [
+				"&a软管泵（Hose Pulley）&f下放软管到流体源上方，把液体抽进相邻管道/罐；也可以反向把罐里液体排回世界。"
+				""
+				"适合抽干岩浆湖、给锅炉补水、排掉废液；无需挖管道到源头。"
+			]
+			id: "23744BB2DB650B2C"
+			rewards: [{
+				id: "4ACADAF035C360E0"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "Hose Pulley"
+			tasks: [{
+				id: "37E5982E163E8513"
+				item: "create:hose_pulley"
+				type: "item"
+			}]
+			title: "软管泵：远程吸排"
+			x: 13.5d
+			y: 6.0d
+		}
+		{
+			dependencies: ["136CD4F340C561DE"]
+			description: [
+				"&a流体管道（Fluid Pipe）&f输送液体，需要泵浦提供压力；&c智能流体管道（Smart Fluid Pipe）&f用颜色/可视化显示当前流体。"
+				""
+				"管道可以穿墙、贴墙；不同流体不要混在一根管里。"
+			]
+			id: "7831E209D6DE9C7A"
+			rewards: [{
+				id: "62468254162C0B2E"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "Fluid Pipe"
+			tasks: [{
+				id: "75929206BED378B3"
+				item: "create:fluid_pipe"
+				type: "item"
+			}]
+			title: "流体管道与智能管道"
+			x: 9.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["7831E209D6DE9C7A"]
+			description: [
+				"&a流体罐（Fluid Tank）&f存储液体，可多层叠放扩容；&c流体阀（Fluid Valve）&f控制罐的进出。"
+				""
+				"每个罐容量固定，叠得越高总容量越大；颜色可用来区分流体种类。"
+			]
+			id: "018C14C7624EC4AE"
+			rewards: [{
+				id: "5B023E9C644E42A4"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "Fluid Tank"
+			tasks: [{
+				id: "196C1A1F433C96C0"
+				item: "create:fluid_tank"
+				type: "item"
+			}]
+			title: "流体罐与阀门"
+			x: 9.0d
+			y: 7.5d
+		}
+		{
+			dependencies: ["018C14C7624EC4AE"]
+			description: [
+				"&a喷口（Spout）&f从上方流体罐取液，给下方经过的容器/物品注液（装水、灌混凝土粉）。"
+				""
+				"&c喷嘴（Nozzle）&f用于从流体罐顶部注入流体；&c物品排水口（Item Drain）&f把流体从机器里排进管道。"
+			]
+			id: "317A8EDFF167E504"
+			rewards: [{
+				id: "7E402DC9BF5137EE"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "注液与排放"
+			tasks: [{
+				id: "650389AFDBDF57B6"
+				item: "create:spout"
+				type: "item"
+			}]
+			title: "喷口·喷嘴·排水口"
+			x: 7.5d
+			y: 9.0d
+		}
+		{
+			dependencies: ["274025E8146DD265"]
+			description: [
+				"&a红石链路（Redstone Link）&f一对配对后无线传输红石信号，跨维度也能用（一个发一个收）。"
+				""
+				"用法：在控制器旁放一个发射器，在远处工厂放接收器，用一个拉杆远程启停整条线。"
+				""
+				"配合序列换挡器/离合器，实现「一个按钮开关整个车间」。"
+			]
+			id: "3459FC2A0EA9EC0A"
+			rewards: [{
+				id: "2AD01398C024FEB7"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "远程控制"
+			tasks: [{
+				id: "2B1AFF61A7BC3F05"
+				item: "create:redstone_link"
+				type: "item"
+			}]
+			title: "红石链路：无线红石"
+			x: 21.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["3459FC2A0EA9EC0A"]
+			description: [
+				"&c脉冲延长器（Pulse Extender）&f拉长短脉冲；&c脉冲中继器（Pulse Repeater）&f延时；&c脉冲计时器（Pulse Timer）&f周期性输出脉冲。"
+				""
+				"用于让投掷器/离合器按固定节拍动作，是自动化流程的时钟。"
+			]
+			id: "1C52E02E1E6BE227"
+			rewards: [{
+				id: "2BFB0CFE67A6F1FA"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "计时器"
+			tasks: [{
+				id: "5E1980D68E186812"
+				item: "create:pulse_extender"
+				type: "item"
+			}]
+			title: "脉冲元件：定时与逻辑"
+			x: 13.5d
+			y: 7.5d
+		}
+		{
+			dependencies: ["52B6190F80254442"]
+			description: [
+				"&a机械合成器（Mechanical Crafter）&f多台摆成 3x3（或所需形状）组成自动工作台，每个格子放一种材料，转动后一次合成。"
+				""
+				"用&c合成槽盖（Crafter Slot Cover）&f封住不用的格子，做出任意形状配方。"
+				""
+				"输入用漏斗/机械臂补料，产物用传送带输出，配合序列换挡器可「先合 A 再合 B」。"
+			]
+			id: "5D25545DF5F6DB6B"
+			rewards: [{
+				id: "3DFAFB0F609A6BD1"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "3x3 阵列"
+			tasks: [{
+				id: "14C57A68B56E8FB8"
+				item: "create:mechanical_crafter"
+				type: "item"
+			}]
+			title: "机械合成器：自动工作台"
+			x: 19.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["5D25545DF5F6DB6B"]
+			description: [
+				"&a合成槽盖（Crafter Slot Cover）&f盖在机械合成器的某个面上，让该格始终为空，从而把 3x3 工作台改成任意形状配方。"
+				""
+				"没有槽盖时所有格子都要占位；想做「只需 2 格材料」的配方必须用它封掉多余格。"
+			]
+			id: "296D62271129FF17"
+			rewards: [{
+				id: "1FF04739870EFDA7"
+				type: "xp"
+				xp: 5
+			}]
+			subtitle: "Crafter Slot Cover"
+			tasks: [{
+				id: "664203B734ECD598"
+				item: "create:crafter_slot_cover"
+				type: "item"
+			}]
+			title: "合成槽盖：固定格子"
+			x: 18.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["6D5D7659AEB1CE8B"]
+			description: [
+				"&a机械活塞（Mechanical Piston）&f接旋转后伸出/缩回，推动一大片方块结构移动；&c活塞延长杆（Extension Pole）&f增加行程。"
+				""
+				"它是移动机器（砍树机、钻机）的基础；结构被推动时如果带了工具就会自动作用。"
+			]
+			id: "189E57B6B3565532"
+			rewards: [{
+				id: "3974127B964CB531"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "Mechanical Piston"
+			tasks: [{
+				id: "268CEBC1B036A145"
+				item: "create:mechanical_piston"
+				type: "item"
+			}]
+			title: "机械活塞：推拉结构"
+			x: 18.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["189E57B6B3565532"]
+			description: [
+				"&a粘性机械活塞（Sticky Mechanical Piston）&f缩回时会拉住前方方块，适合做「推出作业、拉回复位」的往复结构。"
+				""
+				"往复式掘进机、自动砍树机都靠它回程。"
+			]
+			id: "5E4001E19AC0F267"
+			rewards: [{
+				id: "394BE23C1307AD44"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "拉回结构"
+			tasks: [{
+				id: "50DF461D1B4C1921"
+				item: "create:sticky_mechanical_piston"
+				type: "item"
+			}]
+			title: "粘性机械活塞"
+			x: 27.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["189E57B6B3565532"]
+			description: [
+				"&a机械轴承（Mechanical Bearing）&f接旋转后让它上方/前方的整块结构绕轴旋转。"
+				""
+				"经典：轴承+动力钻 = 旋转挖矿机；轴承+动力锯 = 旋转砍树机；轴承+扇叶 = 旋转风车。"
+				""
+				"结构越大越耗应力，注意 SU 余量。"
+			]
+			id: "69E08FCF7C399BAC"
+			rewards: [{
+				id: "3036D52E5868D65F"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "Bearing"
+			tasks: [{
+				id: "0D5823CE6888D8F7"
+				item: "create:mechanical_bearing"
+				type: "item"
+			}]
+			title: "机械轴承：旋转结构"
+			x: 25.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["69E08FCF7C399BAC"]
+			description: [
+				"&a钟控轴承（Clockwork Bearing）&f按红石脉冲旋转固定角度（90/180度），用于门、机械臂定位。"
+				""
+				"&c绳轮（Rope Pulley）&f接旋转后沿竖直方向延伸绳索，带动结构上下移动（如电梯、升降钻机）。"
+			]
+			id: "6C98428F3656C499"
+			rewards: [{
+				id: "50309901014F2117"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "定时旋转与升降"
+			tasks: [{
+				id: "5EA06A3286D8F646"
+				item: "create:clockwork_bearing"
+				type: "item"
+			}]
+			title: "钟控轴承与绳轮"
+			x: 19.5d
+			y: 6.0d
+		}
+		{
+			dependencies: ["69E08FCF7C399BAC"]
+			description: [
+				"&a便携存储接口（Portable Storage Interface）&f放在移动结构上，让旋转/移动的结构能与外部固定容器交换物品。"
+				""
+				"挖掉的矿、砍倒的树通过它自动传回主箱子；&c便携流体接口（Portable Fluid Interface）&f同理处理流体。"
+				""
+				"这是「自动挖矿/砍树机」能真正自动入库的关键件。"
+			]
+			id: "4CB0FAE2E033303E"
+			rewards: [{
+				id: "17DD2F8260304A3B"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "Portable Interface"
+			tasks: [{
+				id: "67672959EAB1643D"
+				item: "create:portable_storage_interface"
+				type: "item"
+			}]
+			title: "便携存储接口：移动结构的物流"
+			x: 15.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["4CB0FAE2E033303E"]
+			description: [
+				"&a轨道（Track）&f铺设铁路；&c车站（Track Station）&f让列车停靠装卸；&c列车信号（Track Signal）&f调度多车；&c轨道观测器（Track Observer）&f检测列车。"
+				""
+				"先铺一段直轨+两个车站，让一辆小车跑通，再逐步扩展。"
+			]
+			id: "37AB1859265B4856"
+			rewards: [{
+				id: "19269DD5347E77BB"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "铁路基础"
+			tasks: [{
+				id: "76D9221ECE9CB9DA"
+				item: "create:track"
+				type: "item"
+			}]
+			title: "轨道·车站·信号"
+			x: 10.5d
+			y: 7.5d
+		}
+		{
+			dependencies: ["37AB1859265B4856"]
+			description: [
+				"&a列车组装器（Cart Assembler）&f放在轨道下，列车经过时把周围方块拼成车厢（箱子车厢、流体罐车厢、漏斗车厢）。"
+				""
+				"&c时刻表（Schedule）&f右键列车打开，给它编「去 A 站卸货 -> 去 B 站装货」的运行计划；&c车钩（Minecart Coupling）&f把多节车厢连挂。"
+				""
+				"列车是长距离大宗物流最优解：矿石专列、补给专列，也能载人通勤。"
+			]
+			id: "78B4044C0AAD9DBA"
+			rewards: [{
+				id: "1AA34FD778237584"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "Cart Assembler"
+			tasks: [{
+				id: "19AFC82DA3BACB5B"
+				item: "create:cart_assembler"
+				type: "item"
+			}]
+			title: "列车组装器·时刻表·车钩"
+			x: 9.0d
+			y: 9.0d
+		}
+		{
+			dependencies: ["74B8393DABB9BDC8"]
+			description: [
+				"&a对称魔杖（Wand of Symmetry）&f开启对称建造，放一个方块自动在镜像位置也放一个，对称厂房飞快。"
+				""
+				"&c蓝图（Schematic & Quill）&f用&c绘图桌（Schematic Table）&f记录现有结构，再用&c原理图火炮（Schematicannon）&f或建筑模式把它复刻到新位置。"
+				""
+				"复制产线时这两样是神器，避免手摆几十台机器。"
+			]
+			id: "1A998AB85098AB8A"
+			rewards: [{
+				id: "0E30E5B79DB80BEF"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "Wand & Schematic"
+			tasks: [{
+				id: "6AC7D6D42418E20C"
+				item: "create:wand_of_symmetry"
+				type: "item"
+			}]
+			title: "对称魔杖与蓝图：快速建造"
+			x: 34.5d
+			y: 4.5d
+		}
+		{
+			dependencies: [
+				"1841AEC274D8DC9F"
+				"3DB18314676B9A0B"
+				"5636D71C11EE77C5"
+			]
+			description: [
+				"布局：水车/蒸汽机出主旋转 -> 主轴带&c粉碎轮&f（双轮对夹）。"
+				""
+				"物流：粉碎轮下方掉矿粉 -> &c传送带&f -> &c黄铜漏斗&f按矿粉种类分流 -> &c机械臂&f分别送进冶炼炉。"
+				""
+				"冶炼：矿粉进炉烧成锭 -> 锭上&c传送带&f送&c机械压片机&f压成板 -> &c机械臂&f把板送进箱子/AE2。"
+				""
+				"接电/接物流：粉碎轮、压片机、泵浦都要应力；产物末端接&c机械臂&f直连 AE2 接口。"
+				""
+				"产量预期：一台大水车主轴 + 一对粉碎轮，每小时可处理上千原矿，足够支撑中期材料需求。"
+			]
+			icon: "create:crushing_wheel"
+			id: "00CC0C731E800BD4"
+			rewards: [{
+				id: "64B40FD16F22DEDE"
+				type: "xp"
+				xp: 20
+			}]
+			shape: "hexagon"
+			size: 1.5d
+			subtitle: "一条完整示范线"
+			tasks: [{
+				id: "71C6E36FD7C1E1CB"
+				title: "事例产线：矿石粉碎-冶炼-压板"
+				type: "checkmark"
+			}]
+			title: "事例产线：矿石粉碎-冶炼-压板"
+			x: 7.5d
+			y: 7.5d
+		}
+		{
+			dependencies: [
+				"655E4633030AEC86"
+				"0A1DF0047F1F8FB8"
+				"78B4044C0AAD9DBA"
+			]
+			description: [
+				"&a风车&f：&c风车轴承&f为底座，上方搭最大 7x7 的&c帆骨架+白帆&f结构（需无遮挡、高 Y）；轴承本身输出旋转。"
+				""
+				"&a蒸汽引擎组&f：先搭&c锅炉多方块&f（水室+加热室，尺寸越大产汽越多），加热室放&c烈焰人燃烧室&f喂烈焰棒，水室接&c机械泵浦&f供水；再把 4~9 台&c蒸汽引擎&f贴在锅炉侧面，旁加&c飞轮&f缓冲。"
+				""
+				"&a列车组装站&f：轨道下方埋&c列车组装器&f，旁放要拼成车厢的方块（箱子/流体罐），列车开过时自动组装。"
+				""
+				"维护：引擎没蒸汽会停（查水/燃料）；风车被遮挡会掉转速；组装站缺材料车厢会缺格。"
+			]
+			icon: "create:steam_engine"
+			id: "44B448E131A9262E"
+			rewards: [{
+				id: "16902D7E29207362"
+				type: "xp"
+				xp: 20
+			}]
+			shape: "hexagon"
+			size: 1.5d
+			subtitle: "尺寸与搭建顺序"
+			tasks: [{
+				id: "02A6151019240DC8"
+				title: "多方块结构：风车·蒸汽机·组装站"
+				type: "checkmark"
+			}]
+			title: "多方块结构：风车·蒸汽机·组装站"
+			x: 7.5d
+			y: 10.5d
+		}
+		{
+			dependencies: [
+				"00CC0C731E800BD4"
+				"44B448E131A9262E"
+			]
+			description: [
+				"一条成熟机械动力基地："
+				""
+				"1. &a动力&f：蒸汽引擎组（锅炉+烈焰人）+ 风车高塔，主应力轴贯穿车间；"
+				""
+				"2. &a传动&f：齿轮箱分线，RSC 给各机器配速，离合器/序列换挡器做节拍；"
+				""
+				"3. &a加工&f：粉碎轮矿线、压片机板线、混合机合金线、动力锯木材线并行；"
+				""
+				"4. &a物流&f：传送带+黄铜漏斗+机械臂分拣，末端接 AE2 接口/存储总线；"
+				""
+				"5. &a移动结构&f：轴承钻机、活塞农场自动回收入库；"
+				""
+				"6. &a电力桥&f：挂交流发电机白嫖 FE，或电动马达吃大电网。"
+				""
+				"完成本任务 = 你能独立设计「看得见运转」的自动化工厂，机械动力毕业。"
+			]
+			icon: "create:brass_casing"
+			id: "17C776A9D915AFF6"
+			rewards: [{
+				id: "48ED6F8DB2CEE446"
+				type: "xp"
+				xp: 30
+			}]
+			shape: "octagon"
+			size: 1.5d
+			subtitle: "从作坊到基地主干"
+			tasks: [{
+				id: "7210DCD6255C8841"
+				title: "综合实战：旋转应力工厂"
+				type: "checkmark"
+			}]
+			title: "综合实战：旋转应力工厂"
+			x: 7.5d
+			y: 12.0d
+		}
+	]
+	title: "机械动力"
+}

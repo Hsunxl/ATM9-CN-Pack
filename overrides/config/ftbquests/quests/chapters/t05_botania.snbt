@@ -1,0 +1,963 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "t05_botania"
+	group: "00C72C1FB6193A42"
+	icon: "botania:lexicon"
+	id: "15F64A57EB98EE2D"
+	order_index: 5
+	progression_mode: "flexible"
+	quest_links: [ ]
+	quests: [
+		{
+			description: [
+				"植物魔法（Botania）不依赖 FE，而用&a魔力（Mana）&f驱动：生成花产魔力 -> 发射器/火花传输 -> 魔力池存储 -> 功能花/祭坛/装备消费。"
+				""
+				"核心概念：&a生成花（产魔）&f、&a功能花（干活）&f、&a魔力池（储能）&f、&a发射器/火花（传输）&f、&a泰拉钢/元素钢（高级材料）&f、&a符文/精灵门（进阶）&f。"
+				""
+				"它解决的问题：用一套「花园即工厂」的体系实现自动农场、自动采矿、物品网络，并产出泰拉/精灵级装备。"
+				""
+				"本章路线：总览 -> 基础（活石/花药台/手册）-> 魔力传输存储 -> 生成花 -> 功能花 -> 材料装备 -> 符文/泰拉钢 -> 精灵门/盖亚 -> 饰品武器 -> Corporea -> 事例 -> 实战。"
+				""
+				"最重要工具：&c植物魔法辞典（Lexica Botania）&f，遇到不懂先翻书。"
+			]
+			icon: "botania:lexicon"
+			id: "5A22AB1E6A4B6179"
+			shape: "hexagon"
+			size: 1.5d
+			subtitle: "用魔力而不是电力"
+			tasks: [{
+				id: "335DF9BA119973A9"
+				title: "植物魔法总览"
+				type: "checkmark"
+			}]
+			title: "植物魔法总览"
+			x: 9.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["5A22AB1E6A4B6179"]
+			description: [
+				"&a纯白雏菊（Pure Daisy）&f放在圆石/原木旁，圆石慢慢变成&c活石（Livingrock）&f、原木变成&c活木（Livingwood）&f。"
+				""
+				"活石/活木是几乎所有植物魔法方块（花药台、魔力池、发射器）的材料。"
+				""
+				"它是被动花，不需要魔力，零门槛入门。"
+			]
+			id: "5B885DA77AC8A3C9"
+			rewards: [{
+				id: "6EC0F5DD9C8686E8"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "点石成金"
+			tasks: [{
+				id: "6E503D3EAFD65DBC"
+				item: "botania:pure_daisy"
+				type: "item"
+			}]
+			title: "纯白雏菊·活石·活木"
+			x: 9.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["5B885DA77AC8A3C9"]
+			description: [
+				"&a花药台（Petal Apothecary）&f：倒水后按配方放入花瓣+材料，合成各种魔法花。"
+				""
+				"花瓣来源：剪&c神秘花（16 色）&f得到各色花瓣；查辞典里「花之配方」即可。"
+				""
+				"合成后台自动空出，可流水线合成；不同生物群系有不同外观的花药台变体。"
+			]
+			id: "52DC85DBC01F0BA3"
+			rewards: [{
+				id: "226A10E6A02E6F11"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "合成魔法花"
+			tasks: [{
+				id: "1F5AEEDB9AC9E2F1"
+				item: "botania:apothecary_livingrock"
+				type: "item"
+			}]
+			title: "花药台与花瓣"
+			x: 9.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["5A22AB1E6A4B6179"]
+			description: [
+				"&a植物魔法辞典（Lexicon）&f是官方手册：右键打开，所有花、结构、合成配方、教程都在里面。"
+				""
+				"遇到任何疑问先翻书；后期还有&c精灵辞典（Lexicon Elven）&f记录精灵内容。"
+			]
+			id: "652267CF1B3BB6FA"
+			rewards: [{
+				id: "146C51E7A0FF85CA"
+				type: "xp"
+				xp: 5
+			}]
+			subtitle: "Lexica Botania"
+			tasks: [{
+				id: "6847FB6A6819A4D7"
+				item: "botania:lexicon"
+				type: "item"
+			}]
+			title: "植物魔法辞典"
+			x: 10.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["52DC85DBC01F0BA3"]
+			description: [
+				"&a魔力池（Mana Pool）&f存储魔力：生成花把魔力射进池子，池子供给需要魔力的设备。"
+				""
+				"&c稀释池（Diluted Pool）&f容量小便宜；&c华丽池（Fabulous Pool）&f容量大；&c创造池（Creative Pool）&f无限（创作模式）。"
+				""
+				"池子可叠放扩容，也可染色区分用途。"
+			]
+			id: "3AF647590B562766"
+			rewards: [{
+				id: "72AE9479CCF0E362"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "Mana Pool"
+			tasks: [{
+				id: "6AD30B6C81CC5D05"
+				item: "botania:mana_pool"
+				type: "item"
+			}]
+			title: "魔力池：魔力银行"
+			x: 10.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["3AF647590B562766"]
+			description: [
+				"&a魔力发射器（Mana Spreader）&f把花产的魔力「射」进魔力池/相邻设备，是植物魔法的管道。"
+				""
+				"升级：&c精灵发射器（Elven Spreader）&f射程速度大增；&c盖亚发射器（Gaia Spreader）&f顶级。"
+				""
+				"发射器必须「看得见」目标，中间不能有方块遮挡。"
+			]
+			id: "102661E7FDBA6160"
+			rewards: [{
+				id: "6AA31AE7B36F4297"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "Mana Spreader"
+			tasks: [{
+				id: "2681847DCFF58D0E"
+				item: "botania:mana_spreader"
+				type: "item"
+			}]
+			title: "魔力发射器"
+			x: 7.5d
+			y: 6.0d
+		}
+		{
+			dependencies: ["102661E7FDBA6160"]
+			description: [
+				"&a透镜（Lens）&f插在发射器上改变魔力束：&c威力（Power）、速度（Speed）、效率（Efficiency）、重力（Gravity）、弹跳（Bounce）、伤害（Damage）、爆炸（Explosive）、火焰（Fire）、活塞（Piston）、磁吸（Magnet）、幻影（Phantom）、绘画（Paint）、传送（Messenger）&f等。"
+				""
+				"不同透镜组合出不同效果，比如磁力束把掉落物吸过来。"
+			]
+			id: "37469A50052312AE"
+			rewards: [{
+				id: "3CC486C2B03918E2"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "Mana Lens"
+			tasks: [{
+				id: "464116AC07D87DA2"
+				item: "botania:lens_normal"
+				type: "item"
+			}]
+			title: "魔力透镜大全"
+			x: 0.0d
+			y: 7.5d
+		}
+		{
+			dependencies: ["3AF647590B562766"]
+			description: [
+				"&a火花（Spark）&f插在魔力池/设备上，让魔力在带火花的方块间无线传输：主池火花把魔力分发给周围功能花/祭坛。"
+				""
+				"升级：&c分散（Dispersive）、主导（Dominant）、 recessive（Recessive）、隔离（Isolated）&f控制分发方向与优先级；&c火花更换器（Spark Changer）&f切换。"
+				""
+				"整片花园插火花即可自动供魔，不用一根根接发射器。"
+			]
+			id: "09DE85FFA7D29D59"
+			rewards: [{
+				id: "301BF57E4BA40423"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "Spark"
+			tasks: [{
+				id: "51D101AB6B2E9A40"
+				item: "botania:spark"
+				type: "item"
+			}]
+			title: "火花：无线供魔"
+			x: 10.5d
+			y: 6.0d
+		}
+		{
+			dependencies: ["3AF647590B562766"]
+			description: ["&a魔力分配器（Mana Distributor）&f把一束魔力分多路输出；&c魔力检测器（Mana Detector）&f检测池子魔力量发红石信号；&c魔力真空（Mana Void）&f丢弃多余魔力防溢出。"]
+			id: "01142D4DCD914B68"
+			rewards: [{
+				id: "04B27EE73CD9C21C"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "Mana Logistics"
+			tasks: [{
+				id: "7518AB01CE177763"
+				item: "botania:mana_distributor"
+				type: "item"
+			}]
+			title: "分配器·检测器·真空"
+			x: 9.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["102661E7FDBA6160"]
+			description: [
+				"发射器要瞄准目标：把发射器和魔力池放在无遮挡直线上；用&c透镜重定向（Redirect）&f让光束拐弯。"
+				""
+				"供魔拓扑：一个主池上插&c主导火花&f，所有消费设备插&c普通火花&f，魔力自动从主池流向缺魔设备；想阻止某设备吸魔就给它&c隔离火花&f。"
+			]
+			icon: "botania:mana_spreader"
+			id: "0B60EDC3A26B9950"
+			rewards: [{
+				id: "2F1FE60DB912DF84"
+				type: "xp"
+				xp: 5
+			}]
+			subtitle: "瞄准与优先级"
+			tasks: [{
+				id: "3D23E9B900FBB623"
+				title: "实用技巧：发射器对准与供魔拓扑"
+				type: "checkmark"
+			}]
+			title: "实用技巧：发射器对准与供魔拓扑"
+			x: 1.5d
+			y: 7.5d
+		}
+		{
+			dependencies: ["09DE85FFA7D29D59"]
+			description: [
+				"生成花要吃燃料/食物/羊毛：用&c漏斗（管道/投掷器）&f自动投喂，让花园无人值守。"
+				""
+				"例：炽玫瑰接煤块传送带；彩虹花接羊毛工厂；蛋糕花接自动蛋糕线。"
+				""
+				"功能花产物用&c漏斗花（Hopperhock）&f吸进箱子，或直接接 Corporea。"
+			]
+			icon: "botania:hopperhock"
+			id: "32B30B7C40BE45D6"
+			rewards: [{
+				id: "76E6425911C626FA"
+				type: "xp"
+				xp: 5
+			}]
+			subtitle: "自动喂花"
+			tasks: [{
+				id: "087374CA6ED256DD"
+				title: "实用技巧：花的自动化投料"
+				type: "checkmark"
+			}]
+			title: "实用技巧：花的自动化投料"
+			x: 6.0d
+			y: 7.5d
+		}
+		{
+			dependencies: ["3AF647590B562766"]
+			description: [
+				"&a炽玫瑰（Endoflame）&f：烧可燃物（煤/木炭/烈焰棒），最基础产能花。"
+				""
+				"&c水绣球（Hydroangeas）&f：浸在水里被动产魔，低产零维护。"
+				""
+				"&c热莉莉（Thermalily）&f：吃岩浆，中产。"
+			]
+			id: "22BC77608AF76004"
+			rewards: [{
+				id: "3E7D4A9C201934A4"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "Generating Flowers I"
+			tasks: [{
+				id: "516A5C1AB696DF00"
+				item: "botania:endoflame"
+				type: "item"
+			}]
+			title: "基础生成花：燃料/水/岩浆"
+			x: 12.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["22BC77608AF76004"]
+			description: [
+				"&a饼干花（Kekimurus）&f吃蛋糕，稳定高产；&c美食百合（Gourmaryllis）&f吃食物，食物越复杂产出越高。"
+				""
+				"配自动蛋糕厂/自动化农场，是中后期稳定魔力来源。"
+			]
+			id: "6A261F1684EC5F58"
+			rewards: [{
+				id: "01266EFE79D83F6A"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "Generating Flowers II"
+			tasks: [{
+				id: "615A48D7C64BDE02"
+				item: "botania:kekimurus"
+				type: "item"
+			}]
+			title: "蛋糕花与美食花"
+			x: 9.0d
+			y: 7.5d
+		}
+		{
+			dependencies: ["22BC77608AF76004"]
+			description: [
+				"&a爆炸花（Entropinnyum）&f吃 TNT 爆炸，产出极高（注意安全围起来）；&c史莱姆花（Narslimmus）&f吃史莱姆球/方块。"
+				""
+				"爆炸花产量大但耗 TNT，要配合 TNT 复制/农场。"
+			]
+			id: "014F4289992C0551"
+			rewards: [{
+				id: "17DECB9FF7F97222"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "Generating Flowers III"
+			tasks: [{
+				id: "7A81C412D3EAF1E3"
+				item: "botania:entropinnyum"
+				type: "item"
+			}]
+			title: "爆炸花与史莱姆花"
+			x: 10.5d
+			y: 7.5d
+		}
+		{
+			dependencies: ["22BC77608AF76004"]
+			description: [
+				"&a经验花（Rosa Arcana）&f吃经验球产魔；&c彩虹花（Spectrolus）&f吃各色羊毛，单体产能王。"
+				""
+				"彩虹花配羊毛农场自动投喂，是中期最大魔力来源。"
+			]
+			id: "4DCBB996F0A08206"
+			rewards: [{
+				id: "47DEE08C7E70A0BC"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "Generating Flowers IV"
+			tasks: [{
+				id: "7B610870DA6F4DC0"
+				item: "botania:rosa_arcana"
+				type: "item"
+			}]
+			title: "经验花与彩虹花"
+			x: 12.0d
+			y: 7.5d
+		}
+		{
+			dependencies: ["22BC77608AF76004"]
+			description: [
+				"&a绿叶花（Munchdew）&f吃树叶产魔；&c花瓣花（Rafflowsia）&f吃花瓣；&c潜影花（Shulk Me Not）&f吃潜影壳。"
+				""
+				"绿叶花配一片森林自动吃叶；花瓣花接神秘花农场。"
+			]
+			id: "47BA8AF97DB7CCAF"
+			rewards: [{
+				id: "00DD2B512CD81A9B"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "Generating Flowers V"
+			tasks: [{
+				id: "4B9E0E9629E6252B"
+				item: "botania:munchdew"
+				type: "item"
+			}]
+			title: "绿叶花与花瓣花"
+			x: 13.5d
+			y: 7.5d
+		}
+		{
+			dependencies: ["22BC77608AF76004"]
+			description: [
+				"&a生命游戏花（Dandelifeon）&f下方方块按生命游戏规则演化，产能极高但结构复杂。"
+				""
+				"其他后期花：&cExoflame（增强燃烧）、Bergamute、Hyacidus、Medumone、Loonium、Manastar&f等，按辞典配方解锁。"
+			]
+			id: "753E77B578355793"
+			rewards: [{
+				id: "5CB9FEA5EC1957D5"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "Generating Flowers VI"
+			tasks: [{
+				id: "092631E291D4389D"
+				item: "botania:dandelifeon"
+				type: "item"
+			}]
+			title: "生命游戏花与后期花"
+			x: 15.0d
+			y: 7.5d
+		}
+		{
+			dependencies: ["3AF647590B562766"]
+			description: ["&a漏斗花（Hopperhock）&f把附近掉落物吸进相邻容器，植物魔法版漏斗；需要魔力。"]
+			id: "09DBF352D6BD63E5"
+			rewards: [{
+				id: "6A9C2E17F1103781"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "Hopperhock"
+			tasks: [{
+				id: "7A98FE3A43C12CB6"
+				item: "botania:hopperhock"
+				type: "item"
+			}]
+			title: "漏斗花：捡东西"
+			x: 13.5d
+			y: 6.0d
+		}
+		{
+			dependencies: ["09DBF352D6BD63E5"]
+			description: [
+				"&a农耕花（Agricarnation）&f加速作物生长；&c跑酷花（Rannuncarpus）&f自动在空地种植/成熟作物。"
+				""
+				"配合漏斗花 = 全自动小麦/胡萝卜农场。"
+			]
+			id: "64399D6A3662107A"
+			rewards: [{
+				id: "64DFF338FE4BB36A"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "Farming"
+			tasks: [{
+				id: "4B1CB65D077B828E"
+				item: "botania:agricarnation"
+				type: "item"
+			}]
+			title: "农耕花与跑酷花"
+			x: 16.5d
+			y: 7.5d
+		}
+		{
+			dependencies: ["09DBF352D6BD63E5"]
+			description: ["&a黏土花（Clayconia）&f把沙子变成黏土；&c沙漏花（Bellethorn）/&c荆棘花（Dreadthorn）&f攻击附近怪物；&c老虎眼花（Tigerseye）&f免疫摔伤。"]
+			id: "7CE1B8E1E965C11A"
+			rewards: [{
+				id: "351BC5696973574A"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "Utility/Combat"
+			tasks: [{
+				id: "2808440217A28FED"
+				item: "botania:clayconia"
+				type: "item"
+			}]
+			title: "黏土花与战斗花"
+			x: 18.0d
+			y: 7.5d
+		}
+		{
+			dependencies: ["09DBF352D6BD63E5"]
+			description: [
+				"&a矿石花（Orechid）&f消耗魔力把石头慢慢变成矿石，等于魔法版矿机；&c地狱矿石花（Orechid Ignem）&f在下界把地狱岩变下界矿。"
+				""
+				"高级版&c高级紫苋花（Jaded Amaranthus）&f定向变指定矿石。"
+				""
+				"配一片石场自动变矿，漏斗花收走，是自动化矿源。"
+			]
+			id: "00812B8A29E64877"
+			rewards: [{
+				id: "4ACDF911E26E5C96"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "Orechid"
+			tasks: [{
+				id: "7ADDCBCFF00D32B5"
+				item: "botania:orechid"
+				type: "item"
+			}]
+			title: "矿石花：方块变矿"
+			x: 19.5d
+			y: 7.5d
+		}
+		{
+			dependencies: ["09DBF352D6BD63E5"]
+			description: ["&a束缚花（Vinculotus）&f把怪物吸引过来困住；&cMarimorphosis&f长树/木；&cBubbell&f水下呼吸；&cJiyuulia&f种植；&cPollidisiac/Heisei Dream/Fallen Kanade/Tangleberrie&f等按辞典解锁。"]
+			id: "39C1F4826CBF0053"
+			rewards: [{
+				id: "1ABE19CB050D59B5"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "Misc Flowers"
+			tasks: [{
+				id: "58133467A3A76712"
+				item: "botania:vinculotus"
+				type: "item"
+			}]
+			title: "束缚花与其他功能花"
+			x: 21.0d
+			y: 7.5d
+		}
+		{
+			dependencies: ["01142D4DCD914B68"]
+			description: [
+				"&a魔力钢锭（Manasteel）&f在魔力池中投入铁锭+魔力粉合成；做魔力钢镐/斧/剑/铲/锄/剪刀与护甲。"
+				""
+				"魔力钢工具自动从魔力石板吸魔修复，是第一套魔法工具。"
+			]
+			id: "58F501DB19FFA711"
+			rewards: [{
+				id: "379E4E161E5EE8B7"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "Manasteel"
+			tasks: [{
+				id: "13C5AB1B1E631CCD"
+				item: "botania:manasteel_ingot"
+				type: "item"
+			}]
+			title: "魔力钢与工具"
+			x: 3.0d
+			y: 7.5d
+		}
+		{
+			dependencies: ["58F501DB19FFA711"]
+			description: [
+				"&a魔力石板（Mana Tablet）&f便携电池，对魔力池右键充能；&c魔力戒指（Mana Ring）/&c大魔力戒指&f自动给装备/工具补魔。"
+				""
+				"石板+戒指 = 移动魔力库，出门挖矿/打 Boss 必备。"
+			]
+			id: "12ACE64550E3EDCD"
+			rewards: [{
+				id: "23D6BE07675525E7"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "Mana Tablet/Ring"
+			tasks: [{
+				id: "35F9DBE3065AD74A"
+				item: "botania:mana_tablet"
+				type: "item"
+			}]
+			title: "魔力石板与戒指"
+			x: 3.0d
+			y: 9.0d
+		}
+		{
+			dependencies: ["58F501DB19FFA711"]
+			description: ["&a元素钢锭（Elementium）&f来自精灵门贸易，比魔力钢更高一档；做元素钢工具/护甲，带快速拾取、抗摔等特效。"]
+			id: "1EB6201E3C74EECD"
+			rewards: [{
+				id: "7514709CBE3C663A"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "Elementium"
+			tasks: [{
+				id: "558BD46CF8A3313F"
+				item: "botania:elementium_ingot"
+				type: "item"
+			}]
+			title: "元素钢：精灵材料"
+			x: 4.5d
+			y: 9.0d
+		}
+		{
+			dependencies: ["1EB6201E3C74EECD"]
+			description: [
+				"&a泰拉钢锭（Terrasteel）&f= 铁锭 + 绿宝石 + 魔力粉，在&c泰拉凝聚板（Terra Plate）&f上方由大量魔力驱动合成。"
+				""
+				"泰拉钢做泰拉钢护甲/剑/镐，是本模组中期顶级装备；需要几十万魔力，先建花园再合成。"
+			]
+			id: "59A00F08E4D5AA6C"
+			rewards: [{
+				id: "0E18C110EE21CDD3"
+				type: "xp"
+				xp: 20
+			}]
+			subtitle: "Terrasteel"
+			tasks: [{
+				id: "13F15ADE2513AC4A"
+				item: "botania:terrasteel_ingot"
+				type: "item"
+			}]
+			title: "泰拉钢：植物魔法精髓"
+			x: 7.5d
+			y: 10.5d
+		}
+		{
+			dependencies: ["59A00F08E4D5AA6C"]
+			description: [
+				"&a泰拉凝聚板（Terra Plate）&f：把板放地上，四周用&c魔力池/火花&f供魔，把铁+绿宝石+魔力粉丢到板上即开始合成。"
+				""
+				"结构：板 + 周围魔力池阵列 + 火花供魔；魔力越足越快。"
+			]
+			id: "5856A29DCF2DF119"
+			rewards: [{
+				id: "2D948366A1D3863F"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "Terra Plate"
+			tasks: [{
+				id: "32E104DE5513AE9D"
+				item: "botania:terra_plate"
+				type: "item"
+			}]
+			title: "泰拉凝聚板：多方块"
+			x: 4.5d
+			y: 12.0d
+		}
+		{
+			dependencies: ["59A00F08E4D5AA6C"]
+			description: [
+				"&a符文祭坛（Runic Altar）&f消耗大量魔力合成&c元素符文（水/火/土/风/春/夏/秋/冬/魔力）&f与&c七宗罪符文（傲慢/贪婪等）&f。"
+				""
+				"符文是泰拉钢、精灵装备、Corporea 的材料；祭坛需持续供魔，可自动投料自动化。"
+			]
+			id: "4F74D28F7D8B3F44"
+			rewards: [{
+				id: "26E0A3B19ED6B20E"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "Runic Altar"
+			tasks: [{
+				id: "01EBBCCA29A040F0"
+				item: "botania:runic_altar"
+				type: "item"
+			}]
+			title: "符文祭坛与符文"
+			x: 6.0d
+			y: 12.0d
+		}
+		{
+			dependencies: ["4F74D28F7D8B3F44"]
+			description: [
+				"&a阿尔法海姆传送门（Alfheim Portal）&f：用&c活木/梦木方块&f搭约 2x3 门框，用大量魔力（火花/发射器）激活成紫色传送门。"
+				""
+				"门旁放&c交换杆/贸易装置&f，把物品丢进去，精灵用&c精灵锭（元素钢）、精灵石英等与你交换。"
+				""
+				"可自动化：管道投料+收料，流水线换精灵材料。"
+			]
+			id: "13A36DC341732593"
+			rewards: [{
+				id: "0E6BC6B8B20D9AC0"
+				type: "xp"
+				xp: 20
+			}]
+			subtitle: "Alfheim Portal"
+			tasks: [{
+				id: "63B590B4807BB82F"
+				item: "botania:alfheim_portal"
+				type: "item"
+			}]
+			title: "阿尔法海姆传送门：精灵贸易"
+			x: 4.5d
+			y: 13.5d
+		}
+		{
+			dependencies: ["59A00F08E4D5AA6C"]
+			description: [
+				"&a盖亚祭坛（Gaia Pylon）&f摆成 3x3 角（配&c盖亚碑/生命精华&f），右键召唤&c盖亚守卫（Gaia Guardian）&f。"
+				""
+				"准备泰拉/元素钢护甲、魔力石板、开阔场地；击败后掉&c盖亚锭（Gaia Ingot）、盖亚发射器、盖亚之魂、唱片。"
+				""
+				"可重复挑战，多人更简单。"
+			]
+			id: "5ACE999772ECEDFC"
+			rewards: [{
+				id: "58C5C1E8E2A1E437"
+				type: "xp"
+				xp: 25
+			}]
+			subtitle: "Gaia Guardian"
+			tasks: [{
+				id: "56B3F287AE751098"
+				item: "botania:gaia_pylon"
+				type: "item"
+			}]
+			title: "盖亚祭坛与盖亚 Boss"
+			x: 7.5d
+			y: 12.0d
+		}
+		{
+			dependencies: ["59A00F08E4D5AA6C"]
+			description: ["&a飞行头带（Flight Tiara）&f消耗魔力飞行；&c平衡披风（Balance Cloak）&f缓降免疫摔伤；&c圣披风/不洁披风/隐身披风&f各有特效。"]
+			id: "3BADEDC267C0A7AF"
+			rewards: [{
+				id: "116C8CF169AD4559"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "Flight & Cloaks"
+			tasks: [{
+				id: "41747120DB7B064B"
+				item: "botania:flight_tiara"
+				type: "item"
+			}]
+			title: "飞行头带与披风"
+			x: 9.0d
+			y: 12.0d
+		}
+		{
+			dependencies: ["12ACE64550E3EDCD"]
+			description: [
+				"&a磁石戒指（Magnet Ring）/&c大磁戒&f自动吸物；&c水之戒指&f水下呼吸；&c神戒奥丁/索尔/洛基&f提供护甲/攻击/隐身；&c光环戒指&f回魔。"
+				""
+				"戒指放在饰品槽（Bauble）即可生效。"
+			]
+			id: "4ED6682CA02BBE4C"
+			rewards: [{
+				id: "576972C61EA3B547"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "Rings"
+			tasks: [{
+				id: "36208BAE9209C386"
+				item: "botania:magnet_ring"
+				type: "item"
+			}]
+			title: "戒指饰品"
+			x: 4.5d
+			y: 10.5d
+		}
+		{
+			dependencies: ["12ACE64550E3EDCD"]
+			description: ["&a旅行腰带（Travel Belt）&f加速奔跑/跳更高；&c超级旅行腰带&f更强；&c击退腰带&c/&c迅捷腰带&f各有效果。"]
+			id: "75D5D02AFA4DEE4A"
+			rewards: [{
+				id: "4E3CE1906102E2A1"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "Belts"
+			tasks: [{
+				id: "1070BF039FA7817C"
+				item: "botania:travel_belt"
+				type: "item"
+			}]
+			title: "腰带"
+			x: 6.0d
+			y: 10.5d
+		}
+		{
+			dependencies: ["59A00F08E4D5AA6C"]
+			description: ["&a星辰之剑（Star Sword）&f范围攻击；&c雷霆之剑（Thunder Sword）&f雷击；&c泰拉之刃（Terra Sword）&f泰拉钢顶级剑。"]
+			id: "14CA687C1576FDBF"
+			rewards: [{
+				id: "2B52E1335A60F970"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "Swords"
+			tasks: [{
+				id: "5EF88D5D3075752F"
+				item: {
+					Count: 1
+					id: "botania:star_sword"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			title: "星辰之剑与泰拉之刃"
+			x: 10.5d
+			y: 12.0d
+		}
+		{
+			dependencies: ["59A00F08E4D5AA6C"]
+			description: ["&a水晶弓（Crystal Bow）&f用魔力射击；&c魔力枪（Mana Gun）&f消耗魔力弹匣；&c烈焰环/荆棘环（Chakram）&f回旋投掷；&c梦木法杖/树枝法杖&f是基础工具。"]
+			id: "59E736A2A95116FA"
+			rewards: [{
+				id: "47EA2481A23E8503"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "Ranged"
+			tasks: [{
+				id: "54EBDE3E46CB6197"
+				item: {
+					Count: 1
+					id: "botania:crystal_bow"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			title: "水晶弓与魔力枪"
+			x: 12.0d
+			y: 12.0d
+		}
+		{
+			dependencies: ["01142D4DCD914B68"]
+			description: [
+				"&aCorporea 系统&f：用&cCorporea 火花&f把箱子连成网络，&cCorporea 索引（Index）&f查询库存，&cCorporea 漏斗（Funnel）&f自动取放，&c晶体立方（Crystal Cube）&f按需请求合成。"
+				""
+				"请求台+漏斗花+网络 = 「要什么自动从箱子拿」，不用管道。"
+				""
+				"可对接 AE2/RS 存储总线，魔法与科技仓库互通。"
+			]
+			id: "6B477D8859629803"
+			rewards: [{
+				id: "1469D001AA4AC417"
+				type: "xp"
+				xp: 20
+			}]
+			subtitle: "Magic Storage"
+			tasks: [{
+				id: "205280D56D220A76"
+				item: "botania:corporea_spark"
+				type: "item"
+			}]
+			title: "Corporea 物品网络"
+			x: 4.5d
+			y: 7.5d
+		}
+		{
+			dependencies: ["6B477D8859629803"]
+			description: [
+				"&a红线（Red String）&f用&c红线锄头&f把多个方块「连线」，让&c光明中继器（Light Relay）/检测中继器/开关中继器&f按红线网络传递信号与光照。"
+				""
+				"是植物魔法版的无线红石/光控网络。"
+			]
+			id: "4B2ABA556300B6EB"
+			rewards: [{
+				id: "34AA8293E17AA7C9"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "Red String"
+			tasks: [{
+				id: "585363194553B14F"
+				item: "botania:red_string_relay"
+				type: "item"
+			}]
+			title: "红线与光明中继"
+			x: 6.0d
+			y: 9.0d
+		}
+		{
+			dependencies: ["4F74D28F7D8B3F44"]
+			description: [
+				"&a酿酒台（Brewery）&f用魔力把花/材料酿成&c药剂瓶（Brew Vial/Flask）&f，得到各种药水效果。"
+				""
+				"&c附魔坛（Enchanter）&f消耗经验+魔力给工具附魔；&c炼金催化剂（Alchemy Catalyst）/&c咒法催化剂（Conjuration Catalyst）&f在魔力池中分解/复制物品。"
+				""
+				"&c香炉（Incense Plate）&f插香提供范围 Buff。"
+			]
+			id: "76A1F6AE902E5F2D"
+			rewards: [{
+				id: "00F6388C681EB6B2"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "Brewery & Enchanter"
+			tasks: [{
+				id: "33019DE0D4974ECD"
+				item: "botania:brewery"
+				type: "item"
+			}]
+			title: "酿酒·附魔·炼金"
+			x: 6.0d
+			y: 13.5d
+		}
+		{
+			dependencies: [
+				"22BC77608AF76004"
+				"09DE85FFA7D29D59"
+			]
+			description: [
+				"布局：一片花田，中间一排魔力池；每个生成花插&c火花&f，主池插&c主导火花&f。"
+				""
+				"产能：炽玫瑰接煤传送带自动喂；彩虹花接羊毛农场；蛋糕花接自动蛋糕线。"
+				""
+				"消费：泰拉凝聚板、符文祭坛、功能花各插&c普通火花&f，自动从主池吸魔。"
+				""
+				"产量预期：一片中型花园（20~30 花）可持续供应泰拉钢/符文合成与全基地功能花。"
+			]
+			icon: "botania:spark"
+			id: "40E43F9D043B89CB"
+			rewards: [{
+				id: "703DA30E5E94785F"
+				type: "xp"
+				xp: 20
+			}]
+			shape: "hexagon"
+			size: 1.5d
+			subtitle: "完整示范"
+			tasks: [{
+				id: "31DBBCFDF24F05F2"
+				title: "事例：产能花花园 + 火花供魔"
+				type: "checkmark"
+			}]
+			title: "事例：产能花花园 + 火花供魔"
+			x: 7.5d
+			y: 7.5d
+		}
+		{
+			dependencies: [
+				"6B477D8859629803"
+				"5ACE999772ECEDFC"
+			]
+			description: [
+				"1. &a产能区&f：生成花花园自动投料，火花汇入主魔力池；"
+				""
+				"2. &a消费区&f：泰拉凝聚板/符文祭坛/功能花各自插火花取魔；"
+				""
+				"3. &a物流区&f：Corporea 网络连接所有箱子，请求台下单、漏斗花收料；"
+				""
+				"4. &a进阶&f：精灵门自动贸易换元素钢，盖亚祭坛挑战得盖亚锭；"
+				""
+				"5. &a装备&f：泰拉钢套+飞行头带+神戒+旅行腰带，自由探索。"
+				""
+				"完成本任务 = 你能用植物魔法独立撑起一套自动化与装备体系，不再依赖教程。"
+			]
+			icon: "botania:corporea_index"
+			id: "15939EC82C9D77C2"
+			rewards: [{
+				id: "28BA204AE13130A0"
+				type: "xp"
+				xp: 30
+			}]
+			shape: "octagon"
+			size: 1.5d
+			subtitle: "花园即工厂"
+			tasks: [{
+				id: "108F9232C6667679"
+				title: "综合实战：魔法自动化体系"
+				type: "checkmark"
+			}]
+			title: "综合实战：魔法自动化体系"
+			x: 7.5d
+			y: 13.5d
+		}
+	]
+	title: "植物魔法"
+}

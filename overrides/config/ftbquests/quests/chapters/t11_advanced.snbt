@@ -1,0 +1,1113 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "t11_advanced"
+	group: "00C72C1FB6193A42"
+	icon: "mysticalagriculture:prosperity_ingot"
+	id: "348572CB6E0A7678"
+	order_index: 11
+	progression_mode: "flexible"
+	quest_links: [ ]
+	quests: [
+		{
+			description: [
+				"本章带你进入 ATM9 的「资源无限化」阶段："
+				""
+				"· &a深度神经网络 HNN&f：模拟击杀怪物，无限战利品；"
+				""
+				"· &a神秘农业&f：种田种出矿物与材料；"
+				""
+				"· &a龙之研究&f：龙金属、能量核心、终极神装；"
+				""
+				"· &a极限反应堆&f：多方块核能 + 汽轮机发电；"
+				""
+				"· &a格雷科技 GTCEu&f：最硬核的可选深度科技线。"
+				""
+				"提醒：本章工程量较大，建议先完成电力/加工/AE2 等基础章节再来。"
+			]
+			icon: "mysticalagriculture:prosperity_ingot"
+			id: "2C7484AFBC908444"
+			shape: "hexagon"
+			size: 1.5d
+			subtitle: "资源无限化 + 终极能源"
+			tasks: [{
+				id: "6F7ABCCFB9BB2F39"
+				title: "进阶科技总览"
+				type: "checkmark"
+			}]
+			title: "进阶科技总览"
+			x: 6.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["2C7484AFBC908444"]
+			description: [
+				"&a敌对神经网络（Hostile Neural Networks）&f的核心：用&a空白数据模型&f（blank_data_model）右键击杀对应怪物收集「数据」，模型逐渐升级。"
+				""
+				"数据分三个维度：&a主世界预测&f（overworld_prediction）、&a下界预测&f（nether_prediction）、&a末地预测&f（end_prediction），外加&a暮色预测&f（twilight_prediction）。"
+				""
+				"把填好的模型放进&a模拟室&f（sim_chamber），消耗&a预测矩阵&f（prediction_matrix）+ 电，就能「模拟击杀」产出对应预测。"
+				""
+				"价值：僵尸/骷髅/苦力怕/末影人模型 = 无限腐肉/骨头/火药/末影珍珠。"
+			]
+			id: "4AE19F91595B86C4"
+			rewards: [{
+				id: "3C4025AE1BBD7305"
+				type: "xp"
+				xp: 20
+			}]
+			subtitle: "数据模型 + 模拟室"
+			tasks: [{
+				id: "7827FC7708DDFF18"
+				item: "hostilenetworks:blank_data_model"
+				type: "item"
+			}]
+			title: "HNN：用 AI 预测刷怪"
+			x: 3.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["4AE19F91595B86C4"]
+			description: [
+				"&a数据模型&f（data_model / data_model_base）对应一种怪物；用&a深度学习头带&f（deep_learner）戴在身上，击杀怪物时自动收集数据，不用手持模型。"
+				""
+				"模型随收集进度自动升级：基础 → 高级 → 精英 → 大师（影响模拟产出效率）。"
+				""
+				"预测矩阵在模拟室里被消耗，产出&a预测&f（prediction）物品。"
+				""
+				"提示：先做出僵尸、骷髅、苦力怕、末影人四个模型，覆盖最常用材料。"
+			]
+			id: "605895E44D12F7B7"
+			rewards: [{
+				id: "2BDFC638BE6F5FA8"
+				type: "xp"
+				xp: 20
+			}]
+			subtitle: "从基础到自足"
+			tasks: [{
+				id: "37DEE1470C14B40F"
+				item: "hostilenetworks:deep_learner"
+				type: "item"
+			}]
+			title: "HNN：深度学习与模型升级"
+			x: 3.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["605895E44D12F7B7"]
+			description: [
+				"&a战利品工厂&f（loot_fabricator）把预测 + 基础材料合成为真实掉落物："
+				""
+				"· 苦力怕预测 → 火药；僵尸预测 → 腐肉/铁锭；骷髅预测 → 骨头；"
+				""
+				"· 末影人预测 → 末影珍珠；烈焰人预测 → 烈焰棒；恶魂预测 → 恶魂之泪。"
+				""
+				"全自动线 = 模拟室（产预测）→ 战利品工厂（合成）→ 管道入库，从此不缺常见材料。"
+				""
+				"联动：产物可喂给神秘农业精华产线或其他机器。"
+			]
+			id: "64DAAF0D932A7EE9"
+			rewards: [{
+				id: "78E1B463F2667D5F"
+				type: "xp"
+				xp: 20
+			}]
+			subtitle: "预测变实物"
+			tasks: [{
+				id: "7CB6C4A88FEF1142"
+				item: "hostilenetworks:loot_fabricator"
+				type: "item"
+			}]
+			title: "HNN：战利品制造机"
+			x: 0.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["2C7484AFBC908444"]
+			description: [
+				"&a神秘农业&f让你种出几乎所有资源。起步：挖&a繁荣矿石&f（prosperity_ore / deepslate_prosperity_ore）得&a繁荣碎片&f（prosperity_shard），合成&a繁荣种子基&f（prosperity_seed_base）。"
+				""
+				"种出&a下界精华&f（inferium_essence），精华逐级升级：&a下界&f→&a谨慎&f（prudentium）→&a三阶&f（tertium）→&a帝国&f（imperium）→&a至高&f（supremium）→&a觉醒至高&f（awakened_supremium）。"
+				""
+				"每种资源都有对应种子（iron_seeds、diamond_seeds、redstone_seeds……），收获精华后在工作台合成真实资源。"
+			]
+			id: "4099702E4B74BB05"
+			rewards: [{
+				id: "0D70D5AEFF3DCAF6"
+				type: "xp"
+				xp: 20
+			}]
+			subtitle: "从繁荣碎片开始"
+			tasks: [{
+				id: "2B099FFC9D366117"
+				item: "mysticalagriculture:prosperity_shard"
+				type: "item"
+			}]
+			title: "神秘农业：种出资源"
+			x: 4.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["4099702E4B74BB05"]
+			description: [
+				"种子种在&a精华农田&f上：inferium_farmland → prudentium → tertium → imperium → supremium，农田等级越高产量越高。"
+				""
+				"&a生长加速器&f（inferium/prudentium/tertium/imperium/supremium_growth_accelerator）摆在作物旁大幅加速，分&a静态版&f（_static）无需供能。"
+				""
+				"资源种子示例：iron_seeds、diamond_seeds、redstone_seeds、gold_seeds、coal_seeds、lapis_lazuli_seeds、ender_pearl 相关的 enderman_seeds、blaze_seeds 等。"
+				""
+				"自动化：用工业先锋播种/收割或机械动力推/拉，整片精华田无人值守。"
+			]
+			id: "02D74601B86C1C37"
+			rewards: [{
+				id: "68B0B7350A23A74B"
+				type: "xp"
+				xp: 20
+			}]
+			subtitle: "怎么种高产"
+			tasks: [{
+				id: "7EC1C03623D773BD"
+				item: "mysticalagriculture:inferium_seeds"
+				type: "item"
+			}]
+			title: "神秘农业：精华种子与农田"
+			x: 6.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["02D74601B86C1C37"]
+			description: [
+				"&a注魔祭坛&f（infusion_altar）放在中央，周围摆&a注魔基座&f（infusion_pedestal），基座上放材料、中央放主物品，右键启动完成&a注魔合成&f。"
+				""
+				"用途：精华跨级升级（下界→谨慎→…）、种子合成、工具升级；升级用&a注魔水晶&f（infusion_crystal），最高&a主注魔水晶&f（master_infusion_crystal）提升成功率与效果。"
+				""
+				"&a种子重处理器&f（seed_reprocessor）把多余种子/精华回收成精华；&a灵魂萃取器&f（soul_extractor）+&a灵魂尘&f（soul_dust）处理生物灵魂。"
+			]
+			id: "28E6AE6DCB4C4E04"
+			rewards: [{
+				id: "6E84C28578B02129"
+				type: "xp"
+				xp: 25
+			}]
+			subtitle: "精华升级核心"
+			tasks: [{
+				id: "4DC6347681EBB68D"
+				item: "mysticalagriculture:infusion_altar"
+				type: "item"
+			}]
+			title: "神秘农业：注魔祭坛"
+			x: 4.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["02D74601B86C1C37"]
+			description: [
+				"&a灵魂罐&f（soul_jar）右键击杀的生物尸体装入灵魂；&a灵魂石/灵魂石砖&f（soulstone / soulstone_bricks）是下界风格建筑材料。"
+				""
+				"装满灵魂的罐子是合成&a生物类种子&f（zombie_seeds、skeleton_seeds、enderman_seeds、cow_seeds 等）的材料。"
+				""
+				"&a灵魂土刷怪笼&f（soulium_spawner）：用 soulium 材料做的刷怪装置，配合灵魂匕首（soulium_dagger）刷怪收集灵魂。"
+				""
+				"提示：先建一个刷怪塔批量攒灵魂，生物种子线才能跑起来。"
+			]
+			id: "6540A363A104A37A"
+			rewards: [{
+				id: "00E0A003B0E5FDBE"
+				type: "xp"
+				xp: 20
+			}]
+			subtitle: "用灵魂解锁生物种子"
+			tasks: [{
+				id: "7543C6446A2E5C57"
+				item: "mysticalagriculture:soul_jar"
+				type: "item"
+			}]
+			title: "神秘农业：灵魂罐与刷怪"
+			x: 6.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["28E6AE6DCB4C4E04"]
+			description: [
+				"&a觉醒祭坛&f（awakening_altar）+&a觉醒基座&f（awakening_pedestal）用于把&a至高精华&f觉醒成&a觉醒至高精华&f（awakened_supremium_essence）。"
+				""
+				"觉醒过程需要消耗大量&a觉醒龙锭&f（来自龙之研究），是两大模组的联动点。"
+				""
+				"觉醒精华可制作&a觉醒工具套装&f（awakened_supremium_pickaxe/sword/bow/chestpiece 等），是全游戏最强工具之一；&a防凋灵方块&f（witherproof_block）保护你的农场。"
+				""
+				"这是神秘农业的毕业目标，工程量大，不必急于一时。"
+			]
+			id: "020B49E3F6E7111F"
+			rewards: [{
+				id: "39A56AF7D19607F7"
+				type: "xp"
+				xp: 30
+			}]
+			subtitle: "至高精华的终点"
+			tasks: [{
+				id: "09327AF323EB9F07"
+				item: "mysticalagriculture:awakening_altar"
+				type: "item"
+			}]
+			title: "神秘农业：觉醒祭坛"
+			x: 1.5d
+			y: 6.0d
+		}
+		{
+			dependencies: ["2C7484AFBC908444"]
+			description: [
+				"&a龙之研究（Draconic Evolution）&f材料链："
+				""
+				"挖&a龙矿&f（overworld/nether/end_draconium_ore，含 deepslate_draconium_ore）得&a龙尘&f（draconium_dust）→ 熔成&a龙锭&f（draconium_ingot）→ 合成&a龙核心&f（draconium_core）。"
+				""
+				"龙锭经&a融合工艺&f（见任务11）升级为&a觉醒龙锭&f（awakened_draconium_ingot / dust / nugget / block）；再收集&a混沌碎片&f（chaos_shard、small/medium/large_chaos_frag）做混沌级装备。"
+				""
+				"&a龙心&f（dragon_heart）击杀末影龙掉落，是高级材料。"
+			]
+			id: "22DE28A597DA314C"
+			rewards: [{
+				id: "2081CCC559031294"
+				type: "xp"
+				xp: 25
+			}]
+			subtitle: "从龙尘到觉醒锭"
+			tasks: [{
+				id: "31C34DF149608426"
+				item: "draconicevolution:draconium_ingot"
+				type: "item"
+			}]
+			title: "龙之研究：龙金属线"
+			x: 7.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["22DE28A597DA314C"]
+			description: [
+				"&a融合工艺&f是多方块合成：中央&a合成核心&f（crafting_core），四周按配方摆&a合成注入器&f（crafting_injector）："
+				""
+				"· &a基础注入器&f（basic_crafting_injector）→ &a Wyvern 注入器&f（wyvern_crafting_injector）→ &a觉醒注入器&f（awakened_crafting_injector）→ &a混沌注入器&f（chaotic_crafting_injector）。"
+				""
+				"把材料放进核心与注入器，接上大电量后启动，注入器依次充能完成合成。"
+				""
+				"产物：觉醒龙锭、觉醒核心（awakened_core）、能量核心组件、龙级装备等。"
+			]
+			id: "4D2D28C4345C881E"
+			rewards: [{
+				id: "5AEAC1F50E728EE8"
+				type: "xp"
+				xp: 30
+			}]
+			subtitle: "终极合成台"
+			tasks: [{
+				id: "0E200FA0BD38EFAB"
+				item: "draconicevolution:crafting_core"
+				type: "item"
+			}]
+			title: "龙之研究：融合工艺多方块"
+			x: 9.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["4D2D28C4345C881E"]
+			description: [
+				"&a能量核心&f（energy_core）是巨型储能多方块：中央能量核心 + 环绕&a稳定器&f（energy_core_stabilizer）+ &a能量塔&f（energy_pylon）进出电 + &a能量传输器&f（energy_transfuser）。"
+				""
+				"版本分&a Wyvern 核心&f（wyvern_energy_core）→&a龙级核心&f（draconic_energy_core）→&a混沌核心&f（chaotic_energy_core），容量随稳定器数量指数增长，可达数十亿 FE。"
+				""
+				"供电：用&a基本/龙级 I/O 水晶&f（basic/draconic/wyvern/chaotic_io_crystal）进出电；&a中继水晶&f（*_relay_crystal）远程输电；&a无线水晶&f（*_wireless_crystal）无线充能装备。"
+			]
+			id: "49809D4F6EE92CCE"
+			rewards: [{
+				id: "7F737FF375C33E69"
+				type: "xp"
+				xp: 30
+			}]
+			subtitle: "万亿级基地电池"
+			tasks: [{
+				id: "2055DF2FFB7CA5A5"
+				item: "draconicevolution:energy_core"
+				type: "item"
+			}]
+			title: "龙之研究：能量核心多方块"
+			x: 9.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["4D2D28C4345C881E"]
+			description: [
+				"工具分三阶：&aWyvern 级&f（wyvern_pickaxe/sword/bow/axe/shovel）→&a龙级&f（draconic_pickaxe/sword/bow/chestpiece）→&a混沌级&f（chaotic_pickaxe/sword/bow/chestpiece），全部 RF 充能。"
+				""
+				"护甲（chestpiece 系列）可插&a升级模块&f（item_wyvern_* / item_draconic_* / item_chaotic_*）：飞行（flight）、速度（speed）、护盾（shield_capacity/recovery）、夜视（night_vision）、水下呼吸（aqua_adapt）、自动进食（auto_feed）、范围挖矿（aoe）等。"
+				""
+				"&a模块核心&f（module_core）是升级件底座；&a龙级电容器&f（draconic_capacitor / wyvern_capacitor / chaotic_capacitor）扩展工具容量。"
+			]
+			id: "1BCC7369472B0CC0"
+			rewards: [{
+				id: "44C8AF1FE84C3B76"
+				type: "xp"
+				xp: 25
+			}]
+			subtitle: "从 Wyvern 到混沌"
+			tasks: [{
+				id: "32B22E213AC8387D"
+				item: "draconicevolution:wyvern_pickaxe"
+				type: "item"
+			}]
+			title: "龙之研究：工具与护甲"
+			x: 10.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["4D2D28C4345C881E"]
+			description: [
+				"&a传送器&f（dislocator / advanced_dislocator）：绑定坐标右键瞬移；&a玩家传送器&f（player_dislocator）点对点传送玩家；&aP2P 传送&f（p2p_dislocator）。"
+				""
+				"&a传送基座&f（dislocator_pedestal / dislocator_receptacle）固定传送点；&a信息板&f（info_tablet）查看多方块状态与能量。"
+				""
+				"&a粒子发生器&f（particle_generator）装饰；&a发电机&f（generator）烧材料发电；&a研磨机&f（grinder）；&a磁铁&f（magnet / advanced_magnet）吸物品。"
+				""
+				"&a磁通量门&f（flux_gate / fluid_gate）按电量/液位控速；&a稳定刷怪笼&f（stabilized_spawner）；&a去附魔器&f（disenchanter）。"
+			]
+			id: "78CB91AD8FDC6738"
+			rewards: [{
+				id: "47F382EE0851E70D"
+				type: "xp"
+				xp: 20
+			}]
+			subtitle: "传送、信息、发电"
+			tasks: [{
+				id: "7C969947B434A6D3"
+				item: {
+					Count: 1
+					id: "draconicevolution:dislocator"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			title: "龙之研究：实用方块与传送"
+			x: 12.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["49809D4F6EE92CCE"]
+			description: [
+				"&a龙反应堆&f（reactor_core）是 DE 的终极多方块发电装置：核心 + &a反应堆注入器&f（reactor_injector）+ &a稳定器&f（reactor_stabilizer）+ 转子组件（reactor_prt_*）。"
+				""
+				"它能产出海量 FE，但一旦失控会爆炸毁灭整片区域——务必先在&a信息板&f上读懂温度/场强曲线，用&a稳定器&f锁住能量再开机。"
+				""
+				"建议：在完全掌握能量核心与融合工艺之前，不要贸然搭建；这是「毕业挑战」级内容。"
+			]
+			id: "6342CB802B93F0B3"
+			rewards: [{
+				id: "0B9BF0361675E3A0"
+				type: "xp"
+				xp: 30
+			}]
+			subtitle: "最危险的发电"
+			tasks: [{
+				id: "1A6E98F1C6EC48E6"
+				item: "draconicevolution:reactor_core"
+				type: "item"
+			}]
+			title: "龙之研究：巨龙反应堆"
+			x: 7.5d
+			y: 6.0d
+		}
+		{
+			dependencies: ["2C7484AFBC908444"]
+			description: [
+				"&a极限反应堆（Extreme Reactors）&f的反应堆是多方块："
+				""
+				"用&a反应堆外壳&f（basic_reactorcasing）围成腔体，内部插&a燃料棒&f（basic_reactorfuelrod），竖放&a控制棒&f（basic_reactorcontrolrod）调节功率，角上放&a反应堆控制器&f（basic_reactorcontroller）。"
+				""
+				"端口：&a固体访问端口&f（basic_reactorsolidaccessport）装燃料、&a能量接口&f（basic_reactorpowertapfe_active/passive）出电、&a流体端口&f（reinforced 版带 fluidport）走水/蒸汽、&a红石端口&f（redstoneport）控制、&a玻璃&f（reactorglass）观察。"
+				""
+				"燃料是&a钇锭&f（yellorium_ingot / dust / nugget / block），从&a钇矿石&f（yellorite_ore / deepslate_yellorite_ore / raw_yellorium）冶炼；烧剩&a蓝晶&f（cyanite）可回收。"
+			]
+			id: "577BC3BD4CC1F1E8"
+			rewards: [{
+				id: "5B94708ED22DF744"
+				type: "xp"
+				xp: 25
+			}]
+			subtitle: "钇矿石变热能"
+			tasks: [{
+				id: "119638AAF54CA4BB"
+				item: "bigreactors:basic_reactorcontroller"
+				type: "item"
+			}]
+			title: "极限反应堆：多方块反应堆"
+			x: 9.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["577BC3BD4CC1F1E8"]
+			description: [
+				"两种发电模式："
+				""
+				"· &a被动冷却&f：反应堆靠空气散热直接出电（用 basic 级 powertapfe），简单但功率低；"
+				""
+				"· &a主动蒸汽循环&f：用&a强化反应堆&f（reinforced_reactorcontroller + reinforced_reactorcasing），进水端口通入水，加热成&a蒸汽&f（steam_bucket），蒸汽送汽轮机发电。"
+				""
+				"&a控制棒&f提升插入深度=降功率降温度；全部抽出=满功率但危险。用红石端口联动温控。"
+				""
+				"进阶：&a能量化机&f（fluidizercontroller）把固体燃料液化供料；&a再处理机&f（reprocessorcontroller）把 cyanite 变回燃料。"
+			]
+			id: "6EF6E8ED7111C2DB"
+			rewards: [{
+				id: "1089EE390F9042E8"
+				type: "xp"
+				xp: 25
+			}]
+			subtitle: "冷却路线选择"
+			tasks: [{
+				id: "2C300F25E308C93F"
+				item: "bigreactors:reinforced_reactorcontroller"
+				type: "item"
+			}]
+			title: "极限反应堆：被动 vs 主动"
+			x: 12.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["6EF6E8ED7111C2DB"]
+			description: [
+				"&a汽轮机&f（Turbine）是另一个多方块："
+				""
+				"用&a涡轮外壳&f（basic_turbinecasing）围成筒，中心立&a涡轮转子轴&f（basic_turbinerotorshaft），轴上层层装&a转子叶片&f（basic_turbinerotorblade），底部&a轴承&f（basic_turbinerotorbearing）支撑，顶/角放&a涡轮控制器&f（basic_turbinecontroller）。"
+				""
+				"蒸汽从&a流体端口&f（basic_turbinefluidport_forge_active/passive）吹入推动转子旋转，&a能量接口&f（basic_turbinepowertapfe）出 FE。"
+				""
+				"叶片越多功率越高，但转速过高会损坏——用控制器或&a红石端口&f限制最高转速。强化版（reinforced_*）功率更大。"
+			]
+			id: "57122F9D25BFCF2B"
+			rewards: [{
+				id: "0FAFADF2A6C14202"
+				type: "xp"
+				xp: 25
+			}]
+			subtitle: "蒸汽变电"
+			tasks: [{
+				id: "2078E48A0C07CF0D"
+				item: "bigreactors:basic_turbinecontroller"
+				type: "item"
+			}]
+			title: "极限反应堆：汽轮机多方块"
+			x: 13.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["57122F9D25BFCF2B"]
+			description: [
+				"配套方块："
+				""
+				"· &a赋能机&f（energizercontroller + energizercasing + energizercell + energycore）：无线/远程给装备充能；"
+				""
+				"· &a流体化机&f（fluidizercontroller）：把钇锭熔成钇液体持续供料；"
+				""
+				"· &a再处理机&f（reprocessorcontroller）：回收辐照燃料；"
+				""
+				"· &a扳手&f（bigreactors:wrench）调整多方块朝向与连接；"
+				""
+				"· 控制器 GUI 实时监控温度、燃料余量、输出功率、转速，是反应堆安全运行的仪表盘。"
+			]
+			id: "7F672135FF9BD236"
+			rewards: [{
+				id: "7E63B2C2FBA6119B"
+				type: "xp"
+				xp: 20
+			}]
+			subtitle: "燃料循环与监控"
+			tasks: [{
+				id: "594E19997CB8DA5B"
+				item: "bigreactors:energizercontroller"
+				type: "item"
+			}]
+			title: "极限反应堆：配套与监控"
+			x: 13.5d
+			y: 6.0d
+		}
+		{
+			dependencies: ["2C7484AFBC908444"]
+			description: [
+				"&a格雷科技（GTCEu, GregTech CE: Unofficial）&f是包内可选的深度科技线：真实化工、多级电压、海量中间产物，完整玩通需数百小时。"
+				""
+				"核心概念："
+				""
+				"· &a电压等级&f：ULV → LV(32) → MV(128) → HV(512) → EV(2048) → IV → LuV → … 逐级解锁；"
+				""
+				"· &a电路 tier&f：basic_electronic_circuit → good_electronic_circuit → advanced_integrated_circuit 等，决定机器能做什么；"
+				""
+				"· &a机器外壳&f（lv/mv/hv/ev/…_machine_hull）是每级机器底座。"
+				""
+				"入门建议：先用其他模组攒资源，从&a蒸汽青铜机器&f起步，按 JEI 逐级查配方；它不适合新手首刷。"
+			]
+			id: "45A998BC32B9DA82"
+			rewards: [{
+				id: "52AE29001E725A57"
+				type: "xp"
+				xp: 20
+			}]
+			subtitle: "最硬核的可选科技线"
+			tasks: [{
+				id: "405F10D5297E3ABC"
+				item: "gtceu:basic_electronic_circuit"
+				type: "item"
+			}]
+			title: "GTCEu：格雷科技入门警告"
+			x: 10.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["45A998BC32B9DA82"]
+			description: [
+				"GTCEu 机器体系："
+				""
+				"· 每级&a电路组装机&f（lv/mv/hv/ev_circuit_assembler）制造电路板；"
+				""
+				"· &a组装线&f（assembly_line）多方块做高端组装；"
+				""
+				"· 矿石处理：矿→粉碎→洗矿→焙烧→电解… 可做到 4 倍以上矿物产量；"
+				""
+				"· &a合金熔炉&f（lv/mv/hv_alloy_smelter 等各级）替代普通熔炉。"
+				""
+				"提示：GTCEu 的 EU 可经转换与 FE 互通；它会「接管」部分矿物/电路配方，一切以 JEI 为准。想深入请查阅包内 GTCEu 官方手册。"
+			]
+			id: "442E8FACB85FD41E"
+			rewards: [{
+				id: "06B48D2016682803"
+				type: "xp"
+				xp: 25
+			}]
+			subtitle: "单块/多方块与矿石倍率"
+			tasks: [{
+				id: "2269711E5FAA93CE"
+				item: "gtceu:lv_machine_hull"
+				type: "item"
+			}]
+			title: "GTCEu：机器与加工链"
+			x: 15.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["64DAAF0D932A7EE9"]
+			description: [
+				"一条资源无限化产线："
+				""
+				"1. &a深度学习头带&f挂机刷怪，把僵尸/骷髅/苦力怕/末影人模型喂到大师级；"
+				""
+				"2. &a模拟室&f批量产预测，&a战利品工厂&f合成骨头/腐肉/末影珍珠；"
+				""
+				"3. 怪物掉落物作为神秘农业&a生物种子&f（zombie/skeleton/enderman_seeds）的催化材料；"
+				""
+				"4. 精华田配&a生长加速器&f阵列自动收割，精华合成为铁/钻石/红石。"
+				""
+				"结果：常见矿物与怪物材料全部无限化。"
+			]
+			id: "1D186DE2857F3727"
+			rewards: [{
+				id: "7ACBCC8AA3C42985"
+				type: "xp"
+				xp: 30
+			}]
+			subtitle: "预测喂精华农场"
+			tasks: [{
+				id: "1635BDDEBCF09CA5"
+				item: "hostilenetworks:sim_chamber"
+				type: "item"
+			}]
+			title: "事例：HNN + 神秘农业联动"
+			x: 0.0d
+			y: 6.0d
+		}
+		{
+			dependencies: [
+				"49809D4F6EE92CCE"
+				"57122F9D25BFCF2B"
+			]
+			description: [
+				"终极能源布局："
+				""
+				"1. 主电源用&a极限反应堆&f（强化蒸汽循环）+&a汽轮机&f，产出稳定 FE；"
+				""
+				"2. 电能汇入&a龙能量核心&f（draconic_energy_core）多方块做基地储能，加多层&a稳定器&f扩容；"
+				""
+				"3. 用&a无线水晶&f（draconic_wireless_crystal）无线给龙级护甲充能；"
+				""
+				"4. &a能量塔&f+&a中继水晶&f分线供全基地；"
+				""
+				"5. &a信息板&f集中监控核心电量与反应堆温度。"
+			]
+			id: "00014BCA4BA719DB"
+			rewards: [{
+				id: "4D78167F16A47884"
+				type: "xp"
+				xp: 35
+			}]
+			subtitle: "万亿电网"
+			tasks: [{
+				id: "22D71174C324926A"
+				item: "draconicevolution:draconic_energy_core"
+				type: "item"
+			}]
+			title: "事例：龙能量核心 + 反应堆供电"
+			x: 10.5d
+			y: 6.0d
+		}
+		{
+			dependencies: ["28E6AE6DCB4C4E04"]
+			description: [
+				"神秘农业精华升级链："
+				""
+				"inferium（下界）→ prudentium（谨慎）→ tertium（三阶）→ imperium（帝国）→ supremium（至高）→ awakened_supremium（觉醒）。"
+				""
+				"每级精华用于解锁对应等级农田、生长加速器与工具；升级在&a注魔祭坛&f完成。"
+				""
+				"不要跳级：先把 inferium 田铺满+加速器，攒够量再批量升 prudentium，循序渐进。"
+			]
+			id: "0352A9D3EF53E8BE"
+			rewards: [{
+				id: "1FE24F837CE5699E"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "五级精华怎么升"
+			tasks: [{
+				id: "5AD8FF8818966CDF"
+				item: "mysticalagriculture:supremium_essence"
+				type: "item"
+			}]
+			title: "精华等级路线图"
+			x: 3.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["1BCC7369472B0CC0"]
+			description: [
+				"龙护甲 chestpiece 常用升级模块："
+				""
+				"· 飞行 item_draconic_flight（Wyvern 即可起飞）；"
+				""
+				"· 护盾 item_draconic_shield_capacity / recovery / control；"
+				""
+				"· 速度 item_draconic_speed、跳跃 item_draconic_jump；"
+				""
+				"· 夜视 item_wyvern_night_vision、水下 item_wyvern_aqua_adapt；"
+				""
+				"· 自动进食 item_draconic_auto_feed、末影拾取 item_draconic_ender_collection、范围挖矿 item_draconic_aoe。"
+				""
+				"混沌级（item_chaotic_*）全面更强。"
+			]
+			id: "2582F72B59B7FAF4"
+			rewards: [{
+				id: "707AA5215C92D71D"
+				type: "xp"
+				xp: 20
+			}]
+			subtitle: "护甲插什么"
+			tasks: [{
+				id: "21AF65BCE1A8E698"
+				item: "draconicevolution:item_draconic_flight"
+				type: "item"
+			}]
+			title: "龙装备升级模块速查"
+			x: 9.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["57122F9D25BFCF2B"]
+			description: [
+				"反应堆运行安全清单："
+				""
+				"· 先小后大：先搭 3x3 小反应堆练手，再扩规模；"
+				""
+				"· 控制棒不要全抽到底，温度接近阈值就下插；"
+				""
+				"· 主动循环确保水/蒸汽管路畅通，断水会过热；"
+				""
+				"· 汽轮机限制最高转速，别让转子飞散；"
+				""
+				"· 龙反应堆（DE）风险极高，单独建在远处，备好断电开关。"
+			]
+			id: "52A9C3F8EC1C5DCC"
+			rewards: [{
+				id: "624E4A8CFFAAC211"
+				type: "xp"
+				xp: 20
+			}]
+			subtitle: "别把家炸了"
+			tasks: [{
+				id: "1515C8BC4F13F63D"
+				item: "bigreactors:reinforced_reactorcontroller"
+				type: "item"
+			}]
+			title: "反应堆安全要点"
+			x: 15.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["605895E44D12F7B7"]
+			description: [
+				"&a预测矩阵&f（prediction_matrix）是模拟室运转的「燃料」，由空白数据模型与矩阵配方合成。"
+				""
+				"它在模拟室里被持续消耗来驱动「模拟击杀」；模型升到高阶后消耗减缓，大师级近乎自足。"
+				""
+				"批量囤积预测矩阵，是 HNN 自动线不中断的关键。"
+			]
+			id: "124D593579DA91D2"
+			rewards: [{
+				id: "3D882FA73833E420"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "模拟室的燃料"
+			tasks: [{
+				id: "488BB0A3AA86B6D7"
+				item: "hostilenetworks:prediction_matrix"
+				type: "item"
+			}]
+			title: "HNN：预测矩阵的来源"
+			x: 1.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["4099702E4B74BB05"]
+			description: [
+				"&a繁荣矿石&f（prosperity_ore / deepslate_prosperity_ore）是神秘农业的基石矿，挖了得&a繁荣碎片&f（prosperity_shard）。"
+				""
+				"碎片可合成为&a繁荣锭&f（prosperity_ingot）、&a繁荣宝石&f（prosperity_gemstone）与对应方块，用于制作种子基与机器。"
+				""
+				"多挖一些繁荣矿，它会贯穿整条神秘农业线。"
+			]
+			id: "56D42C46BF801D99"
+			rewards: [{
+				id: "3CBD1F1A14D67238"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "幸运矿的起点"
+			tasks: [{
+				id: "0F0333DC8F7F51C7"
+				item: "mysticalagriculture:prosperity_ore"
+				type: "item"
+			}]
+			title: "神秘农业：繁荣矿石与基础"
+			x: 4.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["28E6AE6DCB4C4E04"]
+			description: [
+				"&a灵魂萃取器&f（soul_extractor）把生物灵魂处理成&a灵魂尘&f（soul_dust）；"
+				""
+				"&a灵魂土/灵魂钢&f（soulium_ingot / soulium_seed_base）用于&a灵魂土刷怪笼&f（soulium_spawner）；"
+				""
+				"&a灵魂匕首&f（soulium_dagger）右键怪物收集灵魂。"
+				""
+				"生物种子线（zombie/skeleton/cow_seeds）全靠这套灵魂材料启动。"
+			]
+			id: "5AB2CFA3C387C6A2"
+			rewards: [{
+				id: "3DEFFF6BFC5AFF37"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "灵魂尘与灵魂土"
+			tasks: [{
+				id: "48045468F9BB7625"
+				item: "mysticalagriculture:soul_extractor"
+				type: "item"
+			}]
+			title: "神秘农业：灵魂萃取"
+			x: 4.5d
+			y: 6.0d
+		}
+		{
+			dependencies: ["28E6AE6DCB4C4E04"]
+			description: [
+				"精华可做各级工具：prudentium → tertium → imperium → supremium，每级都有镐/剑/斧/铲/锄/弓/镰刀。"
+				""
+				"&a至高工具&f（supremium_pickaxe / sword / bow 等）效率与耐久都很强；再往上是&a觉醒工具&f（awakened_supremium_*）。"
+				""
+				"&a浇水壶&f（watering_can 各级）手动加速作物。"
+			]
+			id: "7CED82450850D88B"
+			rewards: [{
+				id: "490A40A6B89DD209"
+				type: "xp"
+				xp: 20
+			}]
+			subtitle: "至高工具"
+			tasks: [{
+				id: "347CCBAB2BECCB04"
+				item: "mysticalagriculture:supremium_pickaxe"
+				type: "item"
+			}]
+			title: "神秘农业：精华工具套装"
+			x: 6.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["02D74601B86C1C37"]
+			description: [
+				"&a施肥精华&f（fertilized_essence）加速作物生长；"
+				""
+				"&a种子重处理器&f（seed_reprocessor）把多余种子/残次品回收成精华，避免堆积；"
+				""
+				"配合生长加速器，精华田产量可达人工收割的数十倍。"
+			]
+			id: "3AB94D1F3A1D1EDF"
+			rewards: [{
+				id: "0590A00953A0C3F4"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "循环利用"
+			tasks: [{
+				id: "093CF30A7D02AFF4"
+				item: "mysticalagriculture:fertilized_essence"
+				type: "item"
+			}]
+			title: "神秘农业：肥料与种子处理器"
+			x: 7.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["22DE28A597DA314C"]
+			description: [
+				"&a龙块&f（draconium_block）压缩存储龙锭；&a龙核箱&f（draconium_chest）是龙级存储；"
+				""
+				"&a龙核心&f（draconium_core）与&a觉醒核心&f（awakened_core）是融合工艺的关键中间体；"
+				""
+				"&a混沌碎片&f（chaos_shard）来自末地混沌岛，small/medium/large_chaos_frag 逐级合成，做混沌装备。"
+			]
+			id: "18B9A373FFE9DCBB"
+			rewards: [{
+				id: "313C2F7CD9618BDC"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "块与核心"
+			tasks: [{
+				id: "4CF2B2DF85BDEE4E"
+				item: "draconicevolution:draconium_block"
+				type: "item"
+			}]
+			title: "龙之研究：龙锭存储与组件"
+			x: 7.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["78CB91AD8FDC6738"]
+			description: [
+				"&a信息板&f（info_tablet）手持查看能量核心/反应堆的实时状态；"
+				""
+				"&a粒子发生器&f（particle_generator）放出装饰粒子；&a晶体绑定器&f（crystal_binder）绑定水晶；"
+				""
+				"&a磁通量门&f（flux_gate）与&a流体门&f（fluid_gate）按电量/液位限流；&a电位器&f（potentiometer）精细调节。"
+			]
+			id: "0576EC4830516E4D"
+			rewards: [{
+				id: "09354240D3D68E80"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "监控与装饰"
+			tasks: [{
+				id: "5D5669148419BB49"
+				item: "draconicevolution:info_tablet"
+				type: "item"
+			}]
+			title: "龙之研究：信息板与粒子"
+			x: 12.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["577BC3BD4CC1F1E8"]
+			description: [
+				"&a钇矿石&f（yellorite_ore / deepslate_yellorite_ore / raw_yellorium）在地下开采，熔成&a钇锭&f（yellorium_ingot / dust / nugget / block）做反应堆燃料。"
+				""
+				"也可用&a钇流体桶&f（yellorium_bucket）由流体化机供料。"
+				""
+				"多备钇锭，反应堆烧得很快。"
+			]
+			id: "2995397834781E75"
+			rewards: [{
+				id: "0AEF6A74F77345EE"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "燃料从哪来"
+			tasks: [{
+				id: "32E90E1FF02D890D"
+				item: "bigreactors:yellorite_ore"
+				type: "item"
+			}]
+			title: "极限反应堆：钇矿石来源"
+			x: 10.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["6EF6E8ED7111C2DB"]
+			description: [
+				"烧过的钇变成&a蓝晶&f（cyanite_ingot / dust / block / bucket），用&a再处理机&f（reprocessorcontroller）回收成新燃料闭环；"
+				""
+				"&a钚&f（blutonium_ingot / dust）是更高级燃料；"
+				""
+				"配合&a流体化机&f（fluidizercontroller）可全程流体供料，无需手动加锭。"
+			]
+			id: "1D4CE3C56AB05E73"
+			rewards: [{
+				id: "271E03862CA542BF"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "辐照燃料再利用"
+			tasks: [{
+				id: "7344527409FB9413"
+				item: "bigreactors:cyanite_ingot"
+				type: "item"
+			}]
+			title: "极限反应堆：蓝晶回收"
+			x: 15.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["57122F9D25BFCF2B"]
+			description: [
+				"汽轮机内部组件：&a转子轴&f（basic_turbinerotorshaft）串起&a转子叶片&f（basic_turbinerotorblade），底部&a轴承&f（basic_turbinerotorbearing）支撑。"
+				""
+				"叶片层数决定功率上限；强化版（reinforced_turbinerotorblade / shaft）更耐用。"
+				""
+				"蒸汽端口与能量端口分列两端，管路别接反。"
+			]
+			id: "1E29B61C32385F2E"
+			rewards: [{
+				id: "417E16A6A601FE5A"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "汽轮机内部"
+			tasks: [{
+				id: "35FB9785112D8859"
+				item: "bigreactors:basic_turbinerotorblade"
+				type: "item"
+			}]
+			title: "极限反应堆：转子与线圈"
+			x: 16.5d
+			y: 6.0d
+		}
+		{
+			dependencies: ["45A998BC32B9DA82"]
+			description: [
+				"&a电路组装机&f（lv/mv/hv/ev_circuit_assembler）逐级制造电路板："
+				""
+				"basic_electronic_circuit → good_electronic_circuit → basic/advanced_integrated_circuit；"
+				""
+				"电路板是升级机器电压 tier 的门票——想上 MV 就得先批量做 LV 电路。"
+			]
+			id: "6671584AEDE8C022"
+			rewards: [{
+				id: "4E6DD8230876F95F"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "电路板是科技钥匙"
+			tasks: [{
+				id: "1F1C518233382DC8"
+				item: "gtceu:lv_circuit_assembler"
+				type: "item"
+			}]
+			title: "GTCEu：电路组装"
+			x: 13.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["442E8FACB85FD41E"]
+			description: [
+				"&a组装线&f（assembly_line）多方块用&a组装线外壳&f（assembly_line_casing）+ 单元（assembly_line_unit）做高端连续组装；"
+				""
+				"配合&a机器外壳&f（各电压级 machine_hull）与电压线圈，GTCEu 的工厂是「电压驱动」的多级金字塔。"
+				""
+				"不打算深玩 GTCEu 的玩家到此了解概念即可；想入坑请查官方手册。"
+			]
+			id: "65FBEF387B600D85"
+			rewards: [{
+				id: "67B15E42EAABD522"
+				type: "xp"
+				xp: 20
+			}]
+			subtitle: "高端自动化"
+			tasks: [{
+				id: "6F25C686EC050E7F"
+				item: "gtceu:assembly_line"
+				type: "item"
+			}]
+			title: "GTCEu：组装线与多方块"
+			x: 16.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["605895E44D12F7B7"]
+			description: [
+				"预测按生物所在维度分：&a主世界预测&f（overworld_prediction）、&a下界预测&f（nether_prediction）、&a末地预测&f（end_prediction）、&a暮色预测&f（twilight_prediction）。"
+				""
+				"下界预测对应烈焰人/恶魂/岩浆怪等，末地预测对应末影人/末影龙相关；"
+				""
+				"战利品工厂按预测维度合成对应区域掉落物。"
+			]
+			id: "3573202104C66E56"
+			rewards: [{
+				id: "66122CBE1BD99E93"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "主世界/下界/末地"
+			tasks: [{
+				id: "7B3E9DF023184899"
+				item: "hostilenetworks:nether_prediction"
+				type: "item"
+			}]
+			title: "HNN：三类预测维度"
+			x: 3.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["2C7484AFBC908444"]
+			description: [
+				"回顾本章："
+				""
+				"· &aHNN&f → 无限怪物掉落；&a神秘农业&f → 无限矿物；"
+				""
+				"· &a龙之研究&f → 终极能量核心与神装；"
+				""
+				"· &a极限反应堆&f → 大型稳定电源；"
+				""
+				"· &aGTCEu&f → 可选的硬核深度线。"
+				""
+				"到这一步，常见资源已不再稀缺，你可以把精力放在基地规划、AE2 自动合成与最终挑战上。祝你玩得开心！"
+			]
+			icon: "draconicevolution:draconium_ingot"
+			id: "4A00B1885753C31B"
+			rewards: [{
+				id: "6BFBE9BB8A93F0BB"
+				type: "xp"
+				xp: 50
+			}]
+			shape: "octagon"
+			size: 1.5d
+			subtitle: "你已掌握资源无限化"
+			tasks: [{
+				id: "48FD6410300BCDCF"
+				title: "进阶科技收束"
+				type: "checkmark"
+			}]
+			title: "进阶科技收束"
+			x: 6.0d
+			y: 1.5d
+		}
+	]
+	title: "进阶科技综合"
+}

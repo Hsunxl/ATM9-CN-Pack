@@ -1,0 +1,739 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "t15_tconstruct"
+	group: "00C72C1FB6193A42"
+	icon: {
+		Count: 1
+		id: "tconstruct:pickaxe"
+		tag: {
+			Damage: 0
+			tic_broken: 0b
+		}
+	}
+	id: "2FD2133F14A7383B"
+	order_index: 15
+	progression_mode: "flexible"
+	quest_links: [ ]
+	quests: [
+		{
+			description: [
+				"匠魂（Tinkers’ Construct）让工具不再是「木镐→铁镐→钻石镐」的线性升级，而是&a自己拼&f：选材料做部件，组装成工具，再用强化词条把它打磨成独一无二的神器。"
+				""
+				"核心循环：&a做部件&f → &a工具站／锻造台组装&f → &a用工具攒经验升级解锁强化槽&f → &a强化台加词条（Modifier）&f → &a坏了用维修工具修&f，永不丢弃。"
+				""
+				"本章树状路线："
+				""
+				"· &a铸型与部件&f：空白铸型 → 手柄／绑定 → 头部与武器件；"
+				""
+				"· &a组装与工具类型&f：工具站组装第一把镐 → 工具锻造台 → 全工具类型；"
+				""
+				"· &a材料与特性&f：基础材料 → 钴／阿迪特 → 玛玉玲 → 合金大全 → 四系史莱姆水晶；"
+				""
+				"· &a强化系统&f：强化台 → 强化词条大全 → 强化水晶加槽；"
+				""
+				"· &a装备与护具&f：旅行护甲 → 史莱姆／板甲 → 维修工具 → 背包杂物；另有高级铸造厂 Foundry；"
+				""
+				"· &a收尾&f：实用技巧 → 事例设施（全自动冶炼铸锭产线）→ 毕业镐综合实战。"
+			]
+			icon: "tconstruct:pickaxe"
+			id: "6747A141FE0A535C"
+			rewards: [{
+				id: "23655DD72E0F5316"
+				type: "xp"
+				xp: 10
+			}]
+			shape: "hexagon"
+			size: 1.5d
+			subtitle: "部件→组装→强化→升级"
+			tasks: [{
+				id: "5F1F424E89C229FC"
+				title: "认识匠魂：可定制的工具哲学"
+				type: "checkmark"
+			}]
+			title: "认识匠魂：可定制的工具哲学"
+			x: 15.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["6747A141FE0A535C"]
+			description: [
+				"&a空白沙铸型（Blank Sand Cast）&f是一切铸型的起点：&a1 个沙子（或 1 个红沙）&f在工作台里就能合成 &a4 个&f，便宜到可以随手用。"
+				""
+				"用法：把空白沙铸型放进&a浇铸台（Casting Table）&f → 拿一件已在&a部件制造台&f做好的部件（镐头、手柄、刀刃……）右键压印出形状 → 浇入熔融金属 → 冷却后取出成品。&c沙铸型是一次性的，浇完就碎。&f"
+				""
+				"捡起来的&a沙铸型／红沙铸型&f会自动变回空白沙铸型，所以一个空白铸型可以反复压印成不同形状——但每浇铸一次都得重新压印。"
+				""
+				"想省事就做&a金质铸型&f（可重复使用、不消耗）：把实物（如铁锭、镐头部件）放到浇铸台上浇入&a熔融金&f，即可得到对应形状的金质铸型。"
+				""
+				"常见形状：工具手柄、坚固手柄、绑定件、坚固绑定件、镐头、小斧刃、板斧刃、锤头、小刀片、宽刃、扁斧头、弓臂、弓把、大板、锁链基底、维修工具——每种都有沙子／红沙／金质三个版本。"
+				""
+				"&c注意&f：盔甲镶板（头盔／胸甲／护腿／靴子）的铸型只能在&a部件制造台&f里用沙子或空白沙铸型做出来，浇铸台上压印不出来。"
+				""
+				"&7提示：匠魂 3.x 已经移除了「金质空白铸型」，旧攻略里「先做空白金铸型再压印」的玩法在本包行不通——现在空白铸型只有沙子与红沙两种。&f"
+			]
+			id: "43041854B30AAEDA"
+			rewards: [{
+				id: "32F461C2D480576D"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "Blank Sand Cast"
+			tasks: [{
+				count: 4L
+				id: "2322A7A5B57691C9"
+				item: "tconstruct:blank_sand_cast"
+				type: "item"
+			}]
+			title: "空白铸型：一切模具的起点"
+			x: 16.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["43041854B30AAEDA"]
+			description: [
+				"工具由多个部件组成，&a手柄（Tool Handle）&f决定耐久系数与握持手感，&a绑定件（Tool Binding）&f连接头部与手柄。"
+				""
+				"高级工具用&a坚固手柄（Tough Handle）&f与&a坚固绑定（Tough Binding）&f，材料可选范围更大。"
+				""
+				"不同材料做手柄效果不同：&a纸手柄&f多一个强化槽、&a史莱姆手柄&f回弹、&a玛玉玲手柄&f高耐久。"
+			]
+			id: "19898D92D7D67C85"
+			rewards: [{
+				id: "3462F8AF5CEABA68"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "Tool Handle / Binding"
+			tasks: [{
+				id: "3C2D20B477EF22F3"
+				item: "tconstruct:tool_handle"
+				type: "item"
+			}]
+			title: "部件：手柄与绑定"
+			x: 18.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["19898D92D7D67C85"]
+			description: [
+				"&a头部部件&f决定工具的核心性能：&a镐头（Pick Head）&f、&a小斧头（Small Axe Head）&f、&a宽斧头（Broad Axe Head）&f、&a锤首（Hammer Head）&f、&a扁斧首（Adze Head）&f。"
+				""
+				"&a武器件&f决定伤害：&a小刀刃（Small Blade）&f（匕首/剑）、&a宽剑刃（Broad Blade）&f（巨剑/斩刀）、&a弓臂（Bow Limb）+&a弓握把（Bow Grip）+&a弓弦（Bowstring）&f（弓）。"
+				""
+				"&a护甲件&f：&a盾牌芯（Shield Core）、&a大板（Large Plate）、&a锁甲环（Maille）&f。"
+				""
+				"头部材料是工具强弱的关键：玛玉玲头 > 钴 > 铁 > 石 > 木。"
+			]
+			id: "54C47E18CB6DAE68"
+			rewards: [{
+				id: "54B855E9AB26CFC5"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "Pick Head / Blade / Axe Head"
+			tasks: [{
+				id: "1BEDBA66173955E9"
+				item: "tconstruct:pick_head"
+				type: "item"
+			}]
+			title: "部件：头部与武器件"
+			x: 19.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["54C47E18CB6DAE68"]
+			description: [
+				"在&a工具站&f里：镐头 + 绑定 + 手柄 → 合成一把&a匠魂镐（Pickaxe）&f。"
+				""
+				"给工具起个名字，它就属于你了。用它挖矿、砍怪会积累&a经验（XP）&f，升级后解锁&a强化槽&f（默认 3 个，纸部件可加）。"
+				""
+				"工具&a不会用完即消失&f：耐久归零后变成「损坏」状态，用&a维修工具（Repair Kit）&f右键即可修复，材料越高级修得越贵。"
+			]
+			id: "36B6D608851E3AB4"
+			rewards: [{
+				id: "4056B42A63F4AD01"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "Pickaxe 入门"
+			tasks: [{
+				id: "087C500082BABDF2"
+				item: {
+					Count: 1
+					id: "tconstruct:pickaxe"
+					tag: {
+						Damage: 0
+						tic_broken: 0b
+					}
+				}
+				type: "item"
+			}]
+			title: "组装第一把工具"
+			x: 21.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["36B6D608851E3AB4"]
+			description: [
+				"&a工具锻造台（Tinkers’ Anvil）&f是升级后的组装台：支持 4+ 部件的大型工具，也能在这里&a改名、加强化、修工具&f。"
+				""
+				"它和普通铁砧不同：不惩罚耐久、不合并附魔，专门服务匠魂工具的全生命周期。"
+				""
+				"做 4+ 部件工具（锤、大铲、镰刀等）必须有锻造台。"
+			]
+			id: "654401A3F95AA509"
+			rewards: [{
+				id: "2F933D66C9495688"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "Tinkers’ Anvil"
+			tasks: [{
+				id: "324182AD1BA709E8"
+				item: "tconstruct:tinkers_anvil"
+				type: "item"
+			}]
+			title: "工具锻造台：高级工具"
+			x: 22.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["654401A3F95AA509"]
+			description: [
+				"匠魂工具全家桶（按用途分）："
+				""
+				"· 采矿：&aPickaxe（镐）、&aWar Pick（战镐）、&aSledge Hammer（大锤，3×3 挖矿）、&aVein Hammer（矿脉锤，连锁挖矿）；"
+				""
+				"· 伐木：&aHand Axe（手斧）、&aBroad Axe（宽斧）、&aPickadze（镐扁复合）；"
+				""
+				"· 铲地：&aShovel（铲，通过 Mattock 变种）、&aExcavator（大铲，3×3 掘地）；"
+				""
+				"· 农业：&aKama（镰）、&aScythe（大镰，大范围收割）、&aMattock（锄镐复合）；"
+				""
+				"· 战斗：&aSword（剑）、&aDagger（匕首）、&aCleaver（斩刀，高伤害）、&aBattlesign（战盾）；"
+				""
+				"· 远程：&aLongbow（长弓）、&aShortbow（短弓，通过 Crossbow 变种）、&aCrossbow（十字弩）；"
+				""
+				"· 魔法：&aEarth Sky Ender Ichor Staff（四种元素法杖）、&aMelting Pan（熔锅）；"
+				""
+				"· 特殊：&aSwasher（ washer 系）、&aFlint and Brick（点火器）。"
+				""
+				"大锤/大铲/大镰 = 3×3 范围作业，中期效率飞跃。"
+			]
+			icon: {
+				Count: 1
+				id: "tconstruct:sledge_hammer"
+				tag: {
+					Damage: 0
+					tic_broken: 0b
+				}
+			}
+			id: "68AA8846AF895A49"
+			rewards: [{
+				id: "5875330446C2DDE6"
+				type: "xp"
+				xp: 20
+			}]
+			subtitle: "镐·剑·斧·锤·弓· staff"
+			tasks: [{
+				id: "15CF949EAB0DD652"
+				title: "工具类型大全"
+				type: "checkmark"
+			}]
+			title: "工具类型大全"
+			x: 24.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["36B6D608851E3AB4"]
+			description: [
+				"匠魂材料按头部/手柄/绑定分别给特性（Trait）："
+				""
+				"· &a木（Wood）&f：便宜，耐久低，特性「生态」；"
+				""
+				"· &a石（Stone/Cobblestone）&f：便宜，速度一般；"
+				""
+				"· &a燧石（Flint）&f：高暴击率；"
+				""
+				"· &a仙人掌（Cactus）&f：灼烧效果；"
+				""
+				"· &a骨头（Bone）&f：额外耐久；"
+				""
+				"· &a纸（Paper）&f：&a多一个强化槽&f（手柄用纸是核心技巧）；"
+				""
+				"· &a铁（Iron）&f：均衡，特性「地磁」（自动修复）；"
+				""
+				"· &a铜/锡/青铜/铅/银&f：过渡材料，特性各异。"
+			]
+			id: "34111D0AF06BB91A"
+			rewards: [{
+				id: "5C1A6E09BD76E977"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "木·石·铁·铜·锡"
+			tasks: [{
+				count: 4L
+				id: "4A0A7F3F0FA59232"
+				item: "tconstruct:copper_nugget"
+				type: "item"
+			}]
+			title: "基础材料与特性"
+			x: 22.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["34111D0AF06BB91A"]
+			description: [
+				"&a钴（Cobalt）&f矿（&acobalt_ore/raw_cobalt&f）生成在下界，是匠魂中期核心金属：头部特性&a「迅捷」&f（挖矿速度极快）。"
+				""
+				"&a阿迪特（Ardite）&f也在下界：头部特性&a「耐磨」&f（耐久极高）。"
+				""
+				"钴锭和阿迪特锭在冶炼厂内&a按 1:1 混合&f，即成下一条的&a玛玉玲（Manyullyn）&f。"
+			]
+			id: "6C6D4DA187DECA68"
+			rewards: [{
+				id: "71CD29180C18203F"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "Cobalt / Ardite"
+			tasks: [{
+				count: 2L
+				id: "69E144F82E791DF7"
+				item: "tconstruct:cobalt_ingot"
+				type: "item"
+			}]
+			title: "钴与阿迪特：下界高级矿"
+			x: 24.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["6C6D4DA187DECA68"]
+			description: [
+				"&a玛玉玲（Manyullyn）&f=钴+阿迪特在冶炼厂内自动合金化，是匠魂&a最强头部材料&f：高伤害、高耐久、高速。"
+				""
+				"经典配装：&a玛玉玲镐头 + 纸手柄（多强化槽）+ 玛玉玲绑定&f——中期毕业镐。"
+				""
+				"其它合金：&a骑士史莱姆（Knightslime，高伤害）、&a猪铁（Pig Iron，自动修复）、&a玫瑰金（Rose Gold，经验加成）、&a岩钢（Slimesteel）、&a Hepatizon（地核钢）&f等，都在冶炼厂内自动合成。"
+			]
+			id: "4BF95891EA2FFAE2"
+			rewards: [{
+				id: "5EF00FE578A65800"
+				type: "xp"
+				xp: 20
+			}]
+			subtitle: "Manyullyn"
+			tasks: [{
+				id: "632D3C84BBD9ABDA"
+				item: "tconstruct:manyullyn_ingot"
+				type: "item"
+			}]
+			title: "玛玉玲：顶级头部材料"
+			x: 25.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["4BF95891EA2FFAE2"]
+			description: [
+				"冶炼厂内自动合金配方（JEI 查 molten_* bucket）："
+				""
+				"· &a猪铁（Pig Iron）&f=铁+血+熟肉，特性「自动修复」；"
+				""
+				"· &a骑士史莱姆（Knightslime）&f=史莱姆+铁+阿迪特，特性「锋利」；"
+				""
+				"· &a玫瑰金（Rose Gold）&f=金+铜+血，特性「经验加成」；"
+				""
+				"· &a岩钢（Slimesteel）&f=铁+史莱姆球+焦黑砖，特性「回弹」；"
+				""
+				"· &aHepatizon&f=铜+黑曜石+灵魂沙，特性「重力」；"
+				""
+				"· &a紫珀铜（Amethyst Bronze）&f=铜+紫水晶，特性「范围」；"
+				""
+				"· &a焦铁（Cinderslime）&f/&a皇后史莱姆（Queens Slime）&f/&a魂钢（Soulsteel）&f为后期材料。"
+			]
+			id: "1EEBD6F3B1B4CA54"
+			rewards: [{
+				id: "249FEE753F12DA5D"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "Pig Iron / Knightslime / Rose Gold"
+			tasks: [{
+				count: 2L
+				id: "51CD396BA1464FB3"
+				item: "tconstruct:pig_iron_ingot"
+				type: "item"
+			}]
+			title: "合金材料大全"
+			x: 27.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["1EEBD6F3B1B4CA54"]
+			description: [
+				"匠魂新增四种史莱姆，对应四种&a史莱姆水晶（Slime Crystal）&f："
+				""
+				"· &a天空史莱姆（Sky Slime）&f：浮空岛绿色，水晶做&a天空 staff&f与回弹材料；"
+				""
+				"· &a大地史莱姆（Earth Slime）&f：主世界蓝绿，水晶做&a大地 staff&f；"
+				""
+				"· &a末影史莱姆（Ender Slime）&f：末地紫，水晶做&a末影 staff&f；"
+				""
+				"· &a熔岩史莱姆（Ichor Slime）&f：下界红，水晶做&a熔岩 staff&f。"
+				""
+				"水晶可作为工具部件材料，也可合成&a史莱姆靴子&f（弹跳）。"
+			]
+			id: "26FF6C20D435A220"
+			rewards: [{
+				id: "2AA8EF1A084046B2"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "Sky / Earth / Ender / Ichor"
+			tasks: [{
+				id: "66827BE7C6019E35"
+				item: "tconstruct:sky_slime_crystal"
+				type: "item"
+			}]
+			title: "史莱姆水晶与四系史莱姆"
+			x: 28.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["654401A3F95AA509"]
+			description: [
+				"&a强化台（Modifier Worktable）&f是给匠魂工具加&a强化词条（Modifier）&f的地方：把工具放进去，再放入强化材料，即消耗一个强化槽。"
+				""
+				"强化槽数量：默认 3 个，可通过&a纸手柄&f、&a强化水晶（Modifier Crystal）&f、&a升级（Upgrade）&f增加。"
+				""
+				"它和锻造台互补：锻造台管组装/改名，强化台管附魔词条。"
+			]
+			id: "3BE0C112FF67D48F"
+			rewards: [{
+				id: "78305886D64370F9"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "Modifier Worktable"
+			tasks: [{
+				id: "29869E3F0A7C08D3"
+				item: "tconstruct:modifier_worktable"
+				type: "item"
+			}]
+			title: "强化台：给工具加词条"
+			x: 24.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["3BE0C112FF67D48F"]
+			description: [
+				"常用强化词条（在强化台放入对应材料即可，JEI 查）："
+				""
+				"· &a耐久（Reinforced）&f：黑曜石，减少耐久损耗；"
+				""
+				"· &a锋利（Sharpness）&f：烈焰粉，增加伤害；"
+				""
+				"· &a时运（Fortune）&f：绿宝石，矿物掉落翻倍；"
+				""
+				"· &a精准采集（Silk Touch）&f：书+玻璃，采集原方块；"
+				""
+				"· &a击退（Knockback）&f：铁板；&a火焰附加（Fire Aspect）&f：岩浆膏；"
+				""
+				"· &a抢夺（Looting）&f：骨头；&a效率（Efficiency）&f：红石；"
+				""
+				"· &a自动修复（Mending）&f：经验瓶，用 XP 修工具；"
+				""
+				"· &a保护/荆棘（Protection/Thorns）&f：护甲类；"
+				""
+				"· &a深海探索（Depth Strider）&f/&a灵魂行者（Soul Speed）&f：靴子类；"
+				""
+				"· &a下界合金（Netherite）强化&f：终极升级；&a创造性强化（Creative Slot）&f：创造版。"
+			]
+			icon: "tconstruct:modifier_worktable"
+			id: "45BD5A3F1F12EB73"
+			rewards: [{
+				id: "6E4399F8F1D2F7AA"
+				type: "xp"
+				xp: 20
+			}]
+			subtitle: "耐久·锋利·时运·精准…"
+			tasks: [{
+				id: "7C050B8D472A4FCB"
+				title: "强化类型大全"
+				type: "checkmark"
+			}]
+			title: "强化类型大全"
+			x: 25.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["45BD5A3F1F12EB73"]
+			description: [
+				"&a强化水晶（Modifier Crystal）&f是给工具额外+1 强化槽的稀有物品，由史莱姆水晶+钻石+绿宝石合成。"
+				""
+				"每把工具最多用若干次，把槽位从 3 扩到 6~9，等于能堆更多词条。"
+				""
+				"技巧：先用纸手柄把基础槽位拉高，再用强化水晶补满，毕业工具能塞 7~10 个强化。"
+			]
+			id: "2E715914CE4053C4"
+			rewards: [{
+				id: "43EBC8577B22FD27"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "Modifier Crystal"
+			tasks: [{
+				id: "2767272ABC509999"
+				item: "tconstruct:modifier_crystal"
+				type: "item"
+			}]
+			title: "强化水晶：加槽位"
+			x: 27.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["4BF95891EA2FFAE2"]
+			description: [
+				"&a铸造厂（Foundry）&f是冶炼厂的高级版：用&a焦烧砖（Scorched Bricks）&f代替焦黑砖，控制器叫&aFoundry Controller&f。"
+				""
+				"优势：&a同时熔多种金属&f（冶炼厂只能存一种液体），内部通道互不混液；&a合金配方更全&f，吞吐更大。"
+				""
+				"结构件全部 scorched_ 开头：&aScorched Drain/Faucet/Table/Basin/Glass/Channel/Duct/Chute&f，与焦黑版一一对应。"
+				""
+				"建议：先把冶炼厂用熟，再攒下界材料上铸造厂。"
+			]
+			id: "1CC51FC206EA6A56"
+			rewards: [{
+				id: "3BE1EF7DCB4ABFCC"
+				type: "xp"
+				xp: 20
+			}]
+			subtitle: "多方块冶炼厂升级版"
+			tasks: [{
+				id: "333E99693A2A1A67"
+				item: "tconstruct:foundry_controller"
+				type: "item"
+			}]
+			title: "高级铸造厂：Foundry"
+			x: 25.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["6747A141FE0A535C"]
+			description: [
+				"&a旅行套装（Traveler’s Helmet/Chestplate/Leggings/Boots）&f是匠魂入门护甲：轻、快、自带&a盾牌（Traveler’s Shield）&f。"
+				""
+				"它用&a丝布（Silky Cloth）&f+皮革合成，前期探险首选；损坏后用维修工具修。"
+			]
+			id: "70FB07C2FBF1AF17"
+			rewards: [{
+				id: "0E2B4DD5D23E3826"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "Traveler’s Gear"
+			tasks: [{
+				id: "47486A2DA68EA9A7"
+				item: {
+					Count: 1
+					id: "tconstruct:travelers_helmet"
+					tag: {
+						Damage: 0
+						tic_broken: 0b
+					}
+				}
+				type: "item"
+			}]
+			title: "旅行护甲：轻便套装"
+			x: 15.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["70FB07C2FBF1AF17"]
+			description: [
+				"&a史莱姆护甲（Slime Helmet/Chestplate/Leggings/Boots）&f：史莱姆水晶做，自带弹跳/缓降效果。"
+				""
+				"&a板甲（Plate Helmet/Chestplate/Leggings/Boots）&f：金属大板做，高防御，是匠魂的重型护甲线。"
+				""
+				"护甲同样可加强化（保护/荆棘等），在强化台操作。"
+			]
+			id: "778E174EC5F2FB46"
+			rewards: [{
+				id: "0C5DBF05A9806DB3"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "Slime / Plate Armor"
+			tasks: [{
+				id: "288CF654A8686BA9"
+				item: {
+					Count: 1
+					id: "tconstruct:slime_chestplate"
+					tag: {
+						Damage: 0
+						tic_broken: 0b
+					}
+				}
+				type: "item"
+			}]
+			title: "史莱姆护甲与板甲"
+			x: 13.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["778E174EC5F2FB46"]
+			description: [
+				"&a维修工具（Repair Kit）&f是匠魂工具的「补血包」：用对应材料合成（如铁维修包=铁锭+线），右键快坏的工具即修复耐久。"
+				""
+				"材料越高级修得越贵，但一把玛玉玲镐可以修一辈子，不用换。"
+				""
+				"坏到 0 耐久不会消失，只是变「损坏」模型，修一下又能用。"
+			]
+			id: "232347D40DEFF36F"
+			rewards: [{
+				id: "4BF5C50422443781"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "Repair Kit"
+			tasks: [{
+				id: "55ACA5439B4DC165"
+				item: "tconstruct:repair_kit"
+				type: "item"
+			}]
+			title: "维修工具：让工具永不废弃"
+			x: 12.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["232347D40DEFF36F"]
+			description: [
+				"&a小猪背包（Piggy Backpack）&f：随身小箱子，随身开 9~27 格储物，探险神器。"
+				""
+				"&a匠魂小物（Tinkers’ Gadgetry）&f：包括&a燧石手里剑（Flint Shuriken）、&a石英手里剑（Quartz Shuriken）、&a各种粘液球/桶/瓶&f（Sky/Earth/Ender/Ichor Slime Bucket）。"
+				""
+				"&a铜板（Copper Can）、&a铜仪表（Copper Gauge）、&a黑曜石仪表&f等装饰/功能小方块按需收集。"
+			]
+			id: "68833E61268B5E37"
+			rewards: [{
+				id: "12E73569A1E10957"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "Piggy Backpack / Gadgetry"
+			tasks: [{
+				id: "02CBDF5DD1D38AF8"
+				item: "tconstruct:piggy_backpack"
+				type: "item"
+			}]
+			title: "背包与杂物"
+			x: 10.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["6747A141FE0A535C"]
+			description: [
+				"· 冶炼厂先做&a铝黄铜（铝+铜）&f铸模具，再熔铁做工具，顺序别反；"
+				""
+				"· 镐头用&a玛玉玲&f、手柄用&a纸&f（多强化槽），中期毕业配装；"
+				""
+				"· &a锤（Sledge Hammer）&f可 3×3 挖矿，&a镰刀（Scythe）&f大范围收割，农场效率翻倍；"
+				""
+				"· 工具经验靠&a使用积累&f：挖得越多、杀得越多，升级越快，升级解锁强化槽；"
+				""
+				"· 合金在冶炼厂内&a自动混合&f，不用手动配方——两种熔融金属在同一罐里相遇即成合金；"
+				""
+				"· 坏了别扔，用&a维修工具&f修；强化槽不够用&a强化水晶&f扩。"
+			]
+			icon: "tconstruct:materials_and_you"
+			id: "607A62B4632967D9"
+			rewards: [{
+				id: "128EAABA3B122B82"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "少走弯路"
+			tasks: [{
+				id: "1E582083F2AFD26F"
+				title: "实用技巧"
+				type: "checkmark"
+			}]
+			title: "实用技巧"
+			x: 18.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["2E715914CE4053C4"]
+			description: [
+				"一套最小匠魂产线："
+				""
+				"1. &a冶炼厂&f（3×3×3 焦黑结构）+ &a控制器&f + &a储罐&f + &a浇注口&f + &a浇铸台&f；"
+				""
+				"2. 上方用&a漏斗/物流管道&f自动投入原矿/铁锭，冶炼厂熔成液态金属；"
+				""
+				"3. 浇注口对准浇铸台上的&a锭铸型&f，用&a红石脉冲&f控制浇注节奏，自动出锭；"
+				""
+				"4. 出锭用&a漏斗&f接进箱子；镐头/手柄铸型另开一条浇铸台线，自动做部件；"
+				""
+				"5. 部件进&a零件加工台&f的自动化接口（或人工取出），到&a工具站&f组装；"
+				""
+				"6. 成品工具在&a强化台&f加好词条，下矿即用。"
+				""
+				"后期换&a铸造厂&f，同时熔多种金属，合金自动产出。"
+			]
+			icon: "tconstruct:seared_faucet"
+			id: "02F74F9782329773"
+			rewards: [{
+				id: "6B992D4CEE5C582D"
+				type: "xp"
+				xp: 30
+			}]
+			subtitle: "从矿石到部件"
+			tasks: [{
+				id: "50404B1F535DA244"
+				title: "事例设施：全自动冶炼+铸锭产线"
+				type: "checkmark"
+			}]
+			title: "事例设施：全自动冶炼+铸锭产线"
+			x: 28.5d
+			y: 1.5d
+		}
+		{
+			dependencies: [
+				"68AA8846AF895A49"
+				"26FF6C20D435A220"
+				"02F74F9782329773"
+			]
+			description: [
+				"本章终极目标：做出一把&a玛玉玲毕业镐&f，并搭好冶炼/铸造产线。"
+				""
+				"毕业镐配方：&a玛玉玲镐头 + 纸手柄（多槽）+ 玛玉玲绑定&f，强化台塞满&a耐久+时运+精准+效率+自动修复&f，槽不够用强化水晶补。"
+				""
+				"配套：&a冶炼厂/铸造厂&f自动产锭、&a维修工具&f随身、&a旅行/板甲&f穿齐、&a大锤+大铲+镰刀&f各备一把。"
+				""
+				"到这一步，你在主世界的采矿、战斗、农业效率都会质的飞跃——匠魂工具是 ATM9 前期到中期最值得投资的装备线。"
+			]
+			icon: "tconstruct:manyullyn_ingot"
+			id: "7419E122D583A2E3"
+			rewards: [{
+				id: "570E7C11260BAEFD"
+				type: "xp"
+				xp: 60
+			}]
+			shape: "octagon"
+			size: 1.5d
+			subtitle: "本章综合实战"
+			tasks: [{
+				id: "2A11C11F1EFBFF0B"
+				title: "匠魂毕业：一把用一辈子的镐"
+				type: "checkmark"
+			}]
+			title: "匠魂毕业：一把用一辈子的镐"
+			x: 30.0d
+			y: 0.0d
+		}
+	]
+	title: "匠魂 TConstruct"
+}

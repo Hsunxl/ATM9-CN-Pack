@@ -1,0 +1,1148 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "t07_pneumaticcraft"
+	group: "00C72C1FB6193A42"
+	icon: "pneumaticcraft:ingot_iron_compressed"
+	id: "301E7980AE91B3E9"
+	order_index: 7
+	progression_mode: "flexible"
+	quest_links: [ ]
+	quests: [
+		{
+			description: [
+				"气动工艺（PneumaticCraft）用 &a压缩空气（bar 气压）&f作为能源：压缩机把空气压进管道，存进压力容器，驱动工具、无人机、组装机。"
+				""
+				"特色系统：&b压力（bar）&f——气压过高会爆炸；&b热系统&f——加热 / 制冷；&b编程无人机&f——拼图式编程；&b石油分馏&f；&b气动护甲&f。"
+				""
+				"本章路线：总览 → 压缩铁与压力腔室 → 压缩机与管道 → 工具护甲 → PCB 与组装机 → 石油与热力学 → 无人机与物流 → 发电机 → 事例 → 实战。"
+				""
+				"提示：游戏内 &a气动工艺手册（pneumaticcraft:manual）&f随进度解锁，带大量图示，强烈建议边玩边读。"
+			]
+			icon: "pneumaticcraft:ingot_iron_compressed"
+			id: "22E239B8FE5F1DA7"
+			shape: "hexagon"
+			size: 1.5d
+			subtitle: "压缩空气驱动一切"
+			tasks: [{
+				id: "03F9F714E06E9568"
+				title: "气动工艺概览"
+				type: "checkmark"
+			}]
+			title: "气动工艺概览"
+			x: 0.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["22E239B8FE5F1DA7"]
+			description: [
+				"&a压缩铁锭（Compressed Iron Ingot）&f由铁锭在 &a压力腔室&f中高压压缩而成，是气动工艺几乎所有方块 / 工具的材料。"
+				""
+				"它是一切的起点：没有压缩铁就没有压缩机、管道、护甲、无人机。"
+				""
+				"进阶：前期可以用「爆裂铁」（把铁丢进爆炸里小概率得）应急，但正规途径是压力腔室。"
+				""
+				"提示：先搭一个最小压力腔室（见任务 4），批量压缩铁锭。"
+			]
+			id: "359AAAF4D990B2CE"
+			rewards: [{
+				id: "73CA593C96270A5A"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "气动工艺的基石"
+			tasks: [{
+				id: "3B88386D6BBCE39A"
+				item: "pneumaticcraft:ingot_iron_compressed"
+				type: "item"
+			}]
+			title: "压缩铁锭"
+			x: 1.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["359AAAF4D990B2CE"]
+			description: [
+				"&a压缩铁块（Compressed Iron Block）&f用于大型结构 / 储能；&a压缩铁齿轮（Compressed Iron Gear）&f是组装机、机器的常见零件。"
+				""
+				"此外还有 &a压缩石头（Compressed Stone）&f、&a压缩砖 / 强化砖&f等建筑与耐压材料。"
+				""
+				"进阶：攒一组压缩铁块和齿轮，中后期做机器就不慌。"
+				""
+				"提示：compressed_bricks / reinforced_bricks 是做高压结构的方块。"
+			]
+			id: "236B7BF480D0CF6B"
+			rewards: [{
+				id: "461D0B052CD846C6"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "机器的结构件"
+			tasks: [{
+				id: "3CBC436B7468E24A"
+				item: "pneumaticcraft:compressed_iron_gear"
+				type: "item"
+			}]
+			title: "压缩铁块与齿轮"
+			x: 3.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["359AAAF4D990B2CE"]
+			description: [
+				"&a压力腔室墙（Pressure Chamber Wall）&f和 &a压力腔室玻璃（Pressure Chamber Glass）&f是搭建密闭腔室的壁材。"
+				""
+				"腔室必须完全密封（六面都用壁 / 玻璃封死，不能有缺口），否则充不进高压。"
+				""
+				"进阶：壁材等级决定耐压上限，高压配方需要更坚固的壁。"
+				""
+				"提示：先用 3x3x3 小腔室练手，再放大。"
+			]
+			id: "0D24A2D1306A2376"
+			rewards: [{
+				id: "741E9A0BE8C64F4F"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "多方块的外壳"
+			tasks: [{
+				id: "1E52A8401A4A4755"
+				item: "pneumaticcraft:pressure_chamber_wall"
+				type: "item"
+			}]
+			title: "压力腔室：墙壁与玻璃"
+			x: 3.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["0D24A2D1306A2376"]
+			description: [
+				"&a压力腔室阀（Pressure Chamber Valve）&f是唯一能把高压空气导入腔室的方块，贴在腔室外壁，接压力管道。"
+				""
+				"&a压力腔室接口（Pressure Chamber Interface）&f用于从腔室外部放 / 取物品（不用破墙）。"
+				""
+				"搭建顺序：先用墙 / 玻璃围成密闭空间 → 装一个阀接气管 → 装一个接口存取物品。"
+				""
+				"进阶：JEI 筛「压力腔室」配方可查所有需要高压合成的物品（压缩铁、PCB 等）。"
+			]
+			id: "5D0DA8D171FC7CEB"
+			rewards: [{
+				id: "744EE7AABC1983CF"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "进气与存取"
+			tasks: [{
+				id: "4D67BEA1787809E6"
+				item: "pneumaticcraft:pressure_chamber_valve"
+				type: "item"
+			}]
+			title: "压力腔室：阀与接口"
+			x: 4.5d
+			y: 3.0d
+		}
+		{
+			dependencies: [
+				"0D24A2D1306A2376"
+				"5D0DA8D171FC7CEB"
+			]
+			description: [
+				"&a压力腔室（Pressure Chamber）&f是气动工艺的核心多方块，搭建要点："
+				""
+				"1. 用 &b压力腔室墙 / 玻璃&f围成一个任意大小的密闭空间（最小 3x3x3）；"
+				""
+				"2. 至少一个 &b压力腔室阀&f朝外，用来接高压空气；"
+				""
+				"3. 至少一个 &b压力腔室接口&f，用来从外部存取物品；"
+				""
+				"4. 接口 / 阀不能漏气——密封不严会持续掉压；"
+				""
+				"5. 用压缩机往阀里打气，腔室气压升高后，内部物品按「高压配方」反应（如铁锭→压缩铁）。"
+				""
+				"不同配方需要不同气压，JEI 可查；气压越高配方越多但越危险。"
+			]
+			icon: "pneumaticcraft:pressure_chamber_glass"
+			id: "08A68979606599B9"
+			rewards: [{
+				id: "058C4345B20C2879"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "第一个多方块结构"
+			tasks: [{
+				id: "764FF605960F0321"
+				title: "多方块：搭建压力腔室"
+				type: "checkmark"
+			}]
+			title: "多方块：搭建压力腔室"
+			x: 6.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["5D0DA8D171FC7CEB"]
+			description: [
+				"&a空气压缩机（Air Compressor）&f烧固体燃料（煤 / 木炭）把空气压进相邻压力管道，是最基础的气源。"
+				""
+				"&a手动压缩机（Manual Compressor）&f前期用手压，应急做第一罐空气。"
+				""
+				"用法：压缩机贴管道，管道接压力腔室阀 / 储罐，烧煤即可升压。"
+				""
+				"进阶：多台压缩机并联，气压涨得更快。"
+			]
+			id: "02F1373D1E1CDB6C"
+			rewards: [{
+				id: "53823A07DD6BD53D"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "烧燃料压空气"
+			tasks: [{
+				id: "018D021349C53499"
+				item: "pneumaticcraft:air_compressor"
+				type: "item"
+			}]
+			title: "空气压缩机"
+			x: 6.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["02F1373D1E1CDB6C"]
+			description: [
+				"&a高级空气压缩机（Advanced Air Compressor）&f比基础版快得多；&a液体压缩机（Liquid Compressor）&f烧液体燃料压空气。"
+				""
+				"&a高级液体压缩机（Advanced Liquid Compressor）&f更快；&a静电压缩机（Electrostatic Compressor）&f靠雷电 / 高压产空气（进阶）。"
+				""
+				"&a热压缩机（Thermal Compressor）&f靠热源加热空气。"
+				""
+				"进阶：用高级压缩机做主气源，液体压缩机烧石油燃料（见精炼厂）。"
+			]
+			id: "749CF0107C8686A2"
+			rewards: [{
+				id: "40239CD81861B1A5"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "更快的气源"
+			tasks: [{
+				id: "7DF741CE2CE816B8"
+				item: "pneumaticcraft:advanced_air_compressor"
+				type: "item"
+			}]
+			title: "高级与液体压缩机"
+			x: 7.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["749CF0107C8686A2"]
+			description: [
+				"&a太阳能压缩机（Solar Compressor）&f在晴天吸收阳光产压缩空气，不需要燃料，白天自动运行。"
+				""
+				"它需要 &a太阳能硅片（Solar Wafer）&f作为核心，硅片经切割 / 加工制成。"
+				""
+				"进阶：多台太阳能压缩机摆在露天屋顶，白天攒气、晚上用，是清洁能源方案。"
+				""
+				"提示：阴雨天 / 地下不工作，要配合储罐缓冲。"
+			]
+			id: "77A198FDCE95F5A8"
+			rewards: [{
+				id: "7D045E4E65FA63A8"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "靠阳光产气"
+			tasks: [{
+				id: "3EA962C82A667C04"
+				item: "pneumaticcraft:solar_compressor"
+				type: "item"
+			}]
+			title: "太阳能压缩机"
+			x: 9.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["02F1373D1E1CDB6C"]
+			description: [
+				"&a压力管道（Pressure Tube）&f传输压缩空气，分基础 / 高级 / 强化三档，耐压依次提高。"
+				""
+				"管道气压超过耐压上限会爆炸——选对管道等级很重要：低压用基础管，高压用强化管。"
+				""
+				"进阶：管道可以染色 / 隐蔽，用 &a迷彩涂抹器（Camo Applicator）&f把管道伪装成周围方块。"
+				""
+				"提示：先估算你要的气压，再选管道，别全用基础管。"
+			]
+			id: "03D4C8FE4A4213C4"
+			rewards: [{
+				id: "1FD4D72C9A10D46F"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "空气的血管"
+			tasks: [{
+				id: "012F8ACECF885FFC"
+				item: "pneumaticcraft:pressure_tube"
+				type: "item"
+			}]
+			title: "压力管道"
+			x: 7.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["03D4C8FE4A4213C4"]
+			description: [
+				"&a高级压力管（Advanced Pressure Tube）&f耐压更高；&a强化压力管（Reinforced Pressure Tube）&f耐压最高，适合高压网络。"
+				""
+				"&a管道汇（Tube Junction）&f用于管道分路；&a强化砖 / 强化石&f是高压结构材料。"
+				""
+				"进阶：高压主路用强化管，支路用高级管，分级铺设。"
+				""
+				"提示：压力管也能接 &a安全阀 / 调节阀模块&f（见下一条）。"
+			]
+			id: "30B8DC95AD07C52F"
+			rewards: [{
+				id: "605B5FC2F1A8C4A9"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "耐压与分流"
+			tasks: [{
+				id: "7F435B7E70BEDD4E"
+				item: "pneumaticcraft:advanced_pressure_tube"
+				type: "item"
+			}]
+			title: "高级/强化管道与管汇"
+			x: 9.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["30B8DC95AD07C52F"]
+			description: [
+				"&a压力表（Pressure Gauge / Manometer）&f显示所在管道的实时气压，是排查超压的眼睛。"
+				""
+				"&a安全阀模块（Safety Tube Module）&f超压时自动放气保护管道；&a调节阀模块（Regulator Tube Module）&f把下游气压限制在设定值。"
+				""
+				"用法：关键节点装压力表，高压支路装安全阀，重要设备前装调节阀。"
+				""
+				"进阶：一套「监控 + 保护」让气网安全运行，再也不怕半夜爆炸。"
+			]
+			id: "578B019BA9BB5245"
+			rewards: [{
+				id: "21CF4CFE98D9C2B7"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "别让管子炸"
+			tasks: [{
+				id: "4C68476CF2EE58FD"
+				item: "pneumaticcraft:pressure_gauge"
+				type: "item"
+			}]
+			title: "压力表与安全/调节阀"
+			x: 10.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["30B8DC95AD07C52F"]
+			description: [
+				"&a空气罐（Air Canister）&f便携储气，给工具 / 护甲随身补压；&a强化空气罐（Reinforced Air Canister）&f容量更大。"
+				""
+				"&a压力容器（Small / Medium / Large / Huge Tank）&f是基地固定储气罐，容量逐级增大。"
+				""
+				"用法：压缩机把气打进大型储罐，用气设备从储罐取气，压缩机停机也能撑很久。"
+				""
+				"进阶：多个大罐并联 = 大气库，是气网的「蓄水池」。"
+			]
+			id: "6F55C6CE7F7AA9FD"
+			rewards: [{
+				id: "5BC0BA64D9AA5109"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "随身带气、基地储气"
+			tasks: [{
+				id: "589421C912AB7077"
+				item: "pneumaticcraft:large_tank"
+				type: "item"
+			}]
+			title: "气罐与压力容器"
+			x: 10.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["02F1373D1E1CDB6C"]
+			description: [
+				"&a气动扳手（Pneumatic Wrench）&f右键调整机器朝向 / 模式，是气动工艺的「配置工具」。"
+				""
+				"其他工具：&a气动手钻（Jackhammer）&f（配钻头挖矿，气压越高越快）、&a空气炮（Air Cannon）&f弹射物品 / 实体、&a涡流炮（Vortex Cannon）&f、&a转移装置（Transfer Gadget）&f快速搬物品。"
+				""
+				"工具都要「充气」——放充气站或用空气罐补压。"
+				""
+				"进阶：钻头有铁 / 压缩铁 / 钻石 / 下界合金等级，越高级挖越快。"
+			]
+			id: "706DFC26D67662AE"
+			rewards: [{
+				id: "67A56E5081FCA188"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "配置机器的万能钥匙"
+			tasks: [{
+				id: "57A9A182B95BF8E1"
+				item: "pneumaticcraft:pneumatic_wrench"
+				type: "item"
+			}]
+			title: "气动扳手与工具"
+			x: 7.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["6F55C6CE7F7AA9FD"]
+			description: [
+				"&a气动护甲&f（头盔 / 胸甲 / 护腿 / 靴子）持续充气，但提供强力加成："
+				""
+				"· 胸甲：喷气飞行；· 靴子：跳高 / 免摔；· 护腿：加速跑；· 头盔：夜视 / 信息显示。"
+				""
+				"护甲有升级槽，装升级模块强化功能；气压越高防护越强。"
+				""
+				"提示：护甲在 &a充气站（Charging Station）&f补气，随身带空气罐应急。"
+			]
+			id: "471E9936A941CA50"
+			rewards: [{
+				id: "313BA1D32089DF9B"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "行走的增压服"
+			tasks: [{
+				id: "5106AA8B0AFC6E18"
+				item: {
+					Count: 1
+					id: "pneumaticcraft:pneumatic_chestplate"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			title: "气动护甲"
+			x: 12.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["471E9936A941CA50"]
+			description: [
+				"护甲升级模块举例：&b喷气靴升级 Jet Boots 1~5&f（按住跳跃飞行）、&b跳跃升级 Jumping 1~4&f、&b夜视升级 Night Vision&f、&b磁铁升级 Magnet&f（吸掉落物）、&b鞘翅升级 Elytra&f、&b潜水升级 Scuba&f（水下呼吸）、&b速度升级 Speed&f、&b容量升级 Volume&f。"
+				""
+				"升级模块本身也要在压力腔室 / 组装机里做，属于中后期内容。"
+				""
+				"进阶：喷气靴满级 = 自由飞行，是后期移动神装。"
+				""
+				"提示：升级模块分等级，高级版效果更强。"
+			]
+			id: "515973102CAC2C22"
+			rewards: [{
+				id: "67AC2C667E7D2A95"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "喷气靴、夜视、磁铁"
+			tasks: [{
+				id: "6EE759D647E119CA"
+				item: "pneumaticcraft:jet_boots_upgrade_1"
+				type: "item"
+			}]
+			title: "护甲升级模块"
+			x: 13.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["471E9936A941CA50"]
+			description: [
+				"&a充气站（Charging Station）&f放置护甲 / 工具 / 空气罐，从管道系统自动充入压缩空气。"
+				""
+				"把气动装备放上去，气压不足自动补；基地放一排充气站就是「更衣室」。"
+				""
+				"&a充气模块（Charging Module）&f可放进无人机，让它自己找气站补气。"
+				""
+				"提示：充气站持续消耗空气，记得接压缩机或大气罐。"
+			]
+			id: "5DDA10B21D191633"
+			rewards: [{
+				id: "3AEEE666BD5A83DB"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "给装备与工具补气"
+			tasks: [{
+				id: "70CD0BF458F3F345"
+				item: "pneumaticcraft:charging_station"
+				type: "item"
+			}]
+			title: "充气站"
+			x: 13.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["08A68979606599B9"]
+			description: [
+				"&a印刷电路板（PCB / Printed Circuit Board）&f是气动工艺中高级机器（组装机、可编程控制器等）的核心零件。"
+				""
+				"制作流程：&b空 PCB（Empty PCB）&f → 涂感光胶 → &bUV 曝光&f → &b蚀刻&f → 成品 PCB；失败品是 &bfailed_pcb&f。"
+				""
+				"&a未组装 PCB（Unassembled PCB）&f和 &bPCB 蓝图（PCB Blueprint）&f是中间材料。"
+				""
+				"进阶：PCB 产线是中后期产能瓶颈，建议用组装机自动化。"
+			]
+			id: "5C07499DED0C15B2"
+			rewards: [{
+				id: "3C0C9EFD48450DB5"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "气动机器的大脑"
+			tasks: [{
+				id: "425268C50116ACDB"
+				item: "pneumaticcraft:printed_circuit_board"
+				type: "item"
+			}]
+			title: "PCB：印刷电路板"
+			x: 7.5d
+			y: 6.0d
+		}
+		{
+			dependencies: ["5C07499DED0C15B2"]
+			description: [
+				"&a蚀刻机（Etching Tank）&f装蚀刻酸液，把曝光后的 PCB 蚀刻出线路；&aUV 灯箱（UV Light Box）&f对涂好胶的 PCB 做曝光。"
+				""
+				"流程：空 PCB 涂胶 → UV 曝光（按蓝图图案）→ 蚀刻机腐蚀掉多余铜 → 成品 PCB。"
+				""
+				"进阶：两台机器 + 管道供酸 + 进出料 = 自动 PCB 产线。"
+				""
+				"提示：蚀刻酸液用 etch_acid_bucket 桶装，注意别泼。"
+			]
+			id: "3DA40768D31296F3"
+			rewards: [{
+				id: "3540501F8B7C06E5"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "做 PCB 的两件套"
+			tasks: [{
+				id: "039707A43AAADE37"
+				item: "pneumaticcraft:etching_tank"
+				type: "item"
+			}]
+			title: "蚀刻机与 UV 灯箱"
+			x: 9.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["3DA40768D31296F3"]
+			description: [
+				"&a组装控制器（Assembly Controller）&f是气动工艺自动装配线的大脑，决定整条线做什么程序。"
+				""
+				"它需要和 &a组装平台&f、&a钻 / 激光&f、&aIO 单元&f组合成多方块组装系统。"
+				""
+				"用法：把「组装程序」装进控制器，它指挥平台移动工件、钻 / 激光加工。"
+				""
+				"进阶：多条组装线并行，批量生产齿轮 / 阀门 / PCB，是中后期核心产能。"
+			]
+			id: "3DF949BF9D250577"
+			rewards: [{
+				id: "004DFA94CFAA780B"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "装配线的大脑"
+			tasks: [{
+				id: "2FA1267FD9219777"
+				item: "pneumaticcraft:assembly_controller"
+				type: "item"
+			}]
+			title: "组装系统：控制器"
+			x: 10.5d
+			y: 7.5d
+		}
+		{
+			dependencies: ["3DF949BF9D250577"]
+			description: [
+				"&a组装平台（Assembly Platform）&f承托工件并按程序移动；&a组装钻（Assembly Drill）&f钻孔；&a组装激光（Assembly Laser）&f切割 / 焊接。"
+				""
+				"组合：平台在下方滑轨移动，钻 / 激光在上方加工，完成多步工序。"
+				""
+				"进阶：钻 + 激光双加工头可同时装，一个做钻孔一个做焊接。"
+				""
+				"提示：组装系统要供高压空气，接强化压力管。"
+			]
+			id: "3115A3EA2DCBC66A"
+			rewards: [{
+				id: "2465DCDFABB3C7F1"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "工件台与加工头"
+			tasks: [{
+				id: "179AB338D384FD2E"
+				item: "pneumaticcraft:assembly_platform"
+				type: "item"
+			}]
+			title: "组装：平台·钻·激光"
+			x: 12.0d
+			y: 7.5d
+		}
+		{
+			dependencies: ["3115A3EA2DCBC66A"]
+			description: [
+				"&a组装 IO 输入单元（Assembly IO Import）&f把原料送进组装线；&a组装 IO 输出单元（Assembly IO Export）&f把成品送出。"
+				""
+				"&a组装程序（Assembly Program Drill / Laser / Drill_Laser）&f定义加工工序：钻、激光、或钻+激光组合。"
+				""
+				"用法：原料进输入单元 → 平台按程序走 → 钻 / 激光加工 → 成品从输出单元出去。"
+				""
+				"进阶：管道对接 IO 单元，整条线全自动。"
+			]
+			id: "796B564D9E441DCB"
+			rewards: [{
+				id: "57DEAC9E008D993A"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "进出料与工序编排"
+			tasks: [{
+				id: "3DB3E27280947067"
+				item: "pneumaticcraft:assembly_io_unit_import"
+				type: "item"
+			}]
+			title: "组装：IO 单元与程序"
+			x: 13.5d
+			y: 7.5d
+		}
+		{
+			dependencies: ["796B564D9E441DCB"]
+			description: [
+				"气动工艺的 &a组装系统&f是一套多方块，布局要点："
+				""
+				"1. &b组装控制器&f作为大脑，放在线体一端；"
+				""
+				"2. &b组装平台&f铺成一条滑轨轨道，工件在上面移动；"
+				""
+				"3. 轨道上方按程序需要挂 &b组装钻&f 和 / 或 &b组装激光&f；"
+				""
+				"4. 两端放 &bIO 输入 / 输出单元&f，接管道进出料；"
+				""
+				"5. 整条线接高压强化压力管供电；"
+				""
+				"把组装程序装进控制器，放入原料即自动完成多步装配（如把压缩铁做成齿轮 / 阀门 / PCB）。"
+			]
+			icon: "pneumaticcraft:assembly_drill"
+			id: "4907376DC2C6E72C"
+			rewards: [{
+				id: "6D7DD376B3F91005"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "Controller+Platform+Drill/Laser"
+			tasks: [{
+				id: "3231EB751318BA57"
+				title: "多方块：组装系统结构"
+				type: "checkmark"
+			}]
+			title: "多方块：组装系统结构"
+			x: 15.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["30B8DC95AD07C52F"]
+			description: [
+				"&a精炼厂（Refinery）&f把 &a原油（Oil）&f分馏成各种燃料：&b汽油 / 柴油 / 煤油 / LPG / 生物柴油 / 植物油 / 乙醇 / 润滑油&f。"
+				""
+				"精炼厂需要用 &a热力系统&f（加热塔）分级加热，不同温度段出不同产物。"
+				""
+				"&a精炼输出口（Refinery Output）&f分别导出各产物，接管道分流。"
+				""
+				"进阶：原油从世界油井抽取（oil_sand 或油海），精炼厂是「石油→燃料」的核心。"
+			]
+			id: "3AECD8DAFE1855BE"
+			rewards: [{
+				id: "5E02BEECAD9AC61C"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "原油分馏"
+			tasks: [{
+				id: "49FE00622AAB33E6"
+				item: "pneumaticcraft:refinery"
+				type: "item"
+			}]
+			title: "石油：精炼厂"
+			x: 10.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["3AECD8DAFE1855BE"]
+			description: [
+				"精炼厂产物（均有桶装）：&boil（原油）&f、&bdiesel（柴油）&f、&bgasoline（汽油）&f、&bkerosene（煤油）&f、&bLPG（液化石油气）&f、&bbiodiesel（生物柴油）&f、&bvegetable_oil（植物油）&f、&bethanol（乙醇）&f、&blubricant（润滑油）&f。"
+				""
+				"用途：液体压缩机烧燃料压空气；气动发电机烧燃料发电；喷气背包烧燃料飞行；LPG / 润滑油做高级合成。"
+				""
+				"进阶：润滑油是组装机 / 精密机器的耗材，记得常备。"
+				""
+				"提示：煤油灯（Kerosene Lamp）用煤油照明，挺实用。"
+			]
+			id: "4E624AC0FD709D43"
+			rewards: [{
+				id: "6896C14293671F87"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "原油变动力"
+			tasks: [{
+				id: "15D00D62AC5B26A4"
+				item: "pneumaticcraft:diesel_bucket"
+				type: "item"
+			}]
+			title: "石油燃料家族"
+			x: 12.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["3AECD8DAFE1855BE"]
+			description: [
+				"气动工艺有完整热系统：&a热管（Heat Pipe）&f传热、&a散热片（Heat Sink）&f散热、&a热框架（Heat Frame）&f给方块加热、&a热保温层（Thermal Lagging）&f减少热损失。"
+				""
+				"应用：精炼厂需要高温；压缩机过热会降效率，要散热；&a真空泵（Vacuum Pump）&f抽真空 / 抽热。"
+				""
+				"进阶：热管把岩浆 / 烈焰人的热量送到需要的地方，冷热都能调度。"
+				""
+				"提示：热系统与气压系统独立，但高级配方两者都要。"
+			]
+			id: "54A02CB61C85DA44"
+			rewards: [{
+				id: "0DCF04D82EF76A21"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "热也是资源"
+			tasks: [{
+				id: "0A192DD71D48FF12"
+				item: "pneumaticcraft:heat_pipe"
+				type: "item"
+			}]
+			title: "热力学：热管与散热"
+			x: 12.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["54A02CB61C85DA44"]
+			description: [
+				"&a涡流管（Vortex Tube）&f通入压缩空气后，一端出热风、一端出冷风，是「一进两出」的冷热发生器。"
+				""
+				"热风端可给精炼厂 / 机器加热；冷风端用于冷却 / 低温合成。"
+				""
+				"&a真空泵（Vacuum Pump）&f抽真空，配合做负压工艺 / 抽取热量。"
+				""
+				"进阶：涡流管 + 热管 = 自给自足的冷热网络。"
+			]
+			id: "0116BE1BD7442D6A"
+			rewards: [{
+				id: "161E5D8BDEB15CEC"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "一边制冷一边制热"
+			tasks: [{
+				id: "2351E527D9DCF2C1"
+				item: "pneumaticcraft:vortex_tube"
+				type: "item"
+			}]
+			title: "涡流管与真空泵"
+			x: 13.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["0116BE1BD7442D6A"]
+			description: [
+				"&a热气动加工站（Thermopneumatic Processing Plant）&f同时需要 &a热&f和 &a气压&f才能运行，是高级材料（压缩石、特种合金、PCB 中间件）的合成机器。"
+				""
+				"它把热系统和气压系统结合，是中后期材料加工的核心。"
+				""
+				"用法：接热管供热、接压力管供气、物品进出料，按 JEI 配方生产。"
+				""
+				"进阶：加工站 + 组装机 = 气动工艺高级材料全链。"
+			]
+			id: "7CA083431BCF05E0"
+			rewards: [{
+				id: "158C5D0CD194C036"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "热+气压的复合工艺"
+			tasks: [{
+				id: "3E7128B6F8C5EC85"
+				item: "pneumaticcraft:thermopneumatic_processing_plant"
+				type: "item"
+			}]
+			title: "热气动加工站"
+			x: 15.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["706DFC26D67662AE"]
+			description: [
+				"&a无人机（Drone）&f是气动工艺的可编程飞行机器人，靠压缩空气驱动。"
+				""
+				"无人机类型：&bcollector_drone（采集）&f、&bharvesting_drone（收割）&f、&bguard_drone（守卫）&f、&blogistics_drone（物流）&f。"
+				""
+				"无人机用 &a编程拼图（Programming Puzzle）&f或 &a编程台（Programmer）&f编程，按指令挖矿 / 搬运 / 种植 / 攻击。"
+				""
+				"进阶：无人机是气动工艺的灵魂，学会编程 = 拥有一队不吃饭的工人。"
+			]
+			id: "72E45A061C36735A"
+			rewards: [{
+				id: "12C329750842AE7F"
+				type: "xp"
+				xp: 20
+			}]
+			subtitle: "会飞会干活"
+			tasks: [{
+				id: "502E590D95226606"
+				item: "pneumaticcraft:drone"
+				type: "item"
+			}]
+			title: "无人机：可编程机器人"
+			x: 9.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["72E45A061C36735A"]
+			description: [
+				"&a编程拼图（Programming Puzzle）&f是一块块指令积木（挖、放、捡、运、攻击、等待……）；在 &a编程台（Programmer）&f里把拼图按逻辑连成程序。"
+				""
+				"基础指令：&bhack / mine / place / pickup / transport / attack / drop / wait&f 等，拼成流程图。"
+				""
+				"用法：把写好程序的拼图贴到无人机上，它就按流程干活。"
+				""
+				"进阶：复杂程序可用「循环 / 条件」拼图，做出「挖完一区再飞向下一区」的逻辑。"
+			]
+			id: "6042F87B4B6B4B82"
+			rewards: [{
+				id: "5CA093A06ACECBBE"
+				type: "xp"
+				xp: 20
+			}]
+			subtitle: "用拼图块写程序"
+			tasks: [{
+				id: "45A6C5657E61575D"
+				item: "pneumaticcraft:programming_puzzle"
+				type: "item"
+			}]
+			title: "无人机编程：拼图与编程台"
+			x: 10.5d
+			y: 6.0d
+		}
+		{
+			dependencies: ["6042F87B4B6B4B82"]
+			description: [
+				"&a无人机接口（Drone Interface）&f给无人机充电、传程序、停放；&aGPS 工具（GPS Tool）&f记录坐标点；&aGPS 区域工具（GPS Area Tool）&f圈定一块矩形工作区域。"
+				""
+				"用法：用区域工具在地上框一块地，无人机程序里引用该区域，它就只在区内干活。"
+				""
+				"进阶：多架无人机各负责一片区域，用接口集中充电编程。"
+				""
+				"提示：GPS 点可以命名，方便程序引用。"
+			]
+			id: "66051CB68E7ECF0C"
+			rewards: [{
+				id: "6FF6ACBFBA0D14DD"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "充电、编程、圈地"
+			tasks: [{
+				id: "576AC16C9F528305"
+				item: "pneumaticcraft:drone_interface"
+				type: "item"
+			}]
+			title: "无人机接口与 GPS 工具"
+			x: 12.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["66051CB68E7ECF0C"]
+			description: [
+				"&a采集无人机（Collector Drone）&f自动捡掉落物 / 搬箱子；&a收割无人机（Harvesting Drone）&f自动收割作物；&a守卫无人机（Guard Drone）&f攻击附近敌对生物。"
+				""
+				"它们本质都是无人机 + 预设程序 / 升级，换不同任务拼图就是不同工种。"
+				""
+				"进阶：采集无人机接 &a货物漏斗&f，把产物自动运回仓库。"
+				""
+				"提示：无人机怕摔、怕耗气，放接口里充电最稳。"
+			]
+			id: "388A730D830C2B87"
+			rewards: [{
+				id: "0B139530B3F9A03D"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "采集·收割·守卫"
+			tasks: [{
+				id: "430B3B1ACDC81058"
+				item: "pneumaticcraft:harvesting_drone"
+				type: "item"
+			}]
+			title: "专用无人机"
+			x: 13.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["388A730D830C2B87"]
+			description: [
+				"&a物流框架（Logistics Frames）&f贴在容器上，让物流无人机自动搬货："
+				""
+				"&b请求框架 Requester&f：缺什么要什么；&b存储框架 Storage&f：指定存放区；&b主动 / 被动提供框架 Active/Passive Provider&f：供货；&b默认存储框架 Default Storage&f：收零散物品。"
+				""
+				"配合 &a物流配置器（Logistics Configurator）&f设置过滤，&a物流核心（Logistics Core）&f升级无人机物流能力。"
+				""
+				"进阶：几十个箱子 + 几架物流无人机 = 无管道智能仓库。"
+			]
+			id: "1DFE054A8F21ED79"
+			rewards: [{
+				id: "0B36CA379C1F0498"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "无管道智能仓储"
+			tasks: [{
+				id: "789CAD067577CD37"
+				item: "pneumaticcraft:logistics_frame_requester"
+				type: "item"
+			}]
+			title: "物流框架"
+			x: 15.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["1DFE054A8F21ED79"]
+			description: [
+				"&a物流无人机（Logistics Drone）&f在贴了物流框架的箱子之间自动搬运物品，实现「请求框架缺料→从提供框架取货」。"
+				""
+				"&a全向漏斗（Omnidirectional Hopper）&f从任意方向吸物品；&a液体漏斗（Liquid Hopper）&f吸液体。"
+				""
+				"进阶：物流框架 + 物流无人机 + 全向漏斗 = 不用铺管道的柔性物流网。"
+				""
+				"提示：物流无人机消耗空气，记得配接口充电。"
+			]
+			id: "686A9CDE661020B6"
+			rewards: [{
+				id: "494CDA2CDDAF587C"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "无人机搬货的终点"
+			tasks: [{
+				id: "244DD5181573C661"
+				item: "pneumaticcraft:logistics_drone"
+				type: "item"
+			}]
+			title: "物流无人机与货物漏斗"
+			x: 16.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["749CF0107C8686A2"]
+			description: [
+				"&a气动发电机（Pneumatic Dynamo）&f把压缩空气转成 FE 电力，是「气网→电网」的桥。"
+				""
+				"进阶：配合 &a通量压缩机（Flux Compressor）&f（电转气）可做「电↔气」双向转换，气网当储能。"
+				""
+				"玩法：压缩机烧廉价燃料造空气 → 存进气罐 → 气动发电机发电，相当于可存储能源。"
+				""
+				"提示：气压越高发电效率越高，用高压气罐发电更划算。"
+			]
+			id: "2B2CC4B6CD80E22D"
+			rewards: [{
+				id: "0297CDA7876A4B9A"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "压缩空气变电力"
+			tasks: [{
+				id: "3A75FBA0F24A656A"
+				item: "pneumaticcraft:pneumatic_dynamo"
+				type: "item"
+			}]
+			title: "气动发电机"
+			x: 9.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["2B2CC4B6CD80E22D"]
+			description: [
+				"&a通量压缩机（Flux Compressor）&f把 FE 电能压成压缩空气，是「电网→气网」的桥，与气动发电机互逆。"
+				""
+				"&a电梯基座（Elevator Base）&f多个堆叠可做电梯井，&a电梯框架（Elevator Frame）&f是轿厢，&a电梯呼叫器（Elevator Caller）&f呼叫楼层。"
+				""
+				"进阶：电梯多方块 = 基地垂直交通；电气互转 = 灵活储能。"
+				""
+				"提示：电梯基座要垂直堆叠，每层一个。"
+			]
+			id: "2701F95AC74EECE1"
+			rewards: [{
+				id: "663C7181E678B4A0"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "电气互转、垂直交通"
+			tasks: [{
+				id: "057B5694362C6D17"
+				item: "pneumaticcraft:elevator_base"
+				type: "item"
+			}]
+			title: "通量压缩机与电梯"
+			x: 10.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["66051CB68E7ECF0C"]
+			description: [
+				"&a万能传感器（Universal Sensor）&f可检测实体 / 方块 / 物品 / 气压 / 时间等多种条件，满足时输出红石信号，是气动工艺的「感知器」。"
+				""
+				"&a可编程控制器（Programmable Controller）&f像一台小计算机，可用编程拼图写逻辑，统一管理传感器、无人机、机器。"
+				""
+				"进阶：传感器 + 可编程控制器 = 基地自动化大脑，条件触发各种机器。"
+				""
+				"提示：传感器要配 &a分类过滤器（Classify Filter）&f指定检测对象。"
+			]
+			id: "62ECBB487C517B43"
+			rewards: [{
+				id: "52BAC07BFA939D1B"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "红石感知与计算机"
+			tasks: [{
+				id: "2AF74C488BBF2FD3"
+				item: "pneumaticcraft:universal_sensor"
+				type: "item"
+			}]
+			title: "万能传感器与可编程控制器"
+			x: 13.5d
+			y: 6.0d
+		}
+		{
+			dependencies: [
+				"3AECD8DAFE1855BE"
+				"2B2CC4B6CD80E22D"
+			]
+			description: [
+				"一套气动工艺「石油能源链」："
+				""
+				"1. &a采油&f：从油海 / oil_sand 抽原油进储罐；"
+				""
+				"2. &a分馏&f：精炼厂分级加热，分出汽油 / 柴油 / 煤油 / LPG；"
+				""
+				"3. &a供热&f：热管网络把岩浆 / 火焰热量送进精炼厂；"
+				""
+				"4. &a发电&f：柴油 / LPG 喂气动发电机，或液体压缩机压空气；"
+				""
+				"5. &a储气&f：多余的空气存进大型储罐，气网当缓冲；"
+				""
+				"6. &a副产品&f：润滑油 / 生物柴油供组装机和无人机；"
+				""
+				"这条链让你把「原油」变成基地稳定的电力与动力来源。"
+			]
+			icon: "pneumaticcraft:refinery"
+			id: "7457ADC07FC429DA"
+			rewards: [{
+				id: "27421A31AD35760B"
+				type: "xp"
+				xp: 20
+			}]
+			subtitle: "原油→燃料→电力"
+			tasks: [{
+				id: "46376A66907607C6"
+				title: "事例设施：石油精炼产线"
+				type: "checkmark"
+			}]
+			title: "事例设施：石油精炼产线"
+			x: 12.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"388A730D830C2B87"
+				"686A9CDE661020B6"
+			]
+			description: [
+				"一套气动工艺「无人机物流网」："
+				""
+				"1. &a采集&f：采集无人机在农场 / 矿场捡掉落物；"
+				""
+				"2. &a仓库&f：存储框架箱存放大宗，请求框架箱按需补货；"
+				""
+				"3. &a搬运&f：物流无人机在框架间自动运货，全向漏斗吸料；"
+				""
+				"4. &a编程&f：用编程台写「挖一区矿石→运回仓库」的无人机程序；"
+				""
+				"5. &a调度&f：多架无人机分工（采矿 / 收割 / 守卫），接口集中充电；"
+				""
+				"这套设施不铺一条管道，靠无人机飞行完成柔性物流。"
+			]
+			icon: "pneumaticcraft:logistics_drone"
+			id: "46F13CF8E13F7C01"
+			rewards: [{
+				id: "26DC08BE9DF2AEDF"
+				type: "xp"
+				xp: 20
+			}]
+			subtitle: "无管道自动化仓库"
+			tasks: [{
+				id: "3BF746E0C8391DAB"
+				title: "事例设施：无人机 + 物流框架"
+				type: "checkmark"
+			}]
+			title: "事例设施：无人机 + 物流框架"
+			x: 18.0d
+			y: 1.5d
+		}
+		{
+			dependencies: [
+				"7457ADC07FC429DA"
+				"46F13CF8E13F7C01"
+			]
+			description: [
+				"完成本任务 = 你掌握了气动工艺四大体系："
+				""
+				"1. &a气压&f：压缩铁→压力腔室→压缩机→管道→储罐，安全不超压；"
+				""
+				"2. &a组装&f：PCB→组装机多方块，自动批量生产零件；"
+				""
+				"3. &a石油&f：原油→精炼厂→燃料→气动发电机，能源自洽；"
+				""
+				"4. &a无人机&f：拼图编程 + 物流框架，无管道自动化；"
+				""
+				"加上气动护甲（喷气飞行）、电梯、万能传感器，你的基地已经是一座「气压驱动的智能工厂」。"
+				""
+				"下一步：把气网产出的电力 / 材料对接到 RS / AE2，融入更大的自动化网络。"
+			]
+			icon: "pneumaticcraft:drone"
+			id: "5599191EC0A599EB"
+			rewards: [{
+				id: "35347A94C56A7A62"
+				type: "xp"
+				xp: 30
+			}]
+			shape: "octagon"
+			size: 1.5d
+			subtitle: "气压·热·组装·无人机"
+			tasks: [{
+				id: "5B22C8A8C58C6758"
+				title: "气动工艺综合实战"
+				type: "checkmark"
+			}]
+			title: "气动工艺综合实战"
+			x: 19.5d
+			y: 0.0d
+		}
+	]
+	title: "气动工艺"
+}

@@ -1,0 +1,954 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "t09_thermal"
+	group: "00C72C1FB6193A42"
+	icon: "thermal:machine_pulverizer"
+	id: "04FAC52087E78A7B"
+	order_index: 9
+	progression_mode: "flexible"
+	quest_links: [ ]
+	quests: [
+		{
+			description: [
+				"热力系列（Thermal）是老牌科技包：机器（磨粉 / 熔炼 / 锯木 / 离心 / 坩埚 / 精炼 / 培育等）+ 能源炉（Dynamo）+ 能量 / 流体导管 + 通量工具。"
+				""
+				"它强在「全能 + 统一」：所有机器吃 FE，配方直观，和任何 FE 模组无缝兼容，是本包加工与发电的主力。"
+				""
+				"本章路线：总览 → 机器线 → 能源炉线 → 材料线 → 导管储能线 → 工具线 → 升级附件 → 事例设施 → 实战。"
+				""
+				"提示：热力系列分基础 / 创新等子模组，机器在 thermal 命名空间下，JEI 全部可查。"
+			]
+			icon: "thermal:machine_pulverizer"
+			id: "209A4404BA9FDB34"
+			shape: "hexagon"
+			size: 1.5d
+			subtitle: "经典科技加工全家桶"
+			tasks: [{
+				id: "3122772781774C63"
+				title: "热力系列概览"
+				type: "checkmark"
+			}]
+			title: "热力系列概览"
+			x: 4.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["209A4404BA9FDB34"]
+			description: [
+				"&a磨粉机（Pulverizer）&f把原矿磨成 2 份矿粉（2 倍增产），还能磨骨粉、沙子、各种物料。"
+				""
+				"它是热力产线的第一环：原矿 → 磨粉 → 矿粉 → 熔炼，矿石利用率翻倍。"
+				""
+				"用法：接 FE 电，原矿从上方进，矿粉从下方出，管道自动分流。"
+				""
+				"进阶：插速度 / 辅助处理升级，磨粉更快、副产更多。"
+			]
+			id: "03DB4F09C5BA1642"
+			rewards: [{
+				id: "361CAF021CB7FD03"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "矿石二倍增产的经典"
+			tasks: [{
+				id: "1AD399517C6F627F"
+				item: "thermal:machine_pulverizer"
+				type: "item"
+			}]
+			title: "磨粉机"
+			x: 4.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["03DB4F09C5BA1642"]
+			description: [
+				"&a感应熔炼炉（Induction Smelter）&f是热力核心熔炼机：矿粉烧锭 + 副产；还能「合金熔炼」——两种料一起烧出合金。"
+				""
+				"经典合金：&b铜 + 锡 → 青铜&f、&b铁 + 镍 → 因瓦&f、&b金 + 银 → 电子合金&f、&b铜 + 镍 → 康铜&f。"
+				""
+				"进阶：感应熔炼炉是热力一切合金的来源，青铜 / 因瓦 / 电子合金 / 康铜都靠它。"
+				""
+				"提示：加副产物升级，金矿 / 银矿会额外出其他矿粒。"
+			]
+			id: "02D39815DDD3158A"
+			rewards: [{
+				id: "283A005412883961"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "合金与副产核心"
+			tasks: [{
+				id: "3F02C6E9DF312826"
+				item: "thermal:machine_smelter"
+				type: "item"
+			}]
+			title: "感应熔炼炉"
+			x: 4.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["02D39815DDD3158A"]
+			description: [
+				"&a通量熔炉（Redstone Furnace）&f用 FE 电力烧炼，比原版熔炉快得多，不用烧煤。"
+				""
+				"适合处理大量普通矿石 / 食物 / 沙子，和感应熔炼炉分工：通量炉「单一烧炼」，感应炉「合金 + 副产」。"
+				""
+				"进阶：通量炉 + 自动进料 = 全自动烧炼站，产物接管道进仓库。"
+				""
+				"提示：它是最基础的热力机器，前期做一个应急。"
+			]
+			id: "462C8C49F65EDCEE"
+			rewards: [{
+				id: "1154EDB476FAF618"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "电力烧炼"
+			tasks: [{
+				id: "1CDE4860C5EEFCC0"
+				item: "thermal:machine_furnace"
+				type: "item"
+			}]
+			title: "通量熔炉"
+			x: 0.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["02D39815DDD3158A"]
+			description: [
+				"&a锯木机（Sawmill）&f把原木切成更多木板（比手合成划算），副产木屑。"
+				""
+				"木屑可做燃料 / 纸浆；木板是建筑和合成的大宗材料。"
+				""
+				"进阶：锯木机 + 自动农场（树苗）= 木材自由。"
+				""
+				"提示：它也能处理部分植物类物品，JEI 查配方。"
+			]
+			id: "7611AC150818CDEA"
+			rewards: [{
+				id: "4AEFA3C0D05A2EBB"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "原木高效加工"
+			tasks: [{
+				id: "6C2B950D81AD6980"
+				item: "thermal:machine_sawmill"
+				type: "item"
+			}]
+			title: "锯木机"
+			x: 4.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["02D39815DDD3158A"]
+			description: [
+				"&a离心分离器（Centrifugal Separator）&f把混合物甩成多种产物（矿物砂 / 植物 / 废料分离）。"
+				""
+				"它是产线的「第三段」：磨粉 → 熔炼 → 离心，把副产物料再分离出可用资源。"
+				""
+				"进阶：离心分离处理矿渣 / 沥青 / 油砂，把废料变宝。"
+				""
+				"提示：JEI 查「离心」配方看每种物料的产出。"
+			]
+			id: "5913F7AE31348711"
+			rewards: [{
+				id: "0EA0DC20E7F1F3B2"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "物料分离副产"
+			tasks: [{
+				id: "6B7B49CDA3D2067F"
+				item: "thermal:machine_centrifuge"
+				type: "item"
+			}]
+			title: "离心分离器"
+			x: 1.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["7611AC150818CDEA"]
+			description: [
+				"&a熔融坩埚（Crucible）&f把固体熔成液体（如把石头熔成岩浆、把金属熔成熔融金属）。"
+				""
+				"用法：固体进坩埚 → 熔融液体从流体出口出，接储罐 / 管道。"
+				""
+				"进阶：坩埚把岩浆当无限液体源，或把矿石熔成熔融金属对接铸造。"
+				""
+				"提示：它和流体管道 / 储罐配合用。"
+			]
+			id: "6064216994D3691F"
+			rewards: [{
+				id: "5289F5250AD7CED8"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "固体熔成液体"
+			tasks: [{
+				id: "0C3BB78C1B984518"
+				item: "thermal:machine_crucible"
+				type: "item"
+			}]
+			title: "熔融坩埚"
+			x: 3.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["6064216994D3691F"]
+			description: [
+				"&a结晶器（Crystallizer）&f让液体 / 溶液结晶成物品（如水晶 / 矿物晶体）；&a冷却器（Chiller）&f把熔融液浇铸成锭 / 球 / 棒（配合 chiller 模具）。"
+				""
+				"冷却模具：&bchiller_ingot_cast（锭模）&f、&bchiller_ball_cast（球模）&f、&bchiller_rod_cast（棒模）&f。"
+				""
+				"进阶：坩埚熔金属 → 冷却器浇锭 = 熔融铸造产线。"
+				""
+				"提示：模具决定冷却器产出形状。"
+			]
+			id: "48180ED4131A9E46"
+			rewards: [{
+				id: "3D0227E56192B09D"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "晶体生长、浇铸成型"
+			tasks: [{
+				id: "3AA7B292E7E92B98"
+				item: "thermal:machine_crystallizer"
+				type: "item"
+			}]
+			title: "结晶器与冷却器"
+			x: 4.5d
+			y: 7.5d
+		}
+		{
+			dependencies: ["02D39815DDD3158A"]
+			description: [
+				"&a压机（Press）&f用模具把锭压成板 / 齿轮 / 硬币 / 打包 / 拆包："
+				""
+				"&bpress_gear_die（齿轮模）&f压齿轮、&bpress_coin_die（硬币模）&f压硬币、&bpress_packing_2x2 / 3x3_die（打包模）&f压块、&bpress_unpacking_die（拆包模）&f拆块。"
+				""
+				"齿轮 / 板 / 硬币是热力机器和许多模组的合成零件。"
+				""
+				"进阶：压机 + 管道 = 自动压零件产线。"
+			]
+			id: "596B180C5282F4CF"
+			rewards: [{
+				id: "1DEA36E074C250E8"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "压板、齿轮、硬币"
+			tasks: [{
+				id: "1BDFEA5D0253DF8C"
+				item: "thermal:machine_press"
+				type: "item"
+			}]
+			title: "压机与模具"
+			x: 3.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["596B180C5282F4CF"]
+			description: [
+				"&a热解机（Pyrolyzer）&f在缺氧下热解木材 / 生物质，产出木炭 + 焦油 / 燃油类液体。"
+				""
+				"它把木头「干馏」成木炭和可燃液体，是林业→能源的过渡。"
+				""
+				"进阶：热解机产的燃油可喂压缩能源炉发电。"
+				""
+				"提示：热解机同时出固体和液体产物，注意分流。"
+			]
+			id: "734B173D66BBE405"
+			rewards: [{
+				id: "660CB8318126B533"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "木头变炭与油"
+			tasks: [{
+				id: "119E66E89F3DF48A"
+				item: "thermal:machine_pyrolyzer"
+				type: "item"
+			}]
+			title: "热解机"
+			x: 1.5d
+			y: 6.0d
+		}
+		{
+			dependencies: ["734B173D66BBE405"]
+			description: [
+				"&a精炼厂（Refinery）&f把原油 / 油砂（oil_sand / oil_red_sand）分馏成各种燃油 / 沥青类产物。"
+				""
+				"它是热力石油链的核心：油砂 → 精炼 → 燃油 → 压缩能源炉发电。"
+				""
+				"进阶：油砂在世界沙漠 / 海滩生成，自动抽取进精炼厂。"
+				""
+				"提示：精炼厂出多种液体，接不同管道分流。"
+			]
+			id: "5F691197F3FEC7BD"
+			rewards: [{
+				id: "196757CAB727E9C0"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "原油分馏"
+			tasks: [{
+				id: "5E6885FFD15F4D8F"
+				item: "thermal:machine_refinery"
+				type: "item"
+			}]
+			title: "精炼厂"
+			x: 3.0d
+			y: 7.5d
+		}
+		{
+			dependencies: ["5F691197F3FEC7BD"]
+			description: [
+				"&a瓶装机（Bottler）&f自动把液体灌进瓶子 / 桶（如水瓶、岩浆桶）；&a酿造机（Brewer）&f自动酿造药水。"
+				""
+				"用法：液体 + 空瓶进瓶装机 → 成品瓶出；药水材料 + 药水酿造机自动酿。"
+				""
+				"进阶：瓶装机配合流体储罐，自动产水瓶 / 药水。"
+				""
+				"提示：这俩机器处理的是「容器类」物品。"
+			]
+			id: "14DBDD5E81409B18"
+			rewards: [{
+				id: "05F592B099DF9624"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "自动装瓶、自动酿药"
+			tasks: [{
+				id: "62680039C47340CC"
+				item: "thermal:machine_bottler"
+				type: "item"
+			}]
+			title: "瓶装机与酿造机"
+			x: 3.0d
+			y: 9.0d
+		}
+		{
+			dependencies: ["7611AC150818CDEA"]
+			description: [
+				"&a作物培育机（Crop Insolator）&f用作物 + 水 / 肥料自动催熟并产出作物和种子，是热力版全自动农场。"
+				""
+				"它内部完成「播种→生长→收割」，只要持续供种子和水。"
+				""
+				"进阶：培育机 + 管道供种子 / 收产物 = 小麦 / 胡萝卜 / 作物自由。"
+				""
+				"提示：配合 &aphytosoil（热植土）&f和浇水壶效果更好。"
+			]
+			id: "3B873D1C7C92CC99"
+			rewards: [{
+				id: "74E6F4BE49863664"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "热力版自动农场"
+			tasks: [{
+				id: "053AB402C007D7BE"
+				item: "thermal:machine_insolator"
+				type: "item"
+			}]
+			title: "作物培育机"
+			x: 6.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["02D39815DDD3158A"]
+			description: [
+				"&a自动合成机（Crafter）&f按合成配方自动合成物品，从相邻容器取料、成品送回。"
+				""
+				"它是热力自己的「合成器」，适合做机器零件 / 合金的批量合成。"
+				""
+				"进阶：自动合成机 + 导入导出总线 = 自动生产中间材料。"
+				""
+				"提示：和 RS 合成器配合，处理样板外的配方。"
+			]
+			id: "426C064789A42791"
+			rewards: [{
+				id: "18C1B59D6AF645AB"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "机器版合成台"
+			tasks: [{
+				id: "6F6F7371CF38D5BD"
+				item: "thermal:machine_crafter"
+				type: "item"
+			}]
+			title: "自动合成机"
+			x: 6.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["03DB4F09C5BA1642"]
+			description: [
+				"&a斯特林能源炉（Stirling Dynamo）&f烧固体燃料（煤 / 木炭 / 燃料块）发电，是热力最基础的发电机。"
+				""
+				"前期应急用：一排斯特林烧煤，给磨粉机 / 熔炉供电。"
+				""
+				"进阶：多台斯特林并联，接能量导管进电网。"
+				""
+				"提示：它烧固体，不烧液体。"
+			]
+			id: "09EAB1BCED772AB2"
+			rewards: [{
+				id: "7068C81581CEB861"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "烧固体燃料"
+			tasks: [{
+				id: "1108863F65397315"
+				item: "thermal:dynamo_stirling"
+				type: "item"
+			}]
+			title: "能源炉：斯特林"
+			x: 6.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["09EAB1BCED772AB2"]
+			description: [
+				"&a岩浆能源炉（Magmatic Dynamo）&f喝岩浆发电，是最省心的中期电源。"
+				""
+				"配合岩浆农场（流体激光 / 岩浆罐）= 近乎无限电力。"
+				""
+				"进阶：岩浆管道连岩浆湖 / 储罐，岩浆能源炉持续发电。"
+				""
+				"提示：岩浆能量大，但岩浆消耗也快，备足储罐。"
+			]
+			id: "012B98431932C732"
+			rewards: [{
+				id: "10098B68937788DA"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "喝岩浆发电"
+			tasks: [{
+				id: "4A7AA90CD5A4C052"
+				item: "thermal:dynamo_magmatic"
+				type: "item"
+			}]
+			title: "能源炉：岩浆"
+			x: 7.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["012B98431932C732"]
+			description: [
+				"&a压缩能源炉（Compression Dynamo）&f烧液体燃料（燃油 / 生物柴油 / 精炼油）发电，效率高。"
+				""
+				"它是石油链的终点：油砂→精炼厂→燃油→压缩能源炉→电力。"
+				""
+				"进阶：配合热解机产的燃油，林业废料也能发电。"
+				""
+				"提示：压缩炉还需要冷却剂，注意供水 / 冷却。"
+			]
+			id: "286A8F240315B18D"
+			rewards: [{
+				id: "7DF51ECA38128A8D"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "烧燃油发电"
+			tasks: [{
+				id: "2FE896116F543C84"
+				item: "thermal:dynamo_compression"
+				type: "item"
+			}]
+			title: "能源炉：压缩"
+			x: 7.5d
+			y: 6.0d
+		}
+		{
+			dependencies: ["286A8F240315B18D"]
+			description: [
+				"热力还有四种特色能源炉："
+				""
+				"&b饕餮能源炉 Gourmand&f：烧食物发电（农场食物过剩就烧它）；"
+				""
+				"&b宝石能源炉 Lapidary&f：烧绿宝石 / 钻石等宝石发电；"
+				""
+				"&b钱币能源炉 Numismatic&f：烧热力硬币（bronze / invar 硬币等）发电；"
+				""
+				"&b附魔能源炉 Disenchantment&f：烧附魔物品 / 拆解附魔发电。"
+				""
+				"进阶：把仓库里「没用」的东西全变成电，垃圾变能源。"
+			]
+			id: "3FA64A05EF623B89"
+			rewards: [{
+				id: "13F751EEE04CAFF4"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "烧杂物发电"
+			tasks: [{
+				id: "661B152F73C6ACE8"
+				item: "thermal:dynamo_gourmand"
+				type: "item"
+			}]
+			title: "能源炉：饕餮/宝石/钱币/附魔"
+			x: 9.0d
+			y: 7.5d
+		}
+		{
+			dependencies: ["03DB4F09C5BA1642"]
+			description: [
+				"热力基础新增金属：&b锡（Tin）&f、&b铅（Lead）&f、&b银（Silver）&f、&b镍（Nickel）&f，各有原矿（tin/lead/silver/nickel_ore 及 deepslate 版）、raw 块、锭 / 粒 / 粉 / 板 / 齿轮。"
+				""
+				"它们是合金和机器零件的原料：锡做青铜、镍做因瓦、银做电子合金。"
+				""
+				"进阶：原矿走磨粉→熔炼，2 倍增产。"
+				""
+				"提示：这些矿在主世界和深板岩层生成。"
+			]
+			id: "70F515C5696502CB"
+			rewards: [{
+				id: "7303C0EB014E3883"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "铜锡铅银镍"
+			tasks: [{
+				id: "2C86992277A01B18"
+				item: "thermal:tin_ingot"
+				type: "item"
+			}]
+			title: "热力基础金属"
+			x: 7.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["02D39815DDD3158A"]
+			description: [
+				"感应熔炼炉烧出的四大合金：&b青铜 Bronze&f（铜+锡）、&b因瓦 Invar&f（铁+镍）、&b电子合金 Electrum&f（金+银）、&b康铜 Constantan&f（铜+镍）。"
+				""
+				"每种合金都有锭 / 粒 / 粉 / 板 / 齿轮 / 方块，是机器升级和高级零件的材料。"
+				""
+				"进阶：合金等级决定机器 / 工具档位，青铜起步、因瓦 / 电子合金中后期。"
+				""
+				"提示：合金配方在感应熔炼炉里，JEI 可查。"
+			]
+			id: "74F6689154712F41"
+			rewards: [{
+				id: "1A4B605F44ECAA98"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "青铜/因瓦/电子合金/康铜"
+			tasks: [{
+				id: "7BA11829478A19C4"
+				item: "thermal:bronze_ingot"
+				type: "item"
+			}]
+			title: "热力合金"
+			x: 9.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["74F6689154712F41"]
+			description: [
+				"每种金属 / 合金都有：&b粉（dust）&f、&b粒（nugget）&f、&b板（plate）&f、&b齿轮（gear）&f、&b硬币（coin）&f、&b方块（block）&f。"
+				""
+				"齿轮用 &b压机 + gear 模&f压，板用 press 模，硬币用 coin 模——别用手合成，压机快得多。"
+				""
+				"进阶：这些标准件是所有热力机器和工具的合成素材，建议批量生产。"
+				""
+				"提示：coin 系列可喂钱币能源炉发电。"
+			]
+			id: "459951F69FC041E3"
+			rewards: [{
+				id: "30B8E3CD4B614A94"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "机器的标准件"
+			tasks: [{
+				id: "2C61EC9D9581D81F"
+				item: "thermal:bronze_gear"
+				type: "item"
+			}]
+			title: "粉粒板齿轮与硬币"
+			x: 9.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["70F515C5696502CB"]
+			description: [
+				"热力新增矿：&b磷灰石 Apatite&f、&b朱砂 Cinnabar&f、&b硝石 Niter&f、&b硫磺 Sulfur&f、&b红宝石 Ruby&f、&b蓝宝石 Sapphire&f（各有 deepslate 版）。"
+				""
+				"&b油砂 oil_sand / 油红砂 oil_red_sand&f在沙漠 / 海滩生成，是石油精炼的原料。"
+				""
+				"进阶：磷灰石做肥料、硫磺做火药、油砂喂精炼厂。"
+				""
+				"提示：这些矿也走磨粉→熔炼产线。"
+			]
+			id: "05302D35D09EB2B4"
+			rewards: [{
+				id: "60A4C09BC112ABEE"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "新材料与石油原料"
+			tasks: [{
+				id: "72DAA618F7E4863B"
+				item: "thermal:oil_sand"
+				type: "item"
+			}]
+			title: "热力矿物与油砂"
+			x: 12.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["09EAB1BCED772AB2"]
+			description: [
+				"&a能量导管（Energy Duct）&f传输 FE / RF，把能源炉的电送到每台机器。"
+				""
+				"导管可 &b能量限流附件（Energy Limiter Attachment）&f限制每路输出功率，避免一台机器吃满电网。"
+				""
+				"用法：能源炉 → 能量导管 → 机器，导线自动连接相邻设备。"
+				""
+				"进阶：主路粗、支路细，按机器功率分配导管等级。"
+			]
+			id: "16B2431A3E359F5C"
+			rewards: [{
+				id: "495E05AF2778DBFD"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "传输 FE"
+			tasks: [{
+				id: "6C7EE307A014560A"
+				item: "thermal:energy_duct"
+				type: "item"
+			}]
+			title: "能量导管"
+			x: 10.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["16B2431A3E359F5C"]
+			description: [
+				"&a流体导管（Fluid Duct）&f传输液体；&b视窗流体导管（fluid_duct_windowed）&f可看见液面。"
+				""
+				"&a流体储罐（Fluid Reservoir）&f和 &b罐子（Jar）&f存储液体；&b物品缓冲（Item Buffer）&f缓存物品做分流。"
+				""
+				"进阶：流体导管 + 伺服附件 = 定向抽液，从储罐 A 抽到机器 B。"
+				""
+				"提示：导管用扳手调整连接面，避免乱接。"
+			]
+			id: "55BF74B949C2D5E5"
+			rewards: [{
+				id: "771F83A6A052FD2A"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "液体通路与缓冲"
+			tasks: [{
+				id: "6149E3BC5CBA4A63"
+				item: "thermal:fluid_duct"
+				type: "item"
+			}]
+			title: "流体导管与储罐"
+			x: 12.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["16B2431A3E359F5C"]
+			description: [
+				"&a通量电容（Flux Capacitor）&f是便携式 FE 电池，带在身上给通量工具 / 护甲无线充电。"
+				""
+				"它分多个等级（flux_capacitor_0/1/2），容量和充电速度递增。"
+				""
+				"进阶：身上揣一个高阶通量电容，挖矿时通量钻 / 通量锯自动从它取电。"
+				""
+				"提示：通量电容可在发电机 / 充电设施里充满。"
+			]
+			id: "405E5D97122F1321"
+			rewards: [{
+				id: "7A18834355E34D75"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "便携电池"
+			tasks: [{
+				id: "3E144918822835B6"
+				item: "thermal:flux_capacitor"
+				type: "item"
+			}]
+			title: "通量电容"
+			x: 13.5d
+			y: 6.0d
+		}
+		{
+			dependencies: ["74F6689154712F41"]
+			description: [
+				"热力创新提供 &a通量工具&f，用 FE 供电：&b通量钻 Flux Drill&f（多功能挖矿）、&b通量锯 Flux Saw&f（伐木 / 锯切）、&b通量磁铁 Flux Magnet&f（自动吸掉落物，神器）、&b通量泵 Flux Pump&f（搬液体）、&b通量抓钩 Flux Grapple&f（绳索移动）。"
+				""
+				"它们长按蓄力、效率远高于原版工具；通量磁铁是挖矿 / 农场必备。"
+				""
+				"进阶：工具靠身上的通量电容无线充电，边挖边充。"
+				""
+				"提示：工具电量耗尽就停，记得随身带电容。"
+			]
+			id: "12ADDAE1F7570730"
+			rewards: [{
+				id: "70AB62F7D517BF7C"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "电动的镐斧锯泵"
+			tasks: [{
+				id: "4065F039DDB92CBB"
+				item: "thermal:flux_drill"
+				type: "item"
+			}]
+			title: "通量工具"
+			x: 10.5d
+			y: 6.0d
+		}
+		{
+			dependencies: ["3B873D1C7C92CC99"]
+			description: [
+				"&a浇水壶（Watering Can）&f给作物浇水催长，配合培育机 / 热植土用；&a药剂箭袋（Potion Quiver）&f随身存药水，射箭时自动喷 / 自动喝。"
+				""
+				"浇水壶可装水反复浇，是半自动农场的好帮手。"
+				""
+				"进阶：培育机 + 浇水壶 + 热植土 = 超快作物生长。"
+				""
+				"提示：药剂箭袋在战斗中自动提供药水效果。"
+			]
+			id: "76DEBCADD5F1DF8D"
+			rewards: [{
+				id: "1A1578550928C691"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "农业与药水工具"
+			tasks: [{
+				id: "6BF021C7787A29D7"
+				item: "thermal:watering_can"
+				type: "item"
+			}]
+			title: "浇水壶与药剂箭袋"
+			x: 6.0d
+			y: 7.5d
+		}
+		{
+			dependencies: ["7611AC150818CDEA"]
+			description: [
+				"热力机器支持 &a附件（Attachment）&f升级自动化："
+				""
+				"&b伺服附件 Servo&f（自动从机器出货）、&b涡轮伺服 Turbo Servo&f（更快出货）；"
+				""
+				"&b过滤附件 Filter&f（控制进出物品白名单）、&b能量限流附件 Energy Limiter&f（限制耗电）、&b封槽 Slot Seal&f（锁定槽位不被自动操作）。"
+				""
+				"用法：附件插进机器的升级槽，即可实现自动进出料 + 过滤。"
+				""
+				"进阶：伺服 + 过滤 = 机器自动进料 / 出料 / 分拣，不用铺管道。"
+			]
+			id: "55B3307DE7918DC9"
+			rewards: [{
+				id: "6576A708DD35CCA7"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "伺服/过滤/限流/封槽"
+			tasks: [{
+				id: "1C52D00C6F9EFBCC"
+				item: "thermal:servo_attachment"
+				type: "item"
+			}]
+			title: "机器附件"
+			x: 4.5d
+			y: 6.0d
+		}
+		{
+			dependencies: ["3B873D1C7C92CC99"]
+			description: [
+				"&a热植土（Phytosoil / Phytosoil Tilled）&f是热力版加速耕地，种在上面的作物长得更快。"
+				""
+				"热力还新增多种作物：大麦 / 咖啡 / 玉米 / 番茄 / 洋葱 / 水稻 / 茶 / 花生等（各有种子）。"
+				""
+				"进阶：热植土 + 培育机 + 浇水壶 = 高产自动化农场。"
+				""
+				"提示：这些作物可做食物 / 饲料 / 燃料。"
+			]
+			id: "138910B696B0CD3E"
+			rewards: [{
+				id: "15688D8A9B939257"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "加速种植"
+			tasks: [{
+				id: "2F44DCC08B560A0C"
+				item: "thermal:phytosoil"
+				type: "item"
+			}]
+			title: "热植土与热力作物"
+			x: 7.5d
+			y: 7.5d
+		}
+		{
+			dependencies: [
+				"03DB4F09C5BA1642"
+				"02D39815DDD3158A"
+				"5913F7AE31348711"
+			]
+			description: [
+				"一套标准热力矿石产线："
+				""
+				"1. &a供电&f：岩浆能源炉 + 能量导管进电网；"
+				""
+				"2. &a磨粉&f：磨粉机把原矿磨成 2 倍矿粉；"
+				""
+				"3. &a熔炼&f：感应熔炼炉把矿粉熔成锭（合金配方在这里做）；"
+				""
+				"4. &a离心&f：离心机把副产矿渣再分离出矿物；"
+				""
+				"5. &a物流&f：物品缓冲 + 伺服附件自动进出料，能量导管供电；"
+				""
+				"6. &a存储&f：锭存抽屉 / RS，副产液体进储罐；"
+				""
+				"这条线把原矿 → 锭的利用率拉满，并顺便产出合金。"
+			]
+			icon: "thermal:machine_smelter"
+			id: "20F1A59E76F43CB8"
+			rewards: [{
+				id: "6CAC71476733A722"
+				type: "xp"
+				xp: 20
+			}]
+			subtitle: "磨粉→熔炼→离心"
+			tasks: [{
+				id: "00CBC940F4805151"
+				title: "事例设施：矿石处理产线"
+				type: "checkmark"
+			}]
+			title: "事例设施：矿石处理产线"
+			x: 0.0d
+			y: 6.0d
+		}
+		{
+			dependencies: [
+				"5F691197F3FEC7BD"
+				"286A8F240315B18D"
+			]
+			description: [
+				"一套热力石油能源链："
+				""
+				"1. &a采油&f：收集世界油砂 / 油红砂；"
+				""
+				"2. &a精炼&f：精炼厂把油砂分馏成燃油 / 沥青；"
+				""
+				"3. &a发电&f：燃油喂压缩能源炉发电；"
+				""
+				"4. &a储能&f：通量电容 + 能量导管配电，能量缓冲；"
+				""
+				"5. &a副产&f：热解机把木头变木炭 / 燃油，补燃料；"
+				""
+				"6. &a联动&f：电力供给磨粉 / 熔炼 / 培育等所有机器；"
+				""
+				"这条链让你把「沙子 / 木头」变成稳定电力。"
+			]
+			icon: "thermal:machine_refinery"
+			id: "5130DD2E415B4295"
+			rewards: [{
+				id: "2633D931FF3A810F"
+				type: "xp"
+				xp: 20
+			}]
+			subtitle: "油砂→燃油→电力"
+			tasks: [{
+				id: "092A0C3BDFAD8398"
+				title: "事例设施：石油精炼 + 发电"
+				type: "checkmark"
+			}]
+			title: "事例设施：石油精炼 + 发电"
+			x: 4.5d
+			y: 9.0d
+		}
+		{
+			dependencies: ["20F1A59E76F43CB8"]
+			description: [
+				"热力系列 &b没有真正的多方块结构&f——它的设计哲学是「单方块机器 + 附件升级 + 导管连接」。"
+				""
+				"所谓「结构」其实是产线组合："
+				""
+				"· &b机器本身&f是单个方块，吃 FE，靠附件（伺服 / 过滤 / 限流）自动化；"
+				""
+				"· &b导管网络&f把能量导管（电）、流体导管（液）、物品缓冲（物）连成基地物流；"
+				""
+				"· &b产线布局&f：能源炉 → 能量导管 → 一排机器 → 物品缓冲 / 抽屉收产物；"
+				""
+				"相比气动工艺的压力腔室 / 组装机多方块，热力更「平铺」——摆一排机器接导管即可。"
+				""
+				"提示：用扳手调整每个机器的输入 / 输出面，避免乱接。"
+			]
+			icon: "thermal:machine_press"
+			id: "5994A605024D0BB5"
+			rewards: [{
+				id: "5BFDAB5BF40E54EC"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "热力无真正多方块"
+			tasks: [{
+				id: "256510F22A3708E6"
+				title: "机器结构说明"
+				type: "checkmark"
+			}]
+			title: "机器结构说明"
+			x: 1.5d
+			y: 7.5d
+		}
+		{
+			dependencies: [
+				"5130DD2E415B4295"
+				"5994A605024D0BB5"
+			]
+			description: [
+				"完成本任务 = 热力系列成为你基地的通用加工车间："
+				""
+				"1. &a机器&f：磨粉 / 感应熔炼 / 锯木 / 离心 / 坩埚 / 结晶 / 压机 / 热解 / 精炼 / 培育 / 合成，全能加工；"
+				""
+				"2. &a能源&f：斯特林 / 岩浆 / 压缩 / 饕餮 / 宝石 / 钱币 / 附魔能源炉，烧什么都能发电；"
+				""
+				"3. &a材料&f：铜锡铅银镍 + 青铜 / 因瓦 / 电子合金 / 康铜，粉粒板齿轮硬币标准化；"
+				""
+				"4. &a传输&f：能量导管 + 流体导管 + 物品缓冲，FE / 液体 / 物品三线并联；"
+				""
+				"5. &a工具&f：通量钻 / 锯 / 磁铁 / 泵 / 抓钩 + 通量电容随身无线供电；"
+				""
+				"6. &a升级&f：伺服 / 过滤 / 限流附件让机器自动进出料；"
+				""
+				"把热力产线的产物通过 RS / 抽屉入库，它就是基地的「万能加工厂」。"
+			]
+			icon: "thermal:machine_insolator"
+			id: "58C06840B020B321"
+			rewards: [{
+				id: "4BBB3840933F032B"
+				type: "xp"
+				xp: 25
+			}]
+			shape: "octagon"
+			size: 1.5d
+			subtitle: "通用加工车间"
+			tasks: [{
+				id: "46327BF0E6B87BFE"
+				title: "热力系列综合实战"
+				type: "checkmark"
+			}]
+			title: "热力系列综合实战"
+			x: 3.0d
+			y: 10.5d
+		}
+	]
+	title: "热力系列"
+}

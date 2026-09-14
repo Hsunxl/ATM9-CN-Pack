@@ -1,0 +1,1267 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "t17_ars_nouveau"
+	group: "00C72C1FB6193A42"
+	icon: "ars_nouveau:worn_notebook"
+	id: "420113C6EADFB7D4"
+	order_index: 17
+	progression_mode: "flexible"
+	quest_links: [ ]
+	quests: [
+		{
+			description: [
+				"&a新生魔艺 Ars Nouveau&f 是一套「自由拼法术」的魔法模组：你不是背技能表，而是用&a字形 Glyph&f 在雕刻台上自己拼法术。"
+				""
+				"核心资源是&a魔源 Source&f（蓝绿色法力），由魔源瓶存储、中继器传输、源质链接生成；法术书右键释放，耗魔源、有冷却。"
+				""
+				"本章五条线：&a魔源体系&f（生成/存储/传输）→ &a法术书写&f（形态+效果+修饰拼字形）→ &a施法与炮塔&f → &a召唤与仪式&f → &a装备与源质链接&f。"
+				""
+				"分支说明：总览→新手入门（任务1-4）→实用技巧（任务5-8）→物品大全（任务9-44）→事例设施（45-46）→机器结构（47-48）→结尾实战（49）。"
+			]
+			icon: "ars_nouveau:worn_notebook"
+			id: "4EE1B103AB20A3A9"
+			shape: "hexagon"
+			size: 1.5d
+			subtitle: "魔源·字形·召唤·仪式"
+			tasks: [{
+				id: "55912015C6DD3023"
+				title: "新生魔艺总览"
+				type: "checkmark"
+			}]
+			title: "新生魔艺总览"
+			x: 0.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["4EE1B103AB20A3A9"]
+			description: [
+				"&a磨损的笔记本（Worn Notebook）&f是新生魔艺的内置手册，开局就能做，里面写清了所有字形、方块、仪式、召唤的配方与用法。"
+				""
+				"卡关时先翻它：字形怎么组合、仪式怎么摆、源质链接怎么接，都有图文说明。比 JEI 更懂这个模组。"
+				""
+				"做一本放背包，比查 wiki 还快。"
+			]
+			id: "1BBB6B92C58352C6"
+			rewards: [{
+				id: "22D6968F14C1A0EE"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "一切配方与机制都在里面"
+			tasks: [{
+				id: "18BBE5D16F34FF44"
+				item: "ars_nouveau:worn_notebook"
+				type: "item"
+			}]
+			title: "随身手册：Worn Notebook"
+			x: 1.5d
+			y: 6.0d
+		}
+		{
+			dependencies: ["1BBB6B92C58352C6"]
+			description: [
+				"&a新手法术书（Novice Spell Book）&f是入门级施法工具，自带几个基础法术槽，右键即可释放。"
+				""
+				"法术书等级：novice → apprentice（学徒）→ archmage（大法师）→ creative，等级越高法术槽越多、复杂度上限越高。"
+				""
+				"书本身不施法，真正的法术是你在&a雕刻台（Scribes Table）&f里用字形拼出来后写进书里的。"
+			]
+			id: "3F4CAC14791F2434"
+			rewards: [{
+				id: "5FB8087561B1BDED"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "你的第一本 Spell Book"
+			tasks: [{
+				id: "181CA4E07A9E6483"
+				item: "ars_nouveau:novice_spell_book"
+				type: "item"
+			}]
+			title: "新手法术书"
+			x: 3.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["1BBB6B92C58352C6"]
+			description: [
+				"&a魔源宝石（Source Gem）&f是新生魔艺的基础材料，由魔源矿石烧炼或魔源浆果合成，做机器、字形、装备都要它。"
+				""
+				"玩家头顶有一条&a魔源条&f（蓝色）：施法消耗魔源，不施法时自动回复；上限通过装备/护符提升。"
+				""
+				"魔源宝石块（Source Gem Block）是储能装饰方块，也方便堆放。"
+			]
+			id: "5A06ADDE62A5E0DF"
+			rewards: [{
+				id: "41D76843F5CF1D67"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "魔法世界的法力值"
+			tasks: [{
+				count: 4L
+				id: "25E56E4963227D38"
+				item: "ars_nouveau:source_gem"
+				type: "item"
+			}]
+			title: "魔源宝石与魔源"
+			x: 3.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["3F4CAC14791F2434"]
+			description: [
+				"&a雕刻台（Scribes Table）&f是书写法术的工作台：把&a空白字形(Blank Glyph)&f按「形态+效果+修饰」的顺序摆进去，命名后写成一个法术。"
+				""
+				"一个法术 = &a1 个形态字形&f（决定怎么打出去）+ &aN 个效果字形&f（造成什么）+ &a若干修饰字形&f（增强/扩大/延长）。"
+				""
+				"拼好后写进法术书，书里就多一个法术；法术有&a复杂度上限&f，字形越多越复杂，超出上限写不进去，要靠升级装备提升。"
+			]
+			id: "75A5592207153278"
+			rewards: [{
+				id: "127636A38C479225"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "Scribes Table"
+			tasks: [{
+				id: "76BCBB88754BD080"
+				item: "ars_nouveau:scribes_table"
+				type: "item"
+			}]
+			title: "雕刻台：拼法术的地方"
+			x: 4.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["75A5592207153278"]
+			description: [
+				"新生魔艺的乐趣在于&a自己拼法术&f。几个经典配方："
+				""
+				"· &a投射(Projectile) + 伤害(Harm) + 强力(Amplify)&f = 远程法弹，初期神技；"
+				""
+				"· &a自我(Self) + 治疗(Heal)&f = 给自己回血；&a接触(Touch) + 破盾(Dispel)&f = 驱散；"
+				""
+				"· &a爆发(Burst) + 范围(AoE) + 伤害&f = AOE 扫怪；&a自我 + 重力(Gravity)&f = 把怪拉过来；"
+				""
+				"多试字形组合，比直接抄别人的配方更有成就感。注意复杂度别超上限。"
+			]
+			icon: "ars_nouveau:glyph_projectile"
+			id: "7C3725E165FF38E6"
+			rewards: [{
+				id: "790E335D16C11FBA"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "投射+伤害+强力=火球术"
+			tasks: [{
+				id: "4649D96B9A4025FB"
+				title: "实用技巧：法术组合实验"
+				type: "checkmark"
+			}]
+			title: "实用技巧：法术组合实验"
+			x: 6.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["5A06ADDE62A5E0DF"]
+			description: [
+				"&a魔源浆果丛（Sourceberry Bush）&f种在草地上，成熟后结魔源浆果，吃一口回魔源，也能合成魔源宝石。"
+				""
+				"自动化思路：用&a农业源质链接(Agronomic Sourcelink)&f接在浆果丛旁边，它会自动从作物中抽取魔源送进魔源网络——等于「种浆果=发电」。"
+				""
+				"配合骨粉/自动农场，可以做出持续供魔源的农场基地。"
+			]
+			icon: "ars_nouveau:sourceberry_bush"
+			id: "0BA7D834525BBF27"
+			rewards: [{
+				id: "2E7731EBA853F3C1"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "Source Berry 农场"
+			tasks: [{
+				id: "1E11DCCB984E58FA"
+				title: "实用技巧：魔源浆果自动化"
+				type: "checkmark"
+			}]
+			title: "实用技巧：魔源浆果自动化"
+			x: 4.5d
+			y: 6.0d
+		}
+		{
+			dependencies: ["75A5592207153278"]
+			description: [
+				"把拼好的攻击法术写进&a法术炮塔(Spell Turret)&f，炮塔会自动对射程内的怪物施法，相当于自动哨戒炮。"
+				""
+				"再放&a幼兽(Whelp)护符召唤元素精灵协助战斗，炮塔远程+幼兽近战，基地挂机也安全。"
+				""
+				"&a旋转炮塔(Rotating Turret)&f会转向，&a计时炮塔(Timer Turret)&f按间隔放 AOE，适合守农场。"
+			]
+			icon: "ars_nouveau:spell_turret"
+			id: "15AA0D877CC8161C"
+			rewards: [{
+				id: "17C310DE19AE8FD5"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "挂机基地不被拆"
+			tasks: [{
+				id: "6B056F5EF375783A"
+				title: "实用技巧：炮塔+召唤物防守"
+				type: "checkmark"
+			}]
+			title: "实用技巧：炮塔+召唤物防守"
+			x: 6.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["75A5592207153278"]
+			description: [
+				"&a仪式(Ritual)&f是多方块结构：仪式火盆+蜡烛+特定方块布局，启动后持续生效，消耗魔源+材料。"
+				""
+				"资源类仪式如&a丰收仪式(Ritual Harvest)&f自动收割周围作物、&a丰饶仪式(Fertility)&f加速作物生长、&a起飞仪式(Flight)&f给周围玩家缓降/飞行。"
+				""
+				"仪式范围有限，摆在家附近最划算；不需要时用红石刻停。"
+			]
+			icon: "ars_nouveau:ritual_brazier"
+			id: "04E33384BC32EF88"
+			rewards: [{
+				id: "6388FB47153B2597"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "Ritual = 免费圆石/铁"
+			tasks: [{
+				id: "5577C20CAA06B681"
+				title: "实用技巧：仪式生成资源"
+				type: "checkmark"
+			}]
+			title: "实用技巧：仪式生成资源"
+			x: 6.0d
+			y: 7.5d
+		}
+		{
+			dependencies: ["5A06ADDE62A5E0DF"]
+			description: [
+				"&a魔源瓶（Source Jar）&f是魔源的存储方块，蓝绿色液体在里面晃。多瓶并排可堆叠扩容。"
+				""
+				"魔源瓶之间用&a中继器(Relay)&f连接，形成魔源网络；机器（雕刻台、炮塔、仪式）从网络抽魔源。"
+				""
+				"&a魔源罐(Source Jar)&f是标准容器；&a虚空瓶(Void Jar)&f专门销毁多余魔源。"
+			]
+			id: "0C78AC3448ACF0FA"
+			rewards: [{
+				id: "6A62C5760239B6FA"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "Source Jar"
+			tasks: [{
+				count: 4L
+				id: "73A2F9FB27BB75A9"
+				item: "ars_nouveau:source_jar"
+				type: "item"
+			}]
+			title: "魔源瓶：储能方块"
+			x: 4.5d
+			y: 7.5d
+		}
+		{
+			dependencies: ["0C78AC3448ACF0FA"]
+			description: [
+				"&a魔源浆果丛&f是种在草方块上的魔法作物，成熟后右键采摘魔源浆果。"
+				""
+				"浆果直接吃回魔源；也能合成魔源宝石、源质面包(Source Berry Pie/Roll)当食物。"
+				""
+				"它是前期最稳定的魔源来源——种一排浆果丛，魔源就不愁。"
+			]
+			id: "1927889B8FCF8CDE"
+			rewards: [{
+				id: "328CDCF6F693A7F0"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "Sourceberry Bush"
+			tasks: [{
+				id: "1B4DDE420815F9C6"
+				item: "ars_nouveau:sourceberry_bush"
+				type: "item"
+			}]
+			title: "魔源浆果丛"
+			x: 6.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["0C78AC3448ACF0FA"]
+			description: [
+				"&a魔源中继器（Relay）&f是魔源网络的「线缆」：右键两个魔源瓶/机器完成连接，魔源在网络中流动。"
+				""
+				"变体：&a收集中继器(Relay Collector)&f自动吸收附近方块魔源；&a沉积中继器(Relay Deposit)&f往机器灌魔源；&a分裂中继器(Splitter)&f分流；&a传送中继器(Warp)&f跨距离传输。"
+				""
+				"规划：一个主魔源瓶→中继器连雕刻台/炮塔/仪式，别每个机器单独接瓶。"
+			]
+			id: "03E189A7EDFB7DDE"
+			rewards: [{
+				id: "4CF59CD7B0674630"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "Relay 连接魔源网络"
+			tasks: [{
+				count: 4L
+				id: "0B4BDB030B42E5F6"
+				item: "ars_nouveau:relay"
+				type: "item"
+			}]
+			title: "魔源中继器"
+			x: 6.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["0C78AC3448ACF0FA"]
+			description: [
+				"&a魔源宝石块&f是 9 颗魔源宝石合成的装饰/存储方块，堆放方便，也能当建筑材料。"
+				""
+				"它本身不直接产魔源，但拆了能拿回 9 颗宝石，是库存管理小工具。"
+			]
+			id: "6A65B88C7B7264B2"
+			rewards: [{
+				id: "1C69584B1614B48F"
+				type: "xp"
+				xp: 5
+			}]
+			subtitle: "Source Gem Block"
+			tasks: [{
+				id: "744B099787226AEE"
+				item: "ars_nouveau:source_gem_block"
+				type: "item"
+			}]
+			title: "魔源宝石块"
+			x: 6.0d
+			y: 12.0d
+		}
+		{
+			dependencies: ["0C78AC3448ACF0FA"]
+			description: [
+				"&a魔源罐（Source Jar）&f是魔源的标准容器：容量大，右键存取魔源，可堆叠存放。"
+				""
+				"把多个魔源罐接上中继器/魔源管道网络，给法术书与机器持续供能。"
+			]
+			id: "2F8FE2A317786266"
+			rewards: [{
+				id: "5A19C586FF94840A"
+				type: "xp"
+				xp: 5
+			}]
+			subtitle: "Source Jar"
+			tasks: [{
+				id: "2D4670CE26BEBC2B"
+				item: "ars_nouveau:source_jar"
+				type: "item"
+			}]
+			title: "魔源罐"
+			x: 6.0d
+			y: 13.5d
+		}
+		{
+			dependencies: ["75A5592207153278"]
+			description: [
+				"&a空白字形（Blank Glyph）&f是书写法术的原材料，用纸+魔源宝石合成。"
+				""
+				"在雕刻台里，把空白字形+对应效果材料放进去，就能「刻」出具体字形（如伤害字形、治疗字形）。"
+				""
+				"字形刻出来后是&a一次性&f的：拼法术时消耗，要多备空白字形。"
+			]
+			id: "63C5E01D280E374A"
+			rewards: [{
+				id: "7C8986DC00C32474"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "Blank Glyph"
+			tasks: [{
+				count: 4L
+				id: "13BFE4F702D1FB80"
+				item: "ars_nouveau:blank_glyph"
+				type: "item"
+			}]
+			title: "空白字形"
+			x: 6.0d
+			y: 9.0d
+		}
+		{
+			dependencies: ["75A5592207153278"]
+			description: [
+				"&a法术羊皮纸&f用于在法术书之间复制/转移法术：把羊皮纸对着法术书右键，就能抄下一个法术。"
+				""
+				"抄好的羊皮纸可以给另一本法术书，或留给其他玩家。多备几张方便分享配方。"
+			]
+			id: "77D25FC87A55CECD"
+			rewards: [{
+				id: "2E6EA1FA7E5C2391"
+				type: "xp"
+				xp: 5
+			}]
+			subtitle: "Spell Parchment"
+			tasks: [{
+				count: 2L
+				id: "33372A04C91FD625"
+				item: "ars_nouveau:spell_parchment"
+				type: "item"
+			}]
+			title: "法术羊皮纸"
+			x: 6.0d
+			y: 10.5d
+		}
+		{
+			dependencies: ["63C5E01D280E374A"]
+			description: [
+				"&a接触字形(Touch)&f：法术以近战触碰形式释放，打在准星指着的实体上，近距离高伤害，不消耗投射物。"
+				""
+				"适合配&a伤害/治疗/挖掘&f：近身一刀、近身奶人、近身挖方块。"
+			]
+			id: "3FE22A6657310065"
+			rewards: [{
+				id: "31FACA8AB377AC0C"
+				type: "xp"
+				xp: 5
+			}]
+			subtitle: "近战触碰"
+			tasks: [{
+				id: "1A0322D7C388DB76"
+				item: "ars_nouveau:glyph_touch"
+				type: "item"
+			}]
+			title: "形态字形：接触 Touch"
+			x: 7.5d
+			y: 7.5d
+		}
+		{
+			dependencies: ["63C5E01D280E374A"]
+			description: [
+				"&a投射字形(Projectile)&f：发射一颗魔法弹，命中第一个实体/方块，是最常用的远程形态。"
+				""
+				"配&a伤害+强力&f就是火球术；配&a点燃(Ignite)&f就是火箭；配&a冰冻(Freeze)&f就是冰弹。"
+			]
+			id: "2F4946623F250471"
+			rewards: [{
+				id: "56012485D37C71AB"
+				type: "xp"
+				xp: 5
+			}]
+			subtitle: "法弹"
+			tasks: [{
+				id: "5101BD2D10465BC5"
+				item: "ars_nouveau:glyph_projectile"
+				type: "item"
+			}]
+			title: "形态字形：投射 Projectile"
+			x: 7.5d
+			y: 9.0d
+		}
+		{
+			dependencies: ["63C5E01D280E374A"]
+			description: [
+				"&a自我字形(Self)&f：法术直接作用于施法者自己，不发射任何东西。"
+				""
+				"配&a治疗(Heal)&f=自奶；配&a隐身(Invisibility)&f=隐身；配&a缓降(Slowfall)&f=缓降；配&a漂浮(Levitation)&f=飘起来。"
+			]
+			id: "488682EF355E336A"
+			rewards: [{
+				id: "3523D9F7380ED11C"
+				type: "xp"
+				xp: 5
+			}]
+			subtitle: "对自己释放"
+			tasks: [{
+				id: "164B92D3F1BBC7D5"
+				item: "ars_nouveau:glyph_self"
+				type: "item"
+			}]
+			title: "形态字形：自我 Self"
+			x: 7.5d
+			y: 6.0d
+		}
+		{
+			dependencies: ["3FE22A6657310065"]
+			description: [
+				"&a伤害字形(Harm)&f：对目标造成魔法伤害，是战斗法术的核心效果。"
+				""
+				"搭配&a强力(Amplify)&f提升伤害、&a分裂(Split)&f一次打多个、&a穿透(Pierce)&f穿甲。"
+			]
+			id: "487FA7F43616DD84"
+			rewards: [{
+				id: "13D4FAC904D67322"
+				type: "xp"
+				xp: 5
+			}]
+			subtitle: "攻击伤害"
+			tasks: [{
+				id: "2AA6CE535767E7EB"
+				item: "ars_nouveau:glyph_harm"
+				type: "item"
+			}]
+			title: "效果字形：伤害 Harm"
+			x: 9.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["3FE22A6657310065"]
+			description: [
+				"&a治疗字形(Heal)&f：恢复目标生命值，是辅助法术核心。"
+				""
+				"配&a自我(Self)&f=自奶；配&a接触(Touch)&f=奶队友；配&a持续(Extend Time)&f=持续回血。"
+			]
+			id: "4E1531823D21AA79"
+			rewards: [{
+				id: "5CAD301978551CD1"
+				type: "xp"
+				xp: 5
+			}]
+			subtitle: "回血"
+			tasks: [{
+				id: "390C88B5A36A0695"
+				item: "ars_nouveau:glyph_heal"
+				type: "item"
+			}]
+			title: "效果字形：治疗 Heal"
+			x: 9.0d
+			y: 9.0d
+		}
+		{
+			dependencies: ["3FE22A6657310065"]
+			description: [
+				"&a挖掘字形(Break)&f：破坏准星指着的方块，等于远程徒手挖。"
+				""
+				"配&a接触(Touch)+精准采集(Fortune)&f=远程矿镐；配&a范围(AoE)&f=一片一片挖，开山填海。"
+			]
+			id: "4DC92600C33D10E6"
+			rewards: [{
+				id: "31709A64F37E5F3A"
+				type: "xp"
+				xp: 5
+			}]
+			subtitle: "挖方块"
+			tasks: [{
+				id: "6032059E28D94AED"
+				item: "ars_nouveau:glyph_break"
+				type: "item"
+			}]
+			title: "效果字形：挖掘 Break"
+			x: 9.0d
+			y: 7.5d
+		}
+		{
+			dependencies: ["487FA7F43616DD84"]
+			description: [
+				"&a强力字形(Amplify)&f：增强法术的核心数值——伤害更高、治疗更多、挖掘更快。"
+				""
+				"代价是复杂度+1、魔源消耗+1。叠两个强力收益递减但仍可观。"
+			]
+			id: "7961256E5E92FE4E"
+			rewards: [{
+				id: "6822EAAA4C04A0FF"
+				type: "xp"
+				xp: 5
+			}]
+			subtitle: "增强效果"
+			tasks: [{
+				id: "355B11FCCA32B8F7"
+				item: "ars_nouveau:glyph_amplify"
+				type: "item"
+			}]
+			title: "修饰字形：强力 Amplify"
+			x: 10.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["487FA7F43616DD84"]
+			description: [
+				"&a范围字形(AoE)&f：把单点法术扩大成一片，打一群怪、挖一片地、奶一片队友。"
+				""
+				"配&a爆发(Burst)形态&f是 AOE 爆发；配&a光环(Aura)&f是持续光环。"
+			]
+			id: "6DF7D5641C790D39"
+			rewards: [{
+				id: "4320E85509CD7C1F"
+				type: "xp"
+				xp: 5
+			}]
+			subtitle: "一片范围"
+			tasks: [{
+				id: "0CA9B020FAB809D6"
+				item: "ars_nouveau:glyph_aoe"
+				type: "item"
+			}]
+			title: "修饰字形：范围 AoE"
+			x: 10.5d
+			y: 6.0d
+		}
+		{
+			dependencies: ["4E1531823D21AA79"]
+			description: [
+				"&a延长持续(Extend Time)&f：让 Buff/Debuff 类效果持续更久，如隐身、缓降、中毒。"
+				""
+				"配&a治疗+延长&f=持续回血；配&a隐身+延长&f=长时间隐身跑图。"
+			]
+			id: "3AC246256072D5AA"
+			rewards: [{
+				id: "30646EAF629FD2CF"
+				type: "xp"
+				xp: 5
+			}]
+			subtitle: "持续更久"
+			tasks: [{
+				id: "4349BD01244BECD2"
+				item: "ars_nouveau:glyph_extend_time"
+				type: "item"
+			}]
+			title: "修饰字形：延长持续 Extend Time"
+			x: 10.5d
+			y: 7.5d
+		}
+		{
+			dependencies: ["2F4946623F250471"]
+			description: [
+				"&a分裂字形(Split)&f：投射物一次发射多颗，散射出去，适合清怪。"
+				""
+				"配&a投射+伤害+分裂&f=散弹法弹，清小怪神器。"
+			]
+			id: "34D11F3DF89FA132"
+			rewards: [{
+				id: "2D538E328FFC5799"
+				type: "xp"
+				xp: 5
+			}]
+			subtitle: "多发弹"
+			tasks: [{
+				id: "25CA7127B33BB99E"
+				item: "ars_nouveau:glyph_split"
+				type: "item"
+			}]
+			title: "修饰字形：分裂 Split"
+			x: 9.0d
+			y: 10.5d
+		}
+		{
+			dependencies: ["7961256E5E92FE4E"]
+			description: [
+				"&a学徒法术书&f比新手书多法术槽、复杂度上限更高，能写更复杂的法术。"
+				""
+				"升级路线：novice → apprentice → archmage → creative。每级都用更低级书+材料合成。"
+			]
+			id: "31297B98EACEDF01"
+			rewards: [{
+				id: "6DCE414779A2C65A"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "Apprentice Spell Book"
+			tasks: [{
+				id: "0043EAD82A5CA808"
+				item: "ars_nouveau:apprentice_spell_book"
+				type: "item"
+			}]
+			title: "学徒法术书"
+			x: 12.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["31297B98EACEDF01"]
+			description: [
+				"&a大法师法术书&f是生存模式最终级法术书，法术槽最多、复杂度上限最高，能塞进几乎所有字形组合。"
+				""
+				"做出来后你就拥有「万能法术工具箱」：战斗、治疗、建造、传送全在一本里。"
+			]
+			id: "6E46C44DECCAA218"
+			rewards: [{
+				id: "42B7B9EDA22A0675"
+				type: "xp"
+				xp: 20
+			}]
+			subtitle: "Archmage Spell Book"
+			tasks: [{
+				id: "784584B842412B82"
+				item: "ars_nouveau:archmage_spell_book"
+				type: "item"
+			}]
+			title: "大法师法术书"
+			x: 13.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["31297B98EACEDF01"]
+			description: [
+				"&a法术炮塔(Spell Turret)&f是个方块：把拼好的攻击法术写进去，它会自动对射程内怪物施法，耗魔源网络的魔源。"
+				""
+				"相当于自动哨戒炮，放基地门口守家。接中继器供魔源，配魔源瓶。"
+			]
+			id: "5875D4D2EAB2549E"
+			rewards: [{
+				id: "040CB0B5BF4D4072"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "Spell Turret 自动施法"
+			tasks: [{
+				count: 2L
+				id: "42DF3BF639C648C2"
+				item: "ars_nouveau:spell_turret"
+				type: "item"
+			}]
+			title: "法术炮塔"
+			x: 13.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["5875D4D2EAB2549E"]
+			description: [
+				"&a旋转炮塔&f会转向目标，比基础炮塔更智能；适合不规则地形防守。"
+				""
+				"还有&a计时炮塔(Timer Turret)&f按固定间隔放 AOE，适合守农场刷怪点。"
+			]
+			id: "2A6103A3D8BB7479"
+			rewards: [{
+				id: "4F3418E4C5139E2E"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "Rotating Spell Turret"
+			tasks: [{
+				id: "4F4A455D0477A040"
+				item: "ars_nouveau:rotating_spell_turret"
+				type: "item"
+			}]
+			title: "旋转炮塔"
+			x: 15.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["31297B98EACEDF01"]
+			description: [
+				"&a使魔护符（Familiar Charm）&f右键召唤对应使魔：&a星兔（Starbuncle）&f自动捡拾掉落物、&a干草怪（Drygmy）&f产资源、&a紫水晶魔像&f辅助挖矿。"
+				""
+				"各使魔护符配方见 JEI；使魔可跟随/停留，也能装进&a使魔装置&f协助干活。"
+			]
+			id: "327AB3583BBA07AF"
+			rewards: [{
+				id: "7099DFC1DDBF4B2F"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "Familiar Charms"
+			tasks: [{
+				id: "126F5E3E848DF599"
+				item: "ars_nouveau:starbuncle_charm"
+				type: "item"
+			}]
+			title: "使魔护符：随身小伙伴"
+			x: 13.5d
+			y: 6.0d
+		}
+		{
+			dependencies: ["327AB3583BBA07AF"]
+			description: [
+				"&aWixie 使魔&f是常驻跟随你的小魔法生物，提供被动加成（如魔源回复加速）。"
+				""
+				"其他使魔：&a星宝(Starbuncle)&f、&aDrygmy&f、&aWhirlisprig&f、&a书本虫(Bookwyrm)&f、&a紫水晶魔像(Amethyst Golem)&f，各有被动。"
+			]
+			id: "27AC848AC1A6B80D"
+			rewards: [{
+				id: "5B726E4E00042165"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "familiar_wixie"
+			tasks: [{
+				id: "3D25D0FAC08E1651"
+				item: "ars_nouveau:familiar_wixie"
+				type: "item"
+			}]
+			title: "Wixie 使魔"
+			x: 15.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["327AB3583BBA07AF"]
+			description: [
+				"&a仪式（Ritual）&f是新生魔艺 4 的召唤核心：在&a仪式桌&f按配方摆放&a仪式物品&f并点燃，可批量召唤、束缚使魔、开传送门等。"
+				""
+				"本任务以&a束缚仪式（Ritual of Containment）&f为代表：把野生生物束缚成可跟随的宠物。"
+			]
+			id: "291CFE2EC188E962"
+			rewards: [{
+				id: "08838F163EE5A45F"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "Rituals"
+			tasks: [{
+				id: "51AB689B85EBEAAD"
+				item: "ars_nouveau:ritual_containment"
+				type: "item"
+			}]
+			title: "仪式系统：花式召唤"
+			x: 15.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["75A5592207153278"]
+			description: [
+				"&a仪式火盆(Ritual Brazier)&f是仪式的中心方块，周围按特定布局摆蜡烛和方块，放对材料后点火启动仪式。"
+				""
+				"仪式持续生效，消耗魔源；用&a仪式粉笔(Runic Chalk)&f在地面画阵，决定仪式类型。"
+			]
+			id: "39E53E07FE748745"
+			rewards: [{
+				id: "1A1BC378674B2A6F"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "Ritual Brazier 仪式核心"
+			tasks: [{
+				id: "74F0A5E93FA62E96"
+				item: "ars_nouveau:ritual_brazier"
+				type: "item"
+			}]
+			title: "仪式火盆"
+			x: 6.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["39E53E07FE748745"]
+			description: [
+				"&a飞行仪式&f启动后，范围内玩家获得缓降/飞行能力，前期没鞘翅时跑图神器。"
+				""
+				"注意仪式要持续供魔源，断魔源就失效。"
+			]
+			id: "1A915551F7A5E6F4"
+			rewards: [{
+				id: "22AA22EA3E480519"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "Ritual Flight"
+			tasks: [{
+				id: "4C5796C5FFE7C3C6"
+				item: "ars_nouveau:ritual_flight"
+				type: "item"
+			}]
+			title: "仪式：飞行"
+			x: 7.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["39E53E07FE748745"]
+			description: [
+				"&a丰饶仪式&f加速范围内作物生长，配合自动农场 = 作物疯长。"
+				""
+				"还有&a丰收仪式(Harvest)&f自动收割、&a造林仪式(Forestation)&f种树，都是农场辅助。"
+			]
+			id: "7D8C236BABF5F82C"
+			rewards: [{
+				id: "697D10EE33419DCF"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "Ritual Fertility"
+			tasks: [{
+				id: "50B26D0077D8C5E5"
+				item: "ars_nouveau:ritual_fertility"
+				type: "item"
+			}]
+			title: "仪式：丰饶"
+			x: 7.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["31297B98EACEDF01"]
+			description: [
+				"&a奥法者法袍套装（Arcanist Hood/Robes/Leggings/Boots）&f是入门魔法护甲，加护甲值和魔源上限。"
+				""
+				"套装四件提供额外魔源回复；每件都能用线(Thread)附魔，如&a修复线(Repairing)&f自动修装备。"
+			]
+			id: "1F0F4CEC329C29DB"
+			rewards: [{
+				id: "1022EE2A7B450C43"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "Arcanist Robes"
+			tasks: [{
+				id: "09C8BECC17BF5A80"
+				item: {
+					Count: 1
+					id: "ars_nouveau:arcanist_robes"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			title: "奥法者法袍"
+			x: 13.5d
+			y: 7.5d
+		}
+		{
+			dependencies: ["1F0F4CEC329C29DB"]
+			description: [
+				"&a战斗法师法袍(Battlemage)&f偏向战斗：加攻击伤害、法术伤害，适合走战斗法师路线。"
+				""
+				"另一套&a术士法袍(Sorcerer)&f偏向魔源上限和回复，适合频繁施法。按玩法选。"
+			]
+			id: "610ABA2529489547"
+			rewards: [{
+				id: "338D80AC40D6E12A"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "Battlemage Robes"
+			tasks: [{
+				id: "7703F0499ABCFB5B"
+				item: {
+					Count: 1
+					id: "ars_nouveau:battlemage_robes"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			title: "战斗法师法袍"
+			x: 15.0d
+			y: 7.5d
+		}
+		{
+			dependencies: ["610ABA2529489547"]
+			description: [
+				"&a术士法袍(Sorcerer)&f是纯施法向护甲：大幅提升魔源上限与回复速度，适合堆复杂度、频繁放大法术。"
+				""
+				"三套护甲（奥法/战斗/术士）可混搭，但同套有套装加成。"
+			]
+			id: "1D0033429D53F4F6"
+			rewards: [{
+				id: "047154B20F0F70DD"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "Sorcerer Robes"
+			tasks: [{
+				id: "596EB29DCC5E8C8B"
+				item: {
+					Count: 1
+					id: "ars_nouveau:sorcerer_robes"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			title: "术士法袍"
+			x: 16.5d
+			y: 6.0d
+		}
+		{
+			dependencies: ["1F0F4CEC329C29DB"]
+			description: [
+				"&a魔源回复护符&f戴在护符栏，加速魔源回复；&a魔源上限护符(Amulet of Mana Boost)&f加魔源上限。"
+				""
+				"还有&a环境护符(Amulet of Environment)&f防火/防水/防摔。"
+			]
+			id: "79D7AEC5D6EB5061"
+			rewards: [{
+				id: "0E0D5242391688DE"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "Amulet of Mana Regen"
+			tasks: [{
+				id: "1AF63D3693B6635B"
+				item: "ars_nouveau:amulet_of_mana_regen"
+				type: "item"
+			}]
+			title: "魔源回复护符"
+			x: 15.0d
+			y: 9.0d
+		}
+		{
+			dependencies: ["79D7AEC5D6EB5061"]
+			description: [
+				"&a潜能戒指(Ring of Potential)&f提升法术复杂度上限，能塞更多字形。"
+				""
+				"还有&a折扣戒指(Lesser/Greater Discount Ring)&f降低法术魔源消耗、&a延长戒指(Extend Time Ring)&f延长 Buff。"
+			]
+			id: "18FBC93BA1058041"
+			rewards: [{
+				id: "6CEB2D91FE103A53"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "Ring of Potential"
+			tasks: [{
+				id: "3A3B2FE52A9AE27C"
+				item: "ars_nouveau:ring_of_potential"
+				type: "item"
+			}]
+			title: "潜能戒指"
+			x: 16.5d
+			y: 7.5d
+		}
+		{
+			dependencies: ["79D7AEC5D6EB5061"]
+			description: [
+				"&a悬浮腰带(Belt of Levitation)&f让你缓慢漂浮，跳得更高、摔不伤。"
+				""
+				"前期没鞘翅时，配合飞行仪式跑图很舒服。"
+			]
+			id: "69AC84C948B42592"
+			rewards: [{
+				id: "1EE66127ABA76A33"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "Belt of Levitation"
+			tasks: [{
+				id: "21F6EF171FD6D450"
+				item: "ars_nouveau:belt_of_levitation"
+				type: "item"
+			}]
+			title: "悬浮腰带"
+			x: 16.5d
+			y: 9.0d
+		}
+		{
+			dependencies: ["03E189A7EDFB7DDE"]
+			description: [
+				"&a源质链接(Sourcelink)&f是新生魔艺的「魔源发电机」：从特定来源持续抽取魔源送进网络。"
+				""
+				"&a农业源质链接&f接在作物旁，从成熟作物抽魔源——种一排浆果丛/小麦，就能源源不断供魔源。"
+			]
+			id: "1059AC731DA64067"
+			rewards: [{
+				id: "113C6F1FC8D1AFAF"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "Agronomic Sourcelink"
+			tasks: [{
+				id: "6D6DB2D1C70E8FA0"
+				item: "ars_nouveau:agronomic_sourcelink"
+				type: "item"
+			}]
+			title: "农业源质链接"
+			x: 7.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["1059AC731DA64067"]
+			description: [
+				"&a火山源质链接&f从岩浆/火中抽魔源，下界放一排岩浆源，供魔源效率极高。"
+				""
+				"还有&a炼金源质链接(Alchemical)&f从流体/药水抽、&a菌丝源质链接(Mycelial)&f从蘑菇抽。"
+			]
+			id: "00DEE9914E6D75D7"
+			rewards: [{
+				id: "21891FCA3AABE7FF"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "Volcanic Sourcelink"
+			tasks: [{
+				id: "041FCFF74428F3C2"
+				item: "ars_nouveau:volcanic_sourcelink"
+				type: "item"
+			}]
+			title: "火山源质链接"
+			x: 9.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["00DEE9914E6D75D7"]
+			description: [
+				"&a生命源质链接(Vitalic)&f从附近的活物（动物/怪物）身上抽魔源，配刷怪塔 = 魔源无限。"
+				""
+				"三种源质链接按场景选：主世界农场用农业，下界用火山，刷怪塔用生命。"
+			]
+			id: "042996CE85315912"
+			rewards: [{
+				id: "001F9ABCF21114E3"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "Vitalic Sourcelink"
+			tasks: [{
+				id: "6107CA29183DDFC1"
+				item: "ars_nouveau:vitalic_sourcelink"
+				type: "item"
+			}]
+			title: "生命源质链接"
+			x: 10.5d
+			y: 3.0d
+		}
+		{
+			dependencies: [
+				"1927889B8FCF8CDE"
+				"1059AC731DA64067"
+			]
+			description: [
+				"一套完整魔源农场布局："
+				""
+				"1. 地上种一排&a魔源浆果丛&f，用水/骨粉自动催熟；"
+				""
+				"2. 旁边放&a农业源质链接&f，自动从作物抽魔源；"
+				""
+				"3. 源质链接接&a中继器&f到主&a魔源瓶&f；"
+				""
+				"4. 魔源瓶再用中继器连雕刻台/炮塔/仪式。"
+				""
+				"之后你只需要挂机，魔源自动涨，法术随便放。"
+			]
+			icon: "ars_nouveau:agronomic_sourcelink"
+			id: "49269239D34AF3C1"
+			rewards: [{
+				id: "19793C66A60AC656"
+				type: "xp"
+				xp: 20
+			}]
+			subtitle: "完整魔源闭环"
+			tasks: [{
+				id: "4FBCFE60F570DC90"
+				title: "事例设施：魔源浆果农场"
+				type: "checkmark"
+			}]
+			title: "事例设施：魔源浆果农场"
+			x: 9.0d
+			y: 4.5d
+		}
+		{
+			dependencies: [
+				"2A6103A3D8BB7479"
+				"27AC848AC1A6B80D"
+			]
+			description: [
+				"一套基地防守布局："
+				""
+				"1. 在基地门口放 2-3 个&a旋转炮塔&f，写入「投射+伤害+分裂」法弹；"
+				""
+				"2. 旁边放&a计时炮塔&f，写入「爆发+范围+伤害」AOE；"
+				""
+				"3. 用&a中继器&f把魔源瓶接进所有炮塔；"
+				""
+				"4. 召一只&a幼兽(Whelp)&f在门口当近战肉盾。"
+				""
+				"之后晚上刷怪自动清，你可以安心下矿。"
+			]
+			icon: "ars_nouveau:rotating_spell_turret"
+			id: "2964DA941229E789"
+			rewards: [{
+				id: "78DA488510B314F2"
+				type: "xp"
+				xp: 20
+			}]
+			subtitle: "炮塔+召唤物守家"
+			tasks: [{
+				id: "1BE2F749E5881118"
+				title: "事例设施：自动炮塔防守"
+				type: "checkmark"
+			}]
+			title: "事例设施：自动炮塔防守"
+			x: 16.5d
+			y: 4.5d
+		}
+		{
+			dependencies: [
+				"39E53E07FE748745"
+				"1A915551F7A5E6F4"
+			]
+			description: [
+				"仪式结构不是固定形状，而是：&a仪式火盆&f放中心，周围按仪式要求摆&a蜡烛&f和特定方块（如飞行仪式要羽毛块），地上用&a仪式粉笔&f画阵。"
+				""
+				"启动：往火盆放魔源+材料，点火。仪式范围是火盆周围一圈。"
+				""
+				"用红石信号可以开关仪式，自动化调度。"
+			]
+			icon: "ars_nouveau:ritual_brazier"
+			id: "56CE53B9714AA7A8"
+			rewards: [{
+				id: "772316D17CEBC936"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "火盆+蜡烛+粉笔阵"
+			tasks: [{
+				id: "2036F3C1C4AEF213"
+				title: "机器结构：仪式多方块"
+				type: "checkmark"
+			}]
+			title: "机器结构：仪式多方块"
+			x: 9.0d
+			y: 1.5d
+		}
+		{
+			dependencies: [
+				"03E189A7EDFB7DDE"
+				"042996CE85315912"
+			]
+			description: [
+				"魔源网络布局：一个主&a魔源瓶&f存大量魔源，用&a中继器&f连到各个源质链接（发电机端）和各个机器（消耗端）。"
+				""
+				"&a收集中继器&f负责收、&a沉积中继器&f负责发、&a分裂中继器&f分流、&a传送中继器&f跨距离。"
+				""
+				"建议：基地放一个主魔源瓶+几个源质链接当电站，再拉中继器到每个功能区。"
+			]
+			icon: "ars_nouveau:relay"
+			id: "46FCCB28603FBEF2"
+			rewards: [{
+				id: "5150E7235450F685"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "中继器+魔源瓶布局"
+			tasks: [{
+				id: "3E8B7CA8BC07D724"
+				title: "机器结构：魔源网络"
+				type: "checkmark"
+			}]
+			title: "机器结构：魔源网络"
+			x: 12.0d
+			y: 3.0d
+		}
+		{
+			dependencies: [
+				"49269239D34AF3C1"
+				"2964DA941229E789"
+				"56CE53B9714AA7A8"
+				"46FCCB28603FBEF2"
+			]
+			description: [
+				"到这里你已经掌握新生魔艺全套：会拼法术、会建魔源农场、会摆仪式、会用炮塔守家、会穿魔法护甲。"
+				""
+				"下一步：把你的法术和科技线对接——法术炮塔守 AE2 基地、仪式加速自动农场、源质链接供魔源给魔法装备。"
+				""
+				"新生魔艺最大的乐趣是&a自由拼法术&f，多试几个组合，你会发现很多模组没写出来的骚操作。"
+			]
+			icon: "ars_nouveau:archmage_spell_book"
+			id: "1AA22CDFE575CBDC"
+			rewards: [{
+				id: "2467BBE833D15A3A"
+				type: "xp"
+				xp: 50
+			}]
+			shape: "octagon"
+			size: 1.5d
+			subtitle: "大法师全能法师"
+			tasks: [{
+				id: "0CBD865389A40EF1"
+				title: "新生魔艺毕业里程碑"
+				type: "checkmark"
+			}]
+			title: "新生魔艺毕业里程碑"
+			x: 18.0d
+			y: 3.0d
+		}
+	]
+	title: "新生魔艺 Ars Nouveau"
+}

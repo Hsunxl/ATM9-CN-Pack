@@ -1,0 +1,926 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "t16_apotheosis"
+	group: "00C72C1FB6193A42"
+	icon: "apotheosis:gem"
+	id: "55A97077EFC83DCD"
+	order_index: 16
+	progression_mode: "flexible"
+	quest_links: [ ]
+	quests: [
+		{
+			description: [
+				"神化（Apotheosis）是原版&a附魔与装备系统&f的大扩展：附魔可升到 X 级以上、装备带随机词缀、可插宝石、地牢/BOSS 掉落神装。"
+				""
+				"它分四大模块：&a附魔（Enchanting）&f、&a词缀（Affix）&f、&a宝石（Gems）&f、&a冒险（Adventure）&f。"
+				""
+				"本章树状路线："
+				""
+				"· 入门(1-2)：手册、强化附魔台；"
+				""
+				"· 书架扩展(3-8)：概念+地狱/海洋/末地/深渊/特殊书架；"
+				""
+				"· 词缀系统(9-12)：重铸台→简易重铸→词缀材料→洗练；"
+				""
+				"· 宝石系统(13-18)：宝石入门→切割台→核心宝石→世界宝石→插槽→粉末；"
+				""
+				"· 冒险与地牢(19-24)：分解台→远古材料→BOSS→地牢→刷怪笼改造；"
+				""
+				"· 附魔与法器(25-28)：宝典、箭矢、药水护符、法器；"
+				""
+				"· 技巧(29)、事例(30)、结尾(31)。"
+			]
+			icon: "apotheosis:gem"
+			id: "227E9D88F62BCAFC"
+			shape: "hexagon"
+			size: 1.5d
+			subtitle: "词缀·宝石·地牢·高等级附魔"
+			tasks: [{
+				id: "5581259EA03AC156"
+				title: "认识神化：附魔与装备的极限扩展"
+				type: "checkmark"
+			}]
+			title: "认识神化：附魔与装备的极限扩展"
+			x: 0.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["227E9D88F62BCAFC"]
+			description: [
+				"&a神化编年史&f（Apotheosis Chronicle）是 Apotheosis 的 Patchouli 图文手册，记录所有新附魔、词缀规则、宝石类型与地牢机制。"
+				""
+				"开局合成一本随身带（配方见 JEI）；拿不准某词缀/宝石效果时先翻书。"
+			]
+			id: "7100B8CD548E4FCC"
+			rewards: [{
+				id: "0D1B866430AFF3D4"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "Book of Apotheosis"
+			tasks: [{
+				id: "76100E699FF9F41E"
+				item: "patchouli:guide_book"
+				type: "item"
+			}]
+			title: "神化手册"
+			x: 1.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["7100B8CD548E4FCC"]
+			description: [
+				"&a强化附魔台（Augmenting Table）&f替代原版附魔台：它可以把附魔升到&a远超原版上限&f（如效率 V→效率 X、锋利 V→锋利 X）。"
+				""
+				"升级高等级附魔需要：&a更多书架&f（围在台周围）+ &a更高等级的特殊书架&f（见下条）+ &a经验&f。"
+				""
+				"它还支持把附魔书从铁砧里拆出来、合并到更高等级。"
+			]
+			id: "57096927A4A72E2B"
+			rewards: [{
+				id: "418B317DB46D2368"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "Augmenting Table"
+			tasks: [{
+				id: "118335D209CA23D8"
+				item: "apotheosis:augmenting_table"
+				type: "item"
+			}]
+			title: "强化附魔台：突破等级上限"
+			x: 3.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["57096927A4A72E2B"]
+			description: [
+				"原版附魔台最多 15 级书架、效率 V。Apotheosis 引入&a特殊书架（Special Shelves）&f，围着附魔台堆叠，每类书架提供不同的&a能量等级&f。"
+				""
+				"书架分五系：&a地狱（Hell）&f、&a海洋（Sea）&f、&a末地（End）&f、&a深渊（Deep）&f、&a其它特殊&f。每系有基础版+强化版（infused_* / blazing_* 等）。"
+				""
+				"堆叠越多，可附的等级越高；高等级书架材料越稀有，需要去对应维度收集。"
+			]
+			icon: "apotheosis:library"
+			id: "614A939AD15F5BB6"
+			rewards: [{
+				id: "52E6C2D3F197CC09"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "特殊书架堆叠解锁高附魔"
+			tasks: [{
+				id: "5A7526FD95313BDF"
+				title: "书架扩展概念"
+				type: "checkmark"
+			}]
+			title: "书架扩展概念"
+			x: 4.5d
+			y: 6.0d
+		}
+		{
+			dependencies: ["614A939AD15F5BB6"]
+			description: [
+				"&a地狱书架（Hellshelf）&f是地狱系基础书架，用下界材料合成；"
+				""
+				"升级：&aGlowing Hellshelf（发光版）、&aBlazing Hellshelf（炽焰版）、&aInfused Hellshelf（注入版）&f，等级逐级提升。"
+				""
+				"围在附魔台周围提供&a火焰系附魔能量&f（火焰附加、亡灵杀手等）。"
+			]
+			id: "1E92E71C18A98D3C"
+			rewards: [{
+				id: "2D836C360570656D"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "Hellshelf / Blazing / Glowing"
+			tasks: [{
+				count: 4L
+				id: "68377E829550A20E"
+				item: "apotheosis:hellshelf"
+				type: "item"
+			}]
+			title: "地狱书架系"
+			x: 6.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["614A939AD15F5BB6"]
+			description: [
+				"&a海洋书架（Seashelf）&f用海洋/潮汐材料合成；"
+				""
+				"升级：&aCrystal Seashelf（水晶版）、&aHeart Seashelf（心脏版）、&aInfused Seashelf（注入版）&f。"
+				""
+				"提供&a水系/水下附魔能量&f（深海探索、水下呼吸等）。"
+			]
+			id: "6447580997654803"
+			rewards: [{
+				id: "143BAA09DBBE8A87"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "Seashelf / Crystal / Heart"
+			tasks: [{
+				count: 4L
+				id: "427DB2441A47E4DE"
+				item: "apotheosis:seashelf"
+				type: "item"
+			}]
+			title: "海洋书架系"
+			x: 6.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["614A939AD15F5BB6"]
+			description: [
+				"&a末地书架（Endshelf）&f用末地材料合成；"
+				""
+				"升级：&aPearl Endshelf（珍珠版）、&aDraconic Endshelf（龙版）、&aInfused Endshelf（注入版）&f。"
+				""
+				"提供&a末影系/高阶附魔能量&f，是冲 X 级附魔的关键。"
+			]
+			id: "253041DA344A4CBB"
+			rewards: [{
+				id: "58559346A56ED2E8"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "Endshelf / Pearl / Draconic"
+			tasks: [{
+				count: 4L
+				id: "609BFA2EF9B100B8"
+				item: "apotheosis:endshelf"
+				type: "item"
+			}]
+			title: "末地书架系"
+			x: 6.0d
+			y: 7.5d
+		}
+		{
+			dependencies: ["614A939AD15F5BB6"]
+			description: [
+				"&a深渊书架（Deepshelf）&f用深板岩/幽匿材料合成；"
+				""
+				"升级：&aDormant Deepshelf（休眠版）、&aInfused Deepshelf（注入版）、&aEchoing Deepshelf（回响版）、&aSoul Touched Deepshelf（灵魂版）&f。"
+				""
+				"提供&a幽匿/灵魂系附魔能量&f。"
+			]
+			id: "4340E476ADCFAE78"
+			rewards: [{
+				id: "22E9D16FDCC2B85F"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "Deepshelf / Infused / Echoing"
+			tasks: [{
+				count: 4L
+				id: "1E40A9E28194A065"
+				item: "apotheosis:deepshelf"
+				type: "item"
+			}]
+			title: "深渊书架系"
+			x: 6.0d
+			y: 9.0d
+		}
+		{
+			dependencies: ["614A939AD15F5BB6"]
+			description: [
+				"其它功能书架："
+				""
+				"· &aTreasure Shelf（宝藏书架）&f：提升战利品/宝箱品质；"
+				""
+				"· &aBeeshelf（蜂书架）&f：蜜蜂/农业系；&aMelonshelf（西瓜书架）&f：作物系；"
+				""
+				"· &aSightshelf / Sightshelf T2（视野书架）&f：夜视/视觉系；"
+				""
+				"· &aFiltering Shelf（过滤书架）&f：控制附魔池；"
+				""
+				"· &aStoneshelf（石头书架）&f：基础过渡；&aEnder Library / Library（末影图书馆/大图书馆）&f：大型多功能书架方块。"
+			]
+			id: "4A46F391B5C53C86"
+			rewards: [{
+				id: "0466A93BDBC6FCA1"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "Treasure / Bee / Melon / Sight"
+			tasks: [{
+				count: 2L
+				id: "4D952A13AC483CC0"
+				item: "apotheosis:treasure_shelf"
+				type: "item"
+			}]
+			title: "特殊书架与其它"
+			x: 6.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["57096927A4A72E2B"]
+			description: [
+				"&a重铸台（Reforging Table）&f是管理装备&a词缀（Affix）&f的核心方块：把装备放进去，可用材料重新随机词缀、升级词缀等级。"
+				""
+				"词缀分&a前缀（Prefix）+&a后缀（Suffix）&f，一件装备最多各一条；词缀等级从低到高：&a普通(Common)→罕见(Uncommon)→稀有(Rare)→史诗(Epic)→神话(Mythic)&f。"
+				""
+				"词缀效果：+伤害、+血量、+速度、+暴击率、+暴击伤害、+护甲、+韧性等，可叠加。"
+			]
+			id: "0A3827D7A270A7A6"
+			rewards: [{
+				id: "3CDDB4E1BFB423D6"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "Reforging Table"
+			tasks: [{
+				id: "407D2A253F9AE291"
+				item: "apotheosis:reforging_table"
+				type: "item"
+			}]
+			title: "重铸台：装备词缀"
+			x: 4.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["0A3827D7A270A7A6"]
+			description: [
+				"&a简易重铸台（Simple Reforging Table）&f是入门版：功能比重铸台少，但材料便宜，开局就能做。"
+				""
+				"它适合前期洗普通/罕见词缀；后期换正式重铸台冲史诗/神话。"
+			]
+			id: "14BB844FD271D96F"
+			rewards: [{
+				id: "1590B36C13728E75"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "Simple Reforging Table"
+			tasks: [{
+				id: "19042BF847493C2A"
+				item: "apotheosis:simple_reforging_table"
+				type: "item"
+			}]
+			title: "简易重铸台"
+			x: 6.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["14BB844FD271D96F"]
+			description: [
+				"重铸/洗词缀消耗对应等级的&a材料（Material）&f："
+				""
+				"· &aCommon Material（普通）&f：洗普通词缀；"
+				""
+				"· &aUncommon Material（罕见）&f；&aRare Material（稀有）&f；"
+				""
+				"· &aEpic Material（史诗）&f；&aMythic Material（神话）&f：洗最高级词缀。"
+				""
+				"材料主要靠&a地牢宝箱、BOSS 掉落、分解装备（Salvaging Table）&f获得。"
+			]
+			id: "65E68361B6AAFD0D"
+			rewards: [{
+				id: "493650331860ED3F"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "Common → Mythic"
+			tasks: [{
+				id: "485F96F4635747C2"
+				item: "apotheosis:mythic_material"
+				type: "item"
+			}]
+			title: "词缀材料：五级稀有度"
+			x: 7.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["65E68361B6AAFD0D"]
+			description: [
+				"洗词缀流程：把装备放进重铸台 → 投入对应等级材料 → 词缀随机刷新。"
+				""
+				"想锁定某个词缀不被洗掉，用&aVial of Withdrawal（撤回瓶）&f/&aSigil of Rebirth（重生符文）&f保护；"
+				""
+				"想把垃圾词缀装备拆掉回收材料，用&aSalvaging Table（分解台）&f；"
+				""
+				"想给无词缀的新装备强行加词缀，靠&aBOSS 掉落&f或&a重铸台反复洗&f。"
+			]
+			icon: "apotheosis:reforging_table"
+			id: "4CE265FEBBE506C3"
+			rewards: [{
+				id: "05DAB8628E8AD708"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "反复刷出想要的词条"
+			tasks: [{
+				id: "6B231CD489952324"
+				title: "词缀洗练与重置"
+				type: "checkmark"
+			}]
+			title: "词缀洗练与重置"
+			x: 9.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["0A3827D7A270A7A6"]
+			description: [
+				"&a宝石（Gem）&f是可嵌入装备&a插槽（Socket）&f的强化物：每件武器/护甲/工具可通过打孔获得 1~3 个插槽，嵌不同宝石给不同属性。"
+				""
+				"宝石分&a粗糙→普通→完美→神话&f等级，高级宝石由低级合成。"
+				""
+				"宝石类型覆盖&a力量/敏捷/智力/体质/暴击/吸血&f等，与词缀叠加后属性爆炸。"
+			]
+			id: "36C4AEDE48E5CD1A"
+			rewards: [{
+				id: "4560107C391DA17B"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "装备打孔镶嵌"
+			tasks: [{
+				id: "48EFF7D4F9C6C2E3"
+				item: "apotheosis:gem"
+				type: "item"
+			}]
+			title: "宝石入门：Socket & Gem"
+			x: 6.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["36C4AEDE48E5CD1A"]
+			description: [
+				"&a宝石切割台（Gem Cutting Table）&f是宝石系统的工作台："
+				""
+				"· 把低级宝石合成高级宝石（3 合 1）；"
+				""
+				"· 把宝石&a切割&f成可镶嵌状态；"
+				""
+				"· 配合&a符文（Sigil）&f给装备打孔。"
+				""
+				"旁边放&aGem Fused Slate（宝石熔石板）&f可扩展功能。"
+			]
+			id: "0257806B56F797B9"
+			rewards: [{
+				id: "154ED5F79DF62763"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "Gem Cutting Table"
+			tasks: [{
+				id: "4244D283DF112D86"
+				item: "apotheosis:gem_cutting_table"
+				type: "item"
+			}]
+			title: "宝石切割台：合成与打孔"
+			x: 7.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["0257806B56F797B9"]
+			description: [
+				"&a核心宝石（Gems/Core/*）&f是一组通用型宝石，覆盖主流 build："
+				""
+				"· &aBrawlers（格斗）&f：+近战伤害；&aWarlord（军阀）&f：+综合战力；"
+				""
+				"· &aSamurai（武士）&f：+暴击；&aGuardian（守护者）&f：+防御；"
+				""
+				"· &aBreach（破甲）&f：穿透；&aBallast（压舱）&f：+生命；"
+				""
+				"· &aCombatant（斗士）&f：+攻击；&aLightning（雷电）&f：电系；"
+				""
+				"· &aLunar（月）/&aSolar（日）&f：昼夜系；&aSlipstream（滑流）&f：+速度；&aSplendor（辉煌）/&aTyrannical（暴君）&f：后期宝石。"
+			]
+			id: "33CB870FCE444D25"
+			rewards: [{
+				id: "19DBFC7837EF65B7"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "Brawlers / Warlord / Samurai…"
+			tasks: [{
+				id: "4FAFD48AD9199B5C"
+				item: "apotheosis:gem"
+				type: "item"
+			}]
+			title: "核心宝石：Core Gems"
+			x: 9.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["33CB870FCE444D25"]
+			description: [
+				"按维度分布的宝石："
+				""
+				"· &a主世界（Overworld）&f：&aEarth（大地）&f、&aRoyalty（王权）&f；"
+				""
+				"· &a下界（Nether）&f：&aInferno（炼狱）&f、&aBlood Lord（血领主）&f；"
+				""
+				"· &a末地（The End）&f：&aEndersurge（末影涌动）&f、&aMageslayer（弑法者）&f；"
+				""
+				"· &a暮色（Twilight）&f：&aForest（森林）&f、&aQueen（女王）&f。"
+				""
+				"去对应维度地牢/开宝箱才有概率挖到对应宝石。"
+			]
+			icon: "apotheosis:gem"
+			id: "2884E3A4D0DE8904"
+			rewards: [{
+				id: "2C8C4D57DE8CB758"
+				type: "xp"
+				xp: 20
+			}]
+			subtitle: "主世界/下界/末地/暮色"
+			tasks: [{
+				id: "539B8504D7FE0372"
+				title: "世界宝石大全"
+				type: "checkmark"
+			}]
+			title: "世界宝石大全"
+			x: 10.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["2884E3A4D0DE8904"]
+			description: [
+				"&a插槽符文（Sigil of Socketing）&f是给无插槽装备&a强行打一个孔&f的消耗品：右键装备即开一个槽。"
+				""
+				"相关符文："
+				""
+				"· &aSigil of Enhancement（强化符文）&f：强化已有插槽；"
+				""
+				"· &aSigil of Rebirth（重生符文）&f：重置词缀；"
+				""
+				"· &aSigil of Unnaming（匿名符文）&f：去掉名字；"
+				""
+				"· &aSigil of Withdrawal（撤回符文）&f：把已嵌宝石取出。"
+			]
+			id: "76B1EF8025556149"
+			rewards: [{
+				id: "3B914DE21FA7A6AC"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "Sigil of Socketing"
+			tasks: [{
+				id: "378AB65293490F89"
+				item: "apotheosis:sigil_of_socketing"
+				type: "item"
+			}]
+			title: "插槽符文：给装备打孔"
+			x: 12.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["76B1EF8025556149"]
+			description: [
+				"&a宝石粉末（Gem Dust）&f是宝石合成与打孔的通用材料：由低级宝石分解或地牢掉落获得。"
+				""
+				"升级高级宝石时除了 3 合 1，还会消耗粉末；粉末不够就去地牢刷宝箱。"
+			]
+			id: "2B68FDBA120512F6"
+			rewards: [{
+				id: "42C4EC09BBA0EF50"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "Gem Dust"
+			tasks: [{
+				count: 4L
+				id: "4D3272DBA8D40309"
+				item: "apotheosis:gem_dust"
+				type: "item"
+			}]
+			title: "宝石粉末：合成材料"
+			x: 13.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["4CE265FEBBE506C3"]
+			description: [
+				"&a分解台（Salvaging Table）&f把不要的词缀装备/宝石拆成材料："
+				""
+				"· 拆词缀装备 → 对应等级&a词缀材料&f；"
+				""
+				"· 拆宝石 → &a宝石粉末&f；"
+				""
+				"· 拆多余附魔书 → 经验/纸。"
+				""
+				"它是「刷词缀→回收垃圾→再刷」闭环的关键。"
+			]
+			id: "4E4A48A2E0295BED"
+			rewards: [{
+				id: "29260DD22BA6F9EE"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "Salvaging Table"
+			tasks: [{
+				id: "2AA9A27AE9EBF99D"
+				item: "apotheosis:salvaging_table"
+				type: "item"
+			}]
+			title: "分解台：回收装备"
+			x: 10.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["4E4A48A2E0295BED"]
+			description: [
+				"&a远古材料（Ancient Material）&f是洗&a神话（Mythic）&f级词缀的稀有消耗品，只能通过&a高级 BOSS、深层地牢宝箱&f获得。"
+				""
+				"它是后期把装备词缀冲到神话的门票，平时省着用。"
+			]
+			id: "2E5CC7F2121D6D9F"
+			rewards: [{
+				id: "5F303FF16EAD6D1B"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "Ancient Material"
+			tasks: [{
+				id: "06097200AC8EE36A"
+				item: "apotheosis:ancient_material"
+				type: "item"
+			}]
+			title: "远古材料：顶级词缀"
+			x: 12.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["4CE265FEBBE506C3"]
+			description: [
+				"&aBOSS 召唤器（Boss Summoner）&f在&a棱镜祭坛（Prismatic Altar）&f上使用，消耗材料召唤强化版 BOSS。"
+				""
+				"BOSS 掉落：高词缀装备、高级宝石、远古材料、特殊法器（如&aInert Trident  inert 三叉戟、&aWarden Tendril 监守藤须、&aStar Cube 星之立方&f）。"
+				""
+				"建议穿好装备再召唤——BOSS 难度远高于原版。"
+			]
+			id: "6483F3D4D51CE0E7"
+			rewards: [{
+				id: "5F2EFECDAB090C65"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "Boss Summoner"
+			tasks: [{
+				id: "2243A65D3E28BBE1"
+				item: "apotheosis:boss_summoner"
+				type: "item"
+			}]
+			title: "BOSS 召唤器"
+			x: 10.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["6483F3D4D51CE0E7"]
+			description: [
+				"Apotheosis 让世界生成大量&a地下城/地牢&f：多层结构、陷阱、稀有怪物、刷怪笼、宝箱。"
+				""
+				"地牢宝箱产出：&a高词缀装备、宝石、词缀材料、特殊书架材料、附魔书&f。"
+				""
+				"冒险模块还新增：&a死亡指南针&f（找死亡点）、&a稀有怪物&f（带词缀的精英怪）、&aEnder Lead（末影牵引）&f等。"
+				""
+				"核心循环：下地牢 → 刷宝 → 洗词缀/嵌宝石 → 装备变强 → 下更深的地牢。"
+			]
+			icon: "apotheosis:ender_library"
+			id: "34D693D8E29ED98A"
+			rewards: [{
+				id: "5179B1D625250835"
+				type: "xp"
+				xp: 20
+			}]
+			subtitle: "多层结构·稀有怪物·战利品"
+			tasks: [{
+				id: "687AC6A4C5A729F4"
+				title: "地牢与冒险"
+				type: "checkmark"
+			}]
+			title: "地牢与冒险"
+			x: 12.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["34D693D8E29ED98A"]
+			description: [
+				"&a刷怪笼整流器（Rectifier）&f贴在原版刷怪笼上，改造其行为："
+				""
+				"· 修改&a生成范围、生成数量、生成条件；"
+				""
+				"· 让刷怪笼在&a任何亮度&f下工作；"
+				""
+				"· 提高&a掉落率&f、增加&a经验产出&f。"
+				""
+				"它是把地牢刷怪笼改造成&a高效刷怪塔&f的关键道具。"
+			]
+			id: "4E28A136D4C11032"
+			rewards: [{
+				id: "032114FDF7EA65D8"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "Rectifier"
+			tasks: [{
+				id: "69D0CC77D321B753"
+				item: "apotheosis:rectifier"
+				type: "item"
+			}]
+			title: "刷怪笼整流器：改造刷怪笼"
+			x: 13.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["4E28A136D4C11032"]
+			description: [
+				"&aRectifier T2 / T3&f是高级版整流器：修改范围更大、可同时改多项参数、支持&a刷出精英怪/BOSS&f。"
+				""
+				"T3 几乎可以把一个普通刷怪笼改成全自动经验+装备农场。"
+			]
+			id: "6EA92B211803D580"
+			rewards: [{
+				id: "2107C08FF86E4A69"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "Rectifier T2 / T3"
+			tasks: [{
+				id: "7F3A975D1B88EBFE"
+				item: "apotheosis:rectifier_t3"
+				type: "item"
+			}]
+			title: "高级整流器"
+			x: 15.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["57096927A4A72E2B"]
+			description: [
+				"&a附魔宝典（Tome）&f是记录特定附魔的书，可在强化附魔台里&a定向附魔&f对应类型装备："
+				""
+				"· &aWeapon Tome（武器宝典）&f、&aPickaxe Tome（镐宝典）&f、&aBow Tome（弓宝典）&f；"
+				""
+				"· &aHelmet/Chestplate/Leggings/Boots Tome（护甲四部）&f；"
+				""
+				"· &aFishing Tome（钓鱼宝典）、&aOther Tome（杂项）&f；"
+				""
+				"· &aScrap Tome / Improved Scrap Tome（拆解宝典）&f：从装备上拆附魔；&aExtraction Tome（提取宝典）&f。"
+			]
+			id: "638C1112CD3BE6FF"
+			rewards: [{
+				id: "69D9A4628F6F2953"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "Weapon/Pickaxe/Bow Tome…"
+			tasks: [{
+				id: "20470D40E92C80CF"
+				item: "apotheosis:weapon_tome"
+				type: "item"
+			}]
+			title: "附魔宝典：Tome 系列"
+			x: 4.5d
+			y: 7.5d
+		}
+		{
+			dependencies: ["638C1112CD3BE6FF"]
+			description: [
+				"Apotheosis 新增多种功能箭："
+				""
+				"· &aBroadhead Arrow（宽头箭）&f：高伤害；"
+				""
+				"· &aIron Mining Arrow / Diamond Mining Arrow（铁/钻石采矿箭）&f：射方块即采集；"
+				""
+				"· &aObsidian Arrow（黑曜石箭）&f：穿透；"
+				""
+				"· &aExplosive Arrow（爆炸箭）&f：范围爆破。"
+				""
+				"配合匠魂长弓/十字弩使用，战术性极强。"
+			]
+			icon: "apotheosis:broadhead_arrow"
+			id: "700DB9F4498268DC"
+			rewards: [{
+				id: "367911DFAAD4422E"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "Broadhead / Mining / Explosive"
+			tasks: [{
+				id: "547C0C619797E297"
+				title: "特殊箭矢"
+				type: "checkmark"
+			}]
+			title: "特殊箭矢"
+			x: 6.0d
+			y: 12.0d
+		}
+		{
+			dependencies: ["638C1112CD3BE6FF"]
+			description: [
+				"&a药水护符（Potion Charm）&f是可佩戴的随身药水效果：放背包里就持续提供对应药水效果（发光版&aPotion Charm Glow&f）。"
+				""
+				"它不用喝药、不占快捷栏，是长期探险的省心配置。"
+			]
+			id: "10CEBED9DABB9035"
+			rewards: [{
+				id: "68AA35F473F5A54A"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "Potion Charm"
+			tasks: [{
+				id: "72BA254284528668"
+				item: {
+					Count: 1
+					id: "apotheosis:potion_charm"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			title: "药水护符：随身药水"
+			x: 6.0d
+			y: 10.5d
+		}
+		{
+			dependencies: ["10CEBED9DABB9035"]
+			description: [
+				"其它特色物品："
+				""
+				"· &aLucky Foot（幸运脚）&f：提升掉落/幸运；"
+				""
+				"· &aPrismatic Altar（棱镜祭坛）&f：召唤 BOSS 的祭坛；"
+				""
+				"· &aPrismatic Web（棱镜网）&f：特殊陷阱方块；"
+				""
+				"· &aEnder Lead（末影牵引绳）&f：牵末影螨；"
+				""
+				"· &aInfused Breath（注入之息）&f：呼吸类材料；"
+				""
+				"· &aVial of Expulsion/Extraction/Unnaming（驱逐/提取/匿名瓶）&f：药水版符文。"
+			]
+			id: "7067C591BAAAF538"
+			rewards: [{
+				id: "4057FEE0AE9F4E9B"
+				type: "xp"
+				xp: 10
+			}]
+			subtitle: "Lucky Foot / Prismatic Altar…"
+			tasks: [{
+				id: "594D5A37F5B68DAF"
+				item: "apotheosis:lucky_foot"
+				type: "item"
+			}]
+			title: "其它法器与小物"
+			x: 7.5d
+			y: 6.0d
+		}
+		{
+			dependencies: ["227E9D88F62BCAFC"]
+			description: [
+				"· 高等级附魔需要&a大量特殊书架&f围着附魔台，先去各维度收集书架材料；"
+				""
+				"· 词缀装备主要靠&a地牢/BOSS 掉落&f，别指望原版怪物；"
+				""
+				"· 宝石&a先合成高级再镶嵌&f，低级宝石镶上去浪费；"
+				""
+				"· &a刷怪笼整流器&f可以把地牢刷怪笼改成高效刷怪塔；"
+				""
+				"· 垃圾词缀装备别直接丢，&a分解台&f拆成材料再洗；"
+				""
+				"· BOSS 召唤前穿好装备、带好药水——它比原版危险得多。"
+			]
+			icon: "patchouli:guide_book"
+			id: "3F11F42AE8EF5628"
+			rewards: [{
+				id: "52DDD095A864FBB4"
+				type: "xp"
+				xp: 15
+			}]
+			subtitle: "少走弯路"
+			tasks: [{
+				id: "529D0AD563F6B767"
+				title: "实用技巧"
+				type: "checkmark"
+			}]
+			title: "实用技巧"
+			x: 1.5d
+			y: 6.0d
+		}
+		{
+			dependencies: [
+				"4A46F391B5C53C86"
+				"2B68FDBA120512F6"
+				"6EA92B211803D580"
+			]
+			description: [
+				"一套神化基地最小布局："
+				""
+				"1. &a强化附魔台&f为中心，周围 8~16 格内围满&a五系特殊书架&f（地狱/海洋/末地/深渊/特殊），堆到能附 X 级；"
+				""
+				"2. 旁边放&a重铸台+简易重铸台+分解台&f，形成「洗词缀→回收垃圾」闭环；"
+				""
+				"3. &a宝石切割台&f一角，旁边堆&a宝石粉末&f库存，3 合 1 升级宝石；"
+				""
+				"4. &a棱镜祭坛&f放室外/隔离区，定期召唤 BOSS 刷远古材料；"
+				""
+				"5. 地牢入口附近放&a整流器 T3&f，把刷怪笼改成经验/装备农场；"
+				""
+				"6. 最终：全身&a神话词缀+满级宝石+X 级附魔&f的毕业套。"
+			]
+			icon: "apotheosis:augmenting_table"
+			id: "342E185BFDE411D6"
+			rewards: [{
+				id: "0A1DB12AC61D5EB4"
+				type: "xp"
+				xp: 30
+			}]
+			subtitle: "书架阵列与重铸车间"
+			tasks: [{
+				id: "673ABD38B1F7FBB6"
+				title: "事例设施：附魔+宝石基地"
+				type: "checkmark"
+			}]
+			title: "事例设施：附魔+宝石基地"
+			x: 16.5d
+			y: 1.5d
+		}
+		{
+			dependencies: [
+				"34D693D8E29ED98A"
+				"342E185BFDE411D6"
+			]
+			description: [
+				"本章终极目标：搭好&a附魔书架阵列&f、跑通&a词缀洗练闭环&f、嵌满&a高级宝石&f、并能稳定刷&a地牢与 BOSS&f。"
+				""
+				"检验标准："
+				""
+				"· 附魔台能附&a效率 X / 锋利 X&f等超原版等级；"
+				""
+				"· 全身装备带&a神话级词缀&f，每件 1~3 个&a高级宝石插槽&f；"
+				""
+				"· 有一台&a整流器 T3 改造的刷怪农场&f自动产出材料；"
+				""
+				"· 能稳定 solo &a棱镜祭坛 BOSS&f。"
+				""
+				"到这一步，你的装备强度已经远超原版生存天花板——配合匠魂工具，主世界与下界都将畅通无阻。"
+			]
+			icon: "apotheosis:mythic_material"
+			id: "54BF91A9BD159B2B"
+			rewards: [{
+				id: "66C94D2D1300A7C3"
+				type: "xp"
+				xp: 60
+			}]
+			shape: "octagon"
+			size: 1.5d
+			subtitle: "本章综合实战"
+			tasks: [{
+				id: "5FC933E4B4C67591"
+				title: "神化毕业：地牢征服者"
+				type: "checkmark"
+			}]
+			title: "神化毕业：地牢征服者"
+			x: 18.0d
+			y: 1.5d
+		}
+	]
+	title: "神化 Apotheosis"
+}
