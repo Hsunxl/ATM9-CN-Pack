@@ -225,16 +225,16 @@
 				"&7接地气的说法：电压 = 水压，电流 = 管径（每秒多少股水流），EU/t = 每秒流过的水量。管细了（电流不够）就供不上，水压太高（电压超等级）就把管子炸了。"
 			]
 			icon: "gtceu:tin_single_cable"
-			id: "063B7071E9E2DCE4"
+			id: "0C53B7E775D8EDDC"
 			rewards: [{
-				id: "62A47B072F723F7F"
+				id: "4397FA5564366A1F"
 				type: "xp"
 				xp: 10
 			}]
 			size: 1.5d
 			subtitle: "EU、电压、电流的最小知识"
 			tasks: [{
-				id: "6783FF3969EFA165"
+				id: "130FE6A91203010D"
 				title: "电是怎么流动的"
 				type: "checkmark"
 			}]
@@ -243,7 +243,7 @@
 			y: 0.0d
 		}
 		{
-			dependencies: ["063B7071E9E2DCE4"]
+			dependencies: ["0C53B7E775D8EDDC"]
 			description: [
 				"每个机器、线缆、仓都有自己的电压等级，这个等级的含义就是 &b它们能安全承受的最高电压&f。"
 				""
@@ -261,16 +261,16 @@
 				"&7记住口诀：&o同级安全、降级可用、越级爆炸&f。"
 			]
 			icon: "gtceu:lv_machine_hull"
-			id: "508D85DA648E6A73"
+			id: "2F15F9F6021B0AF8"
 			rewards: [{
-				id: "56D11D130D4B70A1"
+				id: "5E3DE3CE2AFC55DF"
 				type: "xp"
 				xp: 10
 			}]
 			size: 1.5d
 			subtitle: "接错电压会炸机器"
 			tasks: [{
-				id: "4AE15D9E222EB602"
+				id: "77556CF053311394"
 				title: "电压：安全与爆炸"
 				type: "checkmark"
 			}]
@@ -279,7 +279,7 @@
 			y: 1.5d
 		}
 		{
-			dependencies: ["508D85DA648E6A73"]
+			dependencies: ["2F15F9F6021B0AF8"]
 			description: [
 				"&a电流（A）&f 表示同一时刻有多少个电压包裹在并行传输。它决定了「能同时供多少台机器」。"
 				""
@@ -335,16 +335,16 @@
 				"&7选线口诀：&o先看电压够不够，再看电流够不够，最后看压降划不划算&f。"
 			]
 			icon: "gtceu:tin_single_cable"
-			id: "38FD6FF6A8FE67CF"
+			id: "61E933168F4032A7"
 			rewards: [{
-				id: "2265A7914153DB0B"
+				id: "1005494681180C3A"
 				type: "xp"
 				xp: 10
 			}]
 			size: 1.5d
 			subtitle: "选线不是看贵不贵"
 			tasks: [{
-				id: "726EF0FD08C4C16E"
+				id: "17CB656E99EC1011"
 				title: "线缆的四个属性"
 				type: "checkmark"
 			}]
@@ -353,7 +353,7 @@
 			y: 4.5d
 		}
 		{
-			dependencies: ["38FD6FF6A8FE67CF"]
+			dependencies: ["61E933168F4032A7"]
 			description: [
 				"「远距离要高压传输」不是玄学，格雷官方文档给了一个非常直观的算例。&e两段都搬 16A LV，同样的距离，结果差 4 倍以上&f。"
 				""
@@ -370,16 +370,16 @@
 				"&e结论&f：压降是 &b按「每格每安培」减去的，不是乘的&f。所以 &a高压少安培走远路 & 到机器附近再降压 &f，永远比低压多安培硬扛划算。这也是分流器和变压站的用武之地。"
 			]
 			icon: "gtceu:lv_transformer_4a"
-			id: "2BC9BBADE52E2CFF"
+			id: "15F501BCCBED6EC4"
 			rewards: [{
-				id: "359044E387B3AB27"
+				id: "558B51EF8A59282F"
 				type: "xp"
 				xp: 10
 			}]
 			size: 1.5d
 			subtitle: "一个官方算例，值一读"
 			tasks: [{
-				id: "332D7444B7E57CD9"
+				id: "313271C405A0E346"
 				title: "压降实例：为什么远线要升压"
 				type: "checkmark"
 			}]
@@ -388,7 +388,7 @@
 			y: 6.0d
 		}
 		{
-			dependencies: ["2BC9BBADE52E2CFF"]
+			dependencies: ["15F501BCCBED6EC4"]
 			description: [
 				"变压器的功能一句话：把「上一级的 1A」和「本级的 4A」互相转换。"
 				""
@@ -499,7 +499,7 @@
 			y: 10.5d
 		}
 		{
-			dependencies: ["063B7071E9E2DCE4"]
+			dependencies: ["0C53B7E775D8EDDC"]
 			description: [
 				"能量转换器（Energy Converter）用来在 &aEU&f 和 &aFE/RF&f 之间换算，是格雷和包内其它科技模组之间的桥。"
 				""
@@ -519,16 +519,16 @@
 				"&e为什么值得重视&f：ATM9 里有大量强力 FE 发电（通用机械乙烯发电机、极限反应堆、Powah 等）。如果你打算用它们喂格雷，先把 &b4:1&f 这个数记牢，否则整条产线的功耗预算会算错 4 倍。"
 			]
 			icon: "gtceu:lv_1a_energy_converter"
-			id: "63FAC4ED695D3C8D"
+			id: "7FD583503F686A53"
 			rewards: [{
-				id: "719064954CD6B8DF"
+				id: "0EF80FBE674437C0"
 				type: "xp"
 				xp: 10
 			}]
 			size: 1.5d
 			subtitle: "红面 EU、绿面 FE"
 			tasks: [{
-				id: "2290228D32B8AE0F"
+				id: "4019FCF8B0EE1558"
 				title: "能量转换器"
 				type: "checkmark"
 			}]
@@ -537,7 +537,7 @@
 			y: 0.0d
 		}
 		{
-			dependencies: ["63FAC4ED695D3C8D"]
+			dependencies: ["7FD583503F686A53"]
 			description: [
 				"二极管（Diode）是专门用来「管理电力传输」的小方块，便宜且实用。"
 				""
@@ -555,16 +555,16 @@
 				"&e顺带一提&f：&a机器外壳（Machine Hull）&f 也能当 1A 二极管用，而且它同时被 AE2 视为有效线缆——ME 线缆可以直接接上外壳，让 ME 网络延伸进超净间。"
 			]
 			icon: "gtceu:lv_diode"
-			id: "111B36ECA1760EE8"
+			id: "1C48E19CFE2C8F02"
 			rewards: [{
-				id: "2F5F0D528BAB42D7"
+				id: "58B89EB5BC1BF457"
 				type: "xp"
 				xp: 10
 			}]
 			size: 1.5d
 			subtitle: "比电池箱便宜的调度器"
 			tasks: [{
-				id: "204CA732CF4D8D25"
+				id: "2B908CB5ACFF078A"
 				title: "二极管"
 				type: "checkmark"
 			}]
@@ -573,7 +573,7 @@
 			y: 1.5d
 		}
 		{
-			dependencies: ["111B36ECA1760EE8"]
+			dependencies: ["1C48E19CFE2C8F02"]
 			description: [
 				"蓄能变电站（Power Substation，PSS）是 GTCEu 最强的储能与配电方案，&aEV 中期&f解锁，用钯、夹层玻璃、电容方块搭建。"
 				""
@@ -590,16 +590,16 @@
 				"&e为什么值得早做&f：它鼓励你把发电集中到一处，然后用 &a变压器 + 细线&f 把高压送到远处再降压使用——这正好是最省压降的布局。"
 			]
 			icon: "gtceu:power_substation"
-			id: "3882226A45BA5D32"
+			id: "21BE477F04733434"
 			rewards: [{
-				id: "6232A779B34D5FA1"
+				id: "7C31A4D442CB4AD5"
 				type: "xp"
 				xp: 10
 			}]
 			size: 1.5d
 			subtitle: "2.7 亿 EU 的中央电网"
 			tasks: [{
-				id: "5685A0BD07F6608E"
+				id: "26821CEA23853F0C"
 				title: "蓄能变电站"
 				type: "checkmark"
 			}]
@@ -608,7 +608,7 @@
 			y: 3.0d
 		}
 		{
-			dependencies: ["3882226A45BA5D32"]
+			dependencies: ["21BE477F04733434"]
 			description: [
 				"有源变压器（Active Transformer）是 &aLuV 级的多方块机器&f，专门解决「把一堆不同规格的电整合起来再分发出去」的问题。"
 				""
@@ -623,16 +623,16 @@
 				"&7一句话理解：PSS 是「水库」，有源变压器是「水厂 + 分水阀」。"
 			]
 			icon: "gtceu:active_transformer"
-			id: "68E36B54B1ABE21D"
+			id: "61A29B49033ECF80"
 			rewards: [{
-				id: "36CA0BEBEDA384CA"
+				id: "7ADE95AC286F6F87"
 				type: "xp"
 				xp: 10
 			}]
 			size: 1.5d
 			subtitle: "LuV 级的电力调度中心"
 			tasks: [{
-				id: "3A519C036DF4F6A5"
+				id: "248DBE4C5B351122"
 				title: "有源变压器"
 				type: "checkmark"
 			}]
@@ -641,7 +641,7 @@
 			y: 4.5d
 		}
 		{
-			dependencies: ["68E36B54B1ABE21D"]
+			dependencies: ["61A29B49033ECF80"]
 			description: [
 				"当电流大到普通线缆扛不住时，格雷提供了激光供电方案。"
 				""
@@ -661,16 +661,16 @@
 				"&7对 ATM9 玩家特别有用：本包新增的 &a微型宇宙宝珠&f 只能通过激光靶仓供能，还有 &a创造能量单元/MAX 能源仓&f 也要靠它。"
 			]
 			icon: "gtceu:iv_256a_laser_source_hatch"
-			id: "1D602BC5BE829CDB"
+			id: "776D760EBD42B4DF"
 			rewards: [{
-				id: "1B5F047C4B492066"
+				id: "365D89A903306667"
 				type: "xp"
 				xp: 10
 			}]
 			size: 1.5d
 			subtitle: "IV 起，256~4096A"
 			tasks: [{
-				id: "3E62F1C23D594553"
+				id: "608FB12779E9EA15"
 				title: "激光仓与激光管道"
 				type: "checkmark"
 			}]
@@ -679,7 +679,7 @@
 			y: 6.0d
 		}
 		{
-			dependencies: ["1D602BC5BE829CDB"]
+			dependencies: ["776D760EBD42B4DF"]
 			description: [
 				"格雷机器的界面比一般模组复杂，但弄懂几处就够用了。"
 				""
@@ -773,16 +773,16 @@
 				"&e接下来怎么走&f：先去做第 ⑥ ⑦ 列的蒸汽时代——那里不需要电，只需要锅炉、焦炉和土高炉。拿到钢之后，你的第一台 LV 机器就有了着落。"
 			]
 			icon: "gtceu:steel_wrench"
-			id: "4EB6C68A193C59B4"
+			id: "187C22AFCC1063D3"
 			rewards: [{
-				id: "4F9317C3627A4285"
+				id: "208BB9DFAB50E3BE"
 				type: "xp"
 				xp: 10
 			}]
 			size: 1.5d
 			subtitle: "可以进蒸汽时代了"
 			tasks: [{
-				id: "73C878B5A0FD8782"
+				id: "1138CCD7EEC46C1D"
 				title: "第一部分小结：把电搞懂"
 				type: "checkmark"
 			}]
@@ -791,7 +791,7 @@
 			y: 10.5d
 		}
 		{
-			dependencies: ["63FAC4ED695D3C8D"]
+			dependencies: ["7FD583503F686A53"]
 			description: [
 				"格雷的工具不是装饰品，每把对应一类明确的操作。&c搞混工具是新手最常见的翻车原因&f。"
 				""
@@ -918,16 +918,16 @@
 				"&7实战建议：给需要多种原料的机器（例如电力高炉、组装机）的输入总线配机械臂 + 保持精确，能省掉大量手动干预。"
 			]
 			icon: "gtceu:lv_robot_arm"
-			id: "5349E34140CE2BFE"
+			id: "7A5DB90438F68BB2"
 			rewards: [{
-				id: "0FB6C57A539FA8CA"
+				id: "0F8AB02251CBC3F1"
 				type: "xp"
 				xp: 10
 			}]
 			size: 1.5d
 			subtitle: "三种传输模式治卡机"
 			tasks: [{
-				id: "10639061D5527CF6"
+				id: "05E8A957D7124045"
 				item: "gtceu:lv_robot_arm"
 				type: "item"
 			}]
@@ -936,7 +936,7 @@
 			y: 4.5d
 		}
 		{
-			dependencies: ["5349E34140CE2BFE"]
+			dependencies: ["7A5DB90438F68BB2"]
 			description: [
 				"过滤器（Filter）可以装在覆盖板里，用来白名单/黑名单控制哪些物品或流体能通过。"
 				""
@@ -956,16 +956,16 @@
 				"&7智能过滤卡在 ATM9 里特别好用：矿处理的产物五花八门，用它就能自动挑出「值得进离心机/电解机」的那部分。"
 			]
 			icon: "gtceu:item_filter"
-			id: "4A94F8870679B103"
+			id: "6203E569ADFB0F32"
 			rewards: [{
-				id: "3667884B7AAD62CB"
+				id: "26A0860F0DC37A87"
 				type: "xp"
 				xp: 10
 			}]
 			size: 1.5d
 			subtitle: "只让该过的过"
 			tasks: [{
-				id: "07934AED073AD151"
+				id: "19FF3AC7F0F38F0B"
 				item: "gtceu:item_smart_filter"
 				type: "item"
 			}]
@@ -974,7 +974,7 @@
 			y: 6.0d
 		}
 		{
-			dependencies: ["4A94F8870679B103"]
+			dependencies: ["6203E569ADFB0F32"]
 			description: [
 				"这两个覆盖板解决「送得远」和「不要了」两个问题。"
 				""
@@ -995,16 +995,16 @@
 				"&7实战组合：矿处理线的副产经常是废料，用「高级销毁覆盖板 + 过滤」自动清掉，避免管道堵死。"
 			]
 			icon: "gtceu:ender_item_link_cover"
-			id: "7CC81009D68CCA55"
+			id: "1AFB1C70F72FEE8E"
 			rewards: [{
-				id: "0E011B570E61525E"
+				id: "5410FD6C9C024393"
 				type: "xp"
 				xp: 10
 			}]
 			size: 1.5d
 			subtitle: "跨维度传物资 + 处理废料"
 			tasks: [{
-				id: "035EEFBFAE87D582"
+				id: "2FEABB6C85BF5F29"
 				item: "gtceu:ender_item_link_cover"
 				type: "item"
 			}]
@@ -1070,16 +1070,16 @@
 				"&7在 ATM9 里，中期你会经常看到「用液态 X + 铸模 Y 产出零件 Z」这样的配方，走的就是这条路。"
 			]
 			icon: "gtceu:plate_casting_mold"
-			id: "0ADCC23510C35D64"
+			id: "09619AF0E5A42497"
 			rewards: [{
-				id: "0EC27BEF1B907362"
+				id: "29D90BFAB0C8DF7A"
 				type: "xp"
 				xp: 10
 			}]
 			size: 1.5d
 			subtitle: "把液态金属变成零件"
 			tasks: [{
-				id: "75A16C2A5C18D894"
+				id: "43264577AC38CDBD"
 				item: "gtceu:plate_casting_mold"
 				type: "item"
 			}]
@@ -1088,7 +1088,7 @@
 			y: 1.5d
 		}
 		{
-			dependencies: ["0ADCC23510C35D64"]
+			dependencies: ["09619AF0E5A42497"]
 			description: [
 				"这四台机器负责把「锭/块」变成各种形状，是材料加工的主力。"
 				""
@@ -1288,16 +1288,16 @@
 				"&7小技巧：先存一整个箱子的青铜锭再开始搭蒸汽机器，中途缺料会很烦。"
 			]
 			icon: "gtceu:bronze_ingot"
-			id: "5207CE0162DEC9AD"
+			id: "73A027097D654BEC"
 			rewards: [{
-				id: "2A5AF6B2E896FA3F"
+				id: "0711EC2FFA4A56C8"
 				type: "xp"
 				xp: 10
 			}]
 			size: 1.5d
 			subtitle: "3 铜 : 1 锡"
 			tasks: [{
-				id: "37CCEB3CAEB47C1D"
+				id: "279D5C1FBC655A1F"
 				item: "gtceu:bronze_ingot"
 				type: "item"
 			}]
@@ -1306,7 +1306,7 @@
 			y: 1.5d
 		}
 		{
-			dependencies: ["5207CE0162DEC9AD"]
+			dependencies: ["73A027097D654BEC"]
 			description: [
 				"锅炉把水加热成蒸汽。它有三种燃料来源，各有低压/高压两个版本。"
 				""
@@ -1324,16 +1324,16 @@
 				"&7选型建议：早期用固体锅炉（煤最便宜），有岩浆之后换液体锅炉，钢一到就上高压。太阳能适合当补充，但晚上会停。"
 			]
 			icon: "gtceu:lp_steam_solid_boiler"
-			id: "6061FA4DFC0D46D1"
+			id: "70C6231DD7B1C558"
 			rewards: [{
-				id: "5794DA777CB37D07"
+				id: "4EF5FDD4654F8F6E"
 				type: "xp"
 				xp: 10
 			}]
 			size: 1.5d
 			subtitle: "用这张表选锅炉"
 			tasks: [{
-				id: "36B7CCAEEB2233E5"
+				id: "72BA6E06E90E210C"
 				item: "gtceu:lp_steam_liquid_boiler"
 				type: "item"
 			}]
@@ -1342,7 +1342,7 @@
 			y: 3.0d
 		}
 		{
-			dependencies: ["6061FA4DFC0D46D1"]
+			dependencies: ["70C6231DD7B1C558"]
 			description: [
 				"蒸汽机器的作用是「便宜、不用电、不用耐久」地完成基础加工。下表是官方给出的精确耗汽量（低压 / 高压）："
 				""
@@ -1402,16 +1402,16 @@
 				"&7记住一句话：&o蒸汽系统最贵的不是材料，是重做一遍。&f"
 			]
 			icon: "gtceu:steel_screwdriver"
-			id: "09ACFCA612B07B90"
+			id: "7972737C7A89E287"
 			rewards: [{
-				id: "3C29CD2F888CCE2C"
+				id: "5A17C841D5063707"
 				type: "xp"
 				xp: 10
 			}]
 			size: 1.5d
 			subtitle: "堵住排气口机器就罢工"
 			tasks: [{
-				id: "144E195F2D812BDA"
+				id: "444D5B7DDF4000CC"
 				title: "排气面与蒸汽安全"
 				type: "checkmark"
 			}]
@@ -1420,7 +1420,7 @@
 			y: 6.0d
 		}
 		{
-			dependencies: ["09ACFCA612B07B90"]
+			dependencies: ["7972737C7A89E287"]
 			description: [
 				"&e到这里你应该已经能&f："
 				""
@@ -1438,16 +1438,16 @@
 				"&7提醒：蒸汽时代是整个格雷线的「新手教学」。这里的每一步后面都会重来一遍（用电力版本），所以现在就把「怎么算耗量、怎么留位置」的习惯养好。"
 			]
 			icon: "gtceu:steel_wrench"
-			id: "0EA1327E2CD44225"
+			id: "27DB7A280EE3633F"
 			rewards: [{
-				id: "05DAF01EC9C40020"
+				id: "7B17A174CC8E7DEC"
 				type: "xp"
 				xp: 10
 			}]
 			size: 1.5d
 			subtitle: "可以开始搭产线了"
 			tasks: [{
-				id: "66BD19FECEE3269E"
+				id: "4FBA880B7E339B2D"
 				title: "蒸汽时代（上）小结"
 				type: "checkmark"
 			}]
@@ -1673,16 +1673,16 @@
 				"&7搭建时记得用 JEI 3D 预览核对青铜机械方块的数量和仓位要求（尤其熔炼炉的蒸汽仓必须在底层）。"
 			]
 			icon: "gtceu:steam_grinder"
-			id: "23EF5F00CBBD341D"
+			id: "35F5FBB9C621D1FB"
 			rewards: [{
-				id: "39A3FBB96BEE09D4"
+				id: "6B4DF14E8FABFDC5"
 				type: "xp"
 				xp: 10
 			}]
 			size: 1.5d
 			subtitle: "一次处理 8 份配方"
 			tasks: [{
-				id: "4857776702BB9AA4"
+				id: "35A0D3782F12ED3E"
 				item: "gtceu:steam_grinder"
 				type: "item"
 			}]
@@ -1691,7 +1691,7 @@
 			y: 7.5d
 		}
 		{
-			dependencies: ["23EF5F00CBBD341D"]
+			dependencies: ["35F5FBB9C621D1FB"]
 			description: [
 				"这两台是蒸汽时代的「资源机器」，用起来有额外讲究。"
 				""
@@ -1714,16 +1714,16 @@
 				"&7提示：蒸汽采矿机的「9×9 范围内要有矿」这个条件，意味着它不会凭空产矿。想「凭空产矿」要等后期 ATM9 的虚空采矿机。"
 			]
 			icon: "gtceu:lp_steam_miner"
-			id: "2881FBD79881BBE9"
+			id: "5E6592AE06FCBA05"
 			rewards: [{
-				id: "5C90FB0060942410"
+				id: "0D850B82B69912BC"
 				type: "xp"
 				xp: 10
 			}]
 			size: 1.5d
 			subtitle: "不用下矿也能拿资源"
 			tasks: [{
-				id: "2E4E77F93D97DB61"
+				id: "3609D6C34C738273"
 				item: "gtceu:lp_steam_miner"
 				type: "item"
 			}]
@@ -1732,7 +1732,7 @@
 			y: 9.0d
 		}
 		{
-			dependencies: ["2881FBD79881BBE9"]
+			dependencies: ["5E6592AE06FCBA05"]
 			description: [
 				"蒸汽的终点是把它的能量转成电——这一步标志着你进入电力时代。"
 				""
@@ -1832,16 +1832,16 @@
 				"&7副产是这条线的灵魂：每一步都有几率产出「伴生矿」的粉，铁里能出金、镍里能出钴、铂里能出钯。这些稀有金属基本靠副产攒。"
 			]
 			icon: "gtceu:purified_iron_ore"
-			id: "5A7342863220AC66"
+			id: "5A3336D6C9BB6D26"
 			rewards: [{
-				id: "0480A93EB8C4E2F6"
+				id: "386E97D57AE56AF5"
 				type: "xp"
 				xp: 10
 			}]
 			size: 1.5d
 			subtitle: "粉碎 → 纯净 → 精炼"
 			tasks: [{
-				id: "0ED78621B03AEE68"
+				id: "7B14346EEA130264"
 				item: "gtceu:purified_iron_ore"
 				type: "item"
 			}]
@@ -1850,7 +1850,7 @@
 			y: 1.5d
 		}
 		{
-			dependencies: ["5A7342863220AC66"]
+			dependencies: ["5A3336D6C9BB6D26"]
 			description: [
 				"研磨机（Macerator）是矿处理链的第一台机器，也是最重要的一台。"
 				""
@@ -1870,16 +1870,16 @@
 				"&7进阶：大型粉碎塔（Large Maceration Tower）是研磨机的多方块版本，吞吐量巨大，见本列后面的任务。"
 			]
 			icon: "gtceu:lv_macerator"
-			id: "40782543D5F2DE90"
+			id: "74B1D3AFC5D935D0"
 			rewards: [{
-				id: "7D27F41F3D675C58"
+				id: "76630F25FFFF4A43"
 				type: "xp"
 				xp: 10
 			}]
 			size: 1.5d
 			subtitle: "第一步就把产出翻倍"
 			tasks: [{
-				id: "1FC877C8CABE069C"
+				id: "19C002FCBF47B3F1"
 				item: "gtceu:lv_macerator"
 				type: "item"
 			}]
@@ -1888,7 +1888,7 @@
 			y: 3.0d
 		}
 		{
-			dependencies: ["40782543D5F2DE90"]
+			dependencies: ["74B1D3AFC5D935D0"]
 			description: [
 				"洗矿厂（Ore Washer）是矿线第二步，也是「副产」的主要来源。"
 				""
@@ -1944,16 +1944,16 @@
 				"&7提示：等到你需要大规模生产铝/钛（进而需要镓）时，化学浸洗器就从「可选」变成「必须」了。"
 			]
 			icon: "gtceu:lv_chemical_bath"
-			id: "5BD9081C6C2136F1"
+			id: "711ACF66A48C87F2"
 			rewards: [{
-				id: "7FCB3FBC36D63A5D"
+				id: "09DDF05A4A94627F"
 				type: "xp"
 				xp: 10
 			}]
 			size: 1.5d
 			subtitle: "比洗矿厂更多副产"
 			tasks: [{
-				id: "16E43A26A178B491"
+				id: "1DAD5194DA32CB61"
 				item: "gtceu:lv_chemical_bath"
 				type: "item"
 			}]
@@ -1962,7 +1962,7 @@
 			y: 6.0d
 		}
 		{
-			dependencies: ["5BD9081C6C2136F1"]
+			dependencies: ["711ACF66A48C87F2"]
 			description: [
 				"&e自查清单&f："
 				""
@@ -1977,16 +1977,16 @@
 				"&e接下来（本列下半部分 / 第 ⑨ 列）&f：热离心机把纯净矿变精炼矿、离心机与电解机处理副产、筛选机筛宝石、以及大型化（大型研磨塔、大型离心机）与把它们整合起来的 &a矿石加工厂&f（ATM9 专属）。"
 			]
 			icon: "gtceu:steel_wrench"
-			id: "4DC62BD2A2E14F31"
+			id: "5C8342C58BF48C3B"
 			rewards: [{
-				id: "39E338DEE1BFFB19"
+				id: "7B6FCACE91D569EE"
 				type: "xp"
 				xp: 10
 			}]
 			size: 1.5d
 			subtitle: "前两步已经跑通"
 			tasks: [{
-				id: "2E7B16F98E59A2F8"
+				id: "38EDDF2667890E43"
 				title: "矿石处理（上）小结"
 				type: "checkmark"
 			}]
@@ -2089,16 +2089,16 @@
 				"&7注意：筛选机的产物是多个不同物品 + 概率产出，输出总线容易堵。建议配过滤或销毁覆盖板处理边角料。"
 			]
 			icon: "gtceu:lv_sifter"
-			id: "63E861FCD8180E8C"
+			id: "229886787091801A"
 			rewards: [{
-				id: "2859EE85BF63FF43"
+				id: "6931DCF3747EAE15"
 				type: "xp"
 				xp: 10
 			}]
 			size: 1.5d
 			subtitle: "宝石类副产的来源"
 			tasks: [{
-				id: "7D812A593E5E614F"
+				id: "44B9D3E3091ABFAE"
 				item: "gtceu:lv_sifter"
 				type: "item"
 			}]
@@ -2107,7 +2107,7 @@
 			y: 3.0d
 		}
 		{
-			dependencies: ["63E861FCD8180E8C"]
+			dependencies: ["229886787091801A"]
 			description: [
 				"电磁选矿机（Electromagnetic Separator）是矿线的另一条支线，专门处理「纯净粉」。"
 				""
@@ -2122,16 +2122,16 @@
 				"&7不必强求：早期不用刻意搭它。等你开始缺稀土（钕、钇等）或特定贵金属时再回来做。"
 			]
 			icon: "gtceu:lv_electromagnetic_separator"
-			id: "3CF9F7EA9747BB7E"
+			id: "0E3DC4984F4212D7"
 			rewards: [{
-				id: "691BDAF5FBF64CC5"
+				id: "0975EF7FA8A3FCC2"
 				type: "xp"
 				xp: 10
 			}]
 			size: 1.5d
 			subtitle: "另一种提纯路线"
 			tasks: [{
-				id: "75A497F42F72AA77"
+				id: "4EFF4A332F4F5569"
 				item: "gtceu:lv_electromagnetic_separator"
 				type: "item"
 			}]
@@ -2140,7 +2140,7 @@
 			y: 4.5d
 		}
 		{
-			dependencies: ["3CF9F7EA9747BB7E"]
+			dependencies: ["0E3DC4984F4212D7"]
 			description: [
 				"矿处理线一旦跑起来，单方块机器会立刻成为瓶颈。这时该上多方块版本了。"
 				""
@@ -2346,16 +2346,16 @@
 				"&e提示&f：真空管是 ULV 级，是整条电路链的起点。等你进入 LV 之后，它仍然会被大量用于低级电路配方，所以别停产。"
 			]
 			icon: "gtceu:vacuum_tube"
-			id: "017FDFE1F97E2E51"
+			id: "79C391B8091CE9CA"
 			rewards: [{
-				id: "2E0E08612C8AB593"
+				id: "1195E09EFAE58266"
 				type: "xp"
 				xp: 10
 			}]
 			size: 1.5d
 			subtitle: "第一块电路，也最便宜"
 			tasks: [{
-				id: "42D373DA195445FD"
+				id: "0D4ED33445D7B87C"
 				item: "gtceu:vacuum_tube"
 				type: "item"
 			}]
@@ -2364,7 +2364,7 @@
 			y: 1.5d
 		}
 		{
-			dependencies: ["017FDFE1F97E2E51"]
+			dependencies: ["79C391B8091CE9CA"]
 			description: [
 				"电路板（Circuit Board）是承载元件的底板，&b它的档次决定了整个电路的等级&f。"
 				""
@@ -2423,16 +2423,16 @@
 				"&7建议：LV/MV 期用通孔件够了；到 HV 之后开始转 SMD，能大幅减少元件产能压力。"
 			]
 			icon: "gtceu:resistor"
-			id: "43AE6EDFC7ADEEEB"
+			id: "3590E9CA4FBE6B3F"
 			rewards: [{
-				id: "361491D25C1106CD"
+				id: "08E04EA39521E0B1"
 				type: "xp"
 				xp: 10
 			}]
 			size: 1.5d
 			subtitle: "电路的积木"
 			tasks: [{
-				id: "43588A6BE1BB97D4"
+				id: "592E88EF839D5D7A"
 				item: "gtceu:capacitor"
 				type: "item"
 			}]
@@ -2441,7 +2441,7 @@
 			y: 4.5d
 		}
 		{
-			dependencies: ["43AE6EDFC7ADEEEB"]
+			dependencies: ["3590E9CA4FBE6B3F"]
 			description: [
 				"贴片元件（SMD，Surface Mount Device）是通孔元件的升级版，一共四种，与通孔件一一对应："
 				""
@@ -2462,16 +2462,16 @@
 				"&7提示：高级贴片元件（如高级贴片晶体管）会一直用到湿件处理器，是终局材料之一。别只做刚够用的量。"
 			]
 			icon: "gtceu:smd_transistor"
-			id: "15DE629A49F943CD"
+			id: "243959D739B13ECB"
 			rewards: [{
-				id: "4402DCD6ED24E001"
+				id: "435FDD21E6F007C5"
 				type: "xp"
 				xp: 10
 			}]
 			size: 1.5d
 			subtitle: "SMD 是后期的答案"
 			tasks: [{
-				id: "449454A932D54C42"
+				id: "15DA5FF35F4D52FC"
 				item: "gtceu:smd_resistor"
 				type: "item"
 			}]
@@ -2480,7 +2480,7 @@
 			y: 6.0d
 		}
 		{
-			dependencies: ["15DE629A49F943CD"]
+			dependencies: ["243959D739B13ECB"]
 			description: [
 				"&e自查清单&f："
 				""
@@ -2495,16 +2495,16 @@
 				"&7提醒：从这一列开始，「电路产能」会成为你基地的长期瓶颈。早点把真空管、板、元件三条产线自动化，后面会舒服很多。"
 			]
 			icon: "gtceu:steel_screwdriver"
-			id: "788EE892069BEE64"
+			id: "77B45BB092EA6379"
 			rewards: [{
-				id: "7DE504D1080E5158"
+				id: "7497D3EC4982A80E"
 				type: "xp"
 				xp: 10
 			}]
 			size: 1.5d
 			subtitle: "认识积木了"
 			tasks: [{
-				id: "7A0987B76F178137"
+				id: "3D085419359C4568"
 				title: "电路（上）小结"
 				type: "checkmark"
 			}]
@@ -2534,16 +2534,16 @@
 				"&7提示：电路组装机耗电量不低，建议单独给它配一条供电线路。"
 			]
 			icon: "gtceu:basic_electronic_circuit"
-			id: "78F3FD294DCAC586"
+			id: "386790B31E18DB61"
 			rewards: [{
-				id: "1FC96E8A4DB679E4"
+				id: "3A77A8A3C1CD2D34"
 				type: "xp"
 				xp: 10
 			}]
 			size: 1.5d
 			subtitle: "进了电力时代的门票"
 			tasks: [{
-				id: "3F7B1277D7041205"
+				id: "70957D740B6C951E"
 				item: "gtceu:basic_electronic_circuit"
 				type: "item"
 			}]
@@ -2552,7 +2552,7 @@
 			y: 0.0d
 		}
 		{
-			dependencies: ["78F3FD294DCAC586"]
+			dependencies: ["386790B31E18DB61"]
 			description: [
 				"MV 阶段的核心电路是「优质（Good）」这一代。"
 				""
@@ -2571,16 +2571,16 @@
 				"&e一个现实提醒&f：MV 是格雷「第一次撞墙」的阶段。因为几乎所有 MV 之后的东西都需要 &a铝&f，而铝必须在 &a电力高炉&f 里烧，电力高炉又需要 MV 电压——这个循环怎么破，见第 ⑫ 列的「电力高炉与层级跳过」。"
 			]
 			icon: "gtceu:good_electronic_circuit"
-			id: "2F72E8A2272C30D5"
+			id: "0EC425A499D2BAC7"
 			rewards: [{
-				id: "10D91BDAE5B83F2E"
+				id: "63571F96ACA58BBE"
 				type: "xp"
 				xp: 10
 			}]
 			size: 1.5d
 			subtitle: "优质电子电路与集成电路"
 			tasks: [{
-				id: "121FE1DDD4595E81"
+				id: "1A8FFA01C142B58A"
 				item: "gtceu:good_electronic_circuit"
 				type: "item"
 			}]
@@ -2589,7 +2589,7 @@
 			y: 1.5d
 		}
 		{
-			dependencies: ["2F72E8A2272C30D5"]
+			dependencies: ["0EC425A499D2BAC7"]
 			description: [
 				"HV 阶段的标志性电路是 &a进阶集成电路（Advanced Integrated Circuit）&f。"
 				""
@@ -2605,16 +2605,16 @@
 				"&e一个实用思路&f：HV 电路的原材料种类多、用量大，最好做成自动化产线（多台组装机 + 传送带 + AE2 供货）。手动做一个还可以，做一百个会崩溃。"
 			]
 			icon: "gtceu:advanced_integrated_circuit"
-			id: "1F8A9655A0C93F53"
+			id: "540CE3A787FFAB67"
 			rewards: [{
-				id: "11B0FEE988132DA6"
+				id: "0F5FFEF0D0FA1A07"
 				type: "xp"
 				xp: 10
 			}]
 			size: 1.5d
 			subtitle: "进阶集成电路"
 			tasks: [{
-				id: "428E9F9CB2FDD3A9"
+				id: "15A9389FDDA7B605"
 				item: "gtceu:advanced_integrated_circuit"
 				type: "item"
 			}]
@@ -2623,7 +2623,7 @@
 			y: 3.0d
 		}
 		{
-			dependencies: ["1F8A9655A0C93F53"]
+			dependencies: ["540CE3A787FFAB67"]
 			description: [
 				"从 EV 开始，电路进入「处理器（Processor）」体系，每一代都有四个层级：&b处理器 → 集群（Assembly）→ 主机（Computer）→ 主板（Mainframe）&f。"
 				""
@@ -2648,16 +2648,16 @@
 				"&7记忆法：&o处理器（基础）→ 集群（几个凑一起）→ 主机（一台电脑）→ 主板（一整套）&f。越往后越贵，但用在越贵的机器上。"
 			]
 			icon: "gtceu:micro_processor"
-			id: "7863A076CAB73BFF"
+			id: "509FEFFA4AFD403F"
 			rewards: [{
-				id: "296D2C0F73740DF7"
+				id: "7861F2CD4C5F9F02"
 				type: "xp"
 				xp: 10
 			}]
 			size: 1.5d
 			subtitle: "终局电路的五个世代"
 			tasks: [{
-				id: "730975388A85FCB6"
+				id: "590DA3B3360020BD"
 				item: "gtceu:micro_processor"
 				type: "item"
 			}]
@@ -2666,7 +2666,7 @@
 			y: 4.5d
 		}
 		{
-			dependencies: ["7863A076CAB73BFF"]
+			dependencies: ["509FEFFA4AFD403F"]
 			description: [
 				"电路生产有专属的两台设备，它们是电路产能的天花板。"
 				""
@@ -2688,16 +2688,16 @@
 				"&7现实规划：到 HV/EV 阶段，你会需要成百上千个电路。请把「电路产线」当成一个独立车间来规划。"
 			]
 			icon: "gtceu:lv_circuit_assembler"
-			id: "1ADA3C9864A68BCB"
+			id: "7019957502E6EC56"
 			rewards: [{
-				id: "3F5358D679C40EE4"
+				id: "3044108E0DA659AC"
 				type: "xp"
 				xp: 10
 			}]
 			size: 1.5d
 			subtitle: "电路的专属产线"
 			tasks: [{
-				id: "6502E41D6640275B"
+				id: "2D43446A05846434"
 				item: "gtceu:lv_circuit_assembler"
 				type: "item"
 			}]
@@ -2706,7 +2706,7 @@
 			y: 6.0d
 		}
 		{
-			dependencies: ["1ADA3C9864A68BCB"]
+			dependencies: ["7019957502E6EC56"]
 			description: [
 				"超净间（Cleanroom）是一个特殊多方块：它是一片&b必须用实心墙围起来&f的洁净空间，高级电路和精密元件必须在里面生产。"
 				""
@@ -2725,16 +2725,16 @@
 				"&7搭建建议：给超净间留出足够大的空间（后期要放好几台机器），并提前规划好穿墙仓和二极管的位置。"
 			]
 			icon: "gtceu:cleanroom"
-			id: "477257905ABD72B6"
+			id: "2F7A45CA9DB0BD3C"
 			rewards: [{
-				id: "7379EE5AA4FDBFB7"
+				id: "1FB668CF7111FB10"
 				type: "xp"
 				xp: 10
 			}]
 			size: 1.5d
 			subtitle: "高级电路的洁净环境"
 			tasks: [{
-				id: "59C2672C90AEB837"
+				id: "2E1C6C8A25F24607"
 				item: "gtceu:cleanroom"
 				type: "item"
 			}]
@@ -2743,7 +2743,7 @@
 			y: 7.5d
 		}
 		{
-			dependencies: ["78F3FD294DCAC586"]
+			dependencies: ["386790B31E18DB61"]
 			description: [
 				"做出 &a钢&f 之后，你就能做 &bLV 机器外壳（LV Machine Hull）&f——这一刻标志着你正式进入电力时代。"
 				""
@@ -2880,16 +2880,16 @@
 				"&7建议：进入 MV 后优先解决「化工基础」——蒸馏设备、化学反应器、储罐、以及稳定的液体输送。"
 			]
 			icon: "gtceu:mv_machine_casing"
-			id: "354DA420D33EFAA6"
+			id: "3E6858C0510BA167"
 			rewards: [{
-				id: "36275D12AF9CAA7B"
+				id: "3E281255CE315D63"
 				type: "xp"
 				xp: 10
 			}]
 			size: 1.5d
 			subtitle: "铝和不锈钢的过渡"
 			tasks: [{
-				id: "6C025819E468E6AA"
+				id: "536274E3A30B5A58"
 				item: "gtceu:mv_machine_casing"
 				type: "item"
 			}]
@@ -2898,7 +2898,7 @@
 			y: 4.5d
 		}
 		{
-			dependencies: ["354DA420D33EFAA6"]
+			dependencies: ["3E6858C0510BA167"]
 			description: [
 				"HV 阶段的标志材料是 &a不锈钢&f，标志性门槛是 &a进阶集成电路&f。"
 				""
@@ -2919,16 +2919,16 @@
 				"&7提示：别忘了本包开启的「GT 线缆原生输出 FE」——你的 HV 电网也可以直接给 FE 机器供电。"
 			]
 			icon: "gtceu:hv_machine_casing"
-			id: "43FCFBBE6AB2AACA"
+			id: "35200CF144FFE713"
 			rewards: [{
-				id: "562F727AB3C95873"
+				id: "66208B3750563BDA"
 				type: "xp"
 				xp: 10
 			}]
 			size: 1.5d
 			subtitle: "不锈钢与 4:1 转换率"
 			tasks: [{
-				id: "185B7D0D6EDAFD39"
+				id: "26CF523737957AD4"
 				item: "gtceu:hv_machine_casing"
 				type: "item"
 			}]
@@ -2937,7 +2937,7 @@
 			y: 6.0d
 		}
 		{
-			dependencies: ["43FCFBBE6AB2AACA"]
+			dependencies: ["35200CF144FFE713"]
 			description: [
 				"EV 是格雷最有「分水岭」感觉的阶段，因为三件事同时发生变化。"
 				""
@@ -2961,16 +2961,16 @@
 				"&7一句话总结 EV：&o单方块时代结束了，从今往后一切都是多方块。&f"
 			]
 			icon: "gtceu:ev_macerator"
-			id: "0221CF5D9695DEB1"
+			id: "7BD8735B2844BA97"
 			rewards: [{
-				id: "39C286EE9CBDCC13"
+				id: "0F91FA90BC6322BC"
 				type: "xp"
 				xp: 10
 			}]
 			size: 1.5d
 			subtitle: "钛、发电换代、储能升级"
 			tasks: [{
-				id: "76206AF9E7F1E3C5"
+				id: "127B9D2FE190DB27"
 				item: "gtceu:ev_macerator"
 				type: "item"
 			}]
@@ -2998,16 +2998,16 @@
 				"&7提示：IV 之后「料」和「电」都不再是主要瓶颈，&b瓶颈变成自动化与物流&f。这时候该认真规划 AE2/RS 的供货体系了。"
 			]
 			icon: "gtceu:iv_macerator"
-			id: "111D08B1241132A5"
+			id: "0986FECE32BA2B26"
 			rewards: [{
-				id: "478D2774CDAE974B"
+				id: "0733DA01C4B7E151"
 				type: "xp"
 				xp: 10
 			}]
 			size: 1.5d
 			subtitle: "钨钢、激光与 GCYM"
 			tasks: [{
-				id: "1898BACF60C8D309"
+				id: "3675816C79DA9586"
 				item: "gtceu:iv_macerator"
 				type: "item"
 			}]
@@ -3016,7 +3016,7 @@
 			y: 0.0d
 		}
 		{
-			dependencies: ["111D08B1241132A5"]
+			dependencies: ["0986FECE32BA2B26"]
 			description: [
 				"LuV 是格雷中后期，材料与机器都进入「超合金」范畴。"
 				""
@@ -3034,16 +3034,16 @@
 				"&7提示：LuV 之后，ATM9 的专属内容（超级聚变反应器、微型宇宙宝珠等）开始成为主线目标。"
 			]
 			icon: "gtceu:luv_macerator"
-			id: "4AA86FBDF0F9E4E6"
+			id: "181F17626AF9EF79"
 			rewards: [{
-				id: "248A6161A730D99B"
+				id: "28BFC6252145F057"
 				type: "xp"
 				xp: 10
 			}]
 			size: 1.5d
 			subtitle: "钌钨钼与有源变压器"
 			tasks: [{
-				id: "72A07C9E8C8A294F"
+				id: "34A398B7191C31EC"
 				item: "gtceu:luv_macerator"
 				type: "item"
 			}]
@@ -3052,7 +3052,7 @@
 			y: 1.5d
 		}
 		{
-			dependencies: ["4AA86FBDF0F9E4E6"]
+			dependencies: ["181F17626AF9EF79"]
 			description: [
 				"ZPM 是格雷的高端阶段，材料以「硅岩系合金」为代表。"
 				""
@@ -3073,16 +3073,16 @@
 				"&7提醒：到 ZPM 阶段，&b「手工做得出」和「能量产」是两回事&f。请务必把关键材料做成自动化产线。"
 			]
 			icon: "gtceu:zpm_macerator"
-			id: "5EBC793554159A67"
+			id: "0E99DDECCBCB4575"
 			rewards: [{
-				id: "5870AED812AEA69C"
+				id: "4306232E1657CD91"
 				type: "xp"
 				xp: 10
 			}]
 			size: 1.5d
 			subtitle: "硅岩合金与终局材料"
 			tasks: [{
-				id: "3EB6B791895BEB93"
+				id: "218B7F87388390E1"
 				item: "gtceu:zpm_macerator"
 				type: "item"
 			}]
@@ -3091,7 +3091,7 @@
 			y: 3.0d
 		}
 		{
-			dependencies: ["5EBC793554159A67"]
+			dependencies: ["0E99DDECCBCB4575"]
 			description: [
 				"UV 及以上是格雷的终局阶段，也是 ATM9 里「ATM 之星 / GregStar」路线所在。"
 				""
@@ -3110,16 +3110,16 @@
 				"&7结语：格雷线的终点不是一个「通关」，而是把整套工业体系跑成自动化。到那时你才能真正理解本包为什么把它放在科技树的最顶端。"
 			]
 			icon: "gtceu:uv_macerator"
-			id: "6108D40450AE0DB0"
+			id: "0D245F879348549C"
 			rewards: [{
-				id: "259C53EBFF597C5D"
+				id: "73F1B963B4E3F0A9"
 				type: "xp"
 				xp: 10
 			}]
 			size: 1.5d
 			subtitle: "铱锇、湿件与星物质"
 			tasks: [{
-				id: "708A275ADAEDDF22"
+				id: "4E0CC03BDAF5C842"
 				item: "gtceu:uv_macerator"
 				type: "item"
 			}]
@@ -3128,7 +3128,7 @@
 			y: 4.5d
 		}
 		{
-			dependencies: ["6108D40450AE0DB0"]
+			dependencies: ["0D245F879348549C"]
 			description: [
 				"大多数多方块机器的超频规则和单方块机器一样：&b耗电 ×4、耗时减半&f（总能耗变成 2 倍，变快但更费电）。"
 				""
@@ -3193,16 +3193,16 @@
 				"&7什么时候开批量模式：当你的基地有几十台高速机器、明显感到卡顿时。单人前期不用管它。"
 			]
 			icon: "gtceu:lv_assembler"
-			id: "277ED3B078F2EE3F"
+			id: "2547B192524CA32C"
 			rewards: [{
-				id: "3FFB6752E2818A32"
+				id: "4D14BD447E3A69D2"
 				type: "xp"
 				xp: 10
 			}]
 			size: 1.5d
 			subtitle: "机器快到极限之后"
 			tasks: [{
-				id: "149CA55ABE150DA1"
+				id: "428587879EDBC447"
 				title: "亚刻超频与批量模式"
 				type: "checkmark"
 			}]
@@ -3211,7 +3211,7 @@
 			y: 7.5d
 		}
 		{
-			dependencies: ["111D08B1241132A5"]
+			dependencies: ["0986FECE32BA2B26"]
 			description: [
 				"格雷的多方块看起来复杂，其实只有三步。&b掌握了这三步，任何多方块你都能搭出来。&f"
 				""
@@ -3236,16 +3236,16 @@
 				"&7记忆法：&o控制器管「是台什么机器」，外壳管「占地方」，仓总线管「进出货」。&f"
 			]
 			icon: "gtceu:lv_machine_casing"
-			id: "2A31865DC596DA02"
+			id: "088339BE6F24688B"
 			rewards: [{
-				id: "274AE1B677E256CA"
+				id: "6E6B5C71DF52DC6E"
 				type: "xp"
 				xp: 10
 			}]
 			size: 1.5d
 			subtitle: "看 JEI、摆方块、看成形"
 			tasks: [{
-				id: "38AE2677705CA660"
+				id: "4287DE93BC176156"
 				title: "多方块搭建三步法"
 				type: "checkmark"
 			}]
@@ -3254,7 +3254,7 @@
 			y: 0.0d
 		}
 		{
-			dependencies: ["2A31865DC596DA02"]
+			dependencies: ["088339BE6F24688B"]
 			description: [
 				"仓（Hatch）和总线（Bus）是多方块唯一能交互的方块。搞清楚它们的种类，就能读懂任何结构图。"
 				""
@@ -3320,16 +3320,16 @@
 				"&7提示：维护检查的频率可以在模组配置里调整（config 里的 maintenanceCheckRate）。"
 			]
 			icon: "gtceu:maintenance_hatch"
-			id: "0C22EFEF08511B5F"
+			id: "155D296E22396C02"
 			rewards: [{
-				id: "5DF86A423973C2F9"
+				id: "5409588BC1EBBC39"
 				type: "xp"
 				xp: 10
 			}]
 			size: 1.5d
 			subtitle: "机器为什么会自己停机"
 			tasks: [{
-				id: "231A7EB68EA5DBF9"
+				id: "60E3F34C51D75C07"
 				item: "gtceu:maintenance_hatch"
 				type: "item"
 			}]
@@ -3338,7 +3338,7 @@
 			y: 3.0d
 		}
 		{
-			dependencies: ["0C22EFEF08511B5F"]
+			dependencies: ["155D296E22396C02"]
 			description: [
 				"&a并行（Parallel）&f 是格雷中后期提升产能最重要的手段。"
 				""
@@ -3364,16 +3364,16 @@
 				"&7注意：ATM9 新增的多台机器（温室、蜂房、蜜蜂处理器、超级聚变反应器、矿石加工厂、微型宇宙宝珠等）都明确写明「可安装并行控制仓」。"
 			]
 			icon: "gtceu:iv_parallel_hatch"
-			id: "3D8DD93CA5A1F701"
+			id: "14AB8BB6DD70C70F"
 			rewards: [{
-				id: "675E31BA66F2B874"
+				id: "6C9BE7740A613239"
 				type: "xp"
 				xp: 10
 			}]
 			size: 1.5d
 			subtitle: "一台机器同时跑多份"
 			tasks: [{
-				id: "2EA9545AA54EAFA5"
+				id: "51B3BD2DC767D392"
 				item: "gtceu:iv_parallel_hatch"
 				type: "item"
 			}]
@@ -3382,7 +3382,7 @@
 			y: 4.5d
 		}
 		{
-			dependencies: ["3D8DD93CA5A1F701"]
+			dependencies: ["14AB8BB6DD70C70F"]
 			description: [
 				"&a壁共享（Wallshare）&f 是格雷多方块最贴心、也最容易被忽略的机制。"
 				""
@@ -3406,16 +3406,16 @@
 				"&7提示：壁共享对「摆放条件」没有影响——只要所有方块数量条件仍然满足，结构就成形。"
 			]
 			icon: "gtceu:lv_machine_casing"
-			id: "78AB2462EB6FFBD8"
+			id: "5D072E3EC577F27F"
 			rewards: [{
-				id: "72F9209F2D791271"
+				id: "13BD3B220528A360"
 				type: "xp"
 				xp: 10
 			}]
 			size: 1.5d
 			subtitle: "第二台起省一半料"
 			tasks: [{
-				id: "64F7AF3460A953FC"
+				id: "00850E40ED3081BD"
 				title: "壁共享"
 				type: "checkmark"
 			}]
@@ -3424,7 +3424,7 @@
 			y: 6.0d
 		}
 		{
-			dependencies: ["78AB2462EB6FFBD8"]
+			dependencies: ["5D072E3EC577F27F"]
 			description: [
 				"这三个概念经常被混在一起。ATM9 官方指南专门用一节来区分它们，因为&b理解差异能省下大量时间与资源&f。"
 				""
@@ -3448,16 +3448,16 @@
 				"&e记忆口诀&f：&o跳过看「几个仓」，超频看「多少安」，省料看「怎么共享」&f。"
 			]
 			icon: "gtceu:iv_parallel_hatch"
-			id: "4CA0ACFE61C9659A"
+			id: "2851D7F587F9F5D7"
 			rewards: [{
-				id: "1A2E17819CA8A945"
+				id: "5E718E84F0389C53"
 				type: "xp"
 				xp: 10
 			}]
 			size: 1.5d
 			subtitle: "ATM9 官方指南的核心一节"
 			tasks: [{
-				id: "35B9670723253A75"
+				id: "2B09A8563984D536"
 				title: "层级跳过 / 超频 / 仓共享"
 				type: "checkmark"
 			}]
@@ -3466,7 +3466,7 @@
 			y: 7.5d
 		}
 		{
-			dependencies: ["4CA0ACFE61C9659A"]
+			dependencies: ["2851D7F587F9F5D7"]
 			description: [
 				"&e自查清单&f："
 				""
@@ -3483,16 +3483,16 @@
 				"&e接下来（第 ⑮ 列）&f：大型涡轮与转子、大型内燃机与液氧、热解炉、大型蒸馏厂、真空冷冻机、装配线、以及聚变反应堆。"
 			]
 			icon: "gtceu:steel_wrench"
-			id: "27CF0C49E89FB478"
+			id: "725A8487F0C107E0"
 			rewards: [{
-				id: "504B893E6435EE9A"
+				id: "2E1FACF16A42FF48"
 				type: "xp"
 				xp: 10
 			}]
 			size: 1.5d
 			subtitle: "会搭、会修、会省料"
 			tasks: [{
-				id: "4FB9B02FEA6F1A60"
+				id: "543B93129D923EBF"
 				title: "多方块（上）小结"
 				type: "checkmark"
 			}]
@@ -3501,7 +3501,7 @@
 			y: 9.0d
 		}
 		{
-			dependencies: ["2A31865DC596DA02"]
+			dependencies: ["088339BE6F24688B"]
 			description: [
 				"EV 之后发电靠多方块。大型涡轮（Large Turbine）是最主流的方案，但它的运行机制比一般机器复杂得多。"
 				""
@@ -3570,16 +3570,16 @@
 				"&7提示：如果你有大量副产油（例如热解炉/蒸馏塔的产物），大型内燃机是最直接的变现方式。"
 			]
 			icon: "gtceu:extreme_combustion_engine"
-			id: "57729035CEDE52A7"
+			id: "54A79169446F404E"
 			rewards: [{
-				id: "326CA334CC6805C4"
+				id: "5853DF257A1A5AB0"
 				type: "xp"
 				xp: 10
 			}]
 			size: 1.5d
 			subtitle: "氧气让发电翻三倍"
 			tasks: [{
-				id: "6ECD3CA16B340C04"
+				id: "30FDA0FDAEE41CA0"
 				item: "gtceu:extreme_combustion_engine"
 				type: "item"
 			}]
@@ -3588,7 +3588,7 @@
 			y: 1.5d
 		}
 		{
-			dependencies: ["57729035CEDE52A7"]
+			dependencies: ["54A79169446F404E"]
 			description: [
 				"工业热解炉（Pyrolyse Oven）是化工线的起点之一：用热量把有机物（木炭、煤、生物质）分解成有用的气体和液体。"
 				""
@@ -3806,16 +3806,16 @@
 				"&7价值：温室让「作物」变成可量产资源，是 ATM9 里农业自动化的重要一环。"
 			]
 			icon: "gtceu:greenhouse"
-			id: "05413E9F7B0F9A63"
+			id: "41EFDFE5EE5B5CDA"
 			rewards: [{
-				id: "6858044F2B9AF9CA"
+				id: "2BCD971568DE979C"
 				type: "xp"
 				xp: 10
 			}]
 			size: 1.5d
 			subtitle: "加水就能种地"
 			tasks: [{
-				id: "1E72A13AB2330922"
+				id: "1BE503D94668131F"
 				item: "gtceu:greenhouse"
 				type: "item"
 			}]
@@ -3824,7 +3824,7 @@
 			y: 0.0d
 		}
 		{
-			dependencies: ["05413E9F7B0F9A63"]
+			dependencies: ["41EFDFE5EE5B5CDA"]
 			description: [
 				"蜂房（Apiary）是 ATM9 新增的养蜂多方块，用于从蜜蜂身上获取蜜脾类产物。它有两个版本，取舍很关键。"
 				""
@@ -3846,16 +3846,16 @@
 				"&7建议：早期用 MK I + 并行仓，等基因培育成熟再转 MK II。"
 			]
 			icon: "gtceu:apiary_i"
-			id: "232165E5AFB417F0"
+			id: "4167CBC17A935A79"
 			rewards: [{
-				id: "0282FD8B7CA75085"
+				id: "7E8A0D6C1ECA54EA"
 				type: "xp"
 				xp: 10
 			}]
 			size: 1.5d
 			subtitle: "从蜜蜂身上拿资源"
 			tasks: [{
-				id: "30DDD9546319EB95"
+				id: "2936880227C0EA64"
 				item: "gtceu:apiary_ii"
 				type: "item"
 			}]
@@ -3864,7 +3864,7 @@
 			y: 1.5d
 		}
 		{
-			dependencies: ["232165E5AFB417F0"]
+			dependencies: ["4167CBC17A935A79"]
 			description: [
 				"蜜蜂处理器（Comb Processor）是蜂房产物的加工机器，比通用的离心机更划算。"
 				""
@@ -3882,16 +3882,16 @@
 				"&7价值：这是一条把「蜜蜂」变成稳定资源的完整产业链——蜂房产蜜脾，蜜蜂处理器把蜜脾变成金属、宝石等有用产物。对于懒人农田流玩家非常友好。"
 			]
 			icon: "gtceu:comb_processor"
-			id: "3E83A35377CE33CF"
+			id: "5187120BFD820BCF"
 			rewards: [{
-				id: "570CC6279FAF7955"
+				id: "0FC33028D64671C8"
 				type: "xp"
 				xp: 10
 			}]
 			size: 1.5d
 			subtitle: "蜜脾产率 ×1.25"
 			tasks: [{
-				id: "5029CFD7126165A3"
+				id: "2EA3547529C65D57"
 				item: "gtceu:comb_processor"
 				type: "item"
 			}]
@@ -3900,7 +3900,7 @@
 			y: 3.0d
 		}
 		{
-			dependencies: ["3E83A35377CE33CF"]
+			dependencies: ["5187120BFD820BCF"]
 			description: [
 				"虚空采矿机（Void Miner）解决的是「矿脉不够挖」的问题——它&b不实际挖掘世界中的矿物，而是凭空生成&f。"
 				""
@@ -3918,16 +3918,16 @@
 				"&7价值：一旦搭起来，你就有了一个无限矿源。配合 AE2 自动输出，可以彻底解放手动挖矿。"
 			]
 			icon: "gtceu:void_miner"
-			id: "684B7CAA2ACFC9F7"
+			id: "48670B1139F3EA39"
 			rewards: [{
-				id: "2E2D2F2FEC4A5A98"
+				id: "3ED42417740E2934"
 				type: "xp"
 				xp: 10
 			}]
 			size: 1.5d
 			subtitle: "凭空产矿"
 			tasks: [{
-				id: "2346FBD4CA858BC3"
+				id: "7069D6F5573999AB"
 				item: "gtceu:void_miner"
 				type: "item"
 			}]
@@ -3936,7 +3936,7 @@
 			y: 4.5d
 		}
 		{
-			dependencies: ["684B7CAA2ACFC9F7"]
+			dependencies: ["48670B1139F3EA39"]
 			description: [
 				"矿石加工厂（Ore Processing Plant）是把整条矿处理线收进一台机器的终极方案。"
 				""
@@ -3955,16 +3955,16 @@
 				"&7意义：这是格雷矿线的「毕业装备」。搭好之后，你的资源问题就彻底解决了。"
 			]
 			icon: "gtceu:ore_processing_plant"
-			id: "1D11F4432B3EB093"
+			id: "12A2745363A06D01"
 			rewards: [{
-				id: "7356E0AC785C58DB"
+				id: "647C6E6675FD6C8A"
 				type: "xp"
 				xp: 10
 			}]
 			size: 1.5d
 			subtitle: "一台顶四台，一次 128 个"
 			tasks: [{
-				id: "3FCA74FBC7BDFC95"
+				id: "0E7232B9C502ADF1"
 				item: "gtceu:ore_processing_plant"
 				type: "item"
 			}]
@@ -3973,7 +3973,7 @@
 			y: 6.0d
 		}
 		{
-			dependencies: ["1D11F4432B3EB093"]
+			dependencies: ["12A2745363A06D01"]
 			description: [
 				"ATM9 给两台经典多方块加了「并行」能力，让它们在终局更加好用。"
 				""
@@ -3992,16 +3992,16 @@
 				"&7小结：这两台都是「在原版基础上加并行」的改良版，属于终局化工与材料链的主力。"
 			]
 			icon: "gtceu:mega_fusion_reactor"
-			id: "588230A0ABB7C12B"
+			id: "3610698A45E2FCD4"
 			rewards: [{
-				id: "7F5754C8E5D0A30C"
+				id: "7C4B365BFDEE6C27"
 				type: "xp"
 				xp: 10
 			}]
 			size: 1.5d
 			subtitle: "带并行的聚变堆和反应釜"
 			tasks: [{
-				id: "07800C373E1D6297"
+				id: "446196BA98C87B41"
 				item: "gtceu:mega_fusion_reactor"
 				type: "item"
 			}]
@@ -4010,7 +4010,7 @@
 			y: 7.5d
 		}
 		{
-			dependencies: ["588230A0ABB7C12B"]
+			dependencies: ["3610698A45E2FCD4"]
 			description: [
 				"星际锻造台（Star Forge）是本包终局的核心机器——它是合成 &aATM 之星&f、&aGregStar&f 的地方。"
 				""
@@ -4031,16 +4031,16 @@
 				"&c注意&f：各仓的摆放位置有严格要求（哪些能替换哪一区的原子机械方块），务必用 JEI 的 3D 预览逐层核对。"
 			]
 			icon: "gtceu:star_forge"
-			id: "21733580F3DE554F"
+			id: "26AA8A333ABF6F08"
 			rewards: [{
-				id: "453B39C98BAD81B2"
+				id: "474715A9E7147D5E"
 				type: "xp"
 				xp: 10
 			}]
 			size: 1.5d
 			subtitle: "通往 ATM 之星与 GregStar"
 			tasks: [{
-				id: "3D913A802370A7DC"
+				id: "605D072FEFD740E7"
 				item: "gtceu:star_forge"
 				type: "item"
 			}]
@@ -4049,7 +4049,7 @@
 			y: 9.0d
 		}
 		{
-			dependencies: ["21733580F3DE554F"]
+			dependencies: ["26AA8A333ABF6F08"]
 			description: [
 				"微型宇宙宝珠（Micro Universe Orb，MUO）是 ATM9 里 &b体积最大、最昂贵&f的多方块——它占据十多个区块，拥有制作与发电两大功能。"
 				""
@@ -4074,16 +4074,16 @@
 				"&7现实提醒：这台机器意味着你的基地要按「工业城市」的规模来规划。电力靠激光、物流靠 AE2、材料靠全套自动化产线——少了任何一环都做不起来。"
 			]
 			icon: "gtceu:micro_universe_orb"
-			id: "78D8FE6C300BA62E"
+			id: "4610082DC995D892"
 			rewards: [{
-				id: "235D52D724A19526"
+				id: "4C8B2DDB1E2CCC9F"
 				type: "xp"
 				xp: 10
 			}]
 			size: 1.5d
 			subtitle: "本包最大的多方块"
 			tasks: [{
-				id: "5F4768F55BF68A6E"
+				id: "14B2DDF160E905A9"
 				item: "gtceu:micro_universe_orb"
 				type: "item"
 			}]
@@ -4092,7 +4092,7 @@
 			y: 10.5d
 		}
 		{
-			dependencies: ["78D8FE6C300BA62E"]
+			dependencies: ["4610082DC995D892"]
 			description: [
 				"最后两条 ATM9 专属小知识——它们不属于多方块，但能省下巨量时间。"
 				""
@@ -4114,17 +4114,17 @@
 				""
 				"&7价值：这两条都是「用别的模组的机制解决格雷的资源瓶颈」，非常符合 ATM9 的整合包哲学。"
 			]
-			icon: "gtceu:neural_node"
-			id: "52064CE9CF4997AC"
+			icon: "minecraft:nether_star"
+			id: "450E8C9D68C89EE6"
 			rewards: [{
-				id: "76115F56C050E7AC"
+				id: "6AD11CA5C4B2C4B5"
 				type: "xp"
 				xp: 10
 			}]
 			size: 1.5d
 			subtitle: "两条白拿资源的捷径"
 			tasks: [{
-				id: "636FB07F07100D1E"
+				id: "41C1FEEC29DA3928"
 				title: "ATM9 专属：惰性下界之星与流星"
 				type: "checkmark"
 			}]
@@ -4133,7 +4133,7 @@
 			y: 12.0d
 		}
 		{
-			dependencies: ["52064CE9CF4997AC"]
+			dependencies: ["450E8C9D68C89EE6"]
 			description: [
 				"读完这 16 列，你已经掌握了格雷的全部核心概念。这一条是「验收清单」——如果你能把下面这些都跑起来，你就真的毕业了。"
 				""
